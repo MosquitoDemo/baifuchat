@@ -29,8 +29,10 @@ extension MessagesViewController: ChatMessageCellProtocol {
         _ = controller.view
 
         // configure cells
+    
 
-        controller.reactorListView.registerReactorNib(MemberCell.nib)
+        controller.reactorListView.reactorTableView.registerNib(MemberCell.self)
+//        controller.reactorListView.registerReactorNib(MemberCell.nib)
         controller.reactorListView.configureCell = {
             guard let cell = $0 as? MemberCell else { return }
             cell.hideStatus = true

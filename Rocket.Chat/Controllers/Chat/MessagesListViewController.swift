@@ -301,6 +301,11 @@ extension MessagesListViewController {
     }
 
     func registerCells() {
+    
+        collectionView.registerNib(ChatMessageCell.self)
+        collectionView.registerNib(ChatLoaderCell.self)
+        collectionView.registerNib(ChatMessageDaySeparator.self)
+        /*
         collectionView.register(UINib(
             nibName: "ChatMessageCell",
             bundle: Bundle.main
@@ -315,6 +320,7 @@ extension MessagesListViewController {
             nibName: "ChatMessageDaySeparator",
             bundle: Bundle.main
         ), forCellWithReuseIdentifier: ChatMessageDaySeparator.identifier)
+ */
     }
 
     func setupSearchBar() {
@@ -350,23 +356,28 @@ extension MessagesListViewController: UICollectionViewDataSource {
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard indexPath.row < data.cells.count else {
-            return collectionView.dequeueReusableCell(withReuseIdentifier: ChatLoaderCell.identifier, for: indexPath)
+            let cell = collectionView.dequeueReusableCell(ChatLoaderCell.self, indexPath: indexPath)
+
+            return cell
         }
 
         if data.isSearchingMessages && data.isLoadingSearchResults {
-            return collectionView.dequeueReusableCell(withReuseIdentifier: ChatLoaderCell.identifier, for: indexPath)
+            
+            let cell = collectionView.dequeueReusableCell(ChatLoaderCell.self, indexPath: indexPath)
+            return cell
         }
 
         let cellData = data.cell(at: indexPath.row)
 
-        if let message = cellData.message,
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ChatMessageCell.identifier, for: indexPath) as? ChatMessageCell {
+        if let message = cellData.message{
+            let cell = collectionView.dequeueReusableCell(ChatMessageCell.self, indexPath: indexPath)
             cell.message = message
+            
             return cell
         }
 
-        if let date = cellData.date,
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ChatMessageDaySeparator.identifier, for: indexPath) as? ChatMessageDaySeparator {
+        if let date = cellData.date{
+            let cell = collectionView.dequeueReusableCell(ChatMessageDaySeparator.self, indexPath: indexPath)
             cell.labelTitle.text = RCDateFormatter.date(date)
             return cell
         }

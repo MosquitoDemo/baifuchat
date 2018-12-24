@@ -18,11 +18,13 @@ final class ChangeAppIconViewController: BaseViewController {
         super.viewDidLoad()
         title = viewModel.title
 
-        collectionView?.register(
-            ReusableViewText.nib,
-            forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader,
-            withReuseIdentifier: ReusableViewText.identifier
-        )
+        collectionView.registerNib(ChangeAppIconCell.self)
+        collectionView.registerNib(ReusableViewText.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader)
+//        collectionView?.register(
+//            ReusableViewText.nib,
+//            forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader,
+//            withReuseIdentifier: ReusableViewText.identifier
+//        )
     }
 
     private func changeIcon(name: String) {
@@ -58,12 +60,13 @@ extension ChangeAppIconViewController: UICollectionViewDataSource {
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let cell = collectionView.dequeueReusableCell(
-            withReuseIdentifier: viewModel.cellIdentifier,
-            for: indexPath
-        ) as? ChangeAppIconCell else {
-            fatalError("Could not dequeue reuable cell as ChangeAppIconCell")
-        }
+        let cell = collectionView.dequeueReusableCell(ChangeAppIconCell.self, indexPath: indexPath)
+//        guard let cell = collectionView.dequeueReusableCell(
+//            withReuseIdentifier: viewModel.cellIdentifier,
+//            for: indexPath
+//        ) as? ChangeAppIconCell else {
+//            fatalError("Could not dequeue reuable cell as ChangeAppIconCell")
+//        }
 
         let iconName = viewModel.availableIcons[indexPath.row]
 
@@ -81,14 +84,18 @@ extension ChangeAppIconViewController: UICollectionViewDataSource {
     }
 
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
-        if kind == UICollectionView.elementKindSectionHeader {
-            if let view = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: ReusableViewText.identifier, for: indexPath) as? ReusableViewText {
-                view.labelText.text = viewModel.header
-                return view
-            }
-        }
+        let view = collectionView.dequeueReusableHeaderFooterView(ReusableViewText.self, ofKind:UICollectionView.elementKindSectionHeader, indexPath: indexPath)
+        view.labelText.text = viewModel.header
 
-        return UICollectionReusableView()
+        return view
+//        if kind == UICollectionView.elementKindSectionHeader {
+//            if let view = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: ReusableViewText.identifier, for: indexPath) as? ReusableViewText {
+//                view.labelText.text = viewModel.header
+//                return view
+//            }
+//        }
+//
+//        return UICollectionReusableView()
     }
 
 }

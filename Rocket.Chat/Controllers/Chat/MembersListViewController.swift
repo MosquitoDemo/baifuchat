@@ -128,9 +128,9 @@ extension MembersListViewController {
 
         registerCells()
 
-        if let cell = membersTableView.dequeueReusableCell(withIdentifier: LoaderTableViewCell.identifier) as? LoaderTableViewCell {
-            self.loaderCell = cell
-        }
+//        if let cell = membersTableView.dequeueReusableCell(withIdentifier: LoaderTableViewCell.identifier) as? LoaderTableViewCell {
+//            self.loaderCell = cell
+//        }
 
         title = data.title
 
@@ -144,6 +144,9 @@ extension MembersListViewController {
     }
 
     func registerCells() {
+        membersTableView.registerNib(MemberCell.self)
+        membersTableView.registerNib(LoaderTableViewCell.self)
+        /*
         membersTableView.register(UINib(
             nibName: "MemberCell",
             bundle: Bundle.main
@@ -153,6 +156,7 @@ extension MembersListViewController {
             nibName: "LoaderTableViewCell",
             bundle: Bundle.main
         ), forCellReuseIdentifier: LoaderTableViewCell.identifier)
+ */
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -185,15 +189,17 @@ extension MembersListViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 
         if indexPath.row == data.members.count {
-            return self.loaderCell
-        }
-
-        if let cell = tableView.dequeueReusableCell(withIdentifier: MemberCell.identifier) as? MemberCell {
-            cell.data = MemberCellData(member: data.member(at: indexPath.row))
+            let cell = tableView.dequeueReusableCell(indexPath: indexPath, LoaderTableViewCell.self)
             return cell
         }
 
-        return UITableViewCell()
+        let cell = tableView.dequeueReusableCell(indexPath: indexPath, MemberCell.self)
+//        if let cell = tableView.dequeueReusableCell(withIdentifier: MemberCell.identifier) as? MemberCell {
+            cell.data = MemberCellData(member: data.member(at: indexPath.row))
+            return cell
+//        }
+
+//        return UITableViewCell()
     }
 
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {

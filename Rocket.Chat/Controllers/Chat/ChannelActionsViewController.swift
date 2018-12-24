@@ -84,6 +84,11 @@ class ChannelActionsViewController: BaseViewController {
     }
 
     func registerCells() {
+        tableView.registerNib(ChannelInfoUserCell.self)
+        tableView.registerNib(ChannelInfoActionCell.self)
+        tableView.registerNib(ChannelInfoDescriptionCell.self)
+        tableView.registerNib(ChannelInfoBasicCell.self)
+/*
         tableView?.register(UINib(
             nibName: "ChannelInfoUserCell",
             bundle: Bundle.main
@@ -99,14 +104,16 @@ class ChannelActionsViewController: BaseViewController {
             bundle: Bundle.main
         ), forCellReuseIdentifier: ChannelInfoDescriptionCell.identifier)
 
+        
         tableView?.register(UINib(
             nibName: "ChannelInfoBasicCell",
             bundle: Bundle.main
         ), forCellReuseIdentifier: ChannelInfoBasicCell.identifier)
+ */
     }
 
     func setupFavoriteButton() {
-        if let settings = AuthSettingsManager.settings {
+               if let settings = AuthSettingsManager.settings {
             if settings.favoriteRooms {
                 let defaultImage = UIImage(named: "Star")?.imageWithTint(UIColor.RCGray()).withRenderingMode(.alwaysOriginal)
                 let buttonFavorite = UIBarButtonItem(image: defaultImage, style: .plain, target: self, action: #selector(buttonFavoriteDidPressed))
@@ -273,25 +280,24 @@ extension ChannelActionsViewController: UITableViewDelegate {
         let data = tableViewData[indexPath.section][indexPath.row]
 
         if let data = data as? ChannelInfoActionCellData {
-            if let cell = tableView.dequeueReusableCell(withIdentifier: ChannelInfoActionCell.identifier) as? ChannelInfoActionCell {
-                cell.data = data
-                cell.separatorInset = UIEdgeInsets(top: 0, left: 48, bottom: 0, right: 0)
-                return cell
-            }
+            let cell = tableView.dequeueReusableCell(ChannelInfoActionCell.self)
+            cell.data = data
+            cell.separatorInset = UIEdgeInsets(top: 0, left: 48, bottom: 0, right: 0)
+            return cell
+            
         }
 
         if let data = data as? ChannelInfoUserCellData {
-            if let cell = tableView.dequeueReusableCell(withIdentifier: ChannelInfoUserCell.identifier) as? ChannelInfoUserCell {
-                cell.data = data
-                return cell
-            }
+            let cell = tableView.dequeueReusableCell(ChannelInfoUserCell.self)
+            cell.data = data
+            return cell
         }
 
         if let data = data as? ChannelInfoDescriptionCellData {
-            if let cell = tableView.dequeueReusableCell(withIdentifier: ChannelInfoDescriptionCell.identifier) as? ChannelInfoDescriptionCell {
+
+            let cell = tableView.dequeueReusableCell(ChannelInfoDescriptionCell.self)
                 cell.data = data
                 return cell
-            }
         }
 
         if let data = data as? ChannelInfoBasicCellData {

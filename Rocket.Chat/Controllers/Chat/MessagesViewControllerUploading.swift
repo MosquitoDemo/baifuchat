@@ -70,18 +70,29 @@ extension MessagesViewController {
     func uploadMediaFromPicker(with info: [UIImagePickerController.InfoKey: Any]) {
         var filename = String.random()
 
-        if let assetURL = info[.referenceURL] as? URL,
-            let asset = PHAsset.fetchAssets(withALAssetURLs: [assetURL], options: nil).firstObject {
-            if let resource = PHAssetResource.assetResources(for: asset).first {
-                filename = resource.originalFilename
+        if #available(iOS 11.0, *) {
+            if let asset = info[UIImagePickerController.InfoKey.phAsset] as? PHAsset{
+                if let resource = PHAssetResource.assetResources(for: asset).first {
+                    filename = resource.originalFilename
+                    upload(gif: asset, filename: filename)
+                    dismiss(animated: true, completion: nil)
+                    return
+                }
             }
-
-            let mimeType = UploadHelper.mimeTypeFor(assetURL)
-
-            if mimeType == "image/gif" {
-                upload(gif: asset, filename: filename)
-                dismiss(animated: true, completion: nil)
-                return
+        } else {
+            if let assetURL = info[.referenceURL] as? URL,
+                let asset = PHAsset.fetchAssets(withALAssetURLs: [assetURL], options: nil).firstObject {
+                if let resource = PHAssetResource.assetResources(for: asset).first {
+                    filename = resource.originalFilename
+                }
+                
+                let mimeType = UploadHelper.mimeTypeFor(assetURL)
+                
+                if mimeType == "image/gif" {
+                    upload(gif: asset, filename: filename)
+                    dismiss(animated: true, completion: nil)
+                    return
+                }
             }
         }
 

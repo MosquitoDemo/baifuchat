@@ -95,7 +95,7 @@ final class ConnectServerViewController: BaseViewController {
         selectedServer = DatabaseManager.selectedIndex
         infoRequestHandler.delegate = self
         textFieldServerURL.placeholder = localized("connection.server_url.placeholder")
-        textFieldServerURL.text = "https://chat.baifu-tech.net"
+        textFieldServerURL.text = "https://chat-stg.baifu-tech.net"
         connect()
         
         if let nav = navigationController as? AuthNavigationController {

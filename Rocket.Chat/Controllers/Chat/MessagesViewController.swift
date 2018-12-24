@@ -235,6 +235,7 @@ final class MessagesViewController: RocketChatViewController {
     // MARK: Cells
 
     private func registerCells() {
+        /*
         let collectionViewCells: [NibCellIndentifier] = [
             (nib: BasicMessageCell.nib, cellIdentifier: BasicMessageCell.identifier),
             (nib: SequentialMessageCell.nib, cellIdentifier: SequentialMessageCell.identifier),
@@ -261,6 +262,15 @@ final class MessagesViewController: RocketChatViewController {
 
         collectionViewCells.forEach {
             collectionView?.register($0.nib, forCellWithReuseIdentifier: $0.cellIdentifier)
+        }
+ */
+        
+    
+        let collectionViewCells = [
+            BasicMessageCell.self,SequentialMessageCell.self,LoaderCell.self,DateSeparatorCell.self,UnreadMarkerCell.self,AudioCell.self,AudioMessageCell.self,VideoCell.self,VideoMessageCell.self,ReactionsCell.self,FileCell.self,FileMessageCell.self,TextAttachmentCell.self,TextAttachmentMessageCell.self,ImageCell.self,ImageMessageCell.self,QuoteCell.self,QuoteMessageCell.self,MessageURLCell.self,MessageActionsCell.self,HeaderCell.self
+        ]
+        collectionViewCells.forEach { (cell) in
+            collectionView.registerNib(cell)
         }
     }
 
