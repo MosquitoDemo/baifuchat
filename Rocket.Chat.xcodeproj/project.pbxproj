@@ -397,6 +397,9 @@
 		41FC9E0F209B469C00FED485 /* AutocompleteCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 41AC3CD21DCC9873002DC39A /* AutocompleteCell.xib */; };
 		41FC9E10209B49B200FED485 /* ChatDirectMessageHeaderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 41D894031F4EF65700E284D2 /* ChatDirectMessageHeaderCell.xib */; };
 		41FE55531F6038D60071E97A /* DatabaseManagerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41FE55521F6038D60071E97A /* DatabaseManagerSpec.swift */; };
+		444797D521D21491005416B9 /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 444797D221D21491005416B9 /* Date+Extension.swift */; };
+		444797D621D21491005416B9 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 444797D321D21491005416B9 /* UIView+Extension.swift */; };
+		444797D721D21491005416B9 /* YLDatePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 444797D421D21491005416B9 /* YLDatePicker.swift */; };
 		597ECBA21E3708A50041C5C5 /* DataExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 597ECBA11E3708A50041C5C5 /* DataExtension.swift */; };
 		597ECBA41E3708B10041C5C5 /* PushManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 597ECBA31E3708B10041C5C5 /* PushManager.swift */; };
 		68D186DF1ED9714F0030EE8C /* MessageURLSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68D186DE1ED9714F0030EE8C /* MessageURLSpec.swift */; };
@@ -1337,6 +1340,16 @@
 		41FC9E07209B3A6300FED485 /* NSAttributedStringExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSAttributedStringExtensions.swift; sourceTree = "<group>"; };
 		41FC9E09209B3A9800FED485 /* MessageExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageExtensions.swift; sourceTree = "<group>"; };
 		41FE55521F6038D60071E97A /* DatabaseManagerSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatabaseManagerSpec.swift; sourceTree = "<group>"; };
+		444797D221D21491005416B9 /* Date+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
+		444797D321D21491005416B9 /* UIView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		444797D421D21491005416B9 /* YLDatePicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YLDatePicker.swift; sourceTree = "<group>"; };
+		444797D821D23341005416B9 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
+		444797D921D23341005416B9 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
+		444797DA21D23342005416B9 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/RCEmojiKit.strings"; sourceTree = "<group>"; };
+		444797DB21D23343005416B9 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		444797DC21D23343005416B9 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/VoiceOver.strings"; sourceTree = "<group>"; };
+		444797DD21D23343005416B9 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
+		444797DE21D23344005416B9 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		5108B4F1453CB9F4E425E3F4 /* Pods-Rocket.Chat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Rocket.Chat.release.xcconfig"; path = "Pods/Target Support Files/Pods-Rocket.Chat/Pods-Rocket.Chat.release.xcconfig"; sourceTree = "<group>"; };
 		58C7F7D8D91A05CA5D1C9FE0 /* Pods-Rocket.ChatTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Rocket.ChatTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Rocket.ChatTests/Pods-Rocket.ChatTests.debug.xcconfig"; sourceTree = "<group>"; };
 		597ECBA01E3708980041C5C5 /* Rocket.Chat.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Rocket.Chat.entitlements; sourceTree = "<group>"; };
@@ -2158,6 +2171,7 @@
 		4102E3AB1E53272C004BAA82 /* Preferences */ = {
 			isa = PBXGroup;
 			children = (
+				444797CE21D2139E005416B9 /* TimeSelectController */,
 				1496A86620FA45CB005C2E14 /* Notifications */,
 				0B3A9767202C75A60019CA92 /* ChangeAppIcon */,
 				0B9AB2BF20444EB300ABEA05 /* Language */,
@@ -2952,6 +2966,16 @@
 				414A1FF91D46395400093E10 /* SocketManager.swift */,
 			);
 			path = Socket;
+			sourceTree = "<group>";
+		};
+		444797CE21D2139E005416B9 /* TimeSelectController */ = {
+			isa = PBXGroup;
+			children = (
+				444797D221D21491005416B9 /* Date+Extension.swift */,
+				444797D321D21491005416B9 /* UIView+Extension.swift */,
+				444797D421D21491005416B9 /* YLDatePicker.swift */,
+			);
+			path = TimeSelectController;
 			sourceTree = "<group>";
 		};
 		7758A7621F8FA34300FAA244 /* UIPickerView */ = {
@@ -4217,6 +4241,7 @@
 				"pt-PT",
 				ja,
 				it,
+				"zh-Hans",
 			);
 			mainGroup = 41DF76D61D2C50710028DBF8;
 			productRefGroup = 41DF76E01D2C50710028DBF8 /* Products */;
@@ -4691,6 +4716,7 @@
 				412E1F3B1DB6D55000531FDA /* ChatMessageURLView.swift in Sources */,
 				8039442E20B342BB002F317A /* AddUsersViewController.swift in Sources */,
 				35C7D19A202B130400B4BE5A /* RCDateFormatter.swift in Sources */,
+				444797D721D21491005416B9 /* YLDatePicker.swift in Sources */,
 				9987B5992093E526007D277C /* FileTableViewCell.swift in Sources */,
 				99BE4D8A2153162A001A43E2 /* UnmanagedMessage.swift in Sources */,
 				41FC9E0C209B3BAA00FED485 /* UploadMessageRequest.swift in Sources */,
@@ -4741,6 +4767,7 @@
 				80307E3E1FD75CB1006AD9EF /* VOLocalized.swift in Sources */,
 				807C7BF920740F3C006B600E /* AuthCanPinMessage.swift in Sources */,
 				996154B1205197E7009B9857 /* NewPasswordViewModel.swift in Sources */,
+				444797D621D21491005416B9 /* UIView+Extension.swift in Sources */,
 				80B2D99120E549CC002F4149 /* StoryboardInitializable.swift in Sources */,
 				411EDED51E3102CB00BC7BE3 /* UploadManager.swift in Sources */,
 				0BBCC2BF204532F0001E3B6D /* ChangeLanguageCell.swift in Sources */,
@@ -5074,6 +5101,7 @@
 				80D41DFA2092147300034D1F /* UserActionSheetPresenter.swift in Sources */,
 				80054CFE1FDAFF5200F5ECF9 /* PushClient.swift in Sources */,
 				597ECBA21E3708A50041C5C5 /* DataExtension.swift in Sources */,
+				444797D521D21491005416B9 /* Date+Extension.swift in Sources */,
 				414A1FFC1D46395900093E10 /* SocketResponse.swift in Sources */,
 				807371A21F96968C00D53ADF /* LoginServiceModelMapping.swift in Sources */,
 				4133EDCF1DA2834E005AA783 /* ChatMessageImageView.swift in Sources */,
@@ -5425,6 +5453,7 @@
 				0B92E67520F767FE003DAB5A /* pt-PT */,
 				4119E1C32138242A00CDFB83 /* ja */,
 				4136466521A4A25E00BE64B8 /* it */,
+				444797DD21D23343005416B9 /* zh-Hans */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -5433,6 +5462,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				41DF76EC1D2C50720028DBF8 /* Base */,
+				444797D821D23341005416B9 /* zh-Hans */,
 			);
 			name = LaunchScreen.storyboard;
 			path = .;
@@ -5453,6 +5483,7 @@
 				416772D520EA4CCA009999F8 /* pt-PT */,
 				4119E1C12138242900CDFB83 /* ja */,
 				4136466321A4A25E00BE64B8 /* it */,
+				444797DB21D23343005416B9 /* zh-Hans */,
 			);
 			name = Localizable.strings;
 			path = .;
@@ -5473,6 +5504,7 @@
 				416772D620EA4CCA009999F8 /* pt-PT */,
 				4119E1C22138242900CDFB83 /* ja */,
 				4136466421A4A25E00BE64B8 /* it */,
+				444797DC21D23343005416B9 /* zh-Hans */,
 			);
 			name = VoiceOver.strings;
 			path = .;
@@ -5482,6 +5514,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				807FB55D2046E7DD00E21429 /* Base */,
+				444797D921D23341005416B9 /* zh-Hans */,
 			);
 			name = Main.storyboard;
 			path = .;
@@ -5499,6 +5532,7 @@
 				807FB57020472B6A00E21429 /* pt-BR */,
 				416772D720EA4CCA009999F8 /* pt-PT */,
 				4136466621A4A25E00BE64B8 /* it */,
+				444797DE21D23344005416B9 /* zh-Hans */,
 			);
 			name = Localizable.strings;
 			path = .;
@@ -5518,6 +5552,7 @@
 				416772D420EA4CCA009999F8 /* pt-PT */,
 				4119E1C02138242900CDFB83 /* ja */,
 				4136466221A4A25D00BE64B8 /* it */,
+				444797DA21D23342005416B9 /* zh-Hans */,
 			);
 			name = RCEmojiKit.strings;
 			path = .;
