@@ -369,6 +369,7 @@ extension MessagesListViewController: UICollectionViewDataSource {
 
         let cellData = data.cell(at: indexPath.row)
 
+        
         if let message = cellData.message{
             let cell = collectionView.dequeueReusableCollectionCell(ChatMessageCell.self, indexPath: indexPath)
             cell.message = message

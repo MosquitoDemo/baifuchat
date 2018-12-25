@@ -69,6 +69,8 @@ final class ReactorListView: UIView {
     }
 
     func registerReactorNib(_ nib: UINib) {
+//        reactorTableView.registerNib(<#T##T.Type#>)
+//        reactorTableView.registerNib(ReactorCell.self)
         reactorTableView.register(nib, forCellReuseIdentifier: "ReactorCell")
     }
 

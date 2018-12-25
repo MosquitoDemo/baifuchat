@@ -397,6 +397,7 @@ final class MessagesViewController: RocketChatViewController {
 
     private func setupTitleView() {
         let view = ChatTitleView.instantiateFromNib()
+        
         view?.subscription = subscription?.unmanaged
         view?.delegate = self
         navigationItem.titleView = view

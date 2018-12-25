@@ -235,6 +235,9 @@ extension FilesListViewController {
     }
 
     func registerCells() {
+        tableView.registerNib(FileTableViewCell.self)
+        tableView.registerNib(LoaderTableViewCell.self)
+        /*
         tableView.register(UINib(
             nibName: String(describing: FileTableViewCell.self),
             bundle: Bundle.main
@@ -244,6 +247,7 @@ extension FilesListViewController {
             nibName: String(describing: LoaderTableViewCell.self),
             bundle: Bundle.main
         ), forCellReuseIdentifier: LoaderTableViewCell.identifier)
+ */
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -263,16 +267,15 @@ extension FilesListViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard indexPath.row < data.cells.count else {
             loadMoreFiles()
-            return tableView.dequeueReusableCell(withIdentifier: LoaderTableViewCell.identifier, for: indexPath)
-        }
-
-        let file = data.cell(at: indexPath.row)
-        if let cell = tableView.dequeueReusableCell(withIdentifier: FileTableViewCell.identifier, for: indexPath) as? FileTableViewCell {
-            cell.file = file
+            let cell = tableView.dequeueReusableCell(indexPath: indexPath, LoaderTableViewCell.self)
             return cell
         }
 
-        return UITableViewCell()
+        let file = data.cell(at: indexPath.row)
+        let cell = tableView.dequeueReusableCell(indexPath: indexPath, FileTableViewCell.self)
+        cell.file = file
+        return cell
+
     }
 
 }
