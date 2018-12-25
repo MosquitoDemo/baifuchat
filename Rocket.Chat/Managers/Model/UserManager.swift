@@ -17,7 +17,9 @@ struct UserManager {
             "params": []
         ] as [String: Any]
 
-        SocketManager.send(request) { _ in }
+        SocketManager.send(request) { response in
+            print(response)
+        }
     }
 
     static func userDataChanges() {
@@ -27,7 +29,21 @@ struct UserManager {
             "params": []
         ] as [String: Any]
 
-        SocketManager.send(request) { _ in }
+        SocketManager.send(request) { response in
+            print(response)
+            
+            
+        }
+        let requestx = [
+            "msg": "sub",
+            "name": "user.extra",
+            "params": []
+            ] as [String: Any]
+        SocketManager.send(requestx) { response in
+            print(response)
+            
+        }
+
     }
 
     static func setUserStatus(status: UserStatus, completion: @escaping MessageCompletion) {

@@ -12,6 +12,7 @@ import DifferenceKit
 class SubscriptionsViewModel {
     var subscriptions: Results<Subscription>? {
         let results = Subscription.all(onlyJoined: !searchState.isSearching)
+        
 
         switch SubscriptionsSortingManager.selectedSortingOption {
         case .activity:
@@ -95,13 +96,19 @@ class SubscriptionsViewModel {
         case .notSearching:
             var queryItems = queryBase
 
+            
             func filtered(using predicateFormat: String) -> Results<Subscription> {
                 let predicate = NSPredicate(format: predicateFormat)
                 let filteredResult = queryItems.filter(predicate)
                 queryItems = queryItems.filter(predicate.negation)
                 return filteredResult
             }
+            let user = AuthManager.currentUser()
+        
+            print(AuthManager.isAuthenticated()?.subscriptions)
+            print(user?.roles)
 
+           
             if SubscriptionsSortingManager.selectedGroupingOptions.contains(.unread) {
                 let queryData = filtered(using: "alert == true")
                 assorter.registerSection(name: localized("subscriptions.unreads"), objects: queryData)
@@ -115,7 +122,7 @@ class SubscriptionsViewModel {
             if SubscriptionsSortingManager.selectedGroupingOptions.contains(.type) {
                 let queryDataChannels = filtered(using: "privateType == 'c'")
                 assorter.registerSection(name: localized("subscriptions.channels"), objects: queryDataChannels)
-
+                
                 let queryDataGroups = filtered(using: "privateType == 'p'")
                 assorter.registerSection(name: localized("subscriptions.groups"), objects: queryDataGroups)
 
@@ -127,6 +134,7 @@ class SubscriptionsViewModel {
                 assorter.registerSection(name: title, objects: queryItems)
             }
 
+            
             assorter.registerModel(model: queryBase)
         }
     }
