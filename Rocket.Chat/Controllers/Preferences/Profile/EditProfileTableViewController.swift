@@ -15,6 +15,26 @@ final class EditProfileTableViewController: BaseTableViewController, MediaPicker
 
     static let identifier = String(describing: EditProfileTableViewController.self)
 
+    let gender = 1
+    
+
+    //女
+    @IBAction func womanClick(_ sender: Any) {
+        manImage.image = UIImage.init(named: "Checkmark")
+
+        womanImage.image = UIImage.init(named: "icon_file")
+    }
+    //男
+    @IBAction func manClick(_ sender: Any) {
+        womanImage.image = UIImage.init(named: "icon_file")
+
+        manImage.image = UIImage.init(named: "Checkmark")
+    }
+    //女
+    @IBOutlet weak var womanImage: UIImageView!
+    //男
+    @IBOutlet weak var manImage: UIImageView!
+    
     @IBOutlet weak var statusValueLabel: UILabel!
     @IBOutlet weak var statusLabel: UILabel! {
         didSet {
@@ -40,6 +60,16 @@ final class EditProfileTableViewController: BaseTableViewController, MediaPicker
         }
     }
 
+    @IBOutlet weak var timeselect: UILabel! {
+        didSet {
+
+//            timeselect/
+//            email.placeholder = viewModel.emailPlaceholder
+        }
+    }
+
+    
+    
     @IBOutlet weak var changeYourPassword: UILabel! {
         didSet {
             changeYourPassword.text = viewModel.changeYourPasswordTitle
@@ -513,9 +543,35 @@ final class EditProfileTableViewController: BaseTableViewController, MediaPicker
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         switch section {
         case 1: return viewModel.profileSectionTitle
+            
+//            cell.selectionStyle = UITableViewCellSelectionStyle.None;
         default: return ""
         }
     }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        switch indexPath.section {
+        case 1:
+            if indexPath.row == 4{
+                print("ssss")
+                let datePicker = YLDatePicker(currentDate: nil, minLimitDate: Date(), maxLimitDate: nil, datePickerType: .YMD) { [weak self] (date) in
+//                    self?.navigationItem.title = date.getString(format: "yyyy-MM-dd")
+//                    print(date.getString(format: "yyyy-MM-dd"))
+                    self?.timeselect.text = date.getString(format: "yyyy-MM-dd")
+                }
+                datePicker.show()
+            }else if indexPath.row == 3{
+                
+
+            }
+            
+        default:
+            return
+        }
+    }
+    
+    
+    //执行时间选择控制器
 
 }
 

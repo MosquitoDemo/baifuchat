@@ -1,0 +1,15 @@
+
+/* Class = "UINavigationItem"; title = "Title"; ObjectID = "3LI-eK-bfy"; */
+"3LI-eK-bfy.title" = "Title";
+
+/* Class = "UINavigationItem"; title = "Select Room"; ObjectID = "9Q1-vx-xCK"; */
+"9Q1-vx-xCK.title" = "Select Room";
+
+/* Class = "UIBarButtonItem"; title = "Item"; ObjectID = "tbM-vz-Ho5"; */
+"tbM-vz-Ho5.title" = "Item";
+
+/* Class = "UILabel"; text = "Lorem Ipsum, Hello World, ..."; ObjectID = "y1B-AR-mU0"; */
+"y1B-AR-mU0.text" = "Lorem Ipsum, Hello World, ...";
+
+/* Class = "UILabel"; text = "To: "; ObjectID = "yK8-y1-8cb"; */
+"yK8-y1-8cb.text" = "To: ";
