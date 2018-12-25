@@ -32,9 +32,10 @@ public extension UICollectionView{
         self.register(T.self, forSupplementaryViewOfKind: kind, withReuseIdentifier: String(describing: T.self))
     }
     
+
     
-    
-    func dequeueReusableCell<T: UICollectionViewCell>(_: T.Type,indexPath: IndexPath) -> T {
+    func dequeueReusableCollectionCell<T: UICollectionViewCell>(_: T.Type,indexPath: IndexPath) -> T {
+        
         guard let cell = self.dequeueReusableCell(withReuseIdentifier: String(describing: T.self), for: indexPath) as? T else { return T() }
         return cell
         
@@ -42,7 +43,7 @@ public extension UICollectionView{
     
     
     
-    func dequeueReusableHeaderFooterView<T: UICollectionReusableView>(_: T.Type,ofKind:String,indexPath: IndexPath) -> T{
+    func dequeueReusableCollectionHeaderFooterView<T: UICollectionReusableView>(_: T.Type,ofKind:String,indexPath: IndexPath) -> T{
         guard let view = self.dequeueReusableSupplementaryView(ofKind: ofKind, withReuseIdentifier: String(describing: T.self), for: indexPath) as? T else{ return T()}
         return view
     }

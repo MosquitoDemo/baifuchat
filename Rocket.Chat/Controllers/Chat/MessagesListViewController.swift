@@ -356,28 +356,28 @@ extension MessagesListViewController: UICollectionViewDataSource {
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard indexPath.row < data.cells.count else {
-            let cell = collectionView.dequeueReusableCell(ChatLoaderCell.self, indexPath: indexPath)
+            let cell = collectionView.dequeueReusableCollectionCell(ChatLoaderCell.self, indexPath: indexPath)
 
             return cell
         }
 
         if data.isSearchingMessages && data.isLoadingSearchResults {
             
-            let cell = collectionView.dequeueReusableCell(ChatLoaderCell.self, indexPath: indexPath)
+            let cell = collectionView.dequeueReusableCollectionCell(ChatLoaderCell.self, indexPath: indexPath)
             return cell
         }
 
         let cellData = data.cell(at: indexPath.row)
 
         if let message = cellData.message{
-            let cell = collectionView.dequeueReusableCell(ChatMessageCell.self, indexPath: indexPath)
+            let cell = collectionView.dequeueReusableCollectionCell(ChatMessageCell.self, indexPath: indexPath)
             cell.message = message
             
             return cell
         }
 
         if let date = cellData.date{
-            let cell = collectionView.dequeueReusableCell(ChatMessageDaySeparator.self, indexPath: indexPath)
+            let cell = collectionView.dequeueReusableCollectionCell(ChatMessageDaySeparator.self, indexPath: indexPath)
             cell.labelTitle.text = RCDateFormatter.date(date)
             return cell
         }

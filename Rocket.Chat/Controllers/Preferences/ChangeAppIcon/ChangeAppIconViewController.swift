@@ -60,7 +60,7 @@ extension ChangeAppIconViewController: UICollectionViewDataSource {
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(ChangeAppIconCell.self, indexPath: indexPath)
+        let cell = collectionView.dequeueReusableCollectionCell(ChangeAppIconCell.self, indexPath: indexPath)
 //        guard let cell = collectionView.dequeueReusableCell(
 //            withReuseIdentifier: viewModel.cellIdentifier,
 //            for: indexPath
@@ -84,7 +84,7 @@ extension ChangeAppIconViewController: UICollectionViewDataSource {
     }
 
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
-        let view = collectionView.dequeueReusableHeaderFooterView(ReusableViewText.self, ofKind:UICollectionView.elementKindSectionHeader, indexPath: indexPath)
+        let view = collectionView.dequeueReusableCollectionHeaderFooterView(ReusableViewText.self, ofKind:UICollectionView.elementKindSectionHeader, indexPath: indexPath)
         view.labelText.text = viewModel.header
 
         return view
