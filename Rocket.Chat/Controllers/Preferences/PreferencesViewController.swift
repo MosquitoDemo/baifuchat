@@ -18,10 +18,10 @@ final class PreferencesViewController: BaseTableViewController {
 
     private let kSectionProfile = 0
     private let kSectionSettings = 1
-    private let kSectionAdministration = 2
+    private let kSectionAdministration = 5
     private let kSectionInformation = 3
     private let kSectionTracking = 4
-    private let kSectionLogout = 5
+    private let kSectionLogout = 2
     private let kSectionFlex = 6
 
     private let viewModel = PreferencesViewModel()
@@ -46,7 +46,7 @@ final class PreferencesViewController: BaseTableViewController {
 
     @IBOutlet weak var labelAdministration: UILabel! {
         didSet {
-            labelAdministration.text = viewModel.administration
+            labelAdministration.text = viewModel.logout
         }
     }
 
@@ -124,7 +124,7 @@ final class PreferencesViewController: BaseTableViewController {
 
     @IBOutlet weak var labelLogout: UILabel! {
         didSet {
-            labelLogout.text = viewModel.logout
+            labelLogout.text = viewModel.administration
         }
     }
 
@@ -274,7 +274,8 @@ final class PreferencesViewController: BaseTableViewController {
         if indexPath.section == kSectionSettings {
             switch indexPath.row {
             case 0:
-                cellContactDidPressed()
+                print("xxxx")
+//                cellContactDidPressed()
             case 1:
                 cellLanguageDidPressed()
             case 4:
