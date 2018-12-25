@@ -13,6 +13,7 @@ internal enum BundleInfoKey: String {
     case build = "CFBundleVersion"
 }
 
+
 final class PreferencesViewModel {
 
     internal let title = localized("myaccount.settings.title")
@@ -133,7 +134,7 @@ final class PreferencesViewModel {
     internal let canOpenFLEX = false
     #endif
 
-    internal let numberOfSections = 7
+    internal let numberOfSections = 3
 
     internal func numberOfRowsInSection(_ section: Int) -> Int {
         switch section {
