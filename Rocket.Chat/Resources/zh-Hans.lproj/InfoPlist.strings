@@ -6,8 +6,8 @@
   Copyright © 2018 Rocket.Chat. All rights reserved.
 */
 
-add-server-shortcut = "Add Server";
-NSCameraUsageDescription = "To take photos and record videos";
-NSMicrophoneUsageDescription = "To record and upload audio and videos";
-NSPhotoLibraryAddUsageDescription = "To save images to your library";
-NSPhotoLibraryUsageDescription = "To upload photos from your library";
+add-server-shortcut = "添加服务器";
+NSCameraUsageDescription = "拍照录像";
+NSMicrophoneUsageDescription = "录制和上传音频和视频";
+NSPhotoLibraryAddUsageDescription = "将图像保存到库中";
+NSPhotoLibraryUsageDescription = "从图书馆上传照片";

@@ -349,7 +349,6 @@
 		41D8EC941F78151A00764B36 /* ChannelActionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41D8EC931F78151A00764B36 /* ChannelActionsViewController.swift */; };
 		41DAE93C1D318E280098E068 /* SubscriptionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41DAE93B1D318E280098E068 /* SubscriptionManager.swift */; };
 		41DAE93E1D318F350098E068 /* Subscription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41DAE93D1D318F350098E068 /* Subscription.swift */; };
-		41DC7A1B1D38454500896FC0 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41DC7A1A1D38454500896FC0 /* Message.swift */; };
 		41DC7A1F1D3865FE00896FC0 /* MessageManagerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41DC7A1E1D3865FE00896FC0 /* MessageManagerSpec.swift */; };
 		41DC7A221D386B4700896FC0 /* StringExtensionSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41DC7A211D386B4700896FC0 /* StringExtensionSpec.swift */; };
 		41DC7A241D386CA800896FC0 /* DateExtensionsSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41DC7A231D386CA800896FC0 /* DateExtensionsSpec.swift */; };
@@ -397,9 +396,11 @@
 		41FC9E0F209B469C00FED485 /* AutocompleteCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 41AC3CD21DCC9873002DC39A /* AutocompleteCell.xib */; };
 		41FC9E10209B49B200FED485 /* ChatDirectMessageHeaderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 41D894031F4EF65700E284D2 /* ChatDirectMessageHeaderCell.xib */; };
 		41FE55531F6038D60071E97A /* DatabaseManagerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41FE55521F6038D60071E97A /* DatabaseManagerSpec.swift */; };
+		443E30C821D254DA00660AE0 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 444797DF21D2512A005416B9 /* Message.swift */; };
 		444797D521D21491005416B9 /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 444797D221D21491005416B9 /* Date+Extension.swift */; };
 		444797D621D21491005416B9 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 444797D321D21491005416B9 /* UIView+Extension.swift */; };
 		444797D721D21491005416B9 /* YLDatePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 444797D421D21491005416B9 /* YLDatePicker.swift */; };
+		444797E021D2512A005416B9 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 444797DF21D2512A005416B9 /* Message.swift */; };
 		597ECBA21E3708A50041C5C5 /* DataExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 597ECBA11E3708A50041C5C5 /* DataExtension.swift */; };
 		597ECBA41E3708B10041C5C5 /* PushManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 597ECBA31E3708B10041C5C5 /* PushManager.swift */; };
 		68D186DF1ED9714F0030EE8C /* MessageURLSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68D186DE1ED9714F0030EE8C /* MessageURLSpec.swift */; };
@@ -582,7 +583,6 @@
 		8076FDC320485A2200114F28 /* SubscriptionUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8076FDC220485A2200114F28 /* SubscriptionUtils.swift */; };
 		8076FDC520485ABB00114F28 /* SubscriptionUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8076FDC420485ABB00114F28 /* SubscriptionUser.swift */; };
 		8076FDC72048632300114F28 /* SubscriptionQueries.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8076FDC62048632300114F28 /* SubscriptionQueries.swift */; };
-		8076FDC82048639700114F28 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41DC7A1A1D38454500896FC0 /* Message.swift */; };
 		8076FDC9204863AF00114F28 /* Mention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4159720D1D3DB882002258F4 /* Mention.swift */; };
 		8076FDCA204863B900114F28 /* Channel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D10E9C191F643457007F1796 /* Channel.swift */; };
 		8076FDCB204863C500114F28 /* Attachment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41900C261D9FE35400308EF4 /* Attachment.swift */; };
@@ -1290,7 +1290,6 @@
 		41D8EC931F78151A00764B36 /* ChannelActionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelActionsViewController.swift; sourceTree = "<group>"; };
 		41DAE93B1D318E280098E068 /* SubscriptionManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubscriptionManager.swift; sourceTree = "<group>"; };
 		41DAE93D1D318F350098E068 /* Subscription.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Subscription.swift; sourceTree = "<group>"; };
-		41DC7A1A1D38454500896FC0 /* Message.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		41DC7A1E1D3865FE00896FC0 /* MessageManagerSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageManagerSpec.swift; sourceTree = "<group>"; };
 		41DC7A211D386B4700896FC0 /* StringExtensionSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtensionSpec.swift; sourceTree = "<group>"; };
 		41DC7A231D386CA800896FC0 /* DateExtensionsSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateExtensionsSpec.swift; sourceTree = "<group>"; };
@@ -1343,13 +1342,12 @@
 		444797D221D21491005416B9 /* Date+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
 		444797D321D21491005416B9 /* UIView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		444797D421D21491005416B9 /* YLDatePicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YLDatePicker.swift; sourceTree = "<group>"; };
-		444797D821D23341005416B9 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
-		444797D921D23341005416B9 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
 		444797DA21D23342005416B9 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/RCEmojiKit.strings"; sourceTree = "<group>"; };
 		444797DB21D23343005416B9 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		444797DC21D23343005416B9 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/VoiceOver.strings"; sourceTree = "<group>"; };
 		444797DD21D23343005416B9 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
 		444797DE21D23344005416B9 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		444797DF21D2512A005416B9 /* Message.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		5108B4F1453CB9F4E425E3F4 /* Pods-Rocket.Chat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Rocket.Chat.release.xcconfig"; path = "Pods/Target Support Files/Pods-Rocket.Chat/Pods-Rocket.Chat.release.xcconfig"; sourceTree = "<group>"; };
 		58C7F7D8D91A05CA5D1C9FE0 /* Pods-Rocket.ChatTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Rocket.ChatTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Rocket.ChatTests/Pods-Rocket.ChatTests.debug.xcconfig"; sourceTree = "<group>"; };
 		597ECBA01E3708980041C5C5 /* Rocket.Chat.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Rocket.Chat.entitlements; sourceTree = "<group>"; };
@@ -2752,7 +2750,6 @@
 				8013F88D1FD6B83C00EE1A4E /* CommandModelMapping.swift */,
 				807371A11F96968C00D53ADF /* LoginServiceModelMapping.swift */,
 				D10E9C211F643616007F1796 /* MentionModelMapping.swift */,
-				41DC7A1A1D38454500896FC0 /* Message.swift */,
 				4151B4571E2D1D2E00F8AA1B /* MessageModelMapping.swift */,
 				4151B45D1E2D32EA00F8AA1B /* MessageURLModelMapping.swift */,
 				806401321FB09EC400990572 /* PermissionModelMapping.swift */,
@@ -3359,6 +3356,7 @@
 			children = (
 				D10E9C191F643457007F1796 /* Channel.swift */,
 				4159720B1D3DB854002258F4 /* Email.swift */,
+				444797DF21D2512A005416B9 /* Message.swift */,
 				4159720D1D3DB882002258F4 /* Mention.swift */,
 				809B53151FE3D3DC00833DD2 /* MessageReaction.swift */,
 				8076FDD02048646500114F28 /* MessageReply.swift */,
@@ -4759,7 +4757,6 @@
 				8041C0422028C7EF007E21FA /* ReactorListView.swift in Sources */,
 				41BF4D6C215B47AD00588B35 /* MessagesSubscriptionViewModel.swift in Sources */,
 				99C29A37212A66EC00521266 /* ObjectExtension.swift in Sources */,
-				41DC7A1B1D38454500896FC0 /* Message.swift in Sources */,
 				415066881EB8B541003AEA1C /* MessageTextCacheManager.swift in Sources */,
 				4124D834209A0521005374CD /* ChatMessageDaySeparator.swift in Sources */,
 				4151B45A1E2D1DD400F8AA1B /* AttachmentModelMapping.swift in Sources */,
@@ -5138,6 +5135,7 @@
 				4151B4581E2D1D2E00F8AA1B /* MessageModelMapping.swift in Sources */,
 				41865AF21FC8B23400A5E48F /* WebViewControllerEmbedded.swift in Sources */,
 				414B3B25203E2F2C0078D3D9 /* MainSplitViewController.swift in Sources */,
+				444797E021D2512A005416B9 /* Message.swift in Sources */,
 				99907513217622A900CAB7C8 /* FileMessageCell.swift in Sources */,
 				414A1FF61D46320F00093E10 /* ResponseMessage.swift in Sources */,
 				996735CF21582E790049BB63 /* BasicMessageCell.swift in Sources */,
@@ -5352,7 +5350,6 @@
 				8076FDE22048A7C500114F28 /* SEComposeHeaderViewController.swift in Sources */,
 				80DC9A6E206BA96200032BE0 /* Localized.swift in Sources */,
 				80D0CE732050BE680056B17F /* UIColorCSSColorsExtension.swift in Sources */,
-				8076FDC82048639700114F28 /* Message.swift in Sources */,
 				807FB569204729E500E21429 /* SEServersViewController.swift in Sources */,
 				80A2A2AC2073BE3500857DAF /* RealmCurrent.swift in Sources */,
 				80977ABB204EFC0F00C41435 /* SESceneTransition.swift in Sources */,
@@ -5364,6 +5361,7 @@
 				80FA906A20569F890069038F /* SEComposeFileCell.swift in Sources */,
 				804273DF204EBD51006DF420 /* APIError.swift in Sources */,
 				803D866D2106307C00B1B697 /* SubscriptionModelMapping.swift in Sources */,
+				443E30C821D254DA00660AE0 /* Message.swift in Sources */,
 				803D866C21062F7400B1B697 /* SEStateAPI.swift in Sources */,
 				806DB94320687697004ED8ED /* Alert.swift in Sources */,
 				41132159216D1BA70061FA11 /* UserModelMapping.swift in Sources */,
@@ -5462,7 +5460,6 @@
 			isa = PBXVariantGroup;
 			children = (
 				41DF76EC1D2C50720028DBF8 /* Base */,
-				444797D821D23341005416B9 /* zh-Hans */,
 			);
 			name = LaunchScreen.storyboard;
 			path = .;
@@ -5514,7 +5511,6 @@
 			isa = PBXVariantGroup;
 			children = (
 				807FB55D2046E7DD00E21429 /* Base */,
-				444797D921D23341005416B9 /* zh-Hans */,
 			);
 			name = Main.storyboard;
 			path = .;

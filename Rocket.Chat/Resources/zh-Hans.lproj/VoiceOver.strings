@@ -7,19 +7,19 @@
 */
 
 // MARK: Auth
-"auth.connect.urlfield.label" = "Server URL";
-"auth.connect.urlfield.hint" = "Insert your server's URL here.";
+"auth.connect.urlfield.label" = "服务器网址";
+"auth.connect.urlfield.hint" = "输入服务器的网址.";
 
-"auth.authentication.emailorusername.label" = "Email or Username";
-"auth.authentication.emailorusername.hint" = "Insert your email or username here.";
-"auth.authentication.password.label" = "Password";
-"auth.authentication.password.label" = "Insert your password here.";
+"auth.authentication.emailorusername.label" = "邮箱/用户名";
+"auth.authentication.emailorusername.hint" = "输入邮箱/用户名.";
+"auth.authentication.password.label" = "密码";
+"auth.authentication.password.label" = "在这输入密码.";
 
 // MARK: Subscriptions
-"subscriptions.main.userview.label" = "Session information";
-"subscriptions.main.userview.value" = "Server: %@. User: %@. Status: %@.";
-"subscriptions.main.userview.hint" = "Double tap to change status.";
+"subscriptions.main.userview.label" = "会话信息";
+"subscriptions.main.userview.value" = "服务器: %@. 用户: %@. 状态: %@.";
+"subscriptions.main.userview.hint" = "双击改变状态.";
 
 // MARK: Message
-"message.label" = "Message from %@ at %@.";
-"message.hint" = "Reactions: %@";
+"message.label" = "信息来自 %@ at %@.";
+"message.hint" = "反应: %@";

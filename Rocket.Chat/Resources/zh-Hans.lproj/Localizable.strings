@@ -1,504 +1,505 @@
 // Global
-"global.ok" = "OK";
-"global.yes" = "Yes";
-"global.no" = "No";
-"global.cancel" = "Cancel";
-"global.error" = "Error";
+"global.ok" = "完成";
+"global.yes" = "是";
+"global.no" = "否";
+"global.cancel" = "取消";
+"global.error" = "错误";
 
 // Errors
-"error.socket.default_error.title" = "Oops!";
-"error.socket.default_error.message" = "Something wrong happened, please try again.";
+"error.socket.default_error.title" = "哎呀!";
+"error.socket.default_error.message" = "有错误，请再尝试.";
 
-"error.login.title" = "Oops!";
-"error.login.message" = "Something wrong happened while trying to login.";
+"error.login.title" = "哎呀!";
+"error.login.message" = "尝试登入时发生了错误.";
 
-"error.signup.title" = "Oops!";
-"error.signup.empty_input.message" = "All the fields are required for sign up.";
+"error.signup.title" = "哎呀!";
+"error.signup.empty_input.message" = "所有领域都需要注册.";
 
-"error.login_unauthorized.title" = "Oops!";
-"error.login_unauthorized.message" = "Your credentials were rejected! Please try again.";
+"error.login_unauthorized.title" = "哎呀!";
+"error.login_unauthorized.message" = "你的凭证已被拒绝，请再尝试.";
 
 // Alerts
-"alert.connection.invalid_url.title" = "Oops!";
-"alert.connection.invalid_url.message" = "The URL you entered is invalid. Check it and try again, please!";
+"alert.connection.invalid_url.title" = "哎呀!";
+"alert.connection.invalid_url.message" = "你输入的网址无效，请检查网址然后再试一次!";
 
-"alert.connection.not_secured.title" = "Oops!";
-"alert.connection.not_secured.message" = "Could not establish a secure connection to the server. Please make sure the server supports SSL.";
+"alert.connection.not_secured.title" = "哎呀!";
+"alert.connection.not_secured.message" = "无法与服务器简历安全连接，请确认服务器可以支持SSL.";
 
-"alert.connection.socket_error.title" = "Oops!";
-"alert.connection.socket_error.message" = "Could not connect to this server!";
+"alert.connection.socket_error.title" = "哎呀!";
+"alert.connection.socket_error.message" = "连接服务器无效!";
 
-"alert.connection.invalid_version.title" = "Oops!";
-"alert.connection.invalid_version.message" = "The server you're trying to connect is using a version that's not supported by the app anymore: %@.\n\nWe require version %@.";
+"alert.connection.invalid_version.title" = "哎呀!";
+"alert.connection.invalid_version.message" = "你尝试链接的服务器正在使用应用程序不再支持的版本: %@.\n\nWe require version %@.";
 
-"alert.settings.set_mail_app.title" = "Oops!";
-"alert.settings.set_mail_app.message" = "No Mail Accounts. Please set up a Mail account in order to send email.";
+"alert.settings.set_mail_app.title" = "哎呀!";
+"alert.settings.set_mail_app.message" = "没有邮件帐户。请设置邮件帐户以发送电子邮件.";
 
-"alert.feature.wip.title" = "Oops!";
-"alert.feature.wip.message" = "We're still working on this feature, stay tuned!";
+"alert.feature.wip.title" = "哎呀!";
+"alert.feature.wip.message" = "请继续关注，我们仍在研究此功能!";
 
-"alert.insecure_image.title" = "Insecure resource";
-"alert.insecure_image.message" = "The resource of the image is insecure and therefore not loaded. Only SSL resources are allowed.";
+"alert.insecure_image.title" = "不安全的资源";
+"alert.insecure_image.message" = "由于图像资源不安全因此未加载，仅允许SSL.";
 
-"alert.socket_error.invalid_user.title" = "Session expired";
-"alert.socket_error.invalid_user.message" = "Your session has expired. Please log in again.";
+"alert.socket_error.invalid_user.title" = "会话已过期";
+"alert.socket_error.invalid_user.message" = "您的会话已过期。请再次登录.";
 
-"alert.login_service_error.title" = "Authentication Error";
-"alert.login_service_error.message" = "Could not authenticate using this service. Please try again.";
+"alert.login_service_error.title" = "授权错误";
+"alert.login_service_error.message" = "无法使用此服务进行身份验证。请再尝试.";
 
-"alert.authorization_error.title" = "Authorization Error";
-"alert.authorization_error.create_channel.description" = "You can't create channels";
+"alert.authorization_error.title" = "授权错误";
+"alert.authorization_error.create_channel.description" = "您无法建立通道";
 
-"alert.unsupported_feature.title" = "Feature not supported";
-"alert.unsupported_feature.message" = "This server's version is: %@. This feature is only supported in versions %@ and above.";
+"alert.unsupported_feature.title" = "此功能不被支持";
+"alert.unsupported_feature.message" = "这个服务器的版本是: %@. 此功能仅在版本中受支持 %@ 或以上.";
 
-"alert.push_token_error.title" = "Warning";
-"alert.push_token_error.message" = "You may still receive push notifications from this server due to a problem with servers of version below 0.60.0.";
+"alert.push_token_error.title" = "警告";
+"alert.push_token_error.message" = "由于版本低于0.60.0的服务器出现问题，您仍可能会收到来自此服务器的推送通知。";
 
-"alert.upload_error.title" = "Upload Error";
-"alert.upload_error.message" = "Something wrong happened when uploading your file. Please try again.";
+"alert.upload_error.title" = "上传错误";
+"alert.upload_error.message" = "上传文件时发生错误，请再尝试";
 
-"alert.upload_dialog.title" = "Upload file";
-"alert.upload_dialog.placeholder.title" = "Title";
-"alert.upload_dialog.placeholder.description" = "Description";
-"alert.upload_dialog.action.upload" = "Upload";
+"alert.upload_dialog.title" = "上传文件";
+"alert.upload_dialog.placeholder.title" = "标题";
+"alert.upload_dialog.placeholder.description" = "描述";
+"alert.upload_dialog.action.upload" = "上传";
 
-"alert.email_verification.title" = "Email verification";
-"alert.email_verification.message" = "We have sent you an email to confirm your registration. If you do not receive an email shortly, please come back and try again.";
+"alert.email_verification.title" = "电子邮件验证";
+"alert.email_verification.message" = "我们已向您发送电子邮件以确认您的注册。如果您没有收到电子邮件，请回来再试一次。";
 
-"alert.discarding_changes.title" = "Unsaved changes";
-"alert.discarding_changes.message" = "Your unsaved changes have been discarded.";
-"alert.load_profile_error.title" = "Failed to load your profile";
-"alert.load_profile_error.message" = "Something wrong happened when loading your profile. Please try again.";
-"alert.password_mismatch_error.title" = "Your password doesn't match";
-"alert.password_mismatch_error.message" = "The confirmation field doesn't match with the password you've provided. Please check it and try again.";
-"alert.update_profile_error.title" = "Failed to update";
-"alert.update_profile_error.message" = "Something wrong happened when updating your profile. Please try again.";
-"alert.update_password_error.title" = "Failed to change password";
-"alert.update_password_error.message" = "Something wrong happened when changing your password. Please try again.";
-"alert.update_profile_empty_fields.title" = "Please fill the empty fields";
-"alert.update_profile_empty_fields.message" = "All your profile information are required and can't stay blank";
-"alert.update_profile_invalid_email.title" = "Invalid e-mail";
-"alert.update_profile_invalid_email.message" = "It seems that the e-mail you've entered is invalid. Please fix it and try again.";
-"alert.password_empty_fields.title" = "Please fill the empty fields";
-"alert.password_empty_fields.message" = "Fill up the password and confirmation fields so you can update your password.";
-"alert.update_profile_success.title" = "Profile updated";
-"alert.update_password_success.title" = "Password updated";
+"alert.discarding_changes.title" = "未保存的更改";
+"alert.discarding_changes.message" = "您未保存的更改已被放弃";
+"alert.load_profile_error.title" = "无法加载您的个人资料";
+"alert.load_profile_error.message" = "加载您的个人资料时发生了错误。请再尝试.";
+"alert.password_mismatch_error.title" = "您的密码不匹配";
+"alert.password_mismatch_error.message" = "确认栏目与您提供的密码不匹配。请检查并重试.";
+"alert.update_profile_error.title" = "无法更新";
+"alert.update_profile_error.message" = "更新个人资料时发生了错误。请再尝试";
+"alert.update_password_error.title" = "无法更改密码";
+"alert.update_password_error.message" = "更改密码时发生了错误。请再试一次.";
+"alert.update_profile_empty_fields.title" = "请填空字段";
+"alert.update_profile_empty_fields.message" = "请填入您所有个人资料，不能留空";
+"alert.update_profile_invalid_email.title" = "电邮地址无效";
+"alert.update_profile_invalid_email.message" = "您输入的电子邮件似乎无效。请修复它，然后再试一次.";
+"alert.password_empty_fields.title" = "请填空字段";
+"alert.password_empty_fields.message" = "填写密码和确认字段，以便更新密码.";
+"alert.update_profile_success.title" = "资料已更新";
+"alert.update_password_success.title" = "密码已更新";
 
-"alert.logout.confirmation.title" = "Logout from this server";
-"alert.logout.confirmation.message" = "Are you sure you want to logout from \"%@\"?";
-"alert.logout.confirmation.confirm" = "Yes, logout";
+"alert.logout.confirmation.title" = "从此服务器注销";
+"alert.logout.confirmation.message" = "您确定要从这退出 \"%@\"?";
+"alert.logout.confirmation.confirm" = "是的，退出";
 
 // Connection Redirect
-"connection.server.redirect.alert.title" = "Server changed it's URL";
-"connection.server.redirect.alert.message" = "Looks like this server changed it's URL to:\n\n%@\n\nWould you like to update the URL?";
-"connection.server.redirect.alert.confirm" = "Yes, change the URL";
+"connection.server.redirect.alert.title" = "服务器更改了它的URL";
+"connection.server.redirect.alert.message" = "看起来这个服务器将其URL更改为:\n\n%@\n\您要更新网址吗?";
+"connection.server.redirect.alert.confirm" = "是的，请更改网址";
 
 // Socket Connection
-"connection.title" = "Sign in to your server";
-"connection.button_connect" = "Connect";
+"connection.title" = "登录您的服务器";
+"connection.button_connect" = "连结";
 "connection.server_url.placeholder" = "your-company.rocket.chat";
-"connection.offline.banner.message" = "You're offline, try connecting again";
-"connection.connecting.banner.message" = "Connecting...";
-"connection.waiting_for_network.banner.message" = "Waiting for network";
+"connection.offline.banner.message" = "您已离线，请尝试重新连接";
+"connection.connecting.banner.message" = "正在链接";
+"connection.waiting_for_network.banner.message" = "等待网络";
 
 // Onboarding
-"onboarding.label_welcome" = "Welcome to Rocket Chat";
-"onboarding.label_subtitle" = "Team Communication";
-"onboarding.button_connect_server" = "Connect to a server";
-"onboarding.button_create_server" = "Create a new workspace";
-"onboarding.button_join_community_prefix" = "Join the community";
+"onboarding.label_welcome" = "欢迎来到Rocket Chat";
+"onboarding.label_subtitle" = "团队沟通";
+"onboarding.button_connect_server" = "连接到服务器";
+"onboarding.button_create_server" = "创建一个新工作区";
+"onboarding.button_join_community_prefix" = "加入社区";
 
 // Auth
-"auth.connect.button_connect" = "Connect";
-"auth.connect.ssl_required" = "It is required that your server supports SSL";
-"auth.connect.connecting" = "Connection in progress. Hold tight";
-"auth.email_auth_prefix" = "Login with ";
-"auth.email_auth" = "e-mail";
-"auth.login_service_prefix" = "Continue with ";
+"auth.connect.button_connect" = "连结";
+"auth.connect.ssl_required" = "您的服务器必须支持SSL";
+"auth.connect.connecting" = "正在连接。抓紧";
+"auth.email_auth_prefix" = "登录";
+"auth.email_auth" = "电子邮件";
+"auth.login_service_prefix" = "继续";
 
-"auth.signup_title" = "Sign up";
-"auth.signup.button_register" = "Register";
-"auth.signup.button_next" = "Next";
-"auth.signup.custom_fields_title" = "Complete your registration";
+"auth.signup_title" = "注册";
+"auth.signup.button_register" = "注册";
+"auth.signup.button_next" = "下一个";
+"auth.signup.custom_fields_title" = "完成注册";
 
-"auth.login.login_title" = "Login";
-"auth.login.button_login_title" = "Login";
-"auth.login.create_account_prefix" = "Don't have an account?";
-"auth.login.create_account" = "\nCreate an Account";
-"auth.login.username.placeholder" = "Email or username";
-"auth.login.password.placeholder" = "Password";
-"auth.login.buttonRegister" = "Create new account";
-"auth.login.buttonResetPassword" = "Forgot password";
-"auth.login.agree_label" = "By proceeding you are agreeing to our";
-"auth.login.agree_and" = "and";
-"auth.login.agree_termsofservice" = "Terms of Service";
-"auth.login.agree_privacypolicy" = "Privacy Policy";
+"auth.login.login_title" = "登录";
+"auth.login.button_login_title" = "登录";
+"auth.login.create_account_prefix" = "没有帐户?";
+"auth.login.create_account" = "\n创建一个帐户";
+"auth.login.username.placeholder" = "电子邮件或用户名";
+"auth.login.password.placeholder" = "密码";
+"auth.login.buttonRegister" = "建立新帐户";
+"auth.login.buttonResetPassword" = "忘记密码";
+"auth.login.agree_label" = "通过执行，您同意我们的";
+"auth.login.agree_and" = "和";
+"auth.login.agree_termsofservice" = "服务条款";
+"auth.login.agree_privacypolicy" = "隐私政策";
 
-"auth.forgot_password.title" = "Forgot your password?";
-"auth.forgot_password.message" = "Enter your e-mail";
-"auth.forgot_password.success" = "If this email is registered, we'll send instructions on how to reset your password. If you do not receive an email shortly, please come back and try again.";
+"auth.forgot_password.title" = "忘记密码了吗?";
+"auth.forgot_password.message" = "输入您的电子邮件";
+"auth.forgot_password.success" = "如果此电子邮件已注册，我们将发送有关如何重置密码的说明。如果您没有收到电子邮件，请回来再试一次.";
 
 // Subscriptions
-"subscriptions.search" = "Search";
-"subscriptions.search_results" = "Results";
-"subscriptions.search.load_more_results" = "Load more results";
-"subscriptions.unreads" = "Unreads";
-"subscriptions.favorites" = "Favorites";
-"subscriptions.channels" = "Channels";
-"subscriptions.groups" = "Private Groups";
-"subscriptions.direct_messages" = "Direct Messages";
-"subscriptions.conversations" = "Conversations";
-"subscriptions.you" = "you";
-"subscriptions.messages" = "Messages";
-"subscriptions.list.you_initial" = "You";
-"subscriptions.list.no_message" = "No message";
-"subscriptions.list.sent_an_attachment" = "sent an attachment";
-"subscriptions.list.date.yesterday" = "Yesterday";
-"subscriptions.list.actions.read" = "Read";
-"subscriptions.list.actions.unread" = "Unread";
-"subscriptions.list.actions.favorite" = "Favorite";
-"subscriptions.list.actions.unfavorite" = "Unfavorite";
-"subscriptions.list.actions.hide" = "Hide";
+"subscriptions.search" = "搜索";
+"subscriptions.search_results" = "结果";
+"subscriptions.search.load_more_results" = "加载更多结果";
+"subscriptions.unreads" = "未读";
+"subscriptions.favorites" = "最爱";
+"subscriptions.channels" = "渠道";
+"subscriptions.groups" = "私人团体";
+"subscriptions.direct_messages" = "直接消息";
+"subscriptions.conversations" = "对话";
+"subscriptions.you" = "您";
+"subscriptions.messages" = "消息";
+"subscriptions.list.you_initial" = "您";
+"subscriptions.list.no_message" = "没有消息";
+"subscriptions.list.sent_an_attachment" = "寄了一个附件";
+"subscriptions.list.date.yesterday" = "昨天";
+"subscriptions.list.actions.read" = "已读";
+"subscriptions.list.actions.unread" = "未读";
+"subscriptions.list.actions.favorite" = "最爱";
+"subscriptions.list.actions.unfavorite" = "取消收藏";
+"subscriptions.list.actions.hide" = "隐藏";
 
 // Servers
-"servers.add_new_team" = "Add new Team";
-"servers.title" = "Servers";
-"servers.add_new_server" = "Add Server";
-"servers.action.disconnect" = "Disconnect";
-"servers.action.disconnect.alert.title" = "Disconnect from Server";
-"servers.action.disconnect.alert.message" = "Do you want to disconnect from \"%@\" server?";
-"servers.action.disconnect.alert.confirm" = "Yes, disconnect";
+"servers.add_new_team" = "添加新团队";
+"servers.title" = "服务器";
+"servers.add_new_server" = "添加服务器";
+"servers.action.disconnect" = "断开";
+"servers.action.disconnect.alert.title" = "断开与服务器的连接";
+"servers.action.disconnect.alert.message" = "请问您要断开\"%@\" 的服务器链接吗?";
+"servers.action.disconnect.alert.confirm" = "是的，断开连接";
 
 // Status
-"status.online" = "Online";
-"status.away" = "Away";
-"status.busy" = "Busy";
-"status.offline" = "Offline";
-"status.invisible" = "Invisible";
+"status.online" = "在线";
+"status.away" = "离开";
+"status.busy" = "在忙";
+"status.offline" = "离线";
+"status.invisible" = "无形";
 
 // New Room View
-"new_room.title" = "New Channel";
-"new_room.buttons.create" = "Create";
-"new_room.cell.public_channel.title" = "Public Channel";
-"new_room.cell.public_channel.description" = "Everyone can access this channel";
-"new_room.cell.public_channel.description.public_only" = "You can only create public channels";
-"new_room.cell.public_channel.description.private_only" = "You can only create private channels";
-"new_room.cell.read_only.title" = "Read only channel";
-"new_room.cell.read_only.description" = "Only authorized members can write new messages";
-"new_room.group.channel.name" = "Channel Name";
-"new_room.cell.channel_name.title" = "Channel Name";
-"new_room.group.invite_users" = "Invite users";
-"new_room.cell.invite_users.placeholder" = "Usernames";
+"new_room.title" = "新通道";
+"new_room.buttons.create" = "创建";
+"new_room.cell.public_channel.title" = "公共通道";
+"new_room.cell.public_channel.description" = "每个人都可以访问此通道";
+"new_room.cell.public_channel.description.public_only" = "您只能创建公共通道";
+"new_room.cell.public_channel.description.private_only" = "您只能创建私人通道";
+"new_room.cell.read_only.title" = "只读通道";
+"new_room.cell.read_only.description" = "只有授权成员才能编写新邮件";
+"new_room.group.channel.name" = "通道名称";
+"new_room.cell.channel_name.title" = "通道名称";
+"new_room.group.invite_users" = "邀请用户";
+"new_room.cell.invite_users.placeholder" = "用户名";
 
 // Notifications
-"notifications.action.reply" = "Reply";
+"notifications.action.reply" = "回复";
 
 // Chat
-"chat.channel_preview_view.title" = "This is a preview of #%@";
-"chat.channel_preview_view.join" = "Join Channel";
-"chat.dm.start_conversation" = "This is the start of your conversation with %@";
-"chat.channel.start_conversation" = "This is the start of the conversation on %@";
-"chat.read_only" = "This room is read only";
-"chat.muted" = "You have been muted";
-"chat.loading_messages" = "Loading messages...";
-"chat.unread_separator" = "New Messages";
-"chat.preview.actions.read" = "Mark as read";
-"chat.preview.actions.unread" = "Mark as unread";
-"chat.preview.actions.favorite" = "Favorite";
-"chat.preview.actions.unfavorite" = "Unfavorite";
-"chat.preview.actions.hide" = "Hide";
+"chat.channel_preview_view.title" = "这是预览 #%@";
+"chat.channel_preview_view.join" = "加入通道";
+"chat.dm.start_conversation" = "这是您会话的开始 %@";
+"chat.channel.start_conversation" = "这是谈话的开始%@";
+"chat.read_only" = "这房间只供阅读";
+"chat.muted" = "你已经静音";
+"chat.loading_messages" = "正在载入讯息";
+"chat.unread_separator" = "新消息";
+"chat.preview.actions.read" = "标记为已读";
+"chat.preview.actions.unread" = "标记为未阅读";
+"chat.preview.actions.favorite" = "喜爱";
+"chat.preview.actions.unfavorite" = "取消收藏";
+"chat.preview.actions.hide" = "隐藏";
 
 // Read Receipts
-"chat.read_receipt_list.title" = "Read by";
-"chat.read_receipt_list.title.loading" = "Loading...";
-"chat.read_receipt_list.title.empty" = "Read by no one";
+"chat.read_receipt_list.title" = "阅读";
+"chat.read_receipt_list.title.loading" = "正在登录...";
+"chat.read_receipt_list.title.empty" = "空文件";
 
 // Chat Message Actions
-"chat.message.actions.info" = "Message info";
-"chat.message.actions.react" = "Add Reaction";
-"chat.message.actions.block" = "Block messages from user";
-"chat.message.actions.report" = "Report Message";
-"chat.message.actions.edit" = "Edit";
-"chat.message.actions.copy" = "Copy";
-"chat.message.actions.pin" = "Pin";
-"chat.message.actions.unpin" = "Unpin";
-"chat.message.actions.star" = "Star";
-"chat.message.actions.unstar" = "Unstar";
-"chat.message.actions.quote" = "Quote";
-"chat.message.actions.reply" = "Reply";
-"chat.message.actions.delete" = "Delete message";
-"chat.message.actions.delete.confirm.title" = "Delete this message?";
-"chat.message.actions.delete.confirm.message" = "Are you sure you want to delete this message? This process can't be undone.";
-"chat.message.actions.delete.confirm.yes" = "Yes, delete";
-"chat.message.actions.discard" = "Discard message";
-"chat.message.actions.discard.confirm.title" = "Discard this message?";
-"chat.message.actions.discard.confirm.message" = "This message was not yet sent. Do you want to discard it? This process can't be undone.";
-"chat.message.actions.discard.confirm.yes" = "Yes, discard";
-"chat.message.actions.resend" = "Resend";
-"chat.message.actions.resend_all" = "Resend all";
+"chat.message.actions.info" = "消息信息";
+"chat.message.actions.react" = "添加反应";
+"chat.message.actions.block" = "拉黑来自用户的消息";
+"chat.message.actions.report" = "报告消息";
+"chat.message.actions.edit" = "编辑";
+"chat.message.actions.copy" = "复制";
+"chat.message.actions.pin" = "固定";
+"chat.message.actions.unpin" = "取消固定";
+"chat.message.actions.star" = "星号";
+"chat.message.actions.unstar" = "取消星号标记";
+"chat.message.actions.quote" = "引用";
+"chat.message.actions.reply" = "回复";
+"chat.message.actions.delete" = "删除消息";
+"chat.message.actions.delete.confirm.title" = "删除此消息?";
+"chat.message.actions.delete.confirm.message" = "你确定要删除这条消息吗？这个过程无法撤消.";
+"chat.message.actions.delete.confirm.yes" = "是的，删除";
+"chat.message.actions.discard" = "放弃消息";
+"chat.message.actions.discard.confirm.title" = "放弃这消息吗?";
+"chat.message.actions.discard.confirm.message" = "此消息尚未发送。你想放弃吗？这个过程无法撤消.";
+"chat.message.actions.discard.confirm.yes" = "是的，放弃";
+"chat.message.actions.resend" = "重发";
+"chat.message.actions.resend_all" = "全部重发";
 
 // Chat Message Report
-"chat.message.report.success.title" = "Message Reported";
-"chat.message.report.success.message" = "Message reported successfully, thank you!";
+"chat.message.report.success.title" = "消息报告";
+"chat.message.report.success.message" = "消息报告成功，谢谢!";
 
 // Chat Upload
-"chat.upload.uploading_image" = "Uploading image";
-"chat.upload.uploading_video" = "Uploading video";
-"chat.upload.uploading_file" = "Uploading \"%@\"";
-"chat.upload.take_photo" = "Take a photo";
-"chat.upload.shoot_video" = "Record video";
-"chat.upload.choose_from_library" = "Choose from library";
-"chat.upload.import_file" = "Attach files";
-"chat.upload.draw" = "Draw something";
+"chat.upload.uploading_image" = "正在上传图片";
+"chat.upload.uploading_video" = "正在上传影片";
+"chat.upload.uploading_file" = "正在上传";
+"chat.upload.take_photo" = "拍照";
+"chat.upload.shoot_video" = "录视频";
+"chat.upload.choose_from_library" = "从图书馆挑选";
+"chat.upload.import_file" = "附加文件";
+"chat.upload.draw" = "画一些东西";
+
 
 // Chat Download
-"chat.download.downloading_file" = "Downloading \"%@\"";
+"chat.download.downloading_file" = "正在下载 \"%@\"";
 
 // Chat Cell Static Messages
-"chat.message.open_file" = "Tap to open the file";
-"chat.message.open_browser" = "Open in Browser";
+"chat.message.open_file" = "点按即可打开该文件";
+"chat.message.open_browser" = "在浏览器中打开";
 
 // Chat Drawing
-"chat.drawing.errorTitle" = "Oops!";
-"chat.drawing.messageTitle" = "You have to draw something before sending it.";
-"chat.drawing.fileName" = "Drawing";
-"chat.drawing.settings.opacity" = "Opacity";
-"chat.drawing.settings.width" = "Width";
-"chat.drawing.settings.color.selected" = "Selected color";
-"chat.drawing.settings.color.others" = "Choose color below:";
+"chat.drawing.errorTitle" = "哎呀!";
+"chat.drawing.messageTitle" = "你必须在发送之前画一些东西.";
+"chat.drawing.fileName" = "画画";
+"chat.drawing.settings.opacity" = "不透明度";
+"chat.drawing.settings.width" = "宽度";
+"chat.drawing.settings.color.selected" = "选择颜色";
+"chat.drawing.settings.color.others" = "选择以下的颜色:";
 
 // Chat Typing
-"chat.users_are_typing" = "%@ are typing...";
-"chat.user_is_typing" = "%@ is typing...";
-"chat.typing" = "typing...";
-"chat.several_typing" = "several users are typing...";
+"chat.users_are_typing" = "%@ 正在输入...";
+"chat.user_is_typing" = "%@ 正在输入...";
+"chat.typing" = "输入中...";
+"chat.several_typing" = "几个用户正在输入...";
 
 // Message Types
-"chat.message.type.room_name_changed" = "Room name changed to: %@ by %@";
-"chat.message.type.user_added_by" = "User %@ added by %@";
-"chat.message.type.user_removed_by" = "User %@ removed by %@";
-"chat.message.type.user_left" = "Has left the channel";
-"chat.message.type.user_joined" = "Has joined the channel";
-"chat.message.type.user_muted" = "User %@ muted by %@";
-"chat.message.type.user_unmuted" = "User %@ unmuted by %@";
-"chat.message.type.welcome" = "Welcome %@";
-"chat.message.type.message_removed" = "Message removed";
-"chat.message.type.subscription_role_added" = "%@ was set %@ by %@";
-"chat.message.type.subscription_role_removed" = "%@ is no longer %@ by %@";
-"chat.message.type.room_archived" = "This room has been archived by %@";
-"chat.message.type.room_unarchived" = "This room has been unarchived by %@";
-"chat.message.type.message_pinned" = "Pinned a message:";
-"chat.message.type.message_snippeted" = "Created a snippet: \"%@\"";
-"chat.message.type.room_changed_privacy" = "Room privacy changed to \"%@\" by %@";
-"chat.message.type.room_changed_topic" = "Room topic changed to \"%@\" by %@";
-"chat.message.type.room_changed_announcement" = "Room annoucement changed to \"%@\" by %@";
-"chat.message.type.room_changed_description" = "Room description changed to \"%@\" by %@";
+"chat.message.type.room_name_changed" = "房间名称改为: %@ by %@";
+"chat.message.type.user_added_by" = "用户 %@ 被加入 %@";
+"chat.message.type.user_removed_by" = "用户 %@删除%@";
+"chat.message.type.user_left" = "离开了通道";
+"chat.message.type.user_joined" = "加入了通道";
+"chat.message.type.user_muted" = "用户 %@ 静音 %@";
+"chat.message.type.user_unmuted" = "用户 %@没有静音 %@";
+"chat.message.type.welcome" = "欢迎 %@";
+"chat.message.type.message_removed" = "消息已删除";
+"chat.message.type.subscription_role_added" = "%@被设定了 %@ 由 %@";
+"chat.message.type.subscription_role_removed" = "%@ 不再是%@ 由 %@";
+"chat.message.type.room_archived" = "这个房间已经存档 %@";
+"chat.message.type.room_unarchived" = "这个房间已被取消归档 %@";
+"chat.message.type.message_pinned" = "固定消息:";
+"chat.message.type.message_snippeted" = "创建了一个片段: \"%@\"";
+"chat.message.type.room_changed_privacy" = "房间隐私改为 \"%@\" 由 %@";
+"chat.message.type.room_changed_topic" = "房间主题改为 \"%@\" 由  %@";
+"chat.message.type.room_changed_announcement" = "房间公告改为 \"%@\" 由  %@";
+"chat.message.type.room_changed_description" = "房间描述改为 \"%@\" 由  %@";
 
 // Chat Information
-"chat.info.title" = "Info";
-"chat.info.item.topic" = "Topic";
-"chat.info.item.no_topic" = "No topic";
-"chat.info.item.description" = "Description";
-"chat.info.item.no_description" = "No description";
-"chat.info.item.members" = "Members";
-"chat.info.item.pinned" = "Pinned";
-"chat.info.item.starred" = "Starred";
-"chat.info.item.mentions" = "Mentions";
-"chat.info.item.notifications" = "Notifications";
-"chat.info.item.files" = "Files";
-"chat.info.item.share" = "Share";
+"chat.info.title" = "信息";
+"chat.info.item.topic" = "主题";
+"chat.info.item.no_topic" = "没主题";
+"chat.info.item.description" = "描述";
+"chat.info.item.no_description" = "没描述";
+"chat.info.item.members" = "会员";
+"chat.info.item.pinned" = "已固定";
+"chat.info.item.starred" = "主演";
+"chat.info.item.mentions" = "提及";
+"chat.info.item.notifications" = "通知";
+"chat.info.item.files" = "文件";
+"chat.info.item.share" = "分享";
 
 // Members List
-"chat.members.list.title" = "Members";
+"chat.members.list.title" = "会员";
 
 // Add Users
-"chat.add_users.title" = "Add Users";
-"chat.add_users.confirm.title" = "Add this user?";
-"chat.add_users.confirm.message" = "Are you sure you want to add '%@' to '%@'?";
+"chat.add_users.title" = "添加用户";
+"chat.add_users.confirm.title" = "添加这用户吗?";
+"chat.add_users.confirm.message" = "您确定要添加 '%@' to '%@'?";
 
 // Messages List
-"chat.messages.list.title" = "Messages";
-"chat.messages.list.empty" = "No messages found";
-"chat.messages.list.search.placeholder" = "Search messages";
-"chat.messages.pinned.list.title" = "Pinned Messages";
-"chat.messages.starred.list.title" = "Starred Messages";
-"chat.messages.mentions.list.title" = "Mentions";
-"chat.messages.files.list.title" = "Files";
-"chat.messages.files.list.empty" = "No files found";
+"chat.messages.list.title" = "消息";
+"chat.messages.list.empty" = "没有找到消息";
+"chat.messages.list.search.placeholder" = "搜索信息";
+"chat.messages.pinned.list.title" = "固定内容";
+"chat.messages.starred.list.title" = "主要消息";
+"chat.messages.mentions.list.title" = "涉及";
+"chat.messages.files.list.title" = "文件";
+"chat.messages.files.list.empty" = "没有找到文件";
 
 // Upload Banner
-"chat.banner.upload.uploading" = "Uploading %@";
-"chat.banner.upload.error" = "Failed uploading %@";
-"chat.banner.upload.retry" = "Try again";
+"chat.banner.upload.uploading" = "正在更新 %@";
+"chat.banner.upload.error" = "更新失败 %@";
+"chat.banner.upload.retry" = "再次尝试";
 
 // Settings
-"myaccount.settings.title" = "Preferences";
-"myaccount.settings.administration" = "Administration";
-"myaccount.settings.logout" = "Logout from %@";
-"myaccount.settings.contactus" = "Contact us";
-"myaccount.settings.profile" = "Profile";
-"myaccount.settings.license" = "License";
-"myaccount.settings.language" = "Language";
-"myaccount.settings.appicon" = "Application Icon";
-"myaccount.settings.review" = "Review this App";
-"myaccount.settings.share" = "Share this App";
-"myaccount.settings.version" = "Version: %@ (%@)";
-"myaccount.settings.server_version" = "Server Version: %@";
-"myaccount.settings.web_browser" = "Web Browser";
-"myaccount.settings.tracking.title" = "Send Crash Report";
-"myaccount.settings.tracking.footer" = "We never track the content of your chats. The crash report only contains relevant information for us in order to identify problems and fix it.";
+"myaccount.settings.title" = "喜好";
+"myaccount.settings.administration" = "管理";
+"myaccount.settings.logout" = "退出 %@";
+"myaccount.settings.contactus" = "联系我们";
+"myaccount.settings.profile" = " 个人资料 ";
+"myaccount.settings.license" = "执照";
+"myaccount.settings.language" = "语言";
+"myaccount.settings.appicon" = "应用图标";
+"myaccount.settings.review" = "查看此应用程序";
+"myaccount.settings.share" = "分享这个应用程式";
+"myaccount.settings.version" = "版本: %@ (%@)";
+"myaccount.settings.server_version" = "服务器版本: %@";
+"myaccount.settings.web_browser" = "网页浏览器";
+"myaccount.settings.tracking.title" = "发送紧急报告";
+"myaccount.settings.tracking.footer" = "我们从不跟踪您的聊天内容。紧急报告仅包含我们的相关信息，以便识别问题并进行修复.";
 
 // Change Application Icon
-"myaccount.settings.changeicon.title" = "Choose an icon";
-"myaccount.settings.changeicon.header" = "You can change how your Rocket.Chat icon looks like on your device. Please choose one of the icons below, whichever you like the most.";
-"myaccount.settings.changeicon.errortitle" = "Cannot change icon";
-"myaccount.settings.changeicon.iosversion" = "Alternate application icons are not supported on iOS version below 10.3";
+"myaccount.settings.changeicon.title" = "选择一个图标";
+"myaccount.settings.changeicon.header" = "您可以更改设备上Rocket.Chat图标的样子。请选择以下图标之一，无论您最喜欢哪一个.";
+"myaccount.settings.changeicon.errortitle" = "无法更改图标";
+"myaccount.settings.changeicon.iosversion" = "iOS 10以下版本不支持备用应用程序图标";
 
 // Change Language
-"myaccount.settings.language.title" = "Change Language";
-"myaccount.settings.language.reset" = "Reset to Default";
-"myaccount.settings.language.message" = "You have changed language settings. You must restart Rocket.Chat before the new settings will take effect.";
+"myaccount.settings.language.title" = "改变语言";
+"myaccount.settings.language.reset" = "重置为默认";
+"myaccount.settings.language.message" = "您已更改语言设置。您必须重新启动Rocket.Chat才能使新设置生效.";
 
 // Notifications preferences
-"myaccount.settings.notifications.title" = "Notification Preferences";
-"myaccount.settings.notifications.save" = "Save";
+"myaccount.settings.notifications.title" = "通知首选项";
+"myaccount.settings.notifications.save" = "保存";
 
-"myaccount.settings.notifications.receive.title" = "Receive Notifications";
-"myaccount.settings.notifications.receive.footer" = "Receive notifications from %@";
-"myaccount.settings.notifications.show.title" = "Show Unread Counter";
-"myaccount.settings.notifications.show.footer" = "Unread counter is displayed as a badge on to the right of the channel, in the list.";
+"myaccount.settings.notifications.receive.title" = "接收通知";
+"myaccount.settings.notifications.receive.footer" = "接收来自 %@的通知";
+"myaccount.settings.notifications.show.title" = "显示未读计数器";
+"myaccount.settings.notifications.show.footer" = "未读计数器在列表中显示为通道右侧的徽章.";
 
-"myaccount.settings.notifications.inapp" = "In-app and Desktop";
-"myaccount.settings.notifications.inapp.alerts" = "Alerts";
-"myaccount.settings.notifications.inapp.footer" = "Displays a banner at the top of the screen when the app is open, and displays a notification on desktop.";
+"myaccount.settings.notifications.inapp" = "应用程式和桌面";
+"myaccount.settings.notifications.inapp.alerts" = "警报";
+"myaccount.settings.notifications.inapp.footer" = "应用程序打开时在屏幕顶部显示横幅，并在桌面上显示通知.";
 
-"myaccount.settings.notifications.mobile" = "Push notifications";
-"myaccount.settings.notifications.mobile.alerts" = "Alerts";
-"myaccount.settings.notifications.mobile.footer" = "These notifications are delivered to your device when the app is not open.";
+"myaccount.settings.notifications.mobile" = "推送通知";
+"myaccount.settings.notifications.mobile.alerts" = "警报";
+"myaccount.settings.notifications.mobile.footer" = "当应用未打开时，这些通知会传送到您的设备.";
 
-"myaccount.settings.notifications.desktop" = "Desktop options";
-"myaccount.settings.notifications.desktop.audio" = "Audio";
-"myaccount.settings.notifications.desktop.sound" = "Sound";
-"myaccount.settings.notifications.desktop.duration" = "Notification Duration";
+"myaccount.settings.notifications.desktop" = "桌面选项";
+"myaccount.settings.notifications.desktop.audio" = "音频";
+"myaccount.settings.notifications.desktop.sound" = "声音";
+"myaccount.settings.notifications.desktop.duration" = "通知持续时间";
 
-"myaccount.settings.notifications.mail" = "Email";
-"myaccount.settings.notifications.email.alerts" = "Alerts";
+"myaccount.settings.notifications.mail" = "电子邮件";
+"myaccount.settings.notifications.email.alerts" = "警报";
 
-"myaccount.settings.notifications.duration.default" = "Default";
-"myaccount.settings.notifications.duration.seconds" = "seconds";
+"myaccount.settings.notifications.duration.default" = "默认";
+"myaccount.settings.notifications.duration.seconds" = "秒";
 
-"alert.update_notifications_preferences_success.title" = "Preferences saved";
+"alert.update_notifications_preferences_success.title" = "偏好已保存";
 
-"alert.update_notifications_preferences_save_error.title" = "Failed to update notifications preferences";
-"alert.update_notifications_preferences_save_error.message" = "Something wrong happened while saving your notification preferences. Please, try again.";
+"alert.update_notifications_preferences_save_error.title" = "无法更新通知首选项";
+"alert.update_notifications_preferences_save_error.message" = "保存通知首选项时发生了错误。请再试一次.";
 
 // Enum SubscriptionNotificationsStatus
-"subscription.notifications.status.default" = "Default";
-"subscription.notifications.status.nothing" = "Nothing";
-"subscription.notifications.status.all" = "All";
-"subscription.notifications.status.mentions" = "Mentions";
+"subscription.notifications.status.default" = "默认";
+"subscription.notifications.status.nothing" = "没有";
+"subscription.notifications.status.all" = "全部";
+"subscription.notifications.status.mentions" = "提及";
 
 // Enum SubscriptionNotificationsAudioValue
-"subscription.notifications.audio.value.none" = "None";
-"subscription.notifications.audio.value.default" = "Default";
-"subscription.notifications.audio.value.beep" = "Beep";
+"subscription.notifications.audio.value.none" = "没有";
+"subscription.notifications.audio.value.default" = "默认";
+"subscription.notifications.audio.value.beep" = "嘟";
 "subscription.notifications.audio.value.chelle" = "Chelle";
 "subscription.notifications.audio.value.ding" = "Ding";
-"subscription.notifications.audio.value.droplet" = "Droplet";
+"subscription.notifications.audio.value.droplet" = "水滴";
 "subscription.notifications.audio.value.highbell" = "Highbell";
-"subscription.notifications.audio.value.seasons" = "Seasons";
+"subscription.notifications.audio.value.seasons" = "四季";
 
 // Choose Web Browser
-"web_browser.safari.title" = "Safari";
-"web_browser.in_app_safari.title" = "In-App Browser";
+"web_browser.safari.title" = "苹果浏览器";
+"web_browser.in_app_safari.title" = "应用程序内浏览器";
 "web_browser.chrome.title" = "Chrome";
 "web_browser.opera.title" = "Opera Mini";
-"web_browser.firefox.title" = "Firefox";
-"myaccount.settings.web_browser.title" = "Web browser";
-"myaccount.settings.web_browser.footer" = "This application will be used to open links in Rocket Chat.";
+"web_browser.firefox.title" = "火狐";
+"myaccount.settings.web_browser.title" = "网页浏览器";
+"myaccount.settings.web_browser.footer" = "此应用程序将用于打开Rocket Chat中的链接.";
 
 // Update Profile
-"myaccount.settings.profile.title" = "Profile";
-"myaccount.settings.editing_profile.title" = "Edit Profile";
-"myaccount.settings.profile.actions.save" = "Save";
-"myaccount.settings.profile.actions.edit" = "Edit";
-"myaccount.settings.profile.actions.change_password" = "Change your password";
-"myaccount.settings.profile.section.profile" = "Profile";
-"myaccount.settings.profile.section.password" = "Password";
-"myaccount.settings.profile.name_placeholder" = "Name";
-"myaccount.settings.profile.username_placeholder" = "Username";
-"myaccount.settings.profile.email_placeholder" = "E-mail";
-"myaccount.settings.profile.status.title" = "Status";
-"myaccount.settings.profile.password_required.title" = "Enter your password";
-"myaccount.settings.profile.password_required.message" = "Your password is required when updating your e-mail.";
-"myaccount.settings.profile.password_required.placeholder" = "Password";
+"myaccount.settings.profile.title" = "个人资料";
+"myaccount.settings.editing_profile.title" = "编辑个人资料";
+"myaccount.settings.profile.actions.save" = "保存";
+"myaccount.settings.profile.actions.edit" = "编辑";
+"myaccount.settings.profile.actions.change_password" = "更改您的密码";
+"myaccount.settings.profile.section.profile" = "个人资料";
+"myaccount.settings.profile.section.password" = "密码";
+"myaccount.settings.profile.name_placeholder" = "名字";
+"myaccount.settings.profile.username_placeholder" = "用户名";
+"myaccount.settings.profile.email_placeholder" = "电子邮件";
+"myaccount.settings.profile.status.title" = "状态";
+"myaccount.settings.profile.password_required.title" = "输入您的密码";
+"myaccount.settings.profile.password_required.message" = "更新电子邮件时需要输入密码.";
+"myaccount.settings.profile.password_required.placeholder" = "密码";
 
 // New Password
-"myaccount.settings.profile.new_password.title" = "New password";
-"myaccount.settings.profile.new_password.section.password" = "Password";
-"myaccount.settings.profile.new_password.actions.save" = "Save";
-"myaccount.settings.profile.new_password.password_placeholder" = "New password";
-"myaccount.settings.profile.new_password.password_confirmation_placeholder" = "Password confirmation";
-"myaccount.settings.profile.new_password.password_required.title" = "Enter your password";
-"myaccount.settings.profile.new_password.password_required.message" = "Your current password is required when setting a new password.";
-"myaccount.settings.profile.new_password.password_required.placeholder" = "Password";
+"myaccount.settings.profile.new_password.title" = "新密码";
+"myaccount.settings.profile.new_password.section.password" = "密码";
+"myaccount.settings.profile.new_password.actions.save" = "保存";
+"myaccount.settings.profile.new_password.password_placeholder" = "新密码";
+"myaccount.settings.profile.new_password.password_confirmation_placeholder" = "密码确认";
+"myaccount.settings.profile.new_password.password_required.title" = "输入您的密码";
+"myaccount.settings.profile.new_password.password_required.message" = "设置新密码时需要您当前的密码.";
+"myaccount.settings.profile.new_password.password_required.placeholder" = "密码";
 
 // User Action Sheet
-"user_action_sheet.info" = "Information";
-"user_action_sheet.remove" = "Remove from room";
-"user_action_sheet.remove_confirm.title" = "Remove this user?";
-"user_action_sheet.remove_confirm.message" = "Are you sure you want to remove '%@' from the room?";
+"user_action_sheet.info" = "信息";
+"user_action_sheet.remove" = "从房间里取出";
+"user_action_sheet.remove_confirm.title" = "删除此用户?";
+"user_action_sheet.remove_confirm.message" = "您确定要从房间中删除'％@'吗？?";
 
 // User Details
-"user_details.status" = "Status";
-"user_details.role" = "Role";
-"user_details.roles" = "Roles";
-"user_details.email" = "Email";
-"user_details.emails" = "Emails";
-"user_details.timezone" = "Timezone";
-"user_details.message_button" = "Message";
-"user_details.voice_call_button" = "Voice Call";
-"user_details.video_call_button" = "Video Call";
+"user_details.status" = "状态";
+"user_details.role" = "角色";
+"user_details.roles" = "角色";
+"user_details.email" = "电子邮件";
+"user_details.emails" = "电子邮件";
+"user_details.timezone" = "时区";
+"user_details.message_button" = "信息";
+"user_details.voice_call_button" = "语音通话";
+"user_details.video_call_button" = "视频电话";
 
 // Theme
-"theme.settings.title" = "Theme";
-"theme.settings.header" = "ALL THEMES";
-"theme.settings.footer" = "Applying a theme will change how the app looks.";
-"theme.light" = "Light";
-"theme.dark" = "Dark";
-"theme.black" = "Black";
+"theme.settings.title" = "主题";
+"theme.settings.header" = "全部主题";
+"theme.settings.footer" = "应用主题将改变应用的外观.";
+"theme.light" = "光";
+"theme.dark" = "暗";
+"theme.black" = "黑";
 
 // Sorting & Grouping Subscriptions
-"subscriptions.sorting.title.alphabetical" = "Sorting by name";
-"subscriptions.sorting.title.activity" = "Sorting by activity";
-"subscriptions.sorting.alphabetical" = "Alphabetical";
-"subscriptions.sorting.activity" = "Activity";
-"subscriptions.grouping.type" = "Group by type";
-"subscriptions.grouping.favorites" = "Group by favorites";
-"subscriptions.grouping.unread_top" = "Unread on top";
+"subscriptions.sorting.title.alphabetical" = "按名称排序";
+"subscriptions.sorting.title.activity" = "按活动排序";
+"subscriptions.sorting.alphabetical" = "按英文字母顺序";
+"subscriptions.sorting.activity" = "活动";
+"subscriptions.grouping.type" = "按类型分组";
+"subscriptions.grouping.favorites" = "按收藏夹分组";
+"subscriptions.grouping.unread_top" = "顶部未读";
 
 // Shortcuts
-"shortcuts.type_message" = "Type message";
-"shortcuts.preferences" = "Preferences";
-"shortcuts.room_search" = "Rooms search";
-"shortcuts.room_selection" = "Room selection 1...9";
-"shortcuts.next_room" = "Next room";
-"shortcuts.previous_room" = "Previous room";
-"shortcuts.new_room" = "New room";
-"shortcuts.room_actions" = "Room actions";
-"shortcuts.upload_room" = "Upload to room";
-"shortcuts.search_messages" = "Search messages";
-"shortcuts.scroll_messages" = "Scroll messages";
-"shortcuts.reply_latest" = "Reply to latest";
-"shortcuts.server_selection" = "Server selection";
-"shortcuts.server_selection_numbers" = "Server selection 1...9";
-"shortcuts.add_server" = "Add server";
-"shortcuts.change_theme" = "Change theme";
-"shortcuts.send" = "Send";
-"shortcuts.new_line" = "New line";
+"shortcuts.type_message" = "输入消息";
+"shortcuts.preferences" = "喜好";
+"shortcuts.room_search" = "房间搜索";
+"shortcuts.room_selection" = "房间选择1...9";
+"shortcuts.next_room" = "下一个房间";
+"shortcuts.previous_room" = "以前的房间";
+"shortcuts.new_room" = "新房间";
+"shortcuts.room_actions" = "房间行动";
+"shortcuts.upload_room" = "上传到房间";
+"shortcuts.search_messages" = "搜索邮件";
+"shortcuts.scroll_messages" = "滚动消息";
+"shortcuts.reply_latest" = "回复最新";
+"shortcuts.server_selection" = "服务器选择";
+"shortcuts.server_selection_numbers" = "服务器选择1...9";
+"shortcuts.add_server" = "添加服务器";
+"shortcuts.change_theme" = "改变主题";
+"shortcuts.send" = "发送";
+"shortcuts.new_line" = "新线路";
 
 // Chat Components
-"chat.components.quote.replied" = "Replied";
-"chat.components.quote.pinned" = "Pinned";
-"chat.components.text_attachment.no_title" = "No title";
+"chat.components.quote.replied" = "回复";
+"chat.components.quote.pinned" = "固定";
+"chat.components.text_attachment.no_title" = "无标题";

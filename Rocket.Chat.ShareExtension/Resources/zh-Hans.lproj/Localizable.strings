@@ -6,29 +6,29 @@
   Copyright © 2018 Rocket.Chat. All rights reserved.
 */
 
-"global.ok" = "Ok";
+"global.ok" = "完成";
 
-"alert.no_servers.title" = "No servers";
-"alert.no_servers.message" = "You need to join at least one Rocket.Chat server in order to share something.";
+"alert.no_servers.title" = "没有服务器";
+"alert.no_servers.message" = "你至少要加入一个火箭。聊天服务器为了分享一些东西.";
 
-"servers.title" = "Servers";
+"servers.title" = "服务器";
 
-"rooms.title" = "Select Rooms";
-"rooms.section.server" = "Select server";
-"rooms.section.favorites" = "Favorites";
-"rooms.section.channels" = "Channels";
-"rooms.section.groups" = "Private Groups";
-"rooms.section.directMessages" = "Direct Messages";
+"rooms.title" = "选择房间";
+"rooms.section.server" = "选择服务器";
+"rooms.section.favorites" = "喜欢";
+"rooms.section.channels" = "通道";
+"rooms.section.groups" = "私人组";
+"rooms.section.directMessages" = "快速消息";
 
-"compose.title" = "Share";
-"compose.send" = "Send";
-"compose.cancel" = "Cancel";
-"compose.destination.to" = "To: ";
-"compose.file.name.placeholder" = "File name";
-"compose.file.description.placeholder" = "File description";
+"compose.title" = "分享";
+"compose.send" = "发送";
+"compose.cancel" = "取消";
+"compose.destination.to" = "来自: ";
+"compose.file.name.placeholder" = "文件名称";
+"compose.file.description.placeholder" = "文件描述";
 
-"report.success.title" = "Success";
-"report.success.message" = "Shared your content successfully.";
-"report.error.title" = "Error";
-"report.error.message" = "Something wrong happened while sending your content.";
-"report.cancelled.message" = "You cancelled the request. The message wasn't sent.";
+"report.success.title" = "成功";
+"report.success.message" = "成功分享您的内容.";
+"report.error.title" = "错误";
+"report.error.message" = "发送内容时发生了错误.";
+"report.cancelled.message" = "你取消了请求。消息没有发出.";

@@ -6,19 +6,18 @@
   Copyright © 2017 Rocket.Chat. All rights reserved.
 */
 
-"emojipicker.title" = "Choose a reaction";
-"searchbar.placeholder" = "Search for an emoji";
+"emojipicker.title" = "选择一个反应";
+"searchbar.placeholder" = "搜索表情符号";
 
-"categories.recent" = "FREQUENTLY USED";
-"categories.custom" = "CUSTOM";
-"categories.people" = "SMILEYS & PEOPLE";
-"categories.nature" = "ANIMALS & NATURE";
-"categories.food" = "FOOD & DRINK";
-"categories.activity" = "ACTIVITY";
-"categories.travel" = "TRAVEL & PLACES";
-"categories.objects" = "OBJECTS";
-"categories.symbols" = "SYMBOLS";
-"categories.flags" = "FLAGS";
+"categories.recent" = "经常使用";
+"categories.custom" = "习惯";
+"categories.people" = "笑脸 & 人物";
+"categories.nature" = "动物 & 自然";
+"categories.food" = "食物 & 饮料";
+"categories.activity" = "行为活动";
+"categories.travel" = "旅行 & 地区";
+"categories.objects" = "对象";
+"categories.symbols" = "符号";
+"categories.flags" = "标志";
 
-"reactorlist.title" = "Reactions";
-
+"reactorlist.title" = "反应";

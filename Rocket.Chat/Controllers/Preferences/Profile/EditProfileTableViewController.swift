@@ -20,15 +20,15 @@ final class EditProfileTableViewController: BaseTableViewController, MediaPicker
 
     //女
     @IBAction func womanClick(_ sender: Any) {
-        manImage.image = UIImage.init(named: "Checkmark")
+        manImage.image = UIImage.init(named: "select-after")
 
-        womanImage.image = UIImage.init(named: "icon_file")
+        womanImage.image = UIImage.init(named: "select-click")
     }
     //男
     @IBAction func manClick(_ sender: Any) {
-        womanImage.image = UIImage.init(named: "icon_file")
+        womanImage.image = UIImage.init(named: "select-after")
 
-        manImage.image = UIImage.init(named: "Checkmark")
+        manImage.image = UIImage.init(named: "select-click")
     }
     //女
     @IBOutlet weak var womanImage: UIImageView!

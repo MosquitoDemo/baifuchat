@@ -18,7 +18,7 @@ struct UnmanagedField: Equatable {
 struct UnmanagedAttachment: Equatable {
     var identifier: String
     var type: MessageType
-
+ 
     var isFile: Bool
     var collapsed: Bool
     var text: String?
