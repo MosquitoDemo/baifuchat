@@ -302,6 +302,7 @@ extension MessagesListViewController {
 
     func registerCells() {
     
+        collectionView.registerNib(ChatMessageSelfCell.self)
         collectionView.registerNib(ChatMessageCell.self)
         collectionView.registerNib(ChatLoaderCell.self)
         collectionView.registerNib(ChatMessageDaySeparator.self)
@@ -382,8 +383,8 @@ extension MessagesListViewController: UICollectionViewDataSource {
             cell.labelTitle.text = RCDateFormatter.date(date)
             return cell
         }
-
         return UICollectionViewCell()
+
     }
 }
 
@@ -408,7 +409,7 @@ extension MessagesListViewController: UICollectionViewDelegateFlowLayout {
         let cellData = data.cell(at: indexPath.row)
 
         if let message = cellData.message {
-            return CGSize(width: fullWidth, height: ChatMessageCell.cellMediaHeightFor(message: message, width: fullWidth, sequential: false))
+            return CGSize(width: fullWidth, height: ChatMessageSelfCell.cellMediaHeightFor(message: message, width: fullWidth, sequential: false))
         }
 
         if cellData.date != nil {

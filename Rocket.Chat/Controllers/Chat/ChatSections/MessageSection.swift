@@ -239,7 +239,7 @@ final class MessageSection: ChatSection {
                 message: object.message
             ).wrapped)
         } else if object.isSequential {
-            cells.append(SequentialMessageChatItem(
+            cells.append(BasicMessageChatItem(
                 user: user,
                 message: object.message
             ).wrapped)
