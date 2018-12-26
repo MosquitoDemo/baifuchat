@@ -25,3 +25,18 @@ struct UnreadMarkerChatItem: ChatItem, Differentiable {
         return identifier == source.identifier
     }
 }
+struct UnreadMarkerSelfChatItem: ChatItem, Differentiable {
+    var relatedReuseIdentifier: String {
+        return UnreadMarkerCell.identifier
+    }
+    
+    var identifier: String
+    
+    var differenceIdentifier: String {
+        return identifier
+    }
+    
+    func isContentEqual(to source: UnreadMarkerSelfChatItem) -> Bool {
+        return identifier == source.identifier
+    }
+}

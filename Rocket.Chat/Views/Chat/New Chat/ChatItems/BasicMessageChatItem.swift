@@ -45,3 +45,40 @@ final class BasicMessageChatItem: BaseMessageChatItem, ChatItem, Differentiable 
             message.updatedAt?.timeIntervalSince1970 == sourceMessage.updatedAt?.timeIntervalSince1970
     }
 }
+final class BasicMessageSelfChatItem: BaseMessageChatItem, ChatItem, Differentiable {
+    
+    
+    var relatedReuseIdentifier: String {
+        return BasicMessageSelfCell.identifier
+    }
+    
+    init(user: UnmanagedUser, message: UnmanagedMessage) {
+        super.init(
+            user: user,
+            message: message
+        )
+    }
+    
+    var differenceIdentifier: String {
+        return (user?.differenceIdentifier ?? "") + (message?.identifier ?? "")
+    }
+    
+    func isContentEqual(to source: BasicMessageSelfChatItem) -> Bool {
+        guard
+            let user = user,
+            let sourceUser = source.user,
+            let message = message,
+            let sourceMessage = source.message
+            else {
+                return false
+        }
+        
+        return
+            user.name == sourceUser.name &&
+                user.username == sourceUser.username &&
+                message.temporary == sourceMessage.temporary &&
+                message.failed == sourceMessage.failed &&
+                message.text == sourceMessage.text &&
+                message.updatedAt?.timeIntervalSince1970 == sourceMessage.updatedAt?.timeIntervalSince1970
+    }
+}

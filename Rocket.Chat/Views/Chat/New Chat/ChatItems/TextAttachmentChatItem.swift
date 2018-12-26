@@ -11,6 +11,9 @@ import DifferenceKit
 import RocketChatViewController
 import RealmSwift
 
+
+
+/// TextAttachmentChatItem 别人发送的消息
 final class TextAttachmentChatItem: BaseTextAttachmentChatItem, ChatItem, Differentiable {
     var relatedReuseIdentifier: String {
         return hasText ? TextAttachmentCell.identifier : TextAttachmentMessageCell.identifier
@@ -54,6 +57,55 @@ final class TextAttachmentChatItem: BaseTextAttachmentChatItem, ChatItem, Differ
     }
 
     func isContentEqual(to source: TextAttachmentChatItem) -> Bool {
+        return collapsed == source.collapsed && fields == source.fields
+    }
+}
+
+
+/// TextAttachmentSelfChatItem 自己发送的消息
+final class TextAttachmentSelfChatItem: BaseTextAttachmentChatItem, ChatItem, Differentiable {
+    var relatedReuseIdentifier: String {
+        return hasText ? TextAttachmentCell.identifier : TextAttachmentMessageCell.identifier
+    }
+    
+    let identifier: String
+    let title: String
+    let subtitle: String?
+    let fields: [UnmanagedField]
+    let color: String?
+    let hasText: Bool
+    
+    init(
+        identifier: String,
+        fields: [UnmanagedField],
+        title: String,
+        subtitle: String?,
+        color: String?,
+        collapsed: Bool,
+        hasText: Bool,
+        user: UnmanagedUser?,
+        message: UnmanagedMessage?
+        ) {
+        
+        self.identifier = identifier
+        self.title = title
+        self.subtitle = subtitle
+        self.color = color
+        self.fields = fields
+        self.hasText = hasText
+        
+        super.init(
+            collapsed: collapsed,
+            user: user,
+            message: message
+        )
+    }
+    
+    var differenceIdentifier: String {
+        return identifier
+    }
+    
+    func isContentEqual(to source: TextAttachmentSelfChatItem) -> Bool {
         return collapsed == source.collapsed && fields == source.fields
     }
 }

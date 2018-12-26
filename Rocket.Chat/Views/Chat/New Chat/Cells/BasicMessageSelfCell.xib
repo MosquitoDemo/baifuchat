@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="BasicMessageSelfCell" customModule="Rocket_Chat" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="408" height="275"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="408" height="275"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bGr-60-jrb">
+                        <rect key="frame" x="348" y="10" width="40" height="40"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="40" id="JZZ-8s-4D5"/>
+                            <constraint firstAttribute="height" constant="40" id="oBh-xj-2Ua"/>
+                        </constraints>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s3o-oq-vgi">
+                        <rect key="frame" x="289.5" y="10" width="43.5" height="245"/>
+                        <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zrD-uH-szB">
+                        <rect key="frame" x="246.5" y="124.5" width="33" height="16"/>
+                        <fontDescription key="fontDescription" style="UICTFontTextStyleFootnote"/>
+                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="heZ-TF-GD4" customClass="RCTextView" customModule="Rocket_Chat" customModuleProvider="target">
+                        <rect key="frame" x="24" y="255" width="309" height="20"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20" id="gDQ-QC-GIC"/>
+                        </constraints>
+                    </view>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sve-N4-rcA">
+                        <rect key="frame" x="0.0" y="255" width="20" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="20" id="7Yl-mm-Hxh"/>
+                            <constraint firstAttribute="height" constant="20" id="hJw-EF-SVQ"/>
+                        </constraints>
+                    </button>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Exclamation" translatesAutoresizingMaskIntoConstraints="NO" id="E4U-1G-3yq">
+                        <rect key="frame" x="225.5" y="125.5" width="14" height="14"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="14" id="7a5-TE-FzG"/>
+                            <constraint firstAttribute="height" constant="14" id="kRY-Px-tz6"/>
+                        </constraints>
+                    </imageView>
+                </subviews>
+            </view>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="Sve-N4-rcA" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="0lx-jR-jUt"/>
+                <constraint firstItem="ZTg-uK-7eu" firstAttribute="bottom" secondItem="heZ-TF-GD4" secondAttribute="bottom" id="6nI-Sn-F29"/>
+                <constraint firstAttribute="bottom" secondItem="Sve-N4-rcA" secondAttribute="bottom" id="Bsq-sV-TD4"/>
+                <constraint firstItem="bGr-60-jrb" firstAttribute="leading" secondItem="heZ-TF-GD4" secondAttribute="trailing" constant="15" id="EVZ-jA-63P"/>
+                <constraint firstAttribute="trailingMargin" secondItem="bGr-60-jrb" secondAttribute="trailing" id="Ezi-9F-aBP"/>
+                <constraint firstItem="heZ-TF-GD4" firstAttribute="leading" secondItem="Sve-N4-rcA" secondAttribute="trailing" constant="4" id="KJ0-HG-rCt"/>
+                <constraint firstItem="s3o-oq-vgi" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="10" id="Ksh-CT-0yZ"/>
+                <constraint firstItem="s3o-oq-vgi" firstAttribute="leading" secondItem="zrD-uH-szB" secondAttribute="trailing" constant="10" id="MXL-fF-VpC"/>
+                <constraint firstItem="s3o-oq-vgi" firstAttribute="centerY" secondItem="zrD-uH-szB" secondAttribute="centerY" id="RJh-VT-F8V"/>
+                <constraint firstItem="zrD-uH-szB" firstAttribute="leading" secondItem="E4U-1G-3yq" secondAttribute="trailing" constant="7" id="U6G-6q-Qrf"/>
+                <constraint firstItem="E4U-1G-3yq" firstAttribute="centerY" secondItem="zrD-uH-szB" secondAttribute="centerY" id="cdt-KK-2jp"/>
+                <constraint firstItem="bGr-60-jrb" firstAttribute="leading" secondItem="s3o-oq-vgi" secondAttribute="trailing" constant="15" id="fsb-4K-v2z"/>
+                <constraint firstItem="bGr-60-jrb" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="10" id="vYd-Sg-hjg"/>
+                <constraint firstItem="heZ-TF-GD4" firstAttribute="top" secondItem="s3o-oq-vgi" secondAttribute="bottom" id="yf3-4K-rM8"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <size key="customSize" width="408" height="275"/>
+            <connections>
+                <outlet property="avatarContainerView" destination="bGr-60-jrb" id="v11-0Q-HLR"/>
+                <outlet property="avatarTrailingConstraint" destination="Ezi-9F-aBP" id="z2t-My-EcU"/>
+                <outlet property="avatarWidthConstraint" destination="JZZ-8s-4D5" id="yMp-uA-l3l"/>
+                <outlet property="date" destination="zrD-uH-szB" id="euq-7R-tKL"/>
+                <outlet property="readReceiptButton" destination="Sve-N4-rcA" id="NLL-47-A6w"/>
+                <outlet property="readReceiptLeadingConstraint" destination="0lx-jR-jUt" id="CYR-ri-Ibg"/>
+                <outlet property="readReceiptWidthConstraint" destination="7Yl-mm-Hxh" id="WIH-gc-p3H"/>
+                <outlet property="statusView" destination="E4U-1G-3yq" id="A2f-X2-ief"/>
+                <outlet property="text" destination="heZ-TF-GD4" id="7jU-Tf-ZmF"/>
+                <outlet property="textHeightConstraint" destination="gDQ-QC-GIC" id="c7T-XD-SYn"/>
+                <outlet property="textLeadingConstraint" destination="KJ0-HG-rCt" id="H3R-zi-0up"/>
+                <outlet property="textTrailingConstraint" destination="EVZ-jA-63P" id="ho5-TS-hv1"/>
+                <outlet property="username" destination="s3o-oq-vgi" id="iYK-RN-Gwp"/>
+            </connections>
+            <point key="canvasLocation" x="108.8" y="-111.0944527736132"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="Exclamation" width="20" height="20"/>
+    </resources>
+</document>
