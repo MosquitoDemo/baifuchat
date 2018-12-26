@@ -64,6 +64,12 @@ class BaseAudioMessageCell: BaseMessageCell {
         }
     }
 
+    func updatePlayer(_ localURL:URL) throws {
+        let data = try Data(contentsOf: localURL)
+        player = try AVAudioPlayer(data: data)
+        player?.prepareToPlay()
+        loading = false
+    }
     func updateAudio() {
         guard !playing, !loading else { return }
         guard let viewModel = viewModel?.base as? AudioMessageChatItem else { return }
@@ -74,22 +80,15 @@ class BaseAudioMessageCell: BaseMessageCell {
 
         loading = true
 
-        func updatePlayer() throws {
-            let data = try Data(contentsOf: localURL)
-            player = try AVAudioPlayer(data: data)
-            player?.prepareToPlay()
-
-            loading = false
-        }
 
         if DownloadManager.fileExists(localURL) {
-            try? updatePlayer()
+            try? self.updatePlayer(localURL)
         } else {
             // Download file and cache it to be used later
             DownloadManager.download(url: url, to: localURL) {
-                DispatchQueue.main.async {
-                    try? updatePlayer()
-                }
+//                DispatchQueue.main.async {
+                    try? self.updatePlayer(localURL)
+//                }
             }
         }
     }

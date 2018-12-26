@@ -88,7 +88,7 @@ class BasicMessageSelfCell: BaseMessageCell, SizingCell {
     
     func updateText() {
         guard
-            let viewModel = viewModel?.base as? BasicMessageChatItem,
+            let viewModel = viewModel?.base as? BasicMessageSelfChatItem,
             let message = viewModel.message
             else {
                 return

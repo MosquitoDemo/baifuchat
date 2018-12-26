@@ -886,6 +886,8 @@
 		F321AEBA21D31A69005B365B /* ChatMessageSelfCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F321AEB821D31A69005B365B /* ChatMessageSelfCell.xib */; };
 		F321AEBD21D36CDC005B365B /* BasicMessageSelfCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F321AEBB21D36CDC005B365B /* BasicMessageSelfCell.swift */; };
 		F321AEBE21D36CDC005B365B /* BasicMessageSelfCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F321AEBC21D36CDC005B365B /* BasicMessageSelfCell.xib */; };
+		F321AEC121D3B18F005B365B /* MessageSelfActionsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F321AEBF21D3B18F005B365B /* MessageSelfActionsCell.swift */; };
+		F321AEC221D3B18F005B365B /* MessageSelfActionsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F321AEC021D3B18F005B365B /* MessageSelfActionsCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -1821,6 +1823,8 @@
 		F321AEB821D31A69005B365B /* ChatMessageSelfCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChatMessageSelfCell.xib; sourceTree = "<group>"; };
 		F321AEBB21D36CDC005B365B /* BasicMessageSelfCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicMessageSelfCell.swift; sourceTree = "<group>"; };
 		F321AEBC21D36CDC005B365B /* BasicMessageSelfCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BasicMessageSelfCell.xib; sourceTree = "<group>"; };
+		F321AEBF21D3B18F005B365B /* MessageSelfActionsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageSelfActionsCell.swift; sourceTree = "<group>"; };
+		F321AEC021D3B18F005B365B /* MessageSelfActionsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MessageSelfActionsCell.xib; sourceTree = "<group>"; };
 		F87E8221BEB77AF190F06201 /* Pods-Rocket.Chat.ShareExtension.beta.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Rocket.Chat.ShareExtension.beta.xcconfig"; path = "Pods/Target Support Files/Pods-Rocket.Chat.ShareExtension/Pods-Rocket.Chat.ShareExtension.beta.xcconfig"; sourceTree = "<group>"; };
 		FEDACA44BBB1C0633DEA6F3D /* Pods-Rocket.ChatTests.beta.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Rocket.ChatTests.beta.xcconfig"; path = "Pods/Target Support Files/Pods-Rocket.ChatTests/Pods-Rocket.ChatTests.beta.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -3872,6 +3876,8 @@
 				4101B02C21A2EF9300772F7C /* HeaderCell.swift */,
 				F321AEBB21D36CDC005B365B /* BasicMessageSelfCell.swift */,
 				F321AEBC21D36CDC005B365B /* BasicMessageSelfCell.xib */,
+				F321AEBF21D3B18F005B365B /* MessageSelfActionsCell.swift */,
+				F321AEC021D3B18F005B365B /* MessageSelfActionsCell.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -4322,6 +4328,7 @@
 				14F8A298202E65C700175FDC /* Blue-29@2x.png in Resources */,
 				8045F49D20D059A600AA0F3C /* ReadReceiptListView.xib in Resources */,
 				412E1F3C1DB6D55000531FDA /* ChatMessageURLView.xib in Resources */,
+				F321AEC221D3B18F005B365B /* MessageSelfActionsCell.xib in Resources */,
 				41FC9E0F209B469C00FED485 /* AutocompleteCell.xib in Resources */,
 				1496A88220FA4A92005C2E14 /* NotificationsSettings.storyboard in Resources */,
 				413FB6E01FE17EB700F010AA /* SubscriptionsTitleView.xib in Resources */,
@@ -5113,6 +5120,7 @@
 				8076FDC72048632300114F28 /* SubscriptionQueries.swift in Sources */,
 				80D41DFA2092147300034D1F /* UserActionSheetPresenter.swift in Sources */,
 				80054CFE1FDAFF5200F5ECF9 /* PushClient.swift in Sources */,
+				F321AEC121D3B18F005B365B /* MessageSelfActionsCell.swift in Sources */,
 				597ECBA21E3708A50041C5C5 /* DataExtension.swift in Sources */,
 				444797D521D21491005416B9 /* Date+Extension.swift in Sources */,
 				414A1FFC1D46395900093E10 /* SocketResponse.swift in Sources */,
