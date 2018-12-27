@@ -14,6 +14,7 @@ import FLAnimatedImage
 import SimpleImageViewer
 import RealmSwift
 
+
 extension MessagesViewController: ChatMessageCellProtocol {
     func handleReviewRequest() {
         allowResignFirstResponder = false

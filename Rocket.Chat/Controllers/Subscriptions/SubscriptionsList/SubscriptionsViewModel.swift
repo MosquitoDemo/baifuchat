@@ -105,8 +105,10 @@ class SubscriptionsViewModel {
             }
             let user = AuthManager.currentUser()
         
+        /*
             print(AuthManager.isAuthenticated()?.subscriptions)
             print(user?.roles)
+ */
 
            
             if SubscriptionsSortingManager.selectedGroupingOptions.contains(.unread) {

@@ -31,3 +31,24 @@ final class MessageActionsChatItem: BaseMessageChatItem, ChatItem, Differentiabl
         return message == sourceMessage
     }
 }
+final class MessageActionsSelfChatItem: BaseMessageChatItem, ChatItem, Differentiable {
+    var relatedReuseIdentifier: String {
+        return MessageSelfActionsCell.identifier
+    }
+    
+    override init(user: UnmanagedUser?, message: UnmanagedMessage?) {
+        super.init(user: nil, message: message)
+    }
+    
+    var differenceIdentifier: String {
+        return message?.identifier ?? ""
+    }
+    
+    func isContentEqual(to source: MessageActionsSelfChatItem) -> Bool {
+        guard let message = message, let sourceMessage = source.message else {
+            return false
+        }
+        
+        return message == sourceMessage
+    }
+}
