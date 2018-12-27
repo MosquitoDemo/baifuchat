@@ -401,6 +401,7 @@
 		444797D621D21491005416B9 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 444797D321D21491005416B9 /* UIView+Extension.swift */; };
 		444797D721D21491005416B9 /* YLDatePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 444797D421D21491005416B9 /* YLDatePicker.swift */; };
 		444797E021D2512A005416B9 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 444797DF21D2512A005416B9 /* Message.swift */; };
+		4466CBBB21D325A90015614A /* MessagesViewControllerGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4466CBBA21D325A90015614A /* MessagesViewControllerGroup.swift */; };
 		597ECBA21E3708A50041C5C5 /* DataExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 597ECBA11E3708A50041C5C5 /* DataExtension.swift */; };
 		597ECBA41E3708B10041C5C5 /* PushManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 597ECBA31E3708B10041C5C5 /* PushManager.swift */; };
 		68D186DF1ED9714F0030EE8C /* MessageURLSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68D186DE1ED9714F0030EE8C /* MessageURLSpec.swift */; };
@@ -1348,6 +1349,7 @@
 		444797DD21D23343005416B9 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
 		444797DE21D23344005416B9 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		444797DF21D2512A005416B9 /* Message.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		4466CBBA21D325A90015614A /* MessagesViewControllerGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesViewControllerGroup.swift; sourceTree = "<group>"; };
 		5108B4F1453CB9F4E425E3F4 /* Pods-Rocket.Chat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Rocket.Chat.release.xcconfig"; path = "Pods/Target Support Files/Pods-Rocket.Chat/Pods-Rocket.Chat.release.xcconfig"; sourceTree = "<group>"; };
 		58C7F7D8D91A05CA5D1C9FE0 /* Pods-Rocket.ChatTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Rocket.ChatTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Rocket.ChatTests/Pods-Rocket.ChatTests.debug.xcconfig"; sourceTree = "<group>"; };
 		597ECBA01E3708980041C5C5 /* Rocket.Chat.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Rocket.Chat.entitlements; sourceTree = "<group>"; };
@@ -2927,6 +2929,7 @@
 				8020C3D72199F75A00AA7133 /* MessagesViewControllerEmptyState.swift */,
 				8020C3D92199F78800AA7133 /* MessagesViewControllerSearching.swift */,
 				80DF7122219CABAD000F0DA5 /* MessagesViewControllerJoining.swift */,
+				4466CBBA21D325A90015614A /* MessagesViewControllerGroup.swift */,
 			);
 			path = Chat;
 			sourceTree = "<group>";
@@ -4715,6 +4718,7 @@
 				8039442E20B342BB002F317A /* AddUsersViewController.swift in Sources */,
 				35C7D19A202B130400B4BE5A /* RCDateFormatter.swift in Sources */,
 				444797D721D21491005416B9 /* YLDatePicker.swift in Sources */,
+				4466CBBB21D325A90015614A /* MessagesViewControllerGroup.swift in Sources */,
 				9987B5992093E526007D277C /* FileTableViewCell.swift in Sources */,
 				99BE4D8A2153162A001A43E2 /* UnmanagedMessage.swift in Sources */,
 				41FC9E0C209B3BAA00FED485 /* UploadMessageRequest.swift in Sources */,
