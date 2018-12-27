@@ -234,15 +234,31 @@ final class MessageSection: ChatSection {
         }
 
         if !object.isSequential && shouldAppendMessageHeader {
-            cells.append(BasicMessageChatItem(
-                user: user,
-                message: object.message
-            ).wrapped)
+            if  user.identifier == AuthManager.currentUser()?.identifier{
+                
+                cells.append(BasicMessageSelfChatItem(
+                    user: user,
+                    message: object.message
+                    ).wrapped)
+            }else{
+                cells.append(BasicMessageChatItem(
+                    user: user,
+                    message: object.message
+                    ).wrapped)
+            }
         } else if object.isSequential {
-            cells.append(BasicMessageChatItem(
-                user: user,
-                message: object.message
-            ).wrapped)
+            if  user.identifier == AuthManager.currentUser()?.identifier{
+                
+                cells.append(BasicMessageSelfChatItem(
+                    user: user,
+                    message: object.message
+                    ).wrapped)
+            }else{
+                cells.append(BasicMessageChatItem(
+                    user: user,
+                    message: object.message
+                    ).wrapped)
+            }
         }
 
         if let daySeparator = object.daySeparator {
