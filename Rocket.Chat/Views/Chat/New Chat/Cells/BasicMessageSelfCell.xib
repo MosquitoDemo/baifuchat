@@ -28,19 +28,19 @@
                         </constraints>
                     </view>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s3o-oq-vgi">
-                        <rect key="frame" x="289.5" y="10" width="43.5" height="245"/>
+                        <rect key="frame" x="289.5" y="10" width="43.5" height="235"/>
                         <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zrD-uH-szB">
-                        <rect key="frame" x="246.5" y="124.5" width="33" height="16"/>
+                        <rect key="frame" x="246.5" y="119.5" width="33" height="16"/>
                         <fontDescription key="fontDescription" style="UICTFontTextStyleFootnote"/>
                         <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="heZ-TF-GD4" customClass="RCTextView" customModule="Rocket_Chat" customModuleProvider="target">
-                        <rect key="frame" x="24" y="255" width="309" height="20"/>
+                        <rect key="frame" x="24" y="245" width="309" height="20"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="20" id="gDQ-QC-GIC"/>
@@ -54,7 +54,7 @@
                         </constraints>
                     </button>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Exclamation" translatesAutoresizingMaskIntoConstraints="NO" id="E4U-1G-3yq">
-                        <rect key="frame" x="225.5" y="125.5" width="14" height="14"/>
+                        <rect key="frame" x="225.5" y="120.5" width="14" height="14"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="14" id="7a5-TE-FzG"/>
                             <constraint firstAttribute="height" constant="14" id="kRY-Px-tz6"/>
@@ -65,7 +65,7 @@
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstItem="Sve-N4-rcA" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="0lx-jR-jUt"/>
-                <constraint firstItem="ZTg-uK-7eu" firstAttribute="bottom" secondItem="heZ-TF-GD4" secondAttribute="bottom" id="6nI-Sn-F29"/>
+                <constraint firstItem="ZTg-uK-7eu" firstAttribute="bottom" secondItem="heZ-TF-GD4" secondAttribute="bottom" constant="10" id="6nI-Sn-F29"/>
                 <constraint firstAttribute="bottom" secondItem="Sve-N4-rcA" secondAttribute="bottom" id="Bsq-sV-TD4"/>
                 <constraint firstItem="bGr-60-jrb" firstAttribute="leading" secondItem="heZ-TF-GD4" secondAttribute="trailing" constant="15" id="EVZ-jA-63P"/>
                 <constraint firstAttribute="trailingMargin" secondItem="bGr-60-jrb" secondAttribute="trailing" id="Ezi-9F-aBP"/>
