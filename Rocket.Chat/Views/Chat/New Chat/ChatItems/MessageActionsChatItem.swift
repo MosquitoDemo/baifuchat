@@ -33,7 +33,7 @@ final class MessageActionsChatItem: BaseMessageChatItem, ChatItem, Differentiabl
 }
 final class MessageActionsSelfChatItem: BaseMessageChatItem, ChatItem, Differentiable {
     var relatedReuseIdentifier: String {
-        return MessageActionsCell.identifier
+        return MessageSelfActionsCell.identifier
     }
     
     override init(user: UnmanagedUser?, message: UnmanagedMessage?) {

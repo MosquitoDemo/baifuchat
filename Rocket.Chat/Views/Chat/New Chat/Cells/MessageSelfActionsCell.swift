@@ -14,8 +14,8 @@ class MessageSelfActionsCell: BaseMessageCell,SizingCell {
     static let identifier = String(describing: MessageSelfActionsCell.self)
     
     static let sizingCell: UICollectionViewCell & ChatCell = {
-        guard let cell = MessageActionsCell.instantiateFromNib() else {
-            return MessageActionsCell()
+        guard let cell = MessageSelfActionsCell.instantiateFromNib() else {
+            return MessageSelfActionsCell()
         }
         
         return cell
