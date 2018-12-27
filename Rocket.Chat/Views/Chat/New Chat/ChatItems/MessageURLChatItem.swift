@@ -48,7 +48,7 @@ final class MessageURLChatItem: BaseMessageChatItem, ChatItem, Differentiable {
 /// MessageURLSelfChatItem
 final class MessageURLSelfChatItem: BaseMessageChatItem, ChatItem, Differentiable {
     var relatedReuseIdentifier: String {
-        return MessageURLCell.identifier
+        return MessageURLSelfCell.identifier
     }
     
     var url: String

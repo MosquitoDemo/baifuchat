@@ -889,6 +889,34 @@
 		F321AEBE21D36CDC005B365B /* BasicMessageSelfCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F321AEBC21D36CDC005B365B /* BasicMessageSelfCell.xib */; };
 		F321AEC121D3B18F005B365B /* MessageSelfActionsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F321AEBF21D3B18F005B365B /* MessageSelfActionsCell.swift */; };
 		F321AEC221D3B18F005B365B /* MessageSelfActionsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F321AEC021D3B18F005B365B /* MessageSelfActionsCell.xib */; };
+		F342453721D47691009CD659 /* AudioMessageSelfCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F342453521D47691009CD659 /* AudioMessageSelfCell.swift */; };
+		F342453821D47691009CD659 /* AudioMessageSelfCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F342453621D47691009CD659 /* AudioMessageSelfCell.xib */; };
+		F342453D21D47753009CD659 /* AudioSelfCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F342453B21D47753009CD659 /* AudioSelfCell.swift */; };
+		F342453E21D47753009CD659 /* AudioSelfCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F342453C21D47753009CD659 /* AudioSelfCell.xib */; };
+		F342454121D477CF009CD659 /* VideoSelfCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F342453F21D477CF009CD659 /* VideoSelfCell.swift */; };
+		F342454221D477CF009CD659 /* VideoSelfCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F342454021D477CF009CD659 /* VideoSelfCell.xib */; };
+		F342454521D47837009CD659 /* VideoMessageSelfCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F342454321D47837009CD659 /* VideoMessageSelfCell.swift */; };
+		F342454621D47837009CD659 /* VideoMessageSelfCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F342454421D47837009CD659 /* VideoMessageSelfCell.xib */; };
+		F342454921D47BC9009CD659 /* ReactionsSelfCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F342454721D47BC9009CD659 /* ReactionsSelfCell.swift */; };
+		F342454A21D47BC9009CD659 /* ReactionsSelfCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F342454821D47BC9009CD659 /* ReactionsSelfCell.xib */; };
+		F342454D21D47CF0009CD659 /* FileMessageSelfCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F342454B21D47CF0009CD659 /* FileMessageSelfCell.swift */; };
+		F342454E21D47CF0009CD659 /* FileMessageSelfCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F342454C21D47CF0009CD659 /* FileMessageSelfCell.xib */; };
+		F342455121D47D2C009CD659 /* FileSelfCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F342454F21D47D2C009CD659 /* FileSelfCell.swift */; };
+		F342455221D47D2C009CD659 /* FileSelfCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F342455021D47D2C009CD659 /* FileSelfCell.xib */; };
+		F342455521D47FAC009CD659 /* TextAttachmentMessageSelfCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F342455321D47FAC009CD659 /* TextAttachmentMessageSelfCell.swift */; };
+		F342455621D47FAC009CD659 /* TextAttachmentMessageSelfCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F342455421D47FAC009CD659 /* TextAttachmentMessageSelfCell.xib */; };
+		F342455921D47FCB009CD659 /* TextAttachmentSelfCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F342455721D47FCB009CD659 /* TextAttachmentSelfCell.swift */; };
+		F342455A21D47FCB009CD659 /* TextAttachmentSelfCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F342455821D47FCB009CD659 /* TextAttachmentSelfCell.xib */; };
+		F342455D21D4808B009CD659 /* ImageMessageSelfCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F342455B21D4808B009CD659 /* ImageMessageSelfCell.swift */; };
+		F342455E21D4808B009CD659 /* ImageMessageSelfCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F342455C21D4808B009CD659 /* ImageMessageSelfCell.xib */; };
+		F342456121D480A7009CD659 /* ImageSelfCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F342455F21D480A7009CD659 /* ImageSelfCell.swift */; };
+		F342456221D480A7009CD659 /* ImageSelfCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F342456021D480A7009CD659 /* ImageSelfCell.xib */; };
+		F342456521D48198009CD659 /* QuoteMessageSelfCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F342456321D48198009CD659 /* QuoteMessageSelfCell.swift */; };
+		F342456621D48198009CD659 /* QuoteMessageSelfCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F342456421D48198009CD659 /* QuoteMessageSelfCell.xib */; };
+		F342456921D481E9009CD659 /* QuoteSelfCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F342456721D481E9009CD659 /* QuoteSelfCell.swift */; };
+		F342456A21D481E9009CD659 /* QuoteSelfCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F342456821D481E9009CD659 /* QuoteSelfCell.xib */; };
+		F342456D21D48272009CD659 /* MessageURLSelfCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F342456B21D48272009CD659 /* MessageURLSelfCell.swift */; };
+		F342456E21D48272009CD659 /* MessageURLSelfCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F342456C21D48272009CD659 /* MessageURLSelfCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -1827,6 +1855,34 @@
 		F321AEBC21D36CDC005B365B /* BasicMessageSelfCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BasicMessageSelfCell.xib; sourceTree = "<group>"; };
 		F321AEBF21D3B18F005B365B /* MessageSelfActionsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageSelfActionsCell.swift; sourceTree = "<group>"; };
 		F321AEC021D3B18F005B365B /* MessageSelfActionsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MessageSelfActionsCell.xib; sourceTree = "<group>"; };
+		F342453521D47691009CD659 /* AudioMessageSelfCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioMessageSelfCell.swift; sourceTree = "<group>"; };
+		F342453621D47691009CD659 /* AudioMessageSelfCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AudioMessageSelfCell.xib; sourceTree = "<group>"; };
+		F342453B21D47753009CD659 /* AudioSelfCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioSelfCell.swift; sourceTree = "<group>"; };
+		F342453C21D47753009CD659 /* AudioSelfCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AudioSelfCell.xib; sourceTree = "<group>"; };
+		F342453F21D477CF009CD659 /* VideoSelfCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoSelfCell.swift; sourceTree = "<group>"; };
+		F342454021D477CF009CD659 /* VideoSelfCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VideoSelfCell.xib; sourceTree = "<group>"; };
+		F342454321D47837009CD659 /* VideoMessageSelfCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoMessageSelfCell.swift; sourceTree = "<group>"; };
+		F342454421D47837009CD659 /* VideoMessageSelfCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VideoMessageSelfCell.xib; sourceTree = "<group>"; };
+		F342454721D47BC9009CD659 /* ReactionsSelfCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReactionsSelfCell.swift; sourceTree = "<group>"; };
+		F342454821D47BC9009CD659 /* ReactionsSelfCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReactionsSelfCell.xib; sourceTree = "<group>"; };
+		F342454B21D47CF0009CD659 /* FileMessageSelfCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileMessageSelfCell.swift; sourceTree = "<group>"; };
+		F342454C21D47CF0009CD659 /* FileMessageSelfCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FileMessageSelfCell.xib; sourceTree = "<group>"; };
+		F342454F21D47D2C009CD659 /* FileSelfCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileSelfCell.swift; sourceTree = "<group>"; };
+		F342455021D47D2C009CD659 /* FileSelfCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FileSelfCell.xib; sourceTree = "<group>"; };
+		F342455321D47FAC009CD659 /* TextAttachmentMessageSelfCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextAttachmentMessageSelfCell.swift; sourceTree = "<group>"; };
+		F342455421D47FAC009CD659 /* TextAttachmentMessageSelfCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TextAttachmentMessageSelfCell.xib; sourceTree = "<group>"; };
+		F342455721D47FCB009CD659 /* TextAttachmentSelfCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextAttachmentSelfCell.swift; sourceTree = "<group>"; };
+		F342455821D47FCB009CD659 /* TextAttachmentSelfCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TextAttachmentSelfCell.xib; sourceTree = "<group>"; };
+		F342455B21D4808B009CD659 /* ImageMessageSelfCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageMessageSelfCell.swift; sourceTree = "<group>"; };
+		F342455C21D4808B009CD659 /* ImageMessageSelfCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImageMessageSelfCell.xib; sourceTree = "<group>"; };
+		F342455F21D480A7009CD659 /* ImageSelfCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSelfCell.swift; sourceTree = "<group>"; };
+		F342456021D480A7009CD659 /* ImageSelfCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImageSelfCell.xib; sourceTree = "<group>"; };
+		F342456321D48198009CD659 /* QuoteMessageSelfCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteMessageSelfCell.swift; sourceTree = "<group>"; };
+		F342456421D48198009CD659 /* QuoteMessageSelfCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QuoteMessageSelfCell.xib; sourceTree = "<group>"; };
+		F342456721D481E9009CD659 /* QuoteSelfCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteSelfCell.swift; sourceTree = "<group>"; };
+		F342456821D481E9009CD659 /* QuoteSelfCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QuoteSelfCell.xib; sourceTree = "<group>"; };
+		F342456B21D48272009CD659 /* MessageURLSelfCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageURLSelfCell.swift; sourceTree = "<group>"; };
+		F342456C21D48272009CD659 /* MessageURLSelfCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MessageURLSelfCell.xib; sourceTree = "<group>"; };
 		F87E8221BEB77AF190F06201 /* Pods-Rocket.Chat.ShareExtension.beta.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Rocket.Chat.ShareExtension.beta.xcconfig"; path = "Pods/Target Support Files/Pods-Rocket.Chat.ShareExtension/Pods-Rocket.Chat.ShareExtension.beta.xcconfig"; sourceTree = "<group>"; };
 		FEDACA44BBB1C0633DEA6F3D /* Pods-Rocket.ChatTests.beta.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Rocket.ChatTests.beta.xcconfig"; path = "Pods/Target Support Files/Pods-Rocket.ChatTests/Pods-Rocket.ChatTests.beta.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -3881,6 +3937,34 @@
 				F321AEBC21D36CDC005B365B /* BasicMessageSelfCell.xib */,
 				F321AEBF21D3B18F005B365B /* MessageSelfActionsCell.swift */,
 				F321AEC021D3B18F005B365B /* MessageSelfActionsCell.xib */,
+				F342453521D47691009CD659 /* AudioMessageSelfCell.swift */,
+				F342453621D47691009CD659 /* AudioMessageSelfCell.xib */,
+				F342453B21D47753009CD659 /* AudioSelfCell.swift */,
+				F342453C21D47753009CD659 /* AudioSelfCell.xib */,
+				F342453F21D477CF009CD659 /* VideoSelfCell.swift */,
+				F342454021D477CF009CD659 /* VideoSelfCell.xib */,
+				F342454321D47837009CD659 /* VideoMessageSelfCell.swift */,
+				F342454421D47837009CD659 /* VideoMessageSelfCell.xib */,
+				F342454721D47BC9009CD659 /* ReactionsSelfCell.swift */,
+				F342454821D47BC9009CD659 /* ReactionsSelfCell.xib */,
+				F342454B21D47CF0009CD659 /* FileMessageSelfCell.swift */,
+				F342454F21D47D2C009CD659 /* FileSelfCell.swift */,
+				F342455021D47D2C009CD659 /* FileSelfCell.xib */,
+				F342455321D47FAC009CD659 /* TextAttachmentMessageSelfCell.swift */,
+				F342455421D47FAC009CD659 /* TextAttachmentMessageSelfCell.xib */,
+				F342454C21D47CF0009CD659 /* FileMessageSelfCell.xib */,
+				F342455721D47FCB009CD659 /* TextAttachmentSelfCell.swift */,
+				F342455821D47FCB009CD659 /* TextAttachmentSelfCell.xib */,
+				F342455B21D4808B009CD659 /* ImageMessageSelfCell.swift */,
+				F342455C21D4808B009CD659 /* ImageMessageSelfCell.xib */,
+				F342455F21D480A7009CD659 /* ImageSelfCell.swift */,
+				F342456021D480A7009CD659 /* ImageSelfCell.xib */,
+				F342456321D48198009CD659 /* QuoteMessageSelfCell.swift */,
+				F342456421D48198009CD659 /* QuoteMessageSelfCell.xib */,
+				F342456721D481E9009CD659 /* QuoteSelfCell.swift */,
+				F342456821D481E9009CD659 /* QuoteSelfCell.xib */,
+				F342456B21D48272009CD659 /* MessageURLSelfCell.swift */,
+				F342456C21D48272009CD659 /* MessageURLSelfCell.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -4291,8 +4375,11 @@
 				419FEAAA2181F13D000DF2EC /* UnreadMarkerCell.xib in Resources */,
 				412BCC851E55C6A300F7F4EE /* ChatMessageTextView.xib in Resources */,
 				14F8A261202E64B200175FDC /* BnW-76@3x.png in Resources */,
+				F342456A21D481E9009CD659 /* QuoteSelfCell.xib in Resources */,
 				999075232177792E00CAB7C8 /* QuoteMessageCell.xib in Resources */,
+				F342453821D47691009CD659 /* AudioMessageSelfCell.xib in Resources */,
 				41FC9E0E209B44CD00FED485 /* ChatLoaderCell.xib in Resources */,
+				F342456E21D48272009CD659 /* MessageURLSelfCell.xib in Resources */,
 				809B53121FE2F2F900833DD2 /* ReactionView.xib in Resources */,
 				41C955FA20A3931C00FC8314 /* ChatMessageActionButtonsView.xib in Resources */,
 				419EB5B9215E52F300E591BF /* VideoCell.xib in Resources */,
@@ -4306,6 +4393,7 @@
 				4174CB0F1D2D995F0086DAC8 /* Auth.storyboard in Resources */,
 				41D3668620C0323100970B99 /* SubscriptionsSortingView.xib in Resources */,
 				4101B02B21A2EF8C00772F7C /* HeaderCell.xib in Resources */,
+				F342455E21D4808B009CD659 /* ImageMessageSelfCell.xib in Resources */,
 				33A5C9BE206A561400FE1C8F /* emojiNames.json in Resources */,
 				14F8A26F202E653E00175FDC /* Grey-83.5@2x.png in Resources */,
 				33A5C9CE206A565800FE1C8F /* people.json in Resources */,
@@ -4314,13 +4402,16 @@
 				14F8A25F202E64B200175FDC /* BnW-40@2x.png in Resources */,
 				14F8A227202E5CBF00175FDC /* Black-83.5@2x.png in Resources */,
 				14F8A23C202E5D0600175FDC /* Red-60@3x.png in Resources */,
+				F342454E21D47CF0009CD659 /* FileMessageSelfCell.xib in Resources */,
 				14F8A274202E653E00175FDC /* Grey-60@2x.png in Resources */,
 				41FC9E10209B49B200FED485 /* ChatDirectMessageHeaderCell.xib in Resources */,
 				14F8A225202E5CBF00175FDC /* Black-60@2x.png in Resources */,
 				41BF4D72215B4CC800588B35 /* DateSeparatorCell.xib in Resources */,
+				F342454221D477CF009CD659 /* VideoSelfCell.xib in Resources */,
 				14F8A25C202E64B200175FDC /* BnW-60@3x.png in Resources */,
 				14F8A26D202E653E00175FDC /* Grey-29@2x.png in Resources */,
 				14F8A26C202E653E00175FDC /* Grey-40@2x.png in Resources */,
+				F342454A21D47BC9009CD659 /* ReactionsSelfCell.xib in Resources */,
 				14F8A244202E5D0600175FDC /* Red-83.5@2x.png in Resources */,
 				14F8A259202E64B200175FDC /* BnW-40@3x.png in Resources */,
 				14F8A245202E5D0600175FDC /* Red-76@3x.png in Resources */,
@@ -4347,6 +4438,7 @@
 				9914183B2166AF63007D2AA2 /* MessageURLCell.xib in Resources */,
 				9990751B21766DF000CAB7C8 /* ImageMessageCell.xib in Resources */,
 				8041C0442028C828007E21FA /* ReactorListView.xib in Resources */,
+				F342455221D47D2C009CD659 /* FileSelfCell.xib in Resources */,
 				8020CCF21FEAB4C3003424F4 /* EmojiPicker.xib in Resources */,
 				80307E411FD75DC0006AD9EF /* VoiceOver.strings in Resources */,
 				14F8A296202E65C700175FDC /* Blue-83.5@2x.png in Resources */,
@@ -4361,6 +4453,7 @@
 				14F8A297202E65C700175FDC /* Blue-40@2x.png in Resources */,
 				14F8A271202E653E00175FDC /* Grey-40@3x.png in Resources */,
 				0B92E66A20F767F8003DAB5A /* InfoPlist.strings in Resources */,
+				F342453E21D47753009CD659 /* AudioSelfCell.xib in Resources */,
 				996735CD21581D160049BB63 /* BasicMessageCell.xib in Resources */,
 				14F8A292202E65C700175FDC /* Blue-29@3x.png in Resources */,
 				14F8A294202E65C700175FDC /* Blue-60@3x.png in Resources */,
@@ -4372,6 +4465,7 @@
 				809B53141FE3294400833DD2 /* ReactionListView.xib in Resources */,
 				14F8A293202E65C700175FDC /* Blue-60@2x.png in Resources */,
 				8041C048202BA234007E21FA /* RCEmojiKit.xcassets in Resources */,
+				F342454621D47837009CD659 /* VideoMessageSelfCell.xib in Resources */,
 				9938A08520D3077800714AB4 /* CustomFieldTableViewCell.xib in Resources */,
 				41865AF41FC8B25100A5E48F /* WebViewControllerEmbedded.xib in Resources */,
 				14F8A281202E659000175FDC /* White-40@3x.png in Resources */,
@@ -4414,6 +4508,8 @@
 				14F8A25B202E64B200175FDC /* BnW-60@2x.png in Resources */,
 				41DE688120C6EBE600AA5EC8 /* SubscriptionSortingCell.xib in Resources */,
 				41FBF4EB20BD8C650080D00D /* ServerCell.xib in Resources */,
+				F342455A21D47FCB009CD659 /* TextAttachmentSelfCell.xib in Resources */,
+				F342455621D47FAC009CD659 /* TextAttachmentMessageSelfCell.xib in Resources */,
 				14F8A220202E5CBF00175FDC /* Black-29@3x.png in Resources */,
 				99907517217666C000CAB7C8 /* TextAttachmentMessageCell.xib in Resources */,
 				80AE2544203E61CF00DC2867 /* ChatMessageUnreadSeparator.xib in Resources */,
@@ -4423,6 +4519,7 @@
 				41EB22361E5F056600AA3AE7 /* Localizable.strings in Resources */,
 				41E2F9FF1D414DE800238DFD /* Chat.storyboard in Resources */,
 				14F8A273202E653E00175FDC /* Grey-60@3x.png in Resources */,
+				F342456221D480A7009CD659 /* ImageSelfCell.xib in Resources */,
 				41F167EB1DAC4D5500775CCA /* ChatTitleView.xib in Resources */,
 				14F8A285202E659000175FDC /* White-29@3x.png in Resources */,
 				33A5C9CA206A565800FE1C8F /* symbols.json in Resources */,
@@ -4431,6 +4528,7 @@
 				14F8A226202E5CBF00175FDC /* Black-29@2x.png in Resources */,
 				33A5C9D0206A565800FE1C8F /* food.json in Resources */,
 				80B2D98720E5496E002F4149 /* UserDetail.storyboard in Resources */,
+				F342456621D48198009CD659 /* QuoteMessageSelfCell.xib in Resources */,
 				33A5C9CF206A565800FE1C8F /* objects.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -4770,6 +4868,7 @@
 				805DEC351FFC03380033151B /* CustomEmojiManager.swift in Sources */,
 				33D08E2520BD5EDC008D03EF /* ThemeableViews.swift in Sources */,
 				0BC0E8632032DD95004BFAAF /* DrawingViewModel.swift in Sources */,
+				F342453D21D47753009CD659 /* AudioSelfCell.swift in Sources */,
 				35E892C8201CDD1600B4BE5A /* NewRoomViewController.swift in Sources */,
 				990FF6D620740C79007B4A53 /* RoomMentionsRequest.swift in Sources */,
 				8039441820AF620C002F317A /* ResourceSharedProperties.swift in Sources */,
@@ -4874,6 +4973,7 @@
 				999F25B5207EEB0C002E0F68 /* FileModelMapping.swift in Sources */,
 				41A79C131D2F09F200A1968E /* Auth.swift in Sources */,
 				0B3A9769202C76080019CA92 /* ChangeAppIconCell.swift in Sources */,
+				F342454521D47837009CD659 /* VideoMessageSelfCell.swift in Sources */,
 				80A2F39020056C5E005D2DCA /* EmojiSearcher.swift in Sources */,
 				419FEAA62181F115000DF2EC /* UnreadMarkerChatItem.swift in Sources */,
 				41E53A171E546F5500C3FBB3 /* UINibExtensions.swift in Sources */,
@@ -4921,6 +5021,7 @@
 				14BAFAE220308F010054A2E6 /* DrawingBrushColorViewController.swift in Sources */,
 				99B4A7B22164683200C80FF2 /* QuoteCell.swift in Sources */,
 				8076FDD6204864E700114F28 /* UserQueries.swift in Sources */,
+				F342455D21D4808B009CD659 /* ImageMessageSelfCell.swift in Sources */,
 				80DF7123219CABAD000F0DA5 /* MessagesViewControllerJoining.swift in Sources */,
 				8039442C20B33F63002F317A /* SubscriptionCanInviteUsers.swift in Sources */,
 				33FB9D3E20CEF610005AF504 /* SubscriptionsSortingSeparatorView.swift in Sources */,
@@ -4975,6 +5076,7 @@
 				8041C04620290A48007E21FA /* RCEmojiKitLocalizable.swift in Sources */,
 				414EFF921E54FE69004F001F /* AuthExtensions.swift in Sources */,
 				33FB9D4220D06492005AF504 /* EditProfileStatusCell.swift in Sources */,
+				F342453721D47691009CD659 /* AudioMessageSelfCell.swift in Sources */,
 				414A1FFA1D46395400093E10 /* SocketManager.swift in Sources */,
 				4151B45C1E2D1E5800F8AA1B /* AuthSettingsModelMapping.swift in Sources */,
 				80AC400820EECB90005082E1 /* ChatBannerViewModel.swift in Sources */,
@@ -4995,6 +5097,7 @@
 				806465EE1FED1AFE001F27DB /* EmojiView.swift in Sources */,
 				8076FDB2204856CC00114F28 /* AuthCanEditMessage.swift in Sources */,
 				99B4A7B4216479CD00C80FF2 /* QuoteChatItem.swift in Sources */,
+				F342455921D47FCB009CD659 /* TextAttachmentSelfCell.swift in Sources */,
 				D12D34031F69C76400AED992 /* SubscriptionExtensions.swift in Sources */,
 				0B80EE5920FC614600E7E43B /* RCPickerView.swift in Sources */,
 				99C577EE207E4F1500CE9B4D /* File.swift in Sources */,
@@ -5024,10 +5127,12 @@
 				8039443020B34B12002F317A /* DirectoryRequest.swift in Sources */,
 				99D888FB204623A900E51306 /* UpdateUserRequest.swift in Sources */,
 				802C8959216314CF00C6B9B2 /* MessagesViewControllerUploading.swift in Sources */,
+				F342454D21D47CF0009CD659 /* FileMessageSelfCell.swift in Sources */,
 				8020C3DA2199F78800AA7133 /* MessagesViewControllerSearching.swift in Sources */,
 				41A9B708215B0D0700CEB218 /* MessagesViewModel.swift in Sources */,
 				8013F8721FD6B5B000EE1A4E /* CommandsClient.swift in Sources */,
 				4147CE7D1F5EAAB300C322C3 /* ServerCell.swift in Sources */,
+				F342454921D47BC9009CD659 /* ReactionsSelfCell.swift in Sources */,
 				8020CCF01FEAB4A7003424F4 /* EmojiPicker.swift in Sources */,
 				8045F49820D0543900AA0F3C /* ReadReceiptsRequest.swift in Sources */,
 				334CFFEE20668DDF003CDB99 /* EmojiCollectionViewCell.swift in Sources */,
@@ -5037,6 +5142,7 @@
 				807371A61F96A4FF00D53ADF /* LoginServiceModelHandler.swift in Sources */,
 				80D41DFD2092378400034D1F /* StarMessageRequest.swift in Sources */,
 				33D08E2A20BD5F24008D03EF /* TopTransparentViewController.swift in Sources */,
+				F342456921D481E9009CD659 /* QuoteSelfCell.swift in Sources */,
 				991AB00C217459690097AE4C /* AudioMessageCell.swift in Sources */,
 				993B7B40215F0B730067B962 /* FileMessageChatItem.swift in Sources */,
 				801DF8151FD7172500302CC8 /* SubscriptionUserView.swift in Sources */,
@@ -5053,12 +5159,14 @@
 				80F09A1D1FFFC24800977D0D /* NSAttributedString+CustomEmojis.swift in Sources */,
 				995FEB2F206286D9004EE38F /* WebBrowserManager.swift in Sources */,
 				4162E1531D651A8800AAAE49 /* UserManager.swift in Sources */,
+				F342456D21D48272009CD659 /* MessageURLSelfCell.swift in Sources */,
 				800FCD4C1F728EC800D9A692 /* ChannelInfoCellProtocol.swift in Sources */,
 				800E22841F8500A200DA84F1 /* MessagesListViewController.swift in Sources */,
 				33D08E2720BD5EDC008D03EF /* NotThemeableViews.swift in Sources */,
 				41778EB920ED4C2C007F72F9 /* SubscriptionCellCondensed.swift in Sources */,
 				99805D7520C191BE00741B8E /* StyledTextField.swift in Sources */,
 				419ECCA41F3CA21A005F224B /* DownloadManager.swift in Sources */,
+				F342456521D48198009CD659 /* QuoteMessageSelfCell.swift in Sources */,
 				80307E3C1FD75BE1006AD9EF /* VOTextField.swift in Sources */,
 				9914183D2166C626007D2AA2 /* MessageURLCell.swift in Sources */,
 				99923773204B3BD800C2D15F /* UploadAvatarRequest.swift in Sources */,
@@ -5080,6 +5188,7 @@
 				334F78EC211DC639003D0C5A /* UnmanagedSubscription.swift in Sources */,
 				80054D001FDB1FA200F5ECF9 /* Alert.swift in Sources */,
 				809D577920ED06E50014C364 /* UINavigationControllerRedrawBar.swift in Sources */,
+				F342456121D480A7009CD659 /* ImageSelfCell.swift in Sources */,
 				8032E3E820362EF5009D33CE /* UpdateMessageRequest.swift in Sources */,
 				411119B61F680DB00019854B /* NetworkCoordinator.swift in Sources */,
 				99EA7A99219181750023BB63 /* BaseTextAttachmentChatItem.swift in Sources */,
@@ -5122,6 +5231,7 @@
 				99F8FAED20B66F210025FEEF /* ImageCoordinator.swift in Sources */,
 				80F533E62195A33B00B7292E /* MessagesViewControllerSending.swift in Sources */,
 				8076FDC72048632300114F28 /* SubscriptionQueries.swift in Sources */,
+				F342455521D47FAC009CD659 /* TextAttachmentMessageSelfCell.swift in Sources */,
 				80D41DFA2092147300034D1F /* UserActionSheetPresenter.swift in Sources */,
 				80054CFE1FDAFF5200F5ECF9 /* PushClient.swift in Sources */,
 				F321AEC121D3B18F005B365B /* MessageSelfActionsCell.swift in Sources */,
@@ -5155,6 +5265,7 @@
 				77BA81511F87C4CB00F295F4 /* TextField.swift in Sources */,
 				41E2FA051D414F0400238DFD /* SubscriptionsViewController.swift in Sources */,
 				4116CBE520B599D9007E7163 /* StatusTableViewController.swift in Sources */,
+				F342454121D477CF009CD659 /* VideoSelfCell.swift in Sources */,
 				996735D221585CA70049BB63 /* BasicMessageChatItem.swift in Sources */,
 				800F38ED2019492D0005CB78 /* DeepLink.swift in Sources */,
 				998E64982161ADE200E7C45A /* TextAttachmentCell.swift in Sources */,
@@ -5164,6 +5275,7 @@
 				41865AF21FC8B23400A5E48F /* WebViewControllerEmbedded.swift in Sources */,
 				414B3B25203E2F2C0078D3D9 /* MainSplitViewController.swift in Sources */,
 				444797E021D2512A005416B9 /* Message.swift in Sources */,
+				F342455121D47D2C009CD659 /* FileSelfCell.swift in Sources */,
 				99907513217622A900CAB7C8 /* FileMessageCell.swift in Sources */,
 				414A1FF61D46320F00093E10 /* ResponseMessage.swift in Sources */,
 				996735CF21582E790049BB63 /* BasicMessageCell.swift in Sources */,

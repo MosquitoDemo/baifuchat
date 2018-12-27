@@ -63,7 +63,7 @@ final class QuoteChatItem: BaseTextAttachmentChatItem, ChatItem, Differentiable 
 /// QuoteChatSelfItem
 final class QuoteChatSelfItem: BaseTextAttachmentChatItem, ChatItem, Differentiable {
     var relatedReuseIdentifier: String {
-        return hasText ? QuoteCell.identifier : QuoteMessageCell.identifier
+        return hasText ? QuoteSelfCell.identifier : QuoteMessageSelfCell.identifier
     }
     
     let identifier: String

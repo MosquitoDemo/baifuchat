@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="AudioSelfCell" customModule="Rocket_Chat" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="69"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="69"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UsZ-Ph-Ld4">
+                        <rect key="frame" x="16" y="10" width="288" height="54"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qAh-yI-1iJ">
+                                <rect key="frame" x="10" y="9" width="36" height="36"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="36" id="Axb-v5-hyE"/>
+                                    <constraint firstAttribute="width" constant="36" id="vRj-ea-gt5"/>
+                                </constraints>
+                                <state key="normal" image="Player Play"/>
+                                <connections>
+                                    <action selector="didPressPlayButton:" destination="gTV-IL-0wX" eventType="touchUpInside" id="hX9-6h-8h1"/>
+                                </connections>
+                            </button>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="Emo-wI-ezG">
+                                <rect key="frame" x="54" y="12" width="153" height="31"/>
+                                <connections>
+                                    <action selector="didFinishSlidingSlider:" destination="gTV-IL-0wX" eventType="touchUpInside" id="tMq-4m-AOQ"/>
+                                    <action selector="didFinishSlidingSlider:" destination="gTV-IL-0wX" eventType="touchUpOutside" id="xmB-14-SI2"/>
+                                    <action selector="didStartSlidingSlider:" destination="gTV-IL-0wX" eventType="touchDragEnter" id="kla-jR-obC"/>
+                                </connections>
+                            </slider>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="hgT-ef-DKP">
+                                <rect key="frame" x="258" y="17" width="20" height="20"/>
+                            </activityIndicatorView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100:00:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oIa-dx-MnL">
+                                <rect key="frame" x="215" y="19" width="63" height="16"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleFootnote"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="qAh-yI-1iJ" firstAttribute="centerY" secondItem="UsZ-Ph-Ld4" secondAttribute="centerY" id="6gb-nO-e35"/>
+                            <constraint firstItem="qAh-yI-1iJ" firstAttribute="leading" secondItem="UsZ-Ph-Ld4" secondAttribute="leading" constant="10" id="Ac9-q4-Acx"/>
+                            <constraint firstAttribute="trailing" secondItem="oIa-dx-MnL" secondAttribute="trailing" constant="10" id="Fy8-Ws-LqI"/>
+                            <constraint firstItem="Emo-wI-ezG" firstAttribute="leading" secondItem="qAh-yI-1iJ" secondAttribute="trailing" constant="10" id="HQa-vG-g6A"/>
+                            <constraint firstItem="oIa-dx-MnL" firstAttribute="centerY" secondItem="UsZ-Ph-Ld4" secondAttribute="centerY" id="I5A-B0-eT7"/>
+                            <constraint firstItem="oIa-dx-MnL" firstAttribute="leading" secondItem="Emo-wI-ezG" secondAttribute="trailing" constant="10" id="STK-f2-dK1"/>
+                            <constraint firstItem="Emo-wI-ezG" firstAttribute="centerY" secondItem="UsZ-Ph-Ld4" secondAttribute="centerY" id="hd5-xp-2k8"/>
+                            <constraint firstAttribute="trailing" secondItem="hgT-ef-DKP" secondAttribute="trailing" constant="10" id="jr5-nN-flU"/>
+                            <constraint firstItem="hgT-ef-DKP" firstAttribute="centerY" secondItem="qAh-yI-1iJ" secondAttribute="centerY" id="oPy-zf-p7o"/>
+                            <constraint firstAttribute="height" constant="54" id="tJi-ya-6iQ"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="UsZ-Ph-Ld4" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="topMargin" constant="10" id="1WS-E7-Uga"/>
+                <constraint firstItem="UsZ-Ph-Ld4" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leadingMargin" id="49L-jg-dbH"/>
+                <constraint firstAttribute="trailingMargin" secondItem="UsZ-Ph-Ld4" secondAttribute="trailing" constant="55" id="BD4-yF-fz2"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <size key="customSize" width="333" height="169"/>
+            <connections>
+                <outlet property="activityIndicatorView" destination="hgT-ef-DKP" id="6tx-3z-cNk"/>
+                <outlet property="buttonPlay" destination="qAh-yI-1iJ" id="HEL-Ov-dO4"/>
+                <outlet property="labelAudioTime" destination="oIa-dx-MnL" id="S8Y-ep-xQF"/>
+                <outlet property="slider" destination="Emo-wI-ezG" id="khM-h6-LXN"/>
+                <outlet property="viewPlayerBackground" destination="UsZ-Ph-Ld4" id="Bso-WP-0wQ"/>
+            </connections>
+            <point key="canvasLocation" x="364" y="207.34632683658174"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="Player Play" width="36" height="36"/>
+    </resources>
+</document>

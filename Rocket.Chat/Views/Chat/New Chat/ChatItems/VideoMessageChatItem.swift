@@ -56,7 +56,7 @@ final class VideoMessageChatItem: BaseMessageChatItem, ChatItem, Differentiable 
 }
 final class VideoMessageSelfChatItem: BaseMessageChatItem, ChatItem, Differentiable {
     var relatedReuseIdentifier: String {
-        return hasText ? VideoCell.identifier : VideoMessageCell.identifier
+        return hasText ? VideoSelfCell.identifier : VideoMessageSelfCell.identifier
     }
     
     let attachment: UnmanagedAttachment

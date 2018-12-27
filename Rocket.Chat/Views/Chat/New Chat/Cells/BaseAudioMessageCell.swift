@@ -72,25 +72,46 @@ class BaseAudioMessageCell: BaseMessageCell {
     }
     func updateAudio() {
         guard !playing, !loading else { return }
-        guard let viewModel = viewModel?.base as? AudioMessageChatItem else { return }
-        guard let url = viewModel.audioURL, let localURL = viewModel.localAudioURL else {
-            Log.debug("[WARNING]: Audio without audio URL - \(viewModel.differenceIdentifier)")
-            return
-        }
-
-        loading = true
-
-
-        if DownloadManager.fileExists(localURL) {
-            try? self.updatePlayer(localURL)
-        } else {
-            // Download file and cache it to be used later
-            DownloadManager.download(url: url, to: localURL) {
-//                DispatchQueue.main.async {
+        if let viewModel = viewModel?.base as? AudioMessageChatItem{
+            guard let url = viewModel.audioURL, let localURL = viewModel.localAudioURL else {
+                Log.debug("[WARNING]: Audio without audio URL - \(viewModel.differenceIdentifier)")
+                return
+            }
+            
+            loading = true
+            
+            
+            if DownloadManager.fileExists(localURL) {
+                try? self.updatePlayer(localURL)
+            } else {
+                // Download file and cache it to be used later
+                DownloadManager.download(url: url, to: localURL) {
+                    //                DispatchQueue.main.async {
                     try? self.updatePlayer(localURL)
-//                }
+                    //                }
+                }
+            }
+        }else if let viewModel = viewModel?.base as? AudioMessageSelfChatItem{
+            guard let url = viewModel.audioURL, let localURL = viewModel.localAudioURL else {
+                Log.debug("[WARNING]: Audio without audio URL - \(viewModel.differenceIdentifier)")
+                return
+            }
+            
+            loading = true
+            
+            
+            if DownloadManager.fileExists(localURL) {
+                try? self.updatePlayer(localURL)
+            } else {
+                // Download file and cache it to be used later
+                DownloadManager.download(url: url, to: localURL) {
+                    //                DispatchQueue.main.async {
+                    try? self.updatePlayer(localURL)
+                    //                }
+                }
             }
         }
+       
     }
 
     func startSlidingSlider(_ sender: UISlider) {
