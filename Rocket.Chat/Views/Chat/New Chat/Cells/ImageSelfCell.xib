@@ -85,7 +85,7 @@
                 <outlet property="labelDescriptionTopConstraint" destination="jF6-yN-KD3" id="sMP-cs-muM"/>
                 <outlet property="labelTitle" destination="ZoG-iD-FTy" id="ZVB-s6-mr6"/>
             </connections>
-            <point key="canvasLocation" x="180" y="271.21439280359823"/>
+            <point key="canvasLocation" x="-106" y="89"/>
         </collectionViewCell>
     </objects>
 </document>

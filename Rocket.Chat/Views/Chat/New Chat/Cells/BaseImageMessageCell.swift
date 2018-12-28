@@ -19,19 +19,30 @@ class BaseImageMessageCell: BaseMessageCell {
 
 
     func loadImage(on imageView: UIImageView, startLoadingBlock: () -> Void, stopLoadingBlock: @escaping () -> Void) {
-        guard let viewModel = viewModel?.base as? ImageMessageChatItem else {
-            return
-        }
-
-        if let imageURL = viewModel.imageURL {
-            startLoadingBlock()
-            ImageManager.loadImage(with: imageURL, into: imageView) { _, _ in
-                stopLoadingBlock()
-
-                // TODO: In case of error, show some error placeholder
+        if let viewModel = viewModel?.base as? ImageMessageChatItem{
+            if let imageURL = viewModel.imageURL {
+                startLoadingBlock()
+                ImageManager.loadImage(with: imageURL, into: imageView) { _, _ in
+                    stopLoadingBlock()
+                    
+                    // TODO: In case of error, show some error placeholder
+                }
+            } else {
+                // TODO: Load some error placeholder
             }
-        } else {
-            // TODO: Load some error placeholder
+            
+        }else if let viewModel = viewModel?.base as? ImageMessageSelfChatItem{
+            if let imageURL = viewModel.imageURL {
+                startLoadingBlock()
+                ImageManager.loadImage(with: imageURL, into: imageView) { _, _ in
+                    stopLoadingBlock()
+                    
+                    // TODO: In case of error, show some error placeholder
+                }
+            } else {
+                // TODO: Load some error placeholder
+            }
         }
+       
     }
 }

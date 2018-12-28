@@ -43,7 +43,7 @@ final class ImageSelfCell: BaseImageMessageCell, SizingCell {
     }
     
     override func configure(completeRendering: Bool) {
-        guard let viewModel = viewModel?.base as? ImageMessageChatItem else {
+        guard let viewModel = viewModel?.base as? ImageMessageSelfChatItem else {
             return
         }
         
