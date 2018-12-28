@@ -12,6 +12,7 @@ import RCMarkdownParser
 struct ChannelInfoBasicCellData: ChannelInfoCellDataProtocol {
     let cellType = ChannelInfoBasicCell.self
     var title: String?
+    
 }
 
 final class ChannelInfoBasicCell: UITableViewCell, ChannelInfoCellProtocol {

@@ -309,6 +309,7 @@
 "chat.info.item.notifications" = "通知";
 "chat.info.item.files" = "ファイル";
 "chat.info.item.share" = "共有";
+"chat.info.item.Actions" = "Actions";
 
 // Members List
 "chat.members.list.title" = "メンバー";

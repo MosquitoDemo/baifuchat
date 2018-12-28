@@ -402,6 +402,8 @@
 		444797D721D21491005416B9 /* YLDatePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 444797D421D21491005416B9 /* YLDatePicker.swift */; };
 		444797E021D2512A005416B9 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 444797DF21D2512A005416B9 /* Message.swift */; };
 		4466CBBB21D325A90015614A /* MessagesViewControllerGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4466CBBA21D325A90015614A /* MessagesViewControllerGroup.swift */; };
+		44833D4E21D4BC7300DB7AB0 /* ChannelInfoMemberCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44833D4D21D4BC7300DB7AB0 /* ChannelInfoMemberCell.swift */; };
+		44833D5421D4BCF600DB7AB0 /* ChannelInfoMemberCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 44833D5321D4BCF600DB7AB0 /* ChannelInfoMemberCell.xib */; };
 		597ECBA21E3708A50041C5C5 /* DataExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 597ECBA11E3708A50041C5C5 /* DataExtension.swift */; };
 		597ECBA41E3708B10041C5C5 /* PushManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 597ECBA31E3708B10041C5C5 /* PushManager.swift */; };
 		68D186DF1ED9714F0030EE8C /* MessageURLSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68D186DE1ED9714F0030EE8C /* MessageURLSpec.swift */; };
@@ -1384,6 +1386,8 @@
 		444797DE21D23344005416B9 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		444797DF21D2512A005416B9 /* Message.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		4466CBBA21D325A90015614A /* MessagesViewControllerGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesViewControllerGroup.swift; sourceTree = "<group>"; };
+		44833D4D21D4BC7300DB7AB0 /* ChannelInfoMemberCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelInfoMemberCell.swift; sourceTree = "<group>"; };
+		44833D5321D4BCF600DB7AB0 /* ChannelInfoMemberCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChannelInfoMemberCell.xib; sourceTree = "<group>"; };
 		5108B4F1453CB9F4E425E3F4 /* Pods-Rocket.Chat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Rocket.Chat.release.xcconfig"; path = "Pods/Target Support Files/Pods-Rocket.Chat/Pods-Rocket.Chat.release.xcconfig"; sourceTree = "<group>"; };
 		58C7F7D8D91A05CA5D1C9FE0 /* Pods-Rocket.ChatTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Rocket.ChatTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Rocket.ChatTests/Pods-Rocket.ChatTests.debug.xcconfig"; sourceTree = "<group>"; };
 		597ECBA01E3708980041C5C5 /* Rocket.Chat.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Rocket.Chat.entitlements; sourceTree = "<group>"; };
@@ -3105,6 +3109,8 @@
 				4124FCC71F7A6252008ED4C3 /* ChannelInfoUserCell.xib */,
 				800FCD491F728E6A00D9A692 /* MemberCell.swift */,
 				800FCD4A1F728E6A00D9A692 /* MemberCell.xib */,
+				44833D4D21D4BC7300DB7AB0 /* ChannelInfoMemberCell.swift */,
+				44833D5321D4BCF600DB7AB0 /* ChannelInfoMemberCell.xib */,
 			);
 			path = Info;
 			sourceTree = "<group>";
@@ -4461,6 +4467,7 @@
 				41DF76EA1D2C50710028DBF8 /* Assets.xcassets in Resources */,
 				14F8A240202E5D0600175FDC /* Red-76@2x.png in Resources */,
 				41FC9E0D209B44A500FED485 /* ChatMessageDaySeparator.xib in Resources */,
+				44833D5421D4BCF600DB7AB0 /* ChannelInfoMemberCell.xib in Resources */,
 				995F712020C7A7CD00B7535F /* EmailAuthTableViewCell.xib in Resources */,
 				809B53141FE3294400833DD2 /* ReactionListView.xib in Resources */,
 				14F8A293202E65C700175FDC /* Blue-60@2x.png in Resources */,
@@ -5245,6 +5252,7 @@
 				8073719A1F94E83600D53ADF /* SocketError.swift in Sources */,
 				413FB6C11FE17D7D00F010AA /* UIViewExtentions.swift in Sources */,
 				1496A86D20FA4644005C2E14 /* NotificationsChooseCell.swift in Sources */,
+				44833D4E21D4BC7300DB7AB0 /* ChannelInfoMemberCell.swift in Sources */,
 				8076FDB0204856AF00114F28 /* AuthCanBlockMessage.swift in Sources */,
 				8076FDA9204853DE00114F28 /* RealmExecute.swift in Sources */,
 				80461ACD2191D0D1003F1F32 /* TextHintEmojiViewCell.swift in Sources */,

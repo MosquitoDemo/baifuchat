@@ -39,8 +39,18 @@ class ChannelActionsViewController: BaseViewController {
                 let hasDescription = !(subscription.roomDescription?.isEmpty ?? true)
                 let hasTopic = !(subscription.roomTopic?.isEmpty ?? true)
 
+//                let memberData = MembersListViewData()
+//                memberData.subscription = self.subscription
+////                let userPhoto = MemberCellData.init(member: UnmanagedUser.Object.className().count)
+//                print(userPhoto)
+                
                 header = [
-                    ChannelInfoBasicCellData(title: "#\(subscription.name)"),
+//                    ChannelInfoBasicCellData(title: "#\(subscription.name)"),
+                    ChannelInfoMemberCellData(
+
+                        icon: UIImage.init(named: "zhuti"), title: "数据表" ,action: showMembersList
+                    ),
+
                     ChannelInfoDescriptionCellData(
                         title: localized("chat.info.item.description"),
                         descriptionText: hasDescription ? subscription.roomDescription : localized("chat.info.item.no_description")
@@ -61,6 +71,7 @@ class ChannelActionsViewController: BaseViewController {
                 isDirectMessage ? nil : ChannelInfoActionCellData(icon: UIImage(named: "Mentions"), title: title(for: "mentions"), action: showMentionsList),
                 isDirectMessage ? nil : ChannelInfoActionCellData(icon: UIImage(named: "Members"), title: title(for: "members"), action: showMembersList),
                 ChannelInfoActionCellData(icon: UIImage(named: "Star"), title: title(for: "starred"), action: showStarredList),
+                ChannelInfoActionCellData(icon: UIImage(named: "announcement"), title: title(for: "starred"), action: showStarredList),
                 ChannelInfoActionCellData(icon: UIImage(named: "Pinned"), title: title(for: "pinned"), action: showPinnedList),
                 ChannelInfoActionCellData(icon: UIImage(named: "Notifications"), title: title(for: "notifications"), action: showNotificationsSettings)
             ], [
@@ -73,7 +84,7 @@ class ChannelActionsViewController: BaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "Actions"
+        title = localized("chat.info.item.Actions")
 
         if #available(iOS 11.0, *) {
             tableView?.contentInsetAdjustmentBehavior = .never
@@ -84,6 +95,7 @@ class ChannelActionsViewController: BaseViewController {
     }
 
     func registerCells() {
+        tableView.registerNib(ChannelInfoMemberCell.self)
         tableView.registerNib(ChannelInfoUserCell.self)
         tableView.registerNib(ChannelInfoActionCell.self)
         tableView.registerNib(ChannelInfoDescriptionCell.self)
@@ -299,6 +311,14 @@ extension ChannelActionsViewController: UITableViewDelegate {
                 cell.data = data
                 return cell
         }
+        // member cell
+        if let data = data as? ChannelInfoMemberCellData {
+            
+            let cell = tableView.dequeueReusableCell(ChannelInfoMemberCell.self)
+            cell.data = data
+            return cell
+        }
+        
 
         if let data = data as? ChannelInfoBasicCellData {
             if let cell = tableView.dequeueReusableCell(withIdentifier: ChannelInfoBasicCell.identifier) as? ChannelInfoBasicCell {
@@ -324,7 +344,11 @@ extension ChannelActionsViewController: UITableViewDelegate {
         if data as? ChannelInfoDescriptionCellData != nil {
             return ChannelInfoDescriptionCell.defaultHeight
         }
-
+//member Data
+        if data as? ChannelInfoMemberCellData != nil {
+            return ChannelInfoMemberCell.defaultHeight
+        }
+        
         if data as? ChannelInfoBasicCellData != nil {
             return ChannelInfoBasicCell.defaultHeight
         }
@@ -345,6 +369,14 @@ extension ChannelActionsViewController: UITableViewDelegate {
             showUserDetails(user)
         }
 
+        if let data = data as? ChannelInfoMemberCellData {
+            guard let action = data.action else {
+                alert(title: localized("alert.feature.wip.title"), message: localized("alert.feature.wip.message"))
+                return
+            }
+            action()
+        }
+        
         if let data = data as? ChannelInfoActionCellData {
             guard let action = data.action else {
                 alert(title: localized("alert.feature.wip.title"), message: localized("alert.feature.wip.message"))

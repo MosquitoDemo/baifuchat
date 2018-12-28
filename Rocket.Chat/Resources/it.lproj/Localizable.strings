@@ -309,6 +309,7 @@
 "chat.info.item.notifications" = "Notifiche";
 "chat.info.item.files" = "Documenti";
 "chat.info.item.share" = "Condivisioni";
+"chat.info.item.Actions" = "Actions";
 
 // Members List
 "chat.members.list.title" = "Componenti";

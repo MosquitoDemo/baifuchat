@@ -309,6 +309,7 @@
 "chat.info.item.mentions" = "Mentions"; // TODO
 "chat.info.item.files" = "Files"; // TODO
 "chat.info.item.share" = "Share"; // TODO
+"chat.info.item.Actions" = "Actions";
 
 // Members List
 "chat.members.list.title" = "Členové";
