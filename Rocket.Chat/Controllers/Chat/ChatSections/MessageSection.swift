@@ -51,79 +51,162 @@ final class MessageSection: ChatSection {
             switch attachment.type {
             case .audio:
                 if sanitizedMessage.isEmpty {
-                    cells.insert(AudioMessageChatItem(
-                        identifier: attachment.identifier,
-                        audioURL: attachment.fullAudioURL,
-                        hasText: false,
-                        user: user,
-                        message: object.message
-                    ).wrapped, at: 0)
+                    if object.message.user?.identifier == AuthManager.currentUser()?.identifier{
+                        cells.insert(AudioMessageSelfChatItem(
+                            identifier: attachment.identifier,
+                            audioURL: attachment.fullAudioURL,
+                            hasText: false,
+                            user: user,
+                            message: object.message
+                            ).wrapped, at: 0)
+
+                    }else{
+                        
+                        cells.insert(AudioMessageChatItem(
+                            identifier: attachment.identifier,
+                            audioURL: attachment.fullAudioURL,
+                            hasText: false,
+                            user: user,
+                            message: object.message
+                            ).wrapped, at: 0)
+                    }
 
                     shouldAppendMessageHeader = false
                 } else {
-                    cells.insert(AudioMessageChatItem(
-                        identifier: attachment.identifier,
-                        audioURL: attachment.fullAudioURL,
-                        hasText: true,
-                        user: nil,
-                        message: object.message
-                    ).wrapped, at: 0)
+                    if object.message.user?.identifier == AuthManager.currentUser()?.identifier{
+                        cells.insert(AudioMessageSelfChatItem(
+                            identifier: attachment.identifier,
+                            audioURL: attachment.fullAudioURL,
+                            hasText: false,
+                            user: user,
+                            message: object.message
+                            ).wrapped, at: 0)
+                        
+                    }else{
+                        
+                        cells.insert(AudioMessageChatItem(
+                            identifier: attachment.identifier,
+                            audioURL: attachment.fullAudioURL,
+                            hasText: false,
+                            user: user,
+                            message: object.message
+                            ).wrapped, at: 0)
+                    }
                 }
             case .video:
                 if sanitizedMessage.isEmpty && shouldAppendMessageHeader {
-                    cells.insert(VideoMessageChatItem(
-                        attachment: attachment,
-                        identifier: attachment.identifier,
-                        descriptionText: attachment.descriptionText,
-                        videoURL: attachment.fullFileURL,
-                        videoThumbPath: attachment.videoThumbPath,
-                        hasText: false,
-                        user: user,
-                        message: object.message
-                    ).wrapped, at: 0)
+                    if object.message.user?.identifier == AuthManager.currentUser()?.identifier{
+                        cells.insert(VideoMessageSelfChatItem(
+                            attachment: attachment,
+                            identifier: attachment.identifier,
+                            descriptionText: attachment.descriptionText,
+                            videoURL: attachment.fullFileURL,
+                            videoThumbPath: attachment.videoThumbPath,
+                            hasText: false,
+                            user: user,
+                            message: object.message
+                            ).wrapped, at: 0)
+                    }else{
+                        cells.insert(VideoMessageChatItem(
+                            attachment: attachment,
+                            identifier: attachment.identifier,
+                            descriptionText: attachment.descriptionText,
+                            videoURL: attachment.fullFileURL,
+                            videoThumbPath: attachment.videoThumbPath,
+                            hasText: false,
+                            user: user,
+                            message: object.message
+                            ).wrapped, at: 0)
+
+                    }
 
                     shouldAppendMessageHeader = false
                 } else {
-                    cells.insert(VideoMessageChatItem(
-                        attachment: attachment,
-                        identifier: attachment.identifier,
-                        descriptionText: attachment.descriptionText,
-                        videoURL: attachment.fullFileURL,
-                        videoThumbPath: attachment.videoThumbPath,
-                        hasText: true,
-                        user: nil,
-                        message: object.message
-                    ).wrapped, at: 0)
+                    if object.message.user?.identifier == AuthManager.currentUser()?.identifier{
+                        cells.insert(VideoMessageSelfChatItem(
+                            attachment: attachment,
+                            identifier: attachment.identifier,
+                            descriptionText: attachment.descriptionText,
+                            videoURL: attachment.fullFileURL,
+                            videoThumbPath: attachment.videoThumbPath,
+                            hasText: false,
+                            user: user,
+                            message: object.message
+                            ).wrapped, at: 0)
+                    }else{
+                        cells.insert(VideoMessageChatItem(
+                            attachment: attachment,
+                            identifier: attachment.identifier,
+                            descriptionText: attachment.descriptionText,
+                            videoURL: attachment.fullFileURL,
+                            videoThumbPath: attachment.videoThumbPath,
+                            hasText: false,
+                            user: user,
+                            message: object.message
+                            ).wrapped, at: 0)
+                        
+                    }
                 }
             case .textAttachment where attachment.fields.count > 0:
                 let collapsed = collapsibleItemsState[attachment.identifier] ?? attachment.collapsed
 
                 if sanitizedMessage.isEmpty && shouldAppendMessageHeader && attachment.identifier == object.message.attachments.first?.identifier {
-                    cells.insert(TextAttachmentChatItem(
-                        identifier: attachment.identifier,
-                        fields: attachment.fields,
-                        title: attachment.title,
-                        subtitle: attachment.text,
-                        color: attachment.color,
-                        collapsed: collapsed,
-                        hasText: false,
-                        user: user,
-                        message: object.message
-                    ).wrapped, at: 0)
-
+                    
+                    if object.message.user?.identifier == AuthManager.currentUser()?.identifier{
+                        
+                        cells.insert(TextAttachmentSelfChatItem(
+                            identifier: attachment.identifier,
+                            fields: attachment.fields,
+                            title: attachment.title,
+                            subtitle: attachment.text,
+                            color: attachment.color,
+                            collapsed: collapsed,
+                            hasText: false,
+                            user: user,
+                            message: object.message
+                            ).wrapped, at: 0)
+                    }else{
+                        cells.insert(TextAttachmentChatItem(
+                            identifier: attachment.identifier,
+                            fields: attachment.fields,
+                            title: attachment.title,
+                            subtitle: attachment.text,
+                            color: attachment.color,
+                            collapsed: collapsed,
+                            hasText: false,
+                            user: user,
+                            message: object.message
+                            ).wrapped, at: 0)
+                    }
+                    
                     shouldAppendMessageHeader = false
                 } else {
-                    cells.insert(TextAttachmentChatItem(
-                        identifier: attachment.identifier,
-                        fields: attachment.fields,
-                        title: attachment.title,
-                        subtitle: attachment.text,
-                        color: attachment.color,
-                        collapsed: collapsed,
-                        hasText: true,
-                        user: nil,
-                        message: object.message
-                    ).wrapped, at: 0)
+                    if object.message.user?.identifier == AuthManager.currentUser()?.identifier{
+                        
+                        cells.insert(TextAttachmentSelfChatItem(
+                            identifier: attachment.identifier,
+                            fields: attachment.fields,
+                            title: attachment.title,
+                            subtitle: attachment.text,
+                            color: attachment.color,
+                            collapsed: collapsed,
+                            hasText: false,
+                            user: user,
+                            message: object.message
+                            ).wrapped, at: 0)
+                    }else{
+                        cells.insert(TextAttachmentChatItem(
+                            identifier: attachment.identifier,
+                            fields: attachment.fields,
+                            title: attachment.title,
+                            subtitle: attachment.text,
+                            color: attachment.color,
+                            collapsed: collapsed,
+                            hasText: false,
+                            user: user,
+                            message: object.message
+                            ).wrapped, at: 0)
+                    }
                 }
             case .textAttachment where !attachment.isFile:
                 let collapsed = collapsibleItemsState[attachment.identifier] ?? attachment.collapsed
@@ -138,99 +221,212 @@ final class MessageSection: ChatSection {
                 }
 
                 if sanitizedMessage.isEmpty && shouldAppendMessageHeader {
-                    cells.insert(QuoteChatItem(
-                        identifier: attachment.identifier,
-                        purpose: purpose,
-                        title: attachment.title,
-                        text: text,
-                        collapsed: collapsed,
-                        hasText: false,
-                        user: user,
-                        message: object.message
-                    ).wrapped, at: 0)
+                    
+                    if object.message.user?.identifier == AuthManager.currentUser()?.identifier{
+
+                        cells.insert(QuoteChatSelfItem(
+                            identifier: attachment.identifier,
+                            purpose: purpose,
+                            title: attachment.title,
+                            text: text,
+                            collapsed: collapsed,
+                            hasText: false,
+                            user: user,
+                            message: object.message
+                            ).wrapped, at: 0)
+                    }else{
+                        cells.insert(QuoteChatItem(
+                            identifier: attachment.identifier,
+                            purpose: purpose,
+                            title: attachment.title,
+                            text: text,
+                            collapsed: collapsed,
+                            hasText: false,
+                            user: user,
+                            message: object.message
+                            ).wrapped, at: 0)
+                    }
+                    
 
                     shouldAppendMessageHeader = false
                 } else {
-                    cells.insert(QuoteChatItem(
-                        identifier: attachment.identifier,
-                        purpose: purpose,
-                        title: attachment.title,
-                        text: text,
-                        collapsed: collapsed,
-                        hasText: true,
-                        user: nil,
-                        message: object.message
-                    ).wrapped, at: 0)
+                    
+                    if object.message.user?.identifier == AuthManager.currentUser()?.identifier{
+                        
+                        cells.insert(QuoteChatSelfItem(
+                            identifier: attachment.identifier,
+                            purpose: purpose,
+                            title: attachment.title,
+                            text: text,
+                            collapsed: collapsed,
+                            hasText: false,
+                            user: user,
+                            message: object.message
+                            ).wrapped, at: 0)
+                    }else{
+                        cells.insert(QuoteChatItem(
+                            identifier: attachment.identifier,
+                            purpose: purpose,
+                            title: attachment.title,
+                            text: text,
+                            collapsed: collapsed,
+                            hasText: false,
+                            user: user,
+                            message: object.message
+                            ).wrapped, at: 0)
+                    }
                 }
             case .image:
                 if sanitizedMessage.isEmpty && shouldAppendMessageHeader {
-                    cells.insert(ImageMessageChatItem(
-                        identifier: attachment.identifier,
-                        title: attachment.title,
-                        descriptionText: attachment.descriptionText,
-                        imageURL: attachment.fullImageURL,
-                        hasText: false,
-                        user: user,
-                        message: object.message
-                    ).wrapped, at: 0)
+                    
+                    if object.message.user?.identifier == AuthManager.currentUser()?.identifier{
+
+                        cells.insert(ImageMessageSelfChatItem(
+                            identifier: attachment.identifier,
+                            title: attachment.title,
+                            descriptionText: attachment.descriptionText,
+                            imageURL: attachment.fullImageURL,
+                            hasText: false,
+                            user: user,
+                            message: object.message
+                            ).wrapped, at: 0)
+                    }else{
+                        cells.insert(ImageMessageChatItem(
+                            identifier: attachment.identifier,
+                            title: attachment.title,
+                            descriptionText: attachment.descriptionText,
+                            imageURL: attachment.fullImageURL,
+                            hasText: false,
+                            user: user,
+                            message: object.message
+                            ).wrapped, at: 0)
+                    }
+                    
 
                     shouldAppendMessageHeader = false
                 } else {
-                    cells.insert(ImageMessageChatItem(
-                        identifier: attachment.identifier,
-                        title: attachment.title,
-                        descriptionText: attachment.descriptionText,
-                        imageURL: attachment.fullImageURL,
-                        hasText: true,
-                        user: nil,
-                        message: object.message
-                    ).wrapped, at: 0)
+                    if object.message.user?.identifier == AuthManager.currentUser()?.identifier{
+                        
+                        cells.insert(ImageMessageSelfChatItem(
+                            identifier: attachment.identifier,
+                            title: attachment.title,
+                            descriptionText: attachment.descriptionText,
+                            imageURL: attachment.fullImageURL,
+                            hasText: false,
+                            user: user,
+                            message: object.message
+                            ).wrapped, at: 0)
+                    }else{
+                        cells.insert(ImageMessageChatItem(
+                            identifier: attachment.identifier,
+                            title: attachment.title,
+                            descriptionText: attachment.descriptionText,
+                            imageURL: attachment.fullImageURL,
+                            hasText: false,
+                            user: user,
+                            message: object.message
+                            ).wrapped, at: 0)
+                    }
                 }
             default:
                 if attachment.isFile {
                     if sanitizedMessage.isEmpty && shouldAppendMessageHeader {
-                        cells.insert(FileMessageChatItem(
+                        
+                        if object.message.user?.identifier == AuthManager.currentUser()?.identifier{
+
+                        cells.insert(FileMessageSelfChatItem(
                             attachment: attachment,
                             hasText: false,
                             user: user,
                             message: object.message
                         ).wrapped, at: 0)
 
+                        }else{
+                            cells.insert(FileMessageChatItem(
+                                attachment: attachment,
+                                hasText: false,
+                                user: user,
+                                message: object.message
+                                ).wrapped, at: 0)
+                        }
                         shouldAppendMessageHeader = false
                     } else {
-                        cells.insert(FileMessageChatItem(
-                            attachment: attachment,
-                            hasText: true,
-                            user: nil,
-                            message: object.message
-                        ).wrapped, at: 0)
+                        if object.message.user?.identifier == AuthManager.currentUser()?.identifier{
+                            
+                            cells.insert(FileMessageSelfChatItem(
+                                attachment: attachment,
+                                hasText: false,
+                                user: user,
+                                message: object.message
+                                ).wrapped, at: 0)
+                            
+                        }else{
+                            cells.insert(FileMessageChatItem(
+                                attachment: attachment,
+                                hasText: false,
+                                user: user,
+                                message: object.message
+                                ).wrapped, at: 0)
+                        }
                     }
                 }
             }
         }
 
         object.message.urls.forEach { messageURL in
-            cells.insert(MessageURLChatItem(
-                url: messageURL.url,
-                imageURL: messageURL.imageURL,
-                title: messageURL.title,
-                subtitle: messageURL.subtitle,
-                message: object.message
-            ).wrapped, at: 0)
+            if object.message.user?.identifier == AuthManager.currentUser()?.identifier{
+
+                cells.insert(MessageURLSelfChatItem(
+                    url: messageURL.url,
+                    imageURL: messageURL.imageURL,
+                    title: messageURL.title,
+                    subtitle: messageURL.subtitle,
+                    message: object.message
+                    ).wrapped, at: 0)
+            }else{
+                cells.insert(MessageURLChatItem(
+                    url: messageURL.url,
+                    imageURL: messageURL.imageURL,
+                    title: messageURL.title,
+                    subtitle: messageURL.subtitle,
+                    message: object.message
+                    ).wrapped, at: 0)
+            }
+            
         }
 
         if object.message.isBroadcastReplyAvailable() {
-            cells.insert(MessageActionsChatItem(
-                user: nil,
-                message: object.message
-            ).wrapped, at: 0)
+            if object.message.user?.identifier == AuthManager.currentUser()?.identifier{
+
+                cells.insert(MessageActionsSelfChatItem(
+                    user: nil,
+                    message: object.message
+                    ).wrapped, at: 0)
+            }else{
+                cells.insert(MessageActionsChatItem(
+                    user: nil,
+                    message: object.message
+                    ).wrapped, at: 0)
+            }
+            
         }
 
         if !object.message.reactions.isEmpty {
-            cells.insert(ReactionsChatItem(
-                message: object.message,
-                reactions: object.message.reactions
-            ).wrapped, at: 0)
+            
+            if object.message.user?.identifier == AuthManager.currentUser()?.identifier{
+
+                cells.insert(ReactionsSelfChatItem(
+                    message: object.message,
+                    reactions: object.message.reactions
+                    ).wrapped, at: 0)
+
+            }else{
+                
+                cells.insert(ReactionsChatItem(
+                    message: object.message,
+                    reactions: object.message.reactions
+                    ).wrapped, at: 0)
+            }
         }
 
         if !object.isSequential && shouldAppendMessageHeader {

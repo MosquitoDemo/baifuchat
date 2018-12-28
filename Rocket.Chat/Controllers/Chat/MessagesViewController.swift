@@ -268,7 +268,7 @@ final class MessagesViewController: RocketChatViewController {
  
         
     
-        let collectionViewCellxs = [BasicMessageCell.self,BasicMessageSelfCell.self,SequentialMessageCell.self,LoaderCell.self,DateSeparatorCell.self,UnreadMarkerCell.self,AudioCell.self,AudioMessageCell.self,VideoCell.self,VideoMessageCell.self,ReactionsCell.self,FileCell.self,FileMessageCell.self,TextAttachmentCell.self,TextAttachmentMessageCell.self,ImageCell.self,ImageMessageCell.self,QuoteCell.self,QuoteMessageCell.self,MessageURLCell.self,MessageActionsCell.self,HeaderCell.self,MessageSelfActionsCell.self]
+        let collectionViewCellxs = [BasicMessageCell.self,BasicMessageSelfCell.self,SequentialMessageCell.self,LoaderCell.self,DateSeparatorCell.self,UnreadMarkerCell.self,AudioCell.self,AudioMessageCell.self,VideoCell.self,VideoMessageCell.self,ReactionsCell.self,FileCell.self,FileMessageCell.self,TextAttachmentCell.self,TextAttachmentMessageCell.self,ImageCell.self,ImageMessageCell.self,QuoteCell.self,QuoteMessageCell.self,MessageURLCell.self,MessageActionsCell.self,HeaderCell.self,AudioSelfCell.self,AudioMessageSelfCell.self,VideoSelfCell.self,VideoMessageSelfCell.self,ReactionsSelfCell.self,FileSelfCell.self,FileMessageSelfCell.self,TextAttachmentSelfCell.self,TextAttachmentMessageSelfCell.self,ImageSelfCell.self,ImageMessageSelfCell.self,QuoteSelfCell.self,QuoteMessageSelfCell.self,MessageURLSelfCell.self,MessageSelfActionsCell.self]
         collectionViewCellxs.forEach { (cell) in
             let nib = UINib(nibName: String(describing: cell), bundle: Bundle(for: cell))
             collectionView.register(nib, forCellWithReuseIdentifier: String(describing: cell))

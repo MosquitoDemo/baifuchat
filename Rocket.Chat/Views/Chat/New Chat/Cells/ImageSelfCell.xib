@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="ImageSelfCell" customModule="Rocket_Chat" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="229"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="229"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x1U-1s-rMN">
+                        <rect key="frame" x="22" y="20" width="282" height="166"/>
+                        <connections>
+                            <action selector="buttonImageHandlerDidTapped:" destination="gTV-IL-0wX" eventType="touchUpInside" id="RK5-qC-Pbl"/>
+                        </connections>
+                    </button>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fvk-k2-KYz">
+                        <rect key="frame" x="22" y="196" width="40" height="20"/>
+                        <fontDescription key="fontDescription" style="UICTFontTextStyleCallout"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZoG-iD-FTy">
+                        <rect key="frame" x="22" y="0.0" width="40" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="40" id="9V5-XZ-6MK"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" style="UICTFontTextStyleCallout"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="jtg-h4-EnR">
+                        <rect key="frame" x="153" y="93" width="20" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="20" id="WYP-af-MHT"/>
+                            <constraint firstAttribute="height" constant="20" id="xXA-2W-8N8"/>
+                        </constraints>
+                    </activityIndicatorView>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="zOG-UZ-10b" customClass="FLAnimatedImageView">
+                        <rect key="frame" x="22" y="20" width="282" height="166"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="zOG-UZ-10b" secondAttribute="height" multiplier="141:83" id="Jfs-aH-mWD"/>
+                        </constraints>
+                    </imageView>
+                </subviews>
+            </view>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="zOG-UZ-10b" firstAttribute="top" secondItem="ZoG-iD-FTy" secondAttribute="bottom" id="2Ag-bO-Q2Q"/>
+                <constraint firstItem="x1U-1s-rMN" firstAttribute="top" secondItem="zOG-UZ-10b" secondAttribute="top" id="3xo-ls-NXJ"/>
+                <constraint firstItem="jtg-h4-EnR" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="93" id="6wM-qv-Ndk"/>
+                <constraint firstAttribute="trailingMargin" secondItem="zOG-UZ-10b" secondAttribute="trailing" constant="55" id="7ea-ZI-vjB"/>
+                <constraint firstItem="jtg-h4-EnR" firstAttribute="centerY" secondItem="zOG-UZ-10b" secondAttribute="centerY" id="Cit-nf-ypq"/>
+                <constraint firstItem="x1U-1s-rMN" firstAttribute="trailing" secondItem="zOG-UZ-10b" secondAttribute="trailing" id="DVf-3a-n1y"/>
+                <constraint firstItem="fvk-k2-KYz" firstAttribute="leading" secondItem="zOG-UZ-10b" secondAttribute="leading" id="DbE-dk-3hZ"/>
+                <constraint firstItem="zOG-UZ-10b" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leadingMargin" constant="6" id="F08-sS-VzA"/>
+                <constraint firstItem="ZoG-iD-FTy" firstAttribute="leading" secondItem="zOG-UZ-10b" secondAttribute="leading" id="Fha-Qe-mdM"/>
+                <constraint firstAttribute="bottom" secondItem="fvk-k2-KYz" secondAttribute="bottom" constant="13" id="GJp-DJ-4wt"/>
+                <constraint firstItem="x1U-1s-rMN" firstAttribute="height" secondItem="zOG-UZ-10b" secondAttribute="height" id="HA4-Q1-xnB"/>
+                <constraint firstItem="ZoG-iD-FTy" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="P4Z-u7-jwH"/>
+                <constraint firstItem="jtg-h4-EnR" firstAttribute="centerX" secondItem="zOG-UZ-10b" secondAttribute="centerX" id="cXX-WF-1Gr"/>
+                <constraint firstItem="zOG-UZ-10b" firstAttribute="width" secondItem="zOG-UZ-10b" secondAttribute="height" multiplier="141:83" id="fnN-Pr-o2p"/>
+                <constraint firstItem="fvk-k2-KYz" firstAttribute="top" secondItem="zOG-UZ-10b" secondAttribute="bottom" constant="10" id="jF6-yN-KD3"/>
+                <constraint firstItem="x1U-1s-rMN" firstAttribute="leading" secondItem="zOG-UZ-10b" secondAttribute="leading" id="l7w-1Q-gtm"/>
+                <constraint firstItem="ZoG-iD-FTy" firstAttribute="trailing" secondItem="fvk-k2-KYz" secondAttribute="trailing" id="tyH-7x-SPG"/>
+                <constraint firstItem="x1U-1s-rMN" firstAttribute="width" secondItem="zOG-UZ-10b" secondAttribute="width" id="vcq-PO-pbg"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <size key="customSize" width="475" height="755"/>
+            <connections>
+                <outlet property="activityIndicatorView" destination="jtg-h4-EnR" id="h7b-Pr-vX4"/>
+                <outlet property="imageView" destination="zOG-UZ-10b" id="46v-Bb-x1P"/>
+                <outlet property="labelDescription" destination="fvk-k2-KYz" id="Job-3f-OOG"/>
+                <outlet property="labelDescriptionTopConstraint" destination="jF6-yN-KD3" id="sMP-cs-muM"/>
+                <outlet property="labelTitle" destination="ZoG-iD-FTy" id="ZVB-s6-mr6"/>
+            </connections>
+            <point key="canvasLocation" x="-106" y="89"/>
+        </collectionViewCell>
+    </objects>
+</document>

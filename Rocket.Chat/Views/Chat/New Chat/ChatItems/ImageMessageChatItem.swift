@@ -64,7 +64,7 @@ final class ImageMessageChatItem: BaseMessageChatItem, ChatItem, Differentiable 
 /// ImageMessageSelfChatItem 自己发送的信息
 final class ImageMessageSelfChatItem: BaseMessageChatItem, ChatItem, Differentiable {
     var relatedReuseIdentifier: String {
-        return hasText ? ImageCell.identifier : ImageMessageCell.identifier
+        return hasText ? ImageSelfCell.identifier : ImageMessageSelfCell.identifier
     }
     
     var identifier: String

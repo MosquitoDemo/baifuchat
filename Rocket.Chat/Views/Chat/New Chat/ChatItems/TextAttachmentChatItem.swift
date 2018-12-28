@@ -65,7 +65,7 @@ final class TextAttachmentChatItem: BaseTextAttachmentChatItem, ChatItem, Differ
 /// TextAttachmentSelfChatItem 自己发送的消息
 final class TextAttachmentSelfChatItem: BaseTextAttachmentChatItem, ChatItem, Differentiable {
     var relatedReuseIdentifier: String {
-        return hasText ? TextAttachmentCell.identifier : TextAttachmentMessageCell.identifier
+        return hasText ? TextAttachmentSelfCell.identifier : TextAttachmentMessageSelfCell.identifier
     }
     
     let identifier: String

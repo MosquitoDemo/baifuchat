@@ -49,7 +49,7 @@ struct ReactionsChatItem: ChatItem, Differentiable {
 }
 struct ReactionsSelfChatItem: ChatItem, Differentiable {
     var relatedReuseIdentifier: String {
-        return ReactionsCell.identifier
+        return ReactionsSelfCell.identifier
     }
     
     var message: UnmanagedMessage

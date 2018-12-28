@@ -45,7 +45,7 @@ class AudioMessageChatItem: BaseMessageChatItem, ChatItem, Differentiable {
 
 class AudioMessageSelfChatItem: BaseMessageChatItem, ChatItem, Differentiable {
     var relatedReuseIdentifier: String {
-        return hasText ? AudioCell.identifier : AudioMessageCell.identifier
+        return hasText ? AudioSelfCell.identifier : AudioMessageSelfCell.identifier
     }
     
     let identifier: String

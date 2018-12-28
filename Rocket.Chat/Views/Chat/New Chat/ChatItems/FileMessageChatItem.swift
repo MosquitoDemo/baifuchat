@@ -38,7 +38,7 @@ final class FileMessageChatItem: BaseMessageChatItem, ChatItem, Differentiable {
 }
 final class FileMessageSelfChatItem: BaseMessageChatItem, ChatItem, Differentiable {
     var relatedReuseIdentifier: String {
-        return hasText ? FileCell.identifier : FileMessageCell.identifier
+        return hasText ? FileSelfCell.identifier : FileMessageSelfCell.identifier
     }
     
     var attachment: UnmanagedAttachment
