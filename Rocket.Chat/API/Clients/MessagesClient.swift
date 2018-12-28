@@ -20,6 +20,7 @@ struct MessagesClient: APIClient {
 
         Realm.executeOnMainThread(realm: realm) { (realm) in
             if let subscriptionMutable = Subscription.find(rid: subscriptionIdentifier, realm: realm) {
+                
                 subscriptionMutable.roomLastMessage = message
                 subscriptionMutable.roomLastMessageDate = message.createdAt
                 subscriptionMutable.roomLastMessageText = Subscription.lastMessageText(lastMessage: message)

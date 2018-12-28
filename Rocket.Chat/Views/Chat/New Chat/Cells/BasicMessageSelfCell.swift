@@ -38,6 +38,7 @@ class BasicMessageSelfCell: BaseMessageCell, SizingCell {
     @IBOutlet weak var readReceiptButton: UIButton!
     
     @IBOutlet weak var textHeightConstraint: NSLayoutConstraint!
+    @IBOutlet weak var textWidthConstraint: NSLayoutConstraint!
     @IBOutlet weak var textLeadingConstraint: NSLayoutConstraint!
     @IBOutlet weak var textTrailingConstraint: NSLayoutConstraint!
     @IBOutlet weak var readReceiptWidthConstraint: NSLayoutConstraint!
@@ -100,19 +101,42 @@ class BasicMessageSelfCell: BaseMessageCell, SizingCell {
             } else if message.failed {
                 messageText.setFontColor(MessageTextFontAttributes.failedFontColor(for: theme))
             }
-            let ps = NSMutableParagraphStyle()
-            ps.alignment = .right
-            messageText.setAttributes([NSAttributedString.Key.paragraphStyle:ps], range: NSRange.init(location: 0, length: messageText.length))
+            
+            self.text.textView.contentInset = UIEdgeInsets(top: 10, left: 10, bottom: -5, right: 10)
+            self.text.textView.backgroundColor = UIColor(hex: "#1D74F5")
+            self.text.textView.layer.cornerRadius = 5
+            self.text.textView.layer.masksToBounds = true
+            
+//            let ps = NSMutableParagraphStyle()
+//            ps.paragraphSpacingBefore = 5
+//            ps.paragraphSpacing = 10
+//            ps.lineSpacing = 5
+//            ps.lineBreakMode = .byWordWrapping
+//
+            messageText.addAttributes([
+//                NSAttributedString.Key.paragraphStyle:ps,
+                NSAttributedString.Key.foregroundColor:UIColor.white
+                ], range: NSRange.init(location: 0, length: messageText.length))
             text.message = messageText
+            
+            
+            let estimateSize = CGSize(width: Double(MAXFLOAT), height: 30)
             
             let maxSize = CGSize(
                 width: textWidth,
                 height: .greatestFiniteMagnitude
             )
             
-            textHeightConstraint.constant = text.textView.sizeThatFits(
-                maxSize
-                ).height
+            let estimateWidth = text.textView.sizeThatFits(estimateSize).width
+            if estimateWidth < textWidth{
+                textWidthConstraint.constant = estimateWidth + 30
+                textHeightConstraint.constant = 35
+            }else{
+                
+                textHeightConstraint.constant = text.textView.sizeThatFits(
+                    maxSize
+                    ).height
+            }
         }
     }
     
