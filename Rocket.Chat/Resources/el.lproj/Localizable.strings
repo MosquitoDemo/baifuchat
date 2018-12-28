@@ -308,6 +308,7 @@
 "chat.info.item.mentions" = "Αναφέρθηκαν";
 "chat.info.item.files" = "Αρχεία";
 "chat.info.item.share" = "Κοινή Χρήση";
+"chat.info.item.Actions" = "Actions";
 
 // Members List
 "chat.members.list.title" = "Μέλη";

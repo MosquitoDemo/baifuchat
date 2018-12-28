@@ -13,8 +13,8 @@ extension MessagesViewController {
                 image: UIImage(named: "Search"),
                 style: .done,
                 target: self,
-//                action: #selector(showSearchMessages)
-                action: #selector(showGroupMessages)
+                action: #selector(showSearchMessages)
+//                action: #selector(showGroupMessages)
 
 //                showGroupMessages
             )

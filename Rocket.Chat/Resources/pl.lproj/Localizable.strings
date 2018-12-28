@@ -308,6 +308,7 @@
 "chat.info.item.mentions" = "Wzmianki";
 "chat.info.item.files" = "Pliki";
 "chat.info.item.share" = "Udostępnij";
+"chat.info.item.Actions" = "Actions";
 
 // Members List
 "chat.members.list.title" = "Członkowie";
