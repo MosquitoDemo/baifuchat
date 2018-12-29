@@ -154,7 +154,16 @@ class SubscriptionsViewModel {
                 assorter.registerSection(name: localized("subscriptions.direct_messages"), objects: queryDataDirectMessages)
             } else {
                 let selectedGroupingOptions = SubscriptionsSortingManager.selectedGroupingOptions
+                assorter.willReconstructSections()
                 let title = !selectedGroupingOptions.isEmpty ? localized("subscriptions.conversations") : ""
+                if let p = user?.parentUsername{
+                    
+                    let parentData = filtered(using: "SELF.name == \(p)")
+                    assorter.registerSection(name: title, objects: parentData)
+                }
+                assorter.registerSection(name: title, objects: subscriptionxs)
+
+                
                 assorter.registerSection(name: title, objects: queryItems)
             }
 

@@ -481,6 +481,8 @@
 "subscriptions.grouping.type" = "Raggruppa per tipo";
 "subscriptions.grouping.favorites" = "Raggruppa per preferiti";
 "subscriptions.grouping.unread_top" = "Non letti sopra";
+"subscriptions.grouping.customer_service" = "";
+"subscriptions.grouping.boss" = "";
 
 // Shortcuts
 "shortcuts.type_message" = "Scrivi un messaggio";

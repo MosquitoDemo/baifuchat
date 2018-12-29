@@ -480,6 +480,8 @@
 "subscriptions.grouping.type" = "Группировать по типу";
 "subscriptions.grouping.favorites" = "Группировать по избранным";
 "subscriptions.grouping.unread_top" = "Непрочитанные свеху";
+"subscriptions.grouping.customer_service" = "";
+"subscriptions.grouping.boss" = "";
 
 // Shortcuts
 "shortcuts.type_message" = "Type message"; //TODO

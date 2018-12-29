@@ -480,6 +480,8 @@
 "subscriptions.grouping.type" = "Ομαδοποίηση κατά τύπο";
 "subscriptions.grouping.favorites" = "Ομαδοποίηση κατά αγαπημένα";
 "subscriptions.grouping.unread_top" = "Αδιάβαστα στην κορυφή";
+"subscriptions.grouping.customer_service" = "";
+"subscriptions.grouping.boss" = "";
 
 // Shortcuts
 "shortcuts.type_message" = "Type message"; //TODO

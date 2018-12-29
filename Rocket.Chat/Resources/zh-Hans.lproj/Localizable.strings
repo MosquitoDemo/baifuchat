@@ -480,6 +480,8 @@
 "subscriptions.grouping.type" = "按类型分组";
 "subscriptions.grouping.favorites" = "按收藏夹分组";
 "subscriptions.grouping.unread_top" = "顶部未读";
+"subscriptions.grouping.customer_service" = "";
+"subscriptions.grouping.boss" = "";
 
 // Shortcuts
 "shortcuts.type_message" = "输入消息";

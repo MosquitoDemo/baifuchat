@@ -17,6 +17,8 @@ enum SubscriptionsGroupingOption: String, CaseIterable {
     case unread
     case type
     case favorites
+    case boss
+    case customerservice
 }
 
 struct SubscriptionsSortingManager {
@@ -104,6 +106,10 @@ struct SubscriptionsSortingManager {
     static internal var selectedGroupingOptions: [SubscriptionsGroupingOption] {
         var options: [SubscriptionsGroupingOption] = []
 
+        /*
+        options.append(.customerservice)
+        options.append(.boss)
+ */
         if isSelected(option: SubscriptionsGroupingOption.favorites.rawValue) {
             options.append(.favorites)
         }

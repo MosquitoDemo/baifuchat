@@ -54,6 +54,11 @@ final class SubscriptionsSortingViewModel {
         case .favorites: return localized("subscriptions.grouping.favorites")
         case .type: return localized("subscriptions.grouping.type")
         case .unread: return localized("subscriptions.grouping.unread_top")
+        case .boss:
+           
+            return localized("subscriptions.grouping.boss")
+        case .customerservice:
+            return localized("subscriptions.grouping.customer_service")
         }
     }
 
@@ -79,6 +84,10 @@ final class SubscriptionsSortingViewModel {
         case .favorites: return UIImage(named: "Group Favorites")
         case .type: return UIImage(named: "Group Type")
         case .unread: return UIImage(named: "Group Unread")
+        case .boss:
+            return UIImage()
+        case .customerservice:
+            return UIImage()
         }
     }
 

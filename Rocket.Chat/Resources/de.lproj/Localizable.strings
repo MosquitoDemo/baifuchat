@@ -480,6 +480,8 @@
 "subscriptions.grouping.type" = "Nach Art gruppieren";
 "subscriptions.grouping.favorites" = "Favoriten gruppieren";
 "subscriptions.grouping.unread_top" = "Ungelesene ganz oben";
+"subscriptions.grouping.customer_service" = "";
+"subscriptions.grouping.boss" = "";
 
 // Shortcuts
 "shortcuts.type_message" = "Nachricht schreiben";
