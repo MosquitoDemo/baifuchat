@@ -91,7 +91,7 @@ class ChannelActionsViewController: BaseViewController {
 //                    ChannelInfoBasicCellData(title: "#\(subscription.name)"),
                    
                     ChannelInfoMemberCellData(
-                        icon: UIImage.init(named: "zhuti"), title: "数据表" ,action: showMembersList
+                        icon: UIImage.init(named: "zhuti"), title: "数据表" ,subscription: self.subscription! ,action: showMembersList
                     ),
                     
                     ChannelInfoDescriptionCellData(
