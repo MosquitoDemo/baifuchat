@@ -7,33 +7,32 @@
 //
 
 import UIKit
+import RealmSwift
 
 struct ChannelInfoMemberCellData: ChannelInfoCellDataProtocol {
     let cellType = ChannelInfoMemberCell.self
     
     var icon: UIImage?
     var title: String?
-//    var detail: Bool = false
+    var data: MembersListViewData?
+    
     
     let action: (() -> Void)?
-    
-
-    
-//    init(icon: UIImage?, title: String = "", detail: Bool = true, action: (() -> Void)? = nil) {
-//        self.icon = icon
-//        self.title = title
-//        self.action = action
-//    }
-    
     
     init(icon: UIImage?, title: String = "",action: (() -> Void)? = nil) {
         self.icon = icon
         self.title = title
         self.action = action
 
-//        self.action = action
-//        self.detail = detail
     }
+    
+    init(data: NSObject? ,action: (() -> Void)? = nil) {
+//        self.data = data
+        self.action = action
+        
+    }
+    
+    // 测试
 }
 
 class ChannelInfoMemberCell: UITableViewCell, ChannelInfoCellProtocol {
@@ -92,6 +91,8 @@ class ChannelInfoMemberCell: UITableViewCell, ChannelInfoCellProtocol {
     @IBOutlet weak var labelSix: UILabel!
     
     
+    
+
     
 }
 

@@ -19,12 +19,30 @@ class ChannelActionsViewController: BaseViewController {
     weak var buttonFavorite: UIBarButtonItem?
     weak var shareRoomCell: UITableViewCell!
 
+    var membersPages: [[UnmanagedUser]] = []
+    var members: FlattenCollection<[[UnmanagedUser]]> {
+        return membersPages.joined()
+    }
+    
+    func member(at index: Int) -> UnmanagedUser {
+        return members[members.index(members.startIndex, offsetBy: index)]
+    }
+    
     var tableViewData: [[Any?]] = [] {
         didSet {
             tableView?.reloadData()
         }
     }
 
+    func refreshMembers() {
+        let data = MembersListViewData()
+        data.subscription = self.subscription
+        data.loadMoreMembers { [weak self] in
+               print(data)
+        
+        }
+    }
+    
     var subscription: Subscription? {
         didSet {
             guard let subscription = self.subscription?.validated() else { return }
@@ -39,18 +57,43 @@ class ChannelActionsViewController: BaseViewController {
                 let hasDescription = !(subscription.roomDescription?.isEmpty ?? true)
                 let hasTopic = !(subscription.roomTopic?.isEmpty ?? true)
 
-//                let memberData = MembersListViewData()
-//                memberData.subscription = self.subscription
-////                let userPhoto = MemberCellData.init(member: UnmanagedUser.Object.className().count)
-//                print(userPhoto)
+                let memberData = MembersListViewData()
+                memberData.subscription = self.subscription
+         print(memberData.members.count)
+                
+//                refreshMembers()
+                //shuju
+//                let options: APIRequestOptionSet = [.paginated(count: 50, offset: 0)]
+//                let client = API.current()?.client(SubscriptionsClient.self)
+//
+//                client?.fetchMembersList(subscription: self.subscription!, options: options) { [weak self] response, users in
+//                    guard
+//                        let self = self,
+//                        let users = users,
+//                        case let .resource(resource) = response
+//                        else {
+//                            return Alert.defaultError.present()
+//                    }
+//                     self.membersPages.append(users)
+//
+//                }
+                
+                
+                let data = MembersListViewData()
+                data.subscription = self.subscription
+                data.loadMoreMembers { [weak self] in
+                    print(data.member(at: 1).displayName)
+//                    https://chat-stg.baifu-tech.net/avatar/Abc199?format=jpeg
+                    
+                }
                 
                 header = [
 //                    ChannelInfoBasicCellData(title: "#\(subscription.name)"),
+                   
                     ChannelInfoMemberCellData(
-
                         icon: UIImage.init(named: "zhuti"), title: "数据表" ,action: showMembersList
                     ),
-
+                    
                     ChannelInfoDescriptionCellData(
                         title: localized("chat.info.item.description"),
                         descriptionText: hasDescription ? subscription.roomDescription : localized("chat.info.item.no_description")
