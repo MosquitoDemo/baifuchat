@@ -358,7 +358,7 @@ extension ChannelActionsViewController: UITableViewDelegate {
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-
+print(indexPath.row)
         if indexPath.section == kShareRoomSection && UIDevice.current.userInterfaceIdiom == .pad {
             shareRoomCell = tableView.cellForRow(at: indexPath)
         }

@@ -103,7 +103,7 @@ final class BasicMessageCell: BaseMessageCell, SizingCell {
                 messageText.setFontColor(MessageTextFontAttributes.failedFontColor(for: theme))
             }
 
-            self.text.textView.contentInset = UIEdgeInsets(top: 10, left: 10, bottom: -5, right: 10)
+            self.text.textView.contentInset = UIEdgeInsets(top: 10, left: 10, bottom: -10, right: 10)
             self.text.textView.backgroundColor = UIColor.groupTableViewBackground
             self.text.textView.layer.cornerRadius = 5
             self.text.textView.layer.masksToBounds = true
@@ -111,7 +111,7 @@ final class BasicMessageCell: BaseMessageCell, SizingCell {
             text.message = messageText
 
             
-            let estimateSize = CGSize(width: Double(MAXFLOAT), height: 30)
+            let estimateSize = CGSize(width: Double(MAXFLOAT), height: 20)
            
             let maxSize = CGSize(
                 width: textWidth,
@@ -121,7 +121,7 @@ final class BasicMessageCell: BaseMessageCell, SizingCell {
             let estimateWidth = text.textView.sizeThatFits(estimateSize).width
             if estimateWidth < textWidth{
                 textWidthConstraint.constant = estimateWidth + 30
-                textHeightConstraint.constant = 35
+                textHeightConstraint.constant = 40
             }else{
                 
                 textHeightConstraint.constant = text.textView.sizeThatFits(
