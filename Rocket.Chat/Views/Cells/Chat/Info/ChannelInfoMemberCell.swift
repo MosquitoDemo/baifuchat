@@ -14,22 +14,16 @@ struct ChannelInfoMemberCellData: ChannelInfoCellDataProtocol {
     
     var icon: UIImage?
     var title: String?
-    var data: MembersListViewData?
-    
-    
+    var subscription: Subscription?
+
     let action: (() -> Void)?
     
-    init(icon: UIImage?, title: String = "",action: (() -> Void)? = nil) {
+    init(icon: UIImage?, title: String = "" ,subscription: Subscription?, action: (() -> Void)? = nil) {
         self.icon = icon
         self.title = title
         self.action = action
+        self.subscription = subscription
 
-    }
-    
-    init(data: NSObject? ,action: (() -> Void)? = nil) {
-//        self.data = data
-        self.action = action
-        
     }
     
     // 测试
@@ -39,18 +33,56 @@ class ChannelInfoMemberCell: UITableViewCell, ChannelInfoCellProtocol {
     
     typealias DataType = ChannelInfoMemberCellData
     
-    
-    
     static let identifier = "ChannelInfoMemberCell"
     
-    static let defaultHeight: CGFloat = 105
+    static let defaultHeight: CGFloat = 125
     
     
     var data: DataType? {
         didSet {
             
-            imageOne.image = data?.icon
-            labelOne.text = data?.title
+            let dataa = MembersListViewData()
+            dataa.subscription = data?.subscription
+            dataa.loadMoreMembers { [weak self] in
+                print(dataa.member(at: 1).displayName)
+                //                    https://chat-stg.baifu-tech.net/avatar/Abc199?format=jpeg
+                
+                
+                let nsdone = NSData(contentsOf: NSURL(string: "https://chat-stg.baifu-tech.net/avatar/\(dataa.member(at: 1).username)?format=jpeg")! as URL)
+                self?.imageOne.image = UIImage(data: nsdone! as Data, scale: 1.0)
+                self?.labelOne.text = dataa.member(at: 1).username
+                
+                let nsdtow = NSData(contentsOf: NSURL(string: "https://chat-stg.baifu-tech.net/avatar/\(dataa.member(at: 2).username)?format=jpeg")! as URL)
+                self?.imageTow.image = UIImage(data: nsdtow! as Data, scale: 1.0)
+                self?.labelTow.text = dataa.member(at: 2).username
+
+                
+                let nsdthree = NSData(contentsOf: NSURL(string: "https://chat-stg.baifu-tech.net/avatar/\(dataa.member(at: 3).username)?format=jpeg")! as URL)
+                self?.imageThree.image = UIImage(data: nsdthree! as Data, scale: 1.0)
+                self?.labelThree.text = dataa.member(at: 3).username
+
+                
+                let nsdfour = NSData(contentsOf: NSURL(string: "https://chat-stg.baifu-tech.net/avatar/\(dataa.member(at: 4).username)?format=jpeg")! as URL)
+                self?.imageFour.image = UIImage(data: nsdfour! as Data, scale: 1.0)
+                self?.labelFour.text = dataa.member(at: 4).username
+
+                
+                let nsdfive = NSData(contentsOf: NSURL(string: "https://chat-stg.baifu-tech.net/avatar/\(dataa.member(at: 5).username)?format=jpeg")! as URL)
+                self?.imageFive.image = UIImage(data: nsdfive! as Data, scale: 1.0)
+                self?.labelFive.text = dataa.member(at: 5).username
+
+                
+                let nsdsix = NSData(contentsOf: NSURL(string: "https://chat-stg.baifu-tech.net/avatar/\(dataa.member(at: 6).username)?format=jpeg")! as URL)
+                self?.imageSix.image = UIImage(data: nsdsix! as Data, scale: 1.0)
+                self?.labelSix.text = dataa.member(at: 6).username
+
+                
+            }
+            
+            
+            
+//            imageOne.image = data?.icon
+//            labelOne.text = data?.title
             
             imageTow.image = data?.icon
             labelTow.text = data?.title
