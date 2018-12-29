@@ -919,6 +919,8 @@
 		F342456A21D481E9009CD659 /* QuoteSelfCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F342456821D481E9009CD659 /* QuoteSelfCell.xib */; };
 		F342456D21D48272009CD659 /* MessageURLSelfCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F342456B21D48272009CD659 /* MessageURLSelfCell.swift */; };
 		F342456E21D48272009CD659 /* MessageURLSelfCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F342456C21D48272009CD659 /* MessageURLSelfCell.xib */; };
+		F3F6BDEF21D70F77003DE407 /* GroupAnnouncementViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3F6BDEE21D70F77003DE407 /* GroupAnnouncementViewController.swift */; };
+		F3F6BDF221D7136E003DE407 /* KMPlaceholderTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3F6BDF121D7136E003DE407 /* KMPlaceholderTextView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -1887,6 +1889,8 @@
 		F342456821D481E9009CD659 /* QuoteSelfCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QuoteSelfCell.xib; sourceTree = "<group>"; };
 		F342456B21D48272009CD659 /* MessageURLSelfCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageURLSelfCell.swift; sourceTree = "<group>"; };
 		F342456C21D48272009CD659 /* MessageURLSelfCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MessageURLSelfCell.xib; sourceTree = "<group>"; };
+		F3F6BDEE21D70F77003DE407 /* GroupAnnouncementViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupAnnouncementViewController.swift; sourceTree = "<group>"; };
+		F3F6BDF121D7136E003DE407 /* KMPlaceholderTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KMPlaceholderTextView.swift; sourceTree = "<group>"; };
 		F87E8221BEB77AF190F06201 /* Pods-Rocket.Chat.ShareExtension.beta.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Rocket.Chat.ShareExtension.beta.xcconfig"; path = "Pods/Target Support Files/Pods-Rocket.Chat.ShareExtension/Pods-Rocket.Chat.ShareExtension.beta.xcconfig"; sourceTree = "<group>"; };
 		FEDACA44BBB1C0633DEA6F3D /* Pods-Rocket.ChatTests.beta.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Rocket.ChatTests.beta.xcconfig"; path = "Pods/Target Support Files/Pods-Rocket.ChatTests/Pods-Rocket.ChatTests.beta.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -2378,6 +2382,7 @@
 		4161332F1D46CA2800E09DA2 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				F3F6BDF021D71359003DE407 /* TextView */,
 				0B80EE5720FC613800E7E43B /* PickerView */,
 				9911CF3220C1CF3D001471C3 /* Buttons */,
 				99805D7320C190FC00741B8E /* TextFields */,
@@ -3004,6 +3009,7 @@
 				8020C3D92199F78800AA7133 /* MessagesViewControllerSearching.swift */,
 				80DF7122219CABAD000F0DA5 /* MessagesViewControllerJoining.swift */,
 				4466CBBA21D325A90015614A /* MessagesViewControllerGroup.swift */,
+				F3F6BDEE21D70F77003DE407 /* GroupAnnouncementViewController.swift */,
 			);
 			path = Chat;
 			sourceTree = "<group>";
@@ -4191,6 +4197,14 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		F3F6BDF021D71359003DE407 /* TextView */ = {
+			isa = PBXGroup;
+			children = (
+				F3F6BDF121D7136E003DE407 /* KMPlaceholderTextView.swift */,
+			);
+			path = TextView;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -5116,6 +5130,7 @@
 				995F711A20C7910800B7535F /* AuthTableViewControllerLoginServices.swift in Sources */,
 				80EE865321A82E6100BFEEC8 /* UIViewControllerDimming.swift in Sources */,
 				999075252177795700CAB7C8 /* QuoteMessageCell.swift in Sources */,
+				F3F6BDEF21D70F77003DE407 /* GroupAnnouncementViewController.swift in Sources */,
 				809B53101FE2F17D00833DD2 /* ReactionView.swift in Sources */,
 				D15C83861F70991F001AB155 /* APIResponse.swift in Sources */,
 				8020C3D52199DDA400AA7133 /* MessagesViewControllerDrafting.swift in Sources */,
@@ -5230,6 +5245,7 @@
 				806728FF20079734009FE94D /* DeleteMessageRequest.swift in Sources */,
 				99DBB872208FF6FE00382DB2 /* SearchMessagesRequest.swift in Sources */,
 				80054CF11FD9505A00F5ECF9 /* SendMessageRequest.swift in Sources */,
+				F3F6BDF221D7136E003DE407 /* KMPlaceholderTextView.swift in Sources */,
 				0B7A210D204680D500D11085 /* ChangeLanguageResetCell.swift in Sources */,
 				4174CB131D2D99960086DAC8 /* BaseViewController.swift in Sources */,
 				412AD609219B1B9600EC0486 /* LoaderCell.swift in Sources */,
