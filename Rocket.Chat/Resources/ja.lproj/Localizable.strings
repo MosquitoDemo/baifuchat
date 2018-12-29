@@ -143,6 +143,8 @@
 "subscriptions.search" = "検索";
 "subscriptions.search_results" = "結果";
 "subscriptions.search.load_more_results" = "もっと結果を読み込む";
+"subscriptions.boss" = "ボス";
+"subscriptions.customer_service" = "カスタマーサービス";
 "subscriptions.unreads" = "未読";
 "subscriptions.favorites" = "お気に入り";
 "subscriptions.channels" = "チャンネル";

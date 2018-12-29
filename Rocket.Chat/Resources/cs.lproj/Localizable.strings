@@ -143,6 +143,8 @@
 "subscriptions.search" = "Hledat";
 "subscriptions.search_results" = "Výsledky";
 "subscriptions.search.load_more_results" = "Nahrát více výsledků";
+"subscriptions.boss" = "Šéfe";
+"subscriptions.customer_service" = "Služby zákazníkům";
 "subscriptions.unreads" = "Nepřečtené";
 "subscriptions.favorites" = "Oblíbené";
 "subscriptions.channels" = "Kanály";

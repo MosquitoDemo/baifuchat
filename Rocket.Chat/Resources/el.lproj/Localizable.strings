@@ -143,6 +143,8 @@
 "subscriptions.search" = "Αναζήτηση";
 "subscriptions.search_results" = "Αποτελέσματα";
 "subscriptions.search.load_more_results" = "Φορτώστε περισσότερα αποτελέσματα";
+"subscriptions.boss" = "Έλα";
+"subscriptions.customer_service" = "Εξυπηρέτηση πελατών";
 "subscriptions.unreads" = "Αδιάβαστα";
 "subscriptions.favorites" = "Αγαπημένα";
 "subscriptions.channels" = "Κανάλια";

@@ -30,6 +30,7 @@ enum UserStatus: String, CustomStringConvertible {
 final class User: BaseModel {
     @objc dynamic var username: String?
     @objc dynamic var name: String?
+    @objc dynamic var parentUsername:String?
     var emails = List<Email>()
     var roles = List<String>()
 

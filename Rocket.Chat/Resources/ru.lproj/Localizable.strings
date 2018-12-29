@@ -143,6 +143,8 @@
 "subscriptions.search" = "Поиск";
 "subscriptions.search_results" = "Результаты";
 "subscriptions.search.load_more_results" = "Загрузить больше результатов";
+"subscriptions.boss" = "босс";
+"subscriptions.customer_service" = "Обслуживание клиентов";
 "subscriptions.unreads" = "Непрочитанные";
 "subscriptions.favorites" = "Избранные";
 "subscriptions.channels" = "Каналы";

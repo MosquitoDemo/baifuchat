@@ -104,7 +104,29 @@ class SubscriptionsViewModel {
                 return filteredResult
             }
             let user = AuthManager.currentUser()
+            let userNames = realm?
+                .objects(User.self)
+                .filter({ (userx) -> Bool in
+                    return userx.roles.contains("customer-service")
+                })
+                .map({ (userx) -> String in
+                    return userx.username ?? ""
+                }) ?? [String]()
         
+            
+            let namePre = NSPredicate(format: "SELF.name IN %@",userNames)
+            let subscriptionxs = queryItems.filter(namePre)
+            
+            
+       
+            assorter.registerSection(name: localized("subscriptions.customer_service"), objects: subscriptionxs)
+            
+            if let p = user?.parentUsername{
+                
+                let parentData = filtered(using: "SELF.name == \(p)")
+                assorter.registerSection(name: localized("subscriptions.boss"), objects: parentData)
+            }
+            
         /*
             print(AuthManager.isAuthenticated()?.subscriptions)
             print(user?.roles)
