@@ -36,10 +36,11 @@ final class BasicMessageCell: BaseMessageCell, SizingCell {
     @IBOutlet weak var text: RCTextView!
 
     @IBOutlet weak var readReceiptButton: UIButton!
-
     @IBOutlet weak var textHeightConstraint: NSLayoutConstraint!
+    
     @IBOutlet weak var textLeadingConstraint: NSLayoutConstraint!
     @IBOutlet weak var textTrailingConstraint: NSLayoutConstraint!
+    @IBOutlet weak var textWidthConstraint: NSLayoutConstraint!
     @IBOutlet weak var readReceiptWidthConstraint: NSLayoutConstraint!
     @IBOutlet weak var readReceiptTrailingConstraint: NSLayoutConstraint!
     @IBOutlet weak var avatarWidthConstraint: NSLayoutConstraint!
@@ -68,6 +69,8 @@ final class BasicMessageCell: BaseMessageCell, SizingCell {
     override func awakeFromNib() {
         super.awakeFromNib()
 
+        
+        
         initialTextHeightConstant = textHeightConstraint.constant
         insertGesturesIfNeeded(with: username)
     }
@@ -100,16 +103,31 @@ final class BasicMessageCell: BaseMessageCell, SizingCell {
                 messageText.setFontColor(MessageTextFontAttributes.failedFontColor(for: theme))
             }
 
+            self.text.textView.contentInset = UIEdgeInsets(top: 10, left: 10, bottom: -5, right: 10)
+            self.text.textView.backgroundColor = UIColor.groupTableViewBackground
+            self.text.textView.layer.cornerRadius = 5
+            self.text.textView.layer.masksToBounds = true
+            
             text.message = messageText
 
+            
+            let estimateSize = CGSize(width: Double(MAXFLOAT), height: 30)
+           
             let maxSize = CGSize(
                 width: textWidth,
                 height: .greatestFiniteMagnitude
             )
 
-            textHeightConstraint.constant = text.textView.sizeThatFits(
-                maxSize
-            ).height
+            let estimateWidth = text.textView.sizeThatFits(estimateSize).width
+            if estimateWidth < textWidth{
+                textWidthConstraint.constant = estimateWidth + 30
+                textHeightConstraint.constant = 35
+            }else{
+                
+                textHeightConstraint.constant = text.textView.sizeThatFits(
+                    maxSize
+                    ).height
+            }
         }
     }
 

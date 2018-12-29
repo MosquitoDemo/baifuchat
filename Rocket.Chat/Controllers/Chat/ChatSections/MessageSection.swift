@@ -306,7 +306,7 @@ final class MessageSection: ChatSection {
                     shouldAppendMessageHeader = false
                 } else {
                     if object.message.user?.identifier == AuthManager.currentUser()?.identifier{
-                        
+                    
                         cells.insert(ImageMessageSelfChatItem(
                             identifier: attachment.identifier,
                             title: attachment.title,
