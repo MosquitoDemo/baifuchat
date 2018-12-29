@@ -402,6 +402,14 @@ extension ChannelActionsViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
 print(indexPath.row)
+        
+        /*群公告*/
+        if indexPath.section == 1 && indexPath.row == 4{
+            let vc = GroupAnnouncementViewController()
+            vc.hidesBottomBarWhenPushed = true
+            self.navigationController?.pushViewController(vc, animated: true)
+            return
+        }
         if indexPath.section == kShareRoomSection && UIDevice.current.userInterfaceIdiom == .pad {
             shareRoomCell = tableView.cellForRow(at: indexPath)
         }
