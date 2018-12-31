@@ -106,7 +106,10 @@ final class PreferencesViewController: BaseTableViewController {
 
     @IBOutlet weak var labelWebBrowser: UILabel! {
         didSet {
-            labelWebBrowser.text = viewModel.webBrowser
+//            labelWebBrowser.text = viewModel.webBrowser
+               labelWebBrowser.text = viewModel.share
+
+            
         }
     }
 
@@ -228,13 +231,13 @@ final class PreferencesViewController: BaseTableViewController {
 
     // MARK: Navigation
 
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let webBrowser = segue.destination as? WebBrowserTableViewController {
-            webBrowser.updateDefaultWebBrowser = { [weak self] in
-                self?.labelDefaultWebBrowser.text = WebBrowserManager.browser.name
-            }
-        }
-    }
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        if let webBrowser = segue.destination as? WebBrowserTableViewController {
+//            webBrowser.updateDefaultWebBrowser = { [weak self] in
+//                self?.labelDefaultWebBrowser.text = WebBrowserManager.browser.name
+//            }
+//        }
+//    }
 
     private func cellLanguageDidPressed() {
         performSegue(withIdentifier: "Language", sender: nil)
@@ -285,6 +288,11 @@ final class PreferencesViewController: BaseTableViewController {
                 cellShareDidPressed()
             case 6:
                 cellAppIconDidPressed()
+                
+            case 3://fenxiang
+                shareAppCell = tableView.cellForRow(at: indexPath)
+                cellShareDidPressed()
+                
             default:
                 break
             }
