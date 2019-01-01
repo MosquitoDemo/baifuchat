@@ -20,15 +20,24 @@ final class EditProfileTableViewController: BaseTableViewController, MediaPicker
 
     //女
     @IBAction func womanClick(_ sender: Any) {
-        manImage.image = UIImage.init(named: "select-after")
-
-        womanImage.image = UIImage.init(named: "select-click")
+        
+        if isShowEditStatue {
+            manImage.image = UIImage.init(named: "select-after")
+            
+            womanImage.image = UIImage.init(named: "select-click")
+        }
+     
     }
     //男
     @IBAction func manClick(_ sender: Any) {
-        womanImage.image = UIImage.init(named: "select-after")
-
-        manImage.image = UIImage.init(named: "select-click")
+        
+        if isShowEditStatue {
+            womanImage.image = UIImage.init(named: "select-after")
+            
+            manImage.image = UIImage.init(named: "select-click")
+            
+        }
+      
     }
     //女
     @IBOutlet weak var womanImage: UIImageView!
@@ -130,7 +139,9 @@ final class EditProfileTableViewController: BaseTableViewController, MediaPicker
     var isUpdatingUser = false
     var isUploadingAvatar = false
     var isLoading = true
-
+    var isShowEditStatue = false
+    
+    
     var currentPassword: String?
     var user: User? = User() {
         didSet {
@@ -240,6 +251,7 @@ final class EditProfileTableViewController: BaseTableViewController, MediaPicker
 
     @objc func beginEditing() {
         isEditingProfile = true
+        isShowEditStatue = true
         navigationItem.title = viewModel.editingTitle
         navigationItem.rightBarButtonItem = saveButton
         navigationItem.hidesBackButton = true
@@ -333,7 +345,7 @@ final class EditProfileTableViewController: BaseTableViewController, MediaPicker
         if name != self.user?.name { userRaw["name"].string = name }
         if username != self.user?.username { userRaw["username"].string = username }
         if email != self.user?.emails.first?.email { userRaw["emails"] = [["address": email]] }
-
+//if timeselect != self.user?.
         let shouldUpdateUser = name != self.user?.name || username != self.user?.username || email != self.user?.emails.first?.email
 
         if !shouldUpdateUser {
@@ -559,7 +571,11 @@ final class EditProfileTableViewController: BaseTableViewController, MediaPicker
 //                    print(date.getString(format: "yyyy-MM-dd"))
                     self?.timeselect.text = date.getString(format: "yyyy-MM-dd")
                 }
-                datePicker.show()
+                
+                
+                if isShowEditStatue{
+                    datePicker.show()
+                }
             }else if indexPath.row == 3{
                 
 
