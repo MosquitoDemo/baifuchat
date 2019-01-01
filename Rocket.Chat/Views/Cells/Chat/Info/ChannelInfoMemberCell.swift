@@ -254,7 +254,7 @@ if dataa.members.count >= 6{
 extension ChannelInfoMemberCell {
     override func applyTheme() {
         super.applyTheme()
-        guard let theme = theme else { return }
+//        guard let theme = theme else { return }
 //        imageViewIcon.tintColor = theme.titleText
     }
 }

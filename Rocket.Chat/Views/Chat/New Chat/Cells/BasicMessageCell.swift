@@ -128,7 +128,6 @@ final class BasicMessageCell: BaseMessageCell, SizingCell {
                 textWidthConstraint.constant = estimateWidth + 30
                 textHeightConstraint.constant = 30
             }else{
-                
                 textHeightConstraint.constant = text.textView.sizeThatFits(
                     maxSize
                     ).height

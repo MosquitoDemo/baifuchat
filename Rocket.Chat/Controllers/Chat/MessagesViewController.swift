@@ -11,7 +11,7 @@ import RocketChatViewController
 import RealmSwift
 import DifferenceKit
 
-private typealias NibCellIndentifier = (nib: UINib, cellIdentifier: String)
+//private typealias NibCellIndentifier = (nib: UINib, cellIdentifier: String)
 
 protocol SizingCell: class {
     static var sizingCell: UICollectionViewCell & ChatCell { get }

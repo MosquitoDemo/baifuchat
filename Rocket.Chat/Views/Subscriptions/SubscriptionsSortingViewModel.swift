@@ -11,7 +11,7 @@ import Foundation
 final class SubscriptionsSortingViewModel {
 
     internal let sortingOptions = SubscriptionsSortingOption.allCases
-    internal let groupingOptions = SubscriptionsGroupingOption.allCases
+    internal let groupingOptions = SubscriptionsGroupingOption.allCases.prefix(upTo: 3)
 
     internal var listSeparatorHeight: CGFloat = 10.0
     internal var viewHeight: CGFloat {

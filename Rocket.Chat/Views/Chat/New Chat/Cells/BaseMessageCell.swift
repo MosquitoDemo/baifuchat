@@ -43,6 +43,8 @@ class BaseMessageCell: UICollectionViewCell, BaseMessageCellProtocol, ChatCell {
         and username: UILabel,
         completeRendering: Bool
     ) {
+        
+        
         guard
             let viewModel = viewModel?.base as? BaseMessageChatItem,
             let user = viewModel.user
@@ -53,6 +55,7 @@ class BaseMessageCell: UICollectionViewCell, BaseMessageCellProtocol, ChatCell {
         usernameLabel = username
 
         date.text = viewModel.dateFormatted
+        print(viewModel.message?.groupable)
         username.text = viewModel.message?.alias ?? user.displayName
 
         if viewModel.message?.failed == true {
