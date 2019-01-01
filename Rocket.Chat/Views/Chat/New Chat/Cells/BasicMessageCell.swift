@@ -53,6 +53,7 @@ final class BasicMessageCell: BaseMessageCell, SizingCell {
             readReceiptTrailingConstraint.constant -
             avatarWidthConstraint.constant -
             avatarLeadingConstraint.constant -
+            
             layoutMargins.left -
             layoutMargins.right
     }
