@@ -45,11 +45,19 @@ final class SubscriptionsViewController: BaseViewController {
 
     override func viewDidLoad() {
         setupSearchBar()
-        setupTitleView()
+        /*
+         设置标题
+         根据需求隐藏
+         setupTitleView()
+         */
         updateBackButton()
         startObservingKeyboard()
 
         super.viewDidLoad()
+        /*
+         根据需求去掉tableHeaderView
+         */
+        self.tableView.tableHeaderView = nil
 
         // If the device is not using the SplitView, we want to show
         // the 3D Touch preview for the cells
@@ -223,10 +231,13 @@ final class SubscriptionsViewController: BaseViewController {
         searchBar?.applyTheme()
     }
 
+    /*
     func setupTitleView() {
         if let titleView = SubscriptionsTitleView.instantiateFromNib() {
             titleView.translatesAutoresizingMaskIntoConstraints = false
             titleView.layoutIfNeeded()
+//            titleView.buttonServer.isHidden = true
+            
             titleView.sizeToFit()
             updateServerInformation()
 
@@ -239,6 +250,7 @@ final class SubscriptionsViewController: BaseViewController {
             titleView.addGestureRecognizer(tapGesture)
         }
     }
+ */
 
 }
 

@@ -37,7 +37,6 @@ final class BasicMessageCell: BaseMessageCell, SizingCell {
 
     @IBOutlet weak var readReceiptButton: UIButton!
     @IBOutlet weak var textHeightConstraint: NSLayoutConstraint!
-    
     @IBOutlet weak var textLeadingConstraint: NSLayoutConstraint!
     @IBOutlet weak var textTrailingConstraint: NSLayoutConstraint!
     @IBOutlet weak var textWidthConstraint: NSLayoutConstraint!
@@ -54,6 +53,7 @@ final class BasicMessageCell: BaseMessageCell, SizingCell {
             readReceiptTrailingConstraint.constant -
             avatarWidthConstraint.constant -
             avatarLeadingConstraint.constant -
+            
             layoutMargins.left -
             layoutMargins.right
     }
@@ -69,9 +69,14 @@ final class BasicMessageCell: BaseMessageCell, SizingCell {
     override func awakeFromNib() {
         super.awakeFromNib()
 
-        
-        
+        username.text = ""
+        date.text = ""
+        text.message = nil
+        avatarView.prepareForReuse()
+        /*
+        textHeightConstraint.constant = initialTextHeightConstant
         initialTextHeightConstant = textHeightConstraint.constant
+ */
         insertGesturesIfNeeded(with: username)
     }
 
@@ -103,7 +108,7 @@ final class BasicMessageCell: BaseMessageCell, SizingCell {
                 messageText.setFontColor(MessageTextFontAttributes.failedFontColor(for: theme))
             }
 
-            self.text.textView.contentInset = UIEdgeInsets(top: 10, left: 10, bottom: -10, right: 10)
+            self.text.textView.contentInset = UIEdgeInsets(top: 10, left: 10, bottom: 0, right: 10)
             self.text.textView.backgroundColor = UIColor.groupTableViewBackground
             self.text.textView.layer.cornerRadius = 5
             self.text.textView.layer.masksToBounds = true
@@ -121,24 +126,29 @@ final class BasicMessageCell: BaseMessageCell, SizingCell {
             let estimateWidth = text.textView.sizeThatFits(estimateSize).width
             if estimateWidth < textWidth{
                 textWidthConstraint.constant = estimateWidth + 30
-                textHeightConstraint.constant = 40
+                textHeightConstraint.constant = 30
             }else{
-                
                 textHeightConstraint.constant = text.textView.sizeThatFits(
                     maxSize
                     ).height
+                textWidthConstraint.constant = textWidth
             }
+            
         }
+    }
+
+/*
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        updateText()
     }
 
     override func prepareForReuse() {
         super.prepareForReuse()
-        username.text = ""
-        date.text = ""
-        text.message = nil
-        avatarView.prepareForReuse()
-        textHeightConstraint.constant = initialTextHeightConstant
+        
+        
     }
+ */
 }
 
 // MARK: Theming

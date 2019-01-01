@@ -132,7 +132,7 @@
             <connections>
                 <outlet property="arrow" destination="exp-6a-fr0" id="MHV-QO-c6Z"/>
                 <outlet property="avatarContainerView" destination="mJc-9i-6tr" id="t6j-2p-XuP"/>
-                <outlet property="avatarLeadingConstraint" destination="Pvy-tD-L8e" id="6X5-0o-qhI"/>
+                <outlet property="avatarLeadingConstant" destination="4Fy-HB-NqE" id="MBi-uv-aK4"/>
                 <outlet property="avatarTrailingConstraint" destination="Pvy-tD-L8e" id="vaG-p3-wxa"/>
                 <outlet property="avatarWidthConstraint" destination="a98-Ih-hXn" id="BSj-tl-FLL"/>
                 <outlet property="containerLeadingConstraint" destination="hd0-jZ-QfZ" id="7tx-iw-JUb"/>
@@ -149,7 +149,6 @@
                 <outlet property="text" destination="ce3-ni-Y66" id="dy8-YA-umY"/>
                 <outlet property="textLeadingConstraint" destination="MKG-Ld-COQ" id="C8H-Hc-YWH"/>
                 <outlet property="textTrailingConstraint" destination="tfc-JH-WW9" id="9x2-oi-4F7"/>
-                <outlet property="userName" destination="c2F-HO-qKk" id="tLB-5F-tzp"/>
                 <outlet property="username" destination="eB2-K6-CaF" id="an0-nJ-b1i"/>
             </connections>
             <point key="canvasLocation" x="1266" y="210"/>

@@ -70,7 +70,14 @@ class BasicMessageSelfCell: BaseMessageCell, SizingCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         
+        username.text = ""
+        date.text = ""
+        text.message = nil
+        avatarView.prepareForReuse()
+        /*
+        textHeightConstraint.constant = initialTextHeightConstant
         initialTextHeightConstant = textHeightConstraint.constant
+ */
         insertGesturesIfNeeded(with: username)
     }
     
@@ -102,25 +109,25 @@ class BasicMessageSelfCell: BaseMessageCell, SizingCell {
                 messageText.setFontColor(MessageTextFontAttributes.failedFontColor(for: theme))
             }
             
-            self.text.textView.contentInset = UIEdgeInsets(top: 10, left: 10, bottom: -5, right: 10)
+            self.text.textView.contentInset = UIEdgeInsets(top: 10, left: 10, bottom: 5, right: 10)
             self.text.textView.backgroundColor = UIColor(hex: "#1D74F5")
             self.text.textView.layer.cornerRadius = 5
             self.text.textView.layer.masksToBounds = true
             
-//            let ps = NSMutableParagraphStyle()
-//            ps.paragraphSpacingBefore = 5
-//            ps.paragraphSpacing = 10
-//            ps.lineSpacing = 5
-//            ps.lineBreakMode = .byWordWrapping
+            let ps = NSMutableParagraphStyle()
+            ps.paragraphSpacingBefore = 10
+            ps.paragraphSpacing = 0
+            ps.lineSpacing = 5
+            ps.lineBreakMode = .byWordWrapping
 //
             messageText.addAttributes([
-//                NSAttributedString.Key.paragraphStyle:ps,
+                NSAttributedString.Key.paragraphStyle:ps,
                 NSAttributedString.Key.foregroundColor:UIColor.white
-                ], range: NSRange.init(location: 0, length: messageText.length))
+                ], range: NSRange(location: 0, length: messageText.length))
             text.message = messageText
             
             
-            let estimateSize = CGSize(width: Double(MAXFLOAT), height: 30)
+            let estimateSize = CGSize(width: Double(MAXFLOAT), height: 20)
             
             let maxSize = CGSize(
                 width: textWidth,
@@ -136,17 +143,14 @@ class BasicMessageSelfCell: BaseMessageCell, SizingCell {
                 textHeightConstraint.constant = text.textView.sizeThatFits(
                     maxSize
                     ).height
+                textWidthConstraint.constant = textWidth
             }
         }
     }
     
     override func prepareForReuse() {
         super.prepareForReuse()
-        username.text = ""
-        date.text = ""
-        text.message = nil
-        avatarView.prepareForReuse()
-        textHeightConstraint.constant = initialTextHeightConstant
+       
     }
     
 }
