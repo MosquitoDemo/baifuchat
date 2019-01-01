@@ -42,7 +42,7 @@ final class QuoteMessageSelfCell: BaseQuoteMessageCell, SizingCell {
     @IBOutlet weak var text: UILabel!
     @IBOutlet weak var arrow: UIImageView!
     @IBOutlet weak var readReceiptButton: UIButton!
-    
+    @IBOutlet weak var avatarLeadingConstant:NSLayoutConstraint!
     @IBOutlet weak var avatarTrailingConstraint: NSLayoutConstraint!
     @IBOutlet weak var avatarWidthConstraint: NSLayoutConstraint!
     @IBOutlet weak var containerTrailingConstraint: NSLayoutConstraint!
