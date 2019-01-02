@@ -55,6 +55,7 @@ final class SubscriptionsViewController: BaseViewController {
 
         super.viewDidLoad()
 
+        /*
         let method = "UserPresence:".appending(UserPresence.away.rawValue)
         
         let request = [
@@ -67,6 +68,7 @@ final class SubscriptionsViewController: BaseViewController {
 
             print(response)
         }
+ */
         
         /*
          根据需求去掉tableHeaderView
