@@ -44,15 +44,21 @@ extension User: ModelMappeable {
                 return email
             }
 
-            self.emails.removeAll()
-            self.emails.append(objectsIn: emails)
+            let temp = List<Email>()
+            temp.append(objectsIn: emails)
+            self.emails = temp
+//            self.emails.removeAll()
+//            self.emails.append(objectsIn: emails)
         }
 
         if let rolesRaw = values["roles"].array {
             let roles = rolesRaw.compactMap({ $0.string })
 
-            self.roles.removeAll()
-            self.roles.append(objectsIn: roles)
+            let temp = List<String>()
+            temp.append(objectsIn: roles)
+            self.roles = temp
+//            self.roles.removeAll()
+//            self.roles.append(objectsIn: roles)
         }
     }
 

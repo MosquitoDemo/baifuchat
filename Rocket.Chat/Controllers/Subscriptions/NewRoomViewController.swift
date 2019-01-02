@@ -16,10 +16,11 @@ final class NewRoomViewController: BaseViewController {
         title = localized("new_room.title")
         navigationItem.rightBarButtonItem?.title = localized("new_room.buttons.create")
     }
-
+/*
     static var user: User? {
         return AuthManager.currentUser()
     }
+ */
 
     let tableViewData: [SectionForm] = [
         SectionForm(
@@ -27,8 +28,8 @@ final class NewRoomViewController: BaseViewController {
             footer: nil,
             cells: [
                 createPublicChannelSwitch(
-                    allowPublic: user?.hasPermission(.createPublicChannels) ?? false,
-                    allowPrivate: user?.hasPermission(.createPublicChannels) ?? false
+                    allowPublic: AuthManager.currentUser()?.hasPermission(.createPublicChannels) ?? false,
+                    allowPrivate: AuthManager.currentUser()?.hasPermission(.createPublicChannels) ?? false
                 ),
                 FormCell(
                     cell: .check(title: localized("new_room.cell.read_only.title"), description: localized("new_room.cell.read_only.description")),
@@ -102,7 +103,8 @@ final class NewRoomViewController: BaseViewController {
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillChangeFrame(_:)), name: UIResponder.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillChangeFrame(_:)), name: UIResponder.keyboardWillHideNotification, object: nil)
 
-        let user = NewRoomViewController.user
+        /*
+        let user = AuthManager.currentUser()
         let createPrivate = user?.hasPermission(.createPrivateChannels) ?? false
         let createPublic = user?.hasPermission(.createPublicChannels) ?? false
 
@@ -114,6 +116,7 @@ final class NewRoomViewController: BaseViewController {
                 self.dismiss(animated: true, completion: nil)
             }
         }
+ */
     }
 
     fileprivate func showErrorAlert(_ errorMessage: String?) {

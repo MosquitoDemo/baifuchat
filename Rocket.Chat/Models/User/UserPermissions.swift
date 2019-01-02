@@ -23,6 +23,7 @@ extension User {
         if let subscription = subscription {
             roles.append(contentsOf: rolesInSubscription(subscription))
         }
+        
 
         for userRole in roles {
             for permissionRole in permissionRoles where userRole == permissionRole {
