@@ -84,7 +84,6 @@ class ChannelInfoMemberCell: UITableViewCell, ChannelInfoCellProtocol {
                 }
 
 
-
     if dataa.members.count == 4{
 
                 let nsdone = NSData(contentsOf: NSURL(string: "https://chat-stg.baifu-tech.net/avatar/\(dataa.member(at: 0).username)?format=jpeg")! as URL)

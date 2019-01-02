@@ -20,6 +20,10 @@ struct UnmanagedUser: UnmanagedObject, Equatable {
     var utcOffset: Double
     var avatarURL: URL?
     var displayName: String
+    
+    var superiorUsername:String?
+    var inferiorUsernames:[String]?
+    var kefuUsernames:[String]?
 
     var managedObject: User? {
         return User.find(withIdentifier: identifier)?.validated()
@@ -40,6 +44,9 @@ extension UnmanagedUser {
         utcOffset = user.utcOffset
         avatarURL = user.avatarURL()
         displayName = user.displayName()
+        superiorUsername = user.superiorUsername
+        inferiorUsernames = user.inferiorUsernames.map{$0}
+        kefuUsernames = user.kefuUsernames.map{$0}
     }
 }
 

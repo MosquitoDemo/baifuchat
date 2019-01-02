@@ -109,6 +109,8 @@ final class SocketManager {
 
             if completion != nil {
                 sharedInstance.queue[identifier] = completion
+                
+                
             }
         } else {
             Log.debug("JSON invalid: \(json)")

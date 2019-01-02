@@ -104,6 +104,7 @@ class SubscriptionsViewModel {
                 return filteredResult
             }
             let user = AuthManager.currentUser()
+            
             let userNames = realm?
                 .objects(User.self)
                 .filter({ (userx) -> Bool in
@@ -113,18 +114,24 @@ class SubscriptionsViewModel {
                     return userx.username ?? ""
                 }) ?? [String]()
         
+            if let _ = user?.unmanaged?.kefuUsernames{
+                let namePre = NSPredicate(format: "SELF.name IN %@",userNames)
+                let subscriptionxs = queryItems.filter(namePre)
+                assorter.registerSection(name: localized("subscriptions.customer_service"), objects: subscriptionxs)
+            }
             
-            let namePre = NSPredicate(format: "SELF.name IN %@",userNames)
-            let subscriptionxs = queryItems.filter(namePre)
             
             
-       
-            assorter.registerSection(name: localized("subscriptions.customer_service"), objects: subscriptionxs)
-            
-            if let p = user?.parentUsername{
+            if let p = user?.superiorUsername{
                 
                 let parentData = filtered(using: "SELF.name == \(p)")
                 assorter.registerSection(name: localized("subscriptions.boss"), objects: parentData)
+            }
+            
+            if let inferiors = user?.unmanaged?.inferiorUsernames{
+                let namePre = NSPredicate(format: "SELF.name IN %@",inferiors)
+                let subscriptionxs = queryItems.filter(namePre)
+                assorter.registerSection(name: localized("subscriptions.subordinate"), objects: subscriptionxs)
             }
             
         /*
@@ -156,13 +163,21 @@ class SubscriptionsViewModel {
                 let selectedGroupingOptions = SubscriptionsSortingManager.selectedGroupingOptions
                 assorter.willReconstructSections()
                 let title = !selectedGroupingOptions.isEmpty ? localized("subscriptions.conversations") : ""
-                if let p = user?.parentUsername{
+                if let _ = user?.unmanaged?.kefuUsernames{
+                    let namePre = NSPredicate(format: "SELF.name IN %@",userNames)
+                    let subscriptionxs = queryItems.filter(namePre)
+                    assorter.registerSection(name: title, objects: subscriptionxs)
+                }
+                if let p = user?.superiorUsername{
                     
                     let parentData = filtered(using: "SELF.name == \(p)")
                     assorter.registerSection(name: title, objects: parentData)
                 }
-                assorter.registerSection(name: title, objects: subscriptionxs)
-
+                if let inferiors = user?.unmanaged?.inferiorUsernames{
+                    let namePre = NSPredicate(format: "SELF.name IN %@",inferiors)
+                    let subscriptionxs = queryItems.filter(namePre)
+                    assorter.registerSection(name:title, objects: subscriptionxs)
+                }
                 
                 assorter.registerSection(name: title, objects: queryItems)
             }

@@ -143,6 +143,7 @@
 "subscriptions.search" = "Search";
 "subscriptions.search_results" = "Results";
 "subscriptions.search.load_more_results" = "Load more results";
+"subscriptions.subordinate" = "Subordinate";
 "subscriptions.boss" = "Boss";
 "subscriptions.customer_service" = "Customer Service";
 "subscriptions.unreads" = "Unreads";

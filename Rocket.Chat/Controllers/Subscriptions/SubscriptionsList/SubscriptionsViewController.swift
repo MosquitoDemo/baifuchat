@@ -54,6 +54,20 @@ final class SubscriptionsViewController: BaseViewController {
         startObservingKeyboard()
 
         super.viewDidLoad()
+
+        let method = "UserPresence:".appending(UserPresence.away.rawValue)
+        
+        let request = [
+            "msg": "method",
+            "method": method,
+            "params": []
+            ] as [String: Any]
+        
+        SocketManager.send(request) { (response) in
+
+            print(response)
+        }
+        
         /*
          根据需求去掉tableHeaderView
          */

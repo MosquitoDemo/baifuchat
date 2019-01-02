@@ -143,6 +143,7 @@
 "subscriptions.search" = "搜索";
 "subscriptions.search_results" = "结果";
 "subscriptions.search.load_more_results" = "加载更多结果";
+"subscriptions.subordinate" = "下属";
 "subscriptions.boss" = "上司";
 "subscriptions.customer_service" = "客服";
 "subscriptions.unreads" = "未读";
