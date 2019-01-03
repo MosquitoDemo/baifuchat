@@ -14,5 +14,6 @@ extension Auth {
 
         let realm = self.realm ?? Realm.current
         return realm?.object(ofType: User.self, forPrimaryKey: userId)
+        
     }
 }

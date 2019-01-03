@@ -31,7 +31,8 @@ class SubscriptionSpec: XCTestCase {
 
     override func tearDown() {
         super.tearDown()
-        Realm.clearDatabase()
+        Realm.current?.refresh()
+//        Realm.clearDatabase()
     }
 
     func testSubscriptionObject() {

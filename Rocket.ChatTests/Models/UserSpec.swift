@@ -27,7 +27,8 @@ class UserSpec: XCTestCase {
 
     override func tearDown() {
         super.tearDown()
-        Realm.clearDatabase()
+        Realm.current?.refresh()
+//        Realm.clearDatabase()
     }
 
     func testUserObject() {

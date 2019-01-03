@@ -37,7 +37,7 @@ class ChannelActionsViewController: BaseViewController {
     func refreshMembers() {
         let data = MembersListViewData()
         data.subscription = self.subscription
-        data.loadMoreMembers { [weak self] in
+        data.loadMoreMembers { _ in
                print(data)
         
         }
