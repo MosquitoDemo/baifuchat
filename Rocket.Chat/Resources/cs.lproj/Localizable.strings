@@ -309,6 +309,7 @@
 "chat.info.item.members" = "Členové";
 "chat.info.item.pinned" = "Připnuto";
 "chat.info.item.starred" = "S hvězdičkou";
+"chat.info.item.announcement" = "公告";
 "chat.info.item.mentions" = "Mentions"; // TODO
 "chat.info.item.files" = "Files"; // TODO
 "chat.info.item.share" = "Share"; // TODO

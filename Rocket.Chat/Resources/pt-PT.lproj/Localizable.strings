@@ -308,6 +308,7 @@
 "chat.info.item.members" = "Membros";
 "chat.info.item.pinned" = "Fixar";
 "chat.info.item.starred" = "Com Estrelas";
+"chat.info.item.announcement" = "announcement";
 "chat.info.item.mentions" = "Menções";
 "chat.info.item.files" = "Ficheiros";
 "chat.info.item.share" = "Partilhar";

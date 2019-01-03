@@ -114,7 +114,7 @@ class ChannelActionsViewController: BaseViewController {
                 isDirectMessage ? nil : ChannelInfoActionCellData(icon: UIImage(named: "Mentions"), title: title(for: "mentions"), action: showMentionsList),
                 isDirectMessage ? nil : ChannelInfoActionCellData(icon: UIImage(named: "Members"), title: title(for: "members"), action: showMembersList),
                 ChannelInfoActionCellData(icon: UIImage(named: "Star"), title: title(for: "starred"), action: showStarredList),
-                ChannelInfoActionCellData(icon: UIImage(named: "announcement"), title: title(for: "starred"), action: showStarredList),
+                ChannelInfoActionCellData(icon: UIImage(named: "announcement"), title: title(for: "announcement"), action: showStarredList),
                 ChannelInfoActionCellData(icon: UIImage(named: "Pinned"), title: title(for: "pinned"), action: showPinnedList),
                 ChannelInfoActionCellData(icon: UIImage(named: "Notifications"), title: title(for: "notifications"), action: showNotificationsSettings)
             ], [
