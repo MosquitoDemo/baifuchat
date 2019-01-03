@@ -141,7 +141,9 @@ final class PreferencesViewModel {
         case 0: return 1
 //        case 1: return canChangeAppIcon ? 7 : 6
             case 1: return 4
-        case 2: return canViewAdministrationPanel ? 1 : 0
+        /*暂时去掉用户权限判断*/
+//        case 2: return canViewAdministrationPanel ? 1 : 0
+        case 2:return 1
         case 3: return 3
         case 4: return 1
         case 5: return 1
