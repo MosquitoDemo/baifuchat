@@ -308,6 +308,7 @@
 "chat.info.item.members" = "メンバー";
 "chat.info.item.pinned" = "ピン留め";
 "chat.info.item.starred" = "スター";
+"chat.info.item.announcement" = "announcement";
 "chat.info.item.mentions" = "メンション";
 "chat.info.item.notifications" = "通知";
 "chat.info.item.files" = "ファイル";

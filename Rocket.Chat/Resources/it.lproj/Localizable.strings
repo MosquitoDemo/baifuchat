@@ -308,6 +308,7 @@
 "chat.info.item.members" = "Componenti";
 "chat.info.item.pinned" = "Evidenziati";
 "chat.info.item.starred" = "Speciali";
+"chat.info.item.announcement" = "announcement";
 "chat.info.item.mentions" = "Menzioni";
 "chat.info.item.notifications" = "Notifiche";
 "chat.info.item.files" = "Documenti";

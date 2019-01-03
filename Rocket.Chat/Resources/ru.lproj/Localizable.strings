@@ -308,6 +308,7 @@
 "chat.info.item.members" = "Пользователи";
 "chat.info.item.pinned" = "Прикрепленные";
 "chat.info.item.starred" = "Отмеченные";
+"chat.info.item.announcement" = "announcement";
 "chat.info.item.mentions" = "Упоминания";
 "chat.info.item.files" = "Файлы";
 "chat.info.item.share" = "Поделиться";
