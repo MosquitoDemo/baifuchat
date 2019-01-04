@@ -58,7 +58,7 @@ class ChannelActionsViewController: BaseViewController {
 
                 let memberData = MembersListViewData()
                 memberData.subscription = self.subscription
-         print(memberData.members.count)
+//         print(memberData.members.count)
                 
 //                refreshMembers()
                 //shuju

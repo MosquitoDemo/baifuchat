@@ -110,17 +110,17 @@ struct SubscriptionsSortingManager {
         options.append(.customerservice)
         options.append(.boss)
  */
-        if isSelected(option: SubscriptionsGroupingOption.favorites.rawValue) {
-            options.append(.favorites)
-        }
-
-        if isSelected(option: SubscriptionsGroupingOption.unread.rawValue) {
-            options.append(.unread)
-        }
-
-        if isSelected(option: SubscriptionsGroupingOption.type.rawValue) {
-            options.append(.type)
-        }
+        options.append(.favorites)
+        options.append(.unread)
+        options.append(.type)
+//        if isSelected(option: SubscriptionsGroupingOption.favorites.rawValue) {
+//        }
+//
+//        if isSelected(option: SubscriptionsGroupingOption.unread.rawValue) {
+//        }
+//
+//        if isSelected(option: SubscriptionsGroupingOption.type.rawValue) {
+//        }
 
         return options
     }
