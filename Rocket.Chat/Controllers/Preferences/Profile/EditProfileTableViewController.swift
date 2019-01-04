@@ -15,7 +15,7 @@ final class EditProfileTableViewController: BaseTableViewController, MediaPicker
 
     static let identifier = String(describing: EditProfileTableViewController.self)
 
-    let gender = 1
+    var gender = "male"
     
 
     //女
@@ -25,7 +25,9 @@ final class EditProfileTableViewController: BaseTableViewController, MediaPicker
             manImage.image = UIImage.init(named: "select-after")
             
             womanImage.image = UIImage.init(named: "select-click")
+            self.gender = "female"
         }
+    
      
     }
     //男
@@ -35,6 +37,7 @@ final class EditProfileTableViewController: BaseTableViewController, MediaPicker
             womanImage.image = UIImage.init(named: "select-after")
             
             manImage.image = UIImage.init(named: "select-click")
+            self.gender = "male"
             
         }
       
@@ -109,7 +112,6 @@ final class EditProfileTableViewController: BaseTableViewController, MediaPicker
     var saveButton: UIBarButtonItem?
     var cancelButton: UIBarButtonItem?
 
-    let api = API.current()
     var avatarFile: FileUpload?
 
     var authSettings: AuthSettings? {
@@ -199,9 +201,35 @@ final class EditProfileTableViewController: BaseTableViewController, MediaPicker
             self.avatarButton.isHidden = false
             fetchUserLoader.hide(animated: true)
         }
+        let user = AuthManager.currentUser() ?? User()
+        
+        API.current()?.client(UsersClient.self).fetchUser(user, completion: { (response) in
+            stopLoading()
+            
+            switch response{
+            case .resource(let result):
+               
+                    self.user = result.user
+                    self.isLoading = false
+                    
+                    if self.canEditAnyInfo {
+                        self.navigationItem.rightBarButtonItem = self.editButton
+                    }
+                    
+                    self.tableView.reloadData()
+                
+                print(result)
+                
+            case .error:
+                Alert(key: "alert.load_profile_error").present(handler: { _ in
+                    self.navigationController?.popViewController(animated: true)
+                })
+                
+            }
+        })
 
         let meRequest = MeRequest()
-        api?.fetch(meRequest) { [weak self] response in
+        API.current()?.fetch(meRequest) { [weak self] response in
             stopLoading()
 
             switch response {
@@ -226,6 +254,7 @@ final class EditProfileTableViewController: BaseTableViewController, MediaPicker
                 })
             }
         }
+ 
     }
 
     func bindUserData() {
@@ -234,6 +263,29 @@ final class EditProfileTableViewController: BaseTableViewController, MediaPicker
         username.text = user?.username
         email.text = user?.emails.first?.email
 
+        if user?.gender == "male"{
+            
+            
+            //男
+            
+            if isShowEditStatue {
+                womanImage.image = UIImage.init(named: "select-after")
+                
+                manImage.image = UIImage.init(named: "select-click")
+                self.gender = "male"
+                
+            }
+        
+        }else{
+            if isShowEditStatue {
+                manImage.image = UIImage.init(named: "select-after")
+                
+                womanImage.image = UIImage.init(named: "select-click")
+                self.gender = "female"
+            }
+            
+        }
+        timeselect.text = user?.birthdate
         updateUserStatus()
     }
 
@@ -326,22 +378,29 @@ final class EditProfileTableViewController: BaseTableViewController, MediaPicker
         guard
             let name = name.text,
             let username = username.text,
-            let email = email.text,
+//            let email = email.text,
+            let birthdate = timeselect.text,
             !name.isEmpty,
-            !username.isEmpty,
-            !email.isEmpty
+            !username.isEmpty
+//            !email.isEmpty
         else {
             Alert(key: "alert.update_profile_empty_fields").present()
             return
         }
 
-        guard email.isValidEmail else {
-            Alert(key: "alert.update_profile_invalid_email").present()
-            return
-        }
+//        guard email.isValidEmail else {
+//            Alert(key: "alert.update_profile_invalid_email").present()
+//            return
+//        }
 
-        var userRaw = JSON([:])
+        var userRaw = [String:Any]()
+        userRaw["name"] = name
+//        userRaw["username"] = username
+        userRaw["emails"] = [["address": email]]
+        userRaw["customFields"] = ["birthdate":birthdate,"gender":gender]
+        let jsonx = JSON(userRaw)
 
+        /*
         if name != self.user?.name { userRaw["name"].string = name }
         if username != self.user?.username { userRaw["username"].string = username }
         if email != self.user?.emails.first?.email { userRaw["emails"] = [["address": email]] }
@@ -353,14 +412,15 @@ final class EditProfileTableViewController: BaseTableViewController, MediaPicker
             return
         }
 
+ */
         let user = User()
-        user.map(userRaw, realm: nil)
+        user.map(jsonx, realm: nil)
 
-        if !(self.user?.emails.first?.email == email) {
-            requestPasswordToUpdate(user: user)
-        } else {
+//        if !(self.user?.emails.first?.email == email) {
+//            requestPasswordToUpdate(user: user)
+//        } else {
             update(user: user)
-        }
+//        }
     }
 
     fileprivate func requestPasswordToUpdate(user: User) {
@@ -404,8 +464,7 @@ final class EditProfileTableViewController: BaseTableViewController, MediaPicker
         startLoading()
         isUploadingAvatar = true
 
-        let client = API.current()?.client(UploadClient.self)
-        client?.uploadAvatar(data: avatarFile.data, filename: avatarFile.name, mimetype: avatarFile.type, completion: { [weak self] _ in
+        API.current()?.client(UploadClient.self).uploadAvatar(data: avatarFile.data, filename: avatarFile.name, mimetype: avatarFile.type, completion: { [weak self] _ in
             guard let self = self else { return }
 
             if !self.isUpdatingUser {
@@ -437,8 +496,8 @@ final class EditProfileTableViewController: BaseTableViewController, MediaPicker
         }
 
         let updateUserRequest = UpdateUserRequest(user: user, currentPassword: currentPassword)
-        api?.fetch(updateUserRequest) { [weak self] response in
-            guard let self = self else { return }
+        API.current()?.fetch(updateUserRequest) {  response in
+//            guard let self = self else { return }
 
             switch response {
             case .resource(let resource):
@@ -454,7 +513,8 @@ final class EditProfileTableViewController: BaseTableViewController, MediaPicker
                 if !self.isUploadingAvatar {
                     self.alertSuccess(title: localized("alert.update_profile_success.title"))
                 }
-            case .error:
+            case .error(let error):
+                print(error)
                 stopLoading(false)
                 Alert(key: "alert.update_profile_error").present()
             }
@@ -569,7 +629,9 @@ final class EditProfileTableViewController: BaseTableViewController, MediaPicker
                 let datePicker = YLDatePicker(currentDate: nil, minLimitDate: Date(), maxLimitDate: nil, datePickerType: .YMD) { [weak self] (date) in
 //                    self?.navigationItem.title = date.getString(format: "yyyy-MM-dd")
 //                    print(date.getString(format: "yyyy-MM-dd"))
-                    self?.timeselect.text = date.getString(format: "yyyy-MM-dd")
+                    let dateString = date.getString(format: "yyyy-MM-dd")
+                    self?.timeselect.text = dateString
+                    self?.user?.birthdate = dateString
                 }
                 
                 

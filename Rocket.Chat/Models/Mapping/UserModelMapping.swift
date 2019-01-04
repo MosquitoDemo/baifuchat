@@ -60,6 +60,13 @@ extension User: ModelMappeable {
 //            self.roles.removeAll()
 //            self.roles.append(objectsIn: roles)
         }
+        
+        if let birthdate = values["customFields"]["birthdate"].string{
+            self.birthdate = birthdate
+        }
+        if let gender = values["customFields"]["gender"].string{
+            self.gender = gender
+        }
     }
 
 }

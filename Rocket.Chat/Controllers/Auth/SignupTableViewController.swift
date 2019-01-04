@@ -171,6 +171,7 @@ final class SignupTableViewController: BaseTableViewController {
             return
         }
 
+    
         startLoading()
         AuthManager.signup(with: name, email, password, customFields: customFields) { [weak self] response in
             DispatchQueue.main.async {

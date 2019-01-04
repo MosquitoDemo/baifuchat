@@ -48,13 +48,28 @@ final class SubscriptionsViewController: BaseViewController {
         /*
          设置标题
          根据需求隐藏
-         setupTitleView()
          */
+//        setupTitleView()
         updateBackButton()
         startObservingKeyboard()
 
         super.viewDidLoad()
 
+    
+        /*
+        let user = AuthManager.currentUser() ?? User()
+        
+        API.current()?.client(UsersClient.self).fetchUser(user, completion: { (response) in
+        
+            switch response{
+            case .resource(let result):
+                print(result)
+                
+            case .error(let error):
+                print(error)
+            }
+        })
+ */
         /*
         let method = "UserPresence:".appending(UserPresence.away.rawValue)
         
@@ -247,7 +262,7 @@ final class SubscriptionsViewController: BaseViewController {
         searchBar?.applyTheme()
     }
 
-    /*
+    
     func setupTitleView() {
         if let titleView = SubscriptionsTitleView.instantiateFromNib() {
             titleView.translatesAutoresizingMaskIntoConstraints = false
@@ -266,7 +281,7 @@ final class SubscriptionsViewController: BaseViewController {
             titleView.addGestureRecognizer(tapGesture)
         }
     }
- */
+ 
 
 }
 
