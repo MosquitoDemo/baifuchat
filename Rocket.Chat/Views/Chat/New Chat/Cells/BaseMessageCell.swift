@@ -55,7 +55,7 @@ class BaseMessageCell: UICollectionViewCell, BaseMessageCellProtocol, ChatCell {
         usernameLabel = username
 
         date.text = viewModel.dateFormatted
-        print(viewModel.message?.groupable)
+//        print(viewModel.message?.groupable)
         username.text = viewModel.message?.alias ?? user.displayName
 
         if viewModel.message?.failed == true {
