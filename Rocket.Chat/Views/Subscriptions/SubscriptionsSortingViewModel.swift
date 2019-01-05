@@ -59,6 +59,8 @@ final class SubscriptionsSortingViewModel {
             return localized("subscriptions.grouping.boss")
         case .customerservice:
             return localized("subscriptions.grouping.customer_service")
+        case .subordinate:
+            return localized("subscriptions.grouping.subordinate")
         }
     }
 
@@ -87,6 +89,8 @@ final class SubscriptionsSortingViewModel {
         case .boss:
             return UIImage()
         case .customerservice:
+            return UIImage()
+        case .subordinate:
             return UIImage()
         }
     }

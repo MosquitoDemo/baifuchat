@@ -381,6 +381,7 @@ final class MessagesViewModel {
 
             if let index = index {
                 if let newSection = section(for: message) {
+                    
                     data[index] = newSection
                 }
             } else {
@@ -425,13 +426,16 @@ final class MessagesViewModel {
                 guard $0.isInvalidated == false else{return}
                 guard let message = $0.unmanaged else { return }
 
+                
                 let index = self.data.firstIndex(where: { (section) -> Bool in
                     if let object = section.object.base as? MessageSectionModel {
                         return object.differenceIdentifier == message.identifier
+                    }else{
+                        return false
                     }
-
-                    return false
+                    
                 })
+                
 
                 if index != nil {
                     return
@@ -575,6 +579,7 @@ final class MessagesViewModel {
             dataSorted[idx] = chatSection
 
             if let indexOfSection = data.firstIndex(of: chatSection) {
+                
                 data[indexOfSection] = chatSection
             }
 

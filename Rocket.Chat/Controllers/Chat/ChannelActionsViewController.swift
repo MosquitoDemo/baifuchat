@@ -53,7 +53,7 @@ class ChannelActionsViewController: BaseViewController {
 
             var header: [Any?]?
 
-            if subscriptionx.type == .directMessage {
+            if isDirectMessage {
                 header = [ChannelInfoUserCellData(user: subscriptionx.directMessageUser)]
             } else {
                 let hasDescription = !(subscriptionx.roomDescription?.isEmpty ?? true)
@@ -92,7 +92,7 @@ class ChannelActionsViewController: BaseViewController {
                 header = [
 //                    ChannelInfoBasicCellData(title: "#\(subscription.name)"),
                    
-                    ChannelInfoMemberCellData(
+                    ChannelInfoMembersCellData(
                         icon: UIImage.init(named: ""), title: "" ,subscription: subscriptionx ,action: showMembersList
                     ),
                     
@@ -140,6 +140,7 @@ class ChannelActionsViewController: BaseViewController {
     }
 
     func registerCells() {
+        tableView.registerNib(ChannelInfoMembersCell.self)
         tableView.registerNib(ChannelInfoMemberCell.self)
         tableView.registerNib(ChannelInfoUserCell.self)
         tableView.registerNib(ChannelInfoActionCell.self)
@@ -361,9 +362,9 @@ extension ChannelActionsViewController: UITableViewDelegate {
                 return cell
         }
         // member cell
-        if let data = data as? ChannelInfoMemberCellData {
+        if let data = data as? ChannelInfoMembersCellData {
             
-            let cell = tableView.dequeueReusableCell(ChannelInfoMemberCell.self)
+            let cell = tableView.dequeueReusableCell(ChannelInfoMembersCell.self)
             cell.data = data
             return cell
         }
@@ -394,8 +395,8 @@ extension ChannelActionsViewController: UITableViewDelegate {
             return ChannelInfoDescriptionCell.defaultHeight
         }
 //member Data
-        if data as? ChannelInfoMemberCellData != nil {
-            return ChannelInfoMemberCell.defaultHeight
+        if data as? ChannelInfoMembersCellData != nil {
+            return ChannelInfoMembersCell.defaultHeight
         }
         
         if data as? ChannelInfoBasicCellData != nil {
@@ -406,9 +407,7 @@ extension ChannelActionsViewController: UITableViewDelegate {
     }
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        tableView.deselectRow(at: indexPath, animated: true)
-print(indexPath.row)
-        
+        tableView.deselectRow(at: indexPath, animated: true)        
         /*群公告*/
         if indexPath.section == 1 && indexPath.row == 4{
             let vc = GroupAnnouncementViewController()
@@ -426,7 +425,7 @@ print(indexPath.row)
             showUserDetails(user)
         }
 
-        if let data = data as? ChannelInfoMemberCellData {
+        if let data = data as? ChannelInfoMembersCellData {
             guard let action = data.action else {
                 alert(title: localized("alert.feature.wip.title"), message: localized("alert.feature.wip.message"))
                 return

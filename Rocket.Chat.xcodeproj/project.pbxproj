@@ -891,6 +891,10 @@
 		F321AEBE21D36CDC005B365B /* BasicMessageSelfCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F321AEBC21D36CDC005B365B /* BasicMessageSelfCell.xib */; };
 		F321AEC121D3B18F005B365B /* MessageSelfActionsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F321AEBF21D3B18F005B365B /* MessageSelfActionsCell.swift */; };
 		F321AEC221D3B18F005B365B /* MessageSelfActionsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F321AEC021D3B18F005B365B /* MessageSelfActionsCell.xib */; };
+		F325F1FC21E0A54B00BAA3EF /* ChannelInfoMembersCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F325F1FA21E0A54B00BAA3EF /* ChannelInfoMembersCell.swift */; };
+		F325F1FD21E0A54B00BAA3EF /* ChannelInfoMembersCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F325F1FB21E0A54B00BAA3EF /* ChannelInfoMembersCell.xib */; };
+		F325F20021E0AA9200BAA3EF /* ChannelMemberCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F325F1FE21E0AA9200BAA3EF /* ChannelMemberCollectionCell.swift */; };
+		F325F20121E0AA9200BAA3EF /* ChannelMemberCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F325F1FF21E0AA9200BAA3EF /* ChannelMemberCollectionCell.xib */; };
 		F342453721D47691009CD659 /* AudioMessageSelfCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F342453521D47691009CD659 /* AudioMessageSelfCell.swift */; };
 		F342453821D47691009CD659 /* AudioMessageSelfCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F342453621D47691009CD659 /* AudioMessageSelfCell.xib */; };
 		F342453D21D47753009CD659 /* AudioSelfCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F342453B21D47753009CD659 /* AudioSelfCell.swift */; };
@@ -1861,6 +1865,10 @@
 		F321AEBC21D36CDC005B365B /* BasicMessageSelfCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BasicMessageSelfCell.xib; sourceTree = "<group>"; };
 		F321AEBF21D3B18F005B365B /* MessageSelfActionsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageSelfActionsCell.swift; sourceTree = "<group>"; };
 		F321AEC021D3B18F005B365B /* MessageSelfActionsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MessageSelfActionsCell.xib; sourceTree = "<group>"; };
+		F325F1FA21E0A54B00BAA3EF /* ChannelInfoMembersCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelInfoMembersCell.swift; sourceTree = "<group>"; };
+		F325F1FB21E0A54B00BAA3EF /* ChannelInfoMembersCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChannelInfoMembersCell.xib; sourceTree = "<group>"; };
+		F325F1FE21E0AA9200BAA3EF /* ChannelMemberCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelMemberCollectionCell.swift; sourceTree = "<group>"; };
+		F325F1FF21E0AA9200BAA3EF /* ChannelMemberCollectionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChannelMemberCollectionCell.xib; sourceTree = "<group>"; };
 		F342453521D47691009CD659 /* AudioMessageSelfCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioMessageSelfCell.swift; sourceTree = "<group>"; };
 		F342453621D47691009CD659 /* AudioMessageSelfCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AudioMessageSelfCell.xib; sourceTree = "<group>"; };
 		F342453B21D47753009CD659 /* AudioSelfCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioSelfCell.swift; sourceTree = "<group>"; };
@@ -2382,8 +2390,8 @@
 		4161332F1D46CA2800E09DA2 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				F3F6BDF021D71359003DE407 /* TextView */,
 				0B80EE5720FC613800E7E43B /* PickerView */,
+				F3F6BDF021D71359003DE407 /* TextView */,
 				9911CF3220C1CF3D001471C3 /* Buttons */,
 				99805D7320C190FC00741B8E /* TextFields */,
 				80D41DFB2092152A00034D1F /* ActionSheets */,
@@ -3117,6 +3125,10 @@
 				800FCD4A1F728E6A00D9A692 /* MemberCell.xib */,
 				44833D4D21D4BC7300DB7AB0 /* ChannelInfoMemberCell.swift */,
 				44833D5321D4BCF600DB7AB0 /* ChannelInfoMemberCell.xib */,
+				F325F1FA21E0A54B00BAA3EF /* ChannelInfoMembersCell.swift */,
+				F325F1FB21E0A54B00BAA3EF /* ChannelInfoMembersCell.xib */,
+				F325F1FE21E0AA9200BAA3EF /* ChannelMemberCollectionCell.swift */,
+				F325F1FF21E0AA9200BAA3EF /* ChannelMemberCollectionCell.xib */,
 			);
 			path = Info;
 			sourceTree = "<group>";
@@ -4484,6 +4496,7 @@
 				44833D5421D4BCF600DB7AB0 /* ChannelInfoMemberCell.xib in Resources */,
 				995F712020C7A7CD00B7535F /* EmailAuthTableViewCell.xib in Resources */,
 				809B53141FE3294400833DD2 /* ReactionListView.xib in Resources */,
+				F325F20121E0AA9200BAA3EF /* ChannelMemberCollectionCell.xib in Resources */,
 				14F8A293202E65C700175FDC /* Blue-60@2x.png in Resources */,
 				8041C048202BA234007E21FA /* RCEmojiKit.xcassets in Resources */,
 				F342454621D47837009CD659 /* VideoMessageSelfCell.xib in Resources */,
@@ -4531,6 +4544,7 @@
 				41FBF4EB20BD8C650080D00D /* ServerCell.xib in Resources */,
 				F342455A21D47FCB009CD659 /* TextAttachmentSelfCell.xib in Resources */,
 				F342455621D47FAC009CD659 /* TextAttachmentMessageSelfCell.xib in Resources */,
+				F325F1FD21E0A54B00BAA3EF /* ChannelInfoMembersCell.xib in Resources */,
 				14F8A220202E5CBF00175FDC /* Black-29@3x.png in Resources */,
 				99907517217666C000CAB7C8 /* TextAttachmentMessageCell.xib in Resources */,
 				80AE2544203E61CF00DC2867 /* ChatMessageUnreadSeparator.xib in Resources */,
@@ -4942,6 +4956,7 @@
 				809B530E1FE2EFA100833DD2 /* ReactionListView.swift in Sources */,
 				4159720C1D3DB854002258F4 /* Email.swift in Sources */,
 				99363FCC20C8758500AA68C0 /* ShowMoreSeparatorTableViewCell.swift in Sources */,
+				F325F20021E0AA9200BAA3EF /* ChannelMemberCollectionCell.swift in Sources */,
 				8013F8861FD6B76600EE1A4E /* CommandsRequest.swift in Sources */,
 				412719461E6B403700461FEE /* RegisterUsernameTableViewController.swift in Sources */,
 				806C59A21FBB0BD600C32D0A /* PostMessageRequest.swift in Sources */,
@@ -5250,6 +5265,7 @@
 				99100B6C20CF3B3F000C5FCC /* LoginTableViewController.swift in Sources */,
 				897083D31F8CF08100233561 /* CheckTableViewCell.swift in Sources */,
 				99F8FAED20B66F210025FEEF /* ImageCoordinator.swift in Sources */,
+				F325F1FC21E0A54B00BAA3EF /* ChannelInfoMembersCell.swift in Sources */,
 				80F533E62195A33B00B7292E /* MessagesViewControllerSending.swift in Sources */,
 				8076FDC72048632300114F28 /* SubscriptionQueries.swift in Sources */,
 				F342455521D47FAC009CD659 /* TextAttachmentMessageSelfCell.swift in Sources */,

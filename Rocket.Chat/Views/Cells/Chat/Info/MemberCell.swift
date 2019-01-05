@@ -8,7 +8,7 @@
 
 import UIKit
 
-struct MemberCellData {
+public struct MemberCellData {
     let member: UnmanagedUser
 
     var nameText: String {
