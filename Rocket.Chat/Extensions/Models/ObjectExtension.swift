@@ -10,11 +10,11 @@ import Foundation
 import RealmSwift
 
 extension Object {
-    func validated() -> Self? {
-        guard !isInvalidated else {
-            return nil
-        }
-
-        return self
-    }
+//    func validated() -> Self? {
+//        guard !isInvalidated else {
+//            return nil
+//        }
+//
+//        return self
+//    }
 }

@@ -126,9 +126,11 @@ class BaseMessageCell: UICollectionViewCell, BaseMessageCellProtocol, ChatCell {
     }
 
     @objc func handleLongPressMessageCell(recognizer: UIGestureRecognizer) {
+        
         guard
             let viewModel = viewModel?.base as? BaseMessageChatItem,
-            let managedObject = viewModel.message?.managedObject?.validated()
+            let managedObject = viewModel.message?.managedObject,
+            managedObject.isInvalidated == false
         else {
             return
         }
@@ -139,7 +141,8 @@ class BaseMessageCell: UICollectionViewCell, BaseMessageCellProtocol, ChatCell {
     @objc func handleUsernameTapGestureCell(recognizer: UIGestureRecognizer) {
         guard
             let viewModel = viewModel?.base as? BaseMessageChatItem,
-            let managedObject = viewModel.message?.managedObject?.validated(),
+            let managedObject = viewModel.message?.managedObject,
+            managedObject.isInvalidated == false,
             let username = usernameLabel
         else {
             return

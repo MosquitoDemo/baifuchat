@@ -83,7 +83,9 @@ final class ImageSelfCell: BaseImageMessageCell, SizingCell {
     override func handleLongPressMessageCell(recognizer: UIGestureRecognizer) {
         guard
             let viewModel = viewModel?.base as? BaseMessageChatItem,
-            let managedObject = viewModel.message?.managedObject?.validated()
+            let managedObject = viewModel.message?.managedObject,
+            managedObject.isInvalidated == false
+
             else {
                 return
         }

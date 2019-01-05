@@ -71,11 +71,12 @@ final class MessagesViewModel {
 
     internal var subscription: Subscription? {
         didSet {
-            guard let subscription = subscription?.validated() else { return }
-            rid = subscription.rid
-            lastSeen = lastSeen == nil ? subscription.lastSeen : lastSeen
-            subscribe(for: subscription)
-            messagesQuery = subscription.fetchMessagesQueryResults()
+            guard let subscriptionx = subscription else {return}
+            guard subscriptionx.isInvalidated == false else { return }
+            rid = subscriptionx.rid
+            lastSeen = lastSeen == nil ? subscriptionx.lastSeen : lastSeen
+            subscribe(for: subscriptionx)
+            messagesQuery = subscriptionx.fetchMessagesQueryResults()
             refreshMessagesQueryOldValues()
             messagesQueryToken = messagesQuery?.observe({ [weak self] collectionChanges in
                 self?.handleDataUpdates(changes: collectionChanges)
@@ -335,7 +336,7 @@ final class MessagesViewModel {
         for insertion in insertions {
             guard
                 insertion < messagesQuery.count,
-                let message = messagesQuery[insertion].validated()?.unmanaged
+                let message = messagesQuery[insertion].unmanaged
             else {
                 continue
             }
@@ -363,7 +364,7 @@ final class MessagesViewModel {
         for modified in modifications {
             guard
                 modified < messagesQuery.count,
-                let message = messagesQuery[modified].validated()?.unmanaged
+                let message = messagesQuery[modified].unmanaged
             else {
                 continue
             }
@@ -398,10 +399,11 @@ final class MessagesViewModel {
             order to get the correct page of data.
      */
     func fetchMessages(from oldestMessage: Date?, prepareAnotherPage: Bool = true) {
+        guard subscription?.isInvalidated == false else { return  }
         guard
             !requestingData,
             hasMoreData || oldestMessage == nil,
-            let subscription = subscription?.validated(),
+            let subscription = subscription,
             let subscriptionUnmanaged = subscription.unmanaged
         else {
             return
@@ -420,7 +422,8 @@ final class MessagesViewModel {
             let pageSize = 30
             let messagesFromDatabase = subscriptionValid.fetchMessages(pageSize, lastMessageDate: oldestMessage)
             messagesFromDatabase.forEach {
-                guard let message = $0.validated()?.unmanaged else { return }
+                guard $0.isInvalidated == false else{return}
+                guard let message = $0.unmanaged else { return }
 
                 let index = self.data.firstIndex(where: { (section) -> Bool in
                     if let object = section.object.base as? MessageSectionModel {
@@ -663,10 +666,14 @@ final class MessagesViewModel {
 extension MessagesViewModel {
 
     func sendTextMessage(text: String) {
-        guard let subscription = subscription?.validated()?.unmanaged, text.count > 0 else {
+        guard subscription?.isInvalidated == false else {
+            return
+        }
+        guard let subscription = subscription?.unmanaged, text.count > 0 else {
             return
         }
 
+        
         guard let client = API.current()?.client(MessagesClient.self) else { return Alert.defaultError.present() }
         client.sendMessage(text: text, subscription: subscription)
     }

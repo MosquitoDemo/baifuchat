@@ -67,17 +67,17 @@ extension User: UnmanagedConvertible {
 extension User {
 
     func displayName() -> String {
-        guard let validatedUser = validated() else {
+        guard !isInvalidated else {
             return ""
         }
 
-        let username = validatedUser.username ?? ""
+        let username = self.username ?? ""
 
         guard let settings = AuthSettingsManager.settings else {
             return username
         }
 
-        if let name = validatedUser.name {
+        if let name = self.name {
             if settings.useUserRealName && !name.isEmpty {
                 return name
             }

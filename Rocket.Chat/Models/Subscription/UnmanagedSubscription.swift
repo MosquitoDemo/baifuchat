@@ -54,7 +54,7 @@ struct UnmanagedSubscription: UnmanagedObject, Equatable {
     var displayName: String
 
     var managedObject: Subscription? {
-        return Subscription.find(withIdentifier: identifier)?.validated()
+        return Subscription.find(withIdentifier: identifier)?.isInvalidated == false ? Subscription.find(withIdentifier: identifier):nil
     }
 }
 

@@ -69,7 +69,10 @@ struct UnmanagedMessage: UnmanagedObject, Equatable {
     var snippetId: String?
 
     var managedObject: Message? {
-        return Message.find(withIdentifier: identifier)?.validated()
+        let message = Message.find(withIdentifier: identifier)
+        
+        return message?.isInvalidated == false ? message:nil
+        
     }
 }
 
