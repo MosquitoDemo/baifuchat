@@ -49,9 +49,8 @@ class MembersListViewData {
             let options: APIRequestOptionSet = [.paginated(count: pageSize, offset: currentPage*pageSize)]
             let client = API.current()?.client(SubscriptionsClient.self)
 
-            client?.fetchMembersList(subscription: subscription, options: options) { [weak self] response, users in
+            client?.fetchMembersList(subscription: subscription, options: options) { response, users in
                 guard
-                    let self = self,
                     let users = users,
                     case let .resource(resource) = response
                 else {
