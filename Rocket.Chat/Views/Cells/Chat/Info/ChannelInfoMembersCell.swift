@@ -53,7 +53,13 @@ class ChannelInfoMembersCell: UITableViewCell,ChannelInfoCellProtocol {
                     let members = userxs.map({ (userx) -> MemberCellData in
                         return MemberCellData(member: userx)
                     })
-                    self.itemArray = members
+                    let first6Elements : [MemberCellData] // An Array of up to the first 3 elements.
+                    if members.count >= 6 {
+                        first6Elements = Array(members[0 ..< 6])
+                    } else {
+                        first6Elements = members
+                    }
+                    self.itemArray = first6Elements
                     self.collectionView.reloadData()
                     
                 /*
