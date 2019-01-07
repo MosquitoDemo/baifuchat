@@ -236,7 +236,7 @@ extension MainSplitViewController {
     }
 
     @objc func shortcutUpload(_ command: UIKeyCommand) {
-        guard chatViewController?.subscription?.validated() != nil else {
+        guard chatViewController?.subscription?.isInvalidated == false else {
             return
         }
 
@@ -244,7 +244,7 @@ extension MainSplitViewController {
     }
 
     @objc func shortcutRoomActions(_ command: UIKeyCommand) {
-        guard chatViewController?.subscription?.validated() != nil else {
+        guard chatViewController?.subscription?.isInvalidated == false else {
             return
         }
 
@@ -252,7 +252,7 @@ extension MainSplitViewController {
     }
 
     @objc func shortcutRoomMessageSearch(_ command: UIKeyCommand) {
-        guard chatViewController?.subscription?.validated() != nil else {
+        guard chatViewController?.subscription?.isInvalidated == false else {
             return
         }
 

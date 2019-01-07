@@ -44,20 +44,23 @@ class ChannelActionsViewController: BaseViewController {
     
     var subscription: Subscription? {
         didSet {
-            guard let subscription = self.subscription?.validated() else { return }
+            guard self.subscription?.isInvalidated == false else { return }
 
-            let isDirectMessage = subscription.type == .directMessage
+            guard let subscriptionx = self.subscription else {
+                return
+            }
+            let isDirectMessage = subscriptionx.type == .directMessage
 
             var header: [Any?]?
 
-            if subscription.type == .directMessage {
-                header = [ChannelInfoUserCellData(user: subscription.directMessageUser)]
+            if isDirectMessage {
+                header = [ChannelInfoUserCellData(user: subscriptionx.directMessageUser)]
             } else {
-                let hasDescription = !(subscription.roomDescription?.isEmpty ?? true)
-                let hasTopic = !(subscription.roomTopic?.isEmpty ?? true)
+                let hasDescription = !(subscriptionx.roomDescription?.isEmpty ?? true)
+                let hasTopic = !(subscriptionx.roomTopic?.isEmpty ?? true)
 
                 let memberData = MembersListViewData()
-                memberData.subscription = self.subscription
+                memberData.subscription = subscriptionx
 //         print(memberData.members.count)
                 
 //                refreshMembers()
@@ -79,9 +82,9 @@ class ChannelActionsViewController: BaseViewController {
                 
                 
                 let data = MembersListViewData()
-                data.subscription = self.subscription
+                data.subscription = subscriptionx
                 data.loadMoreMembers { [weak self] in
-                    print(data.member(at: 1).displayName)
+//                    print(data.member(at: 1).displayName)
 //                    https://chat-stg.baifu-tech.net/avatar/Abc199?format=jpeg
                     
                 }
@@ -89,17 +92,17 @@ class ChannelActionsViewController: BaseViewController {
                 header = [
 //                    ChannelInfoBasicCellData(title: "#\(subscription.name)"),
                    
-                    ChannelInfoMemberCellData(
-                        icon: UIImage.init(named: ""), title: "" ,subscription: self.subscription! ,action: showMembersList
+                    ChannelInfoMembersCellData(
+                        icon: UIImage.init(named: ""), title: "" ,subscription: subscriptionx ,action: showMembersList
                     ),
                     
                     ChannelInfoDescriptionCellData(
                         title: localized("chat.info.item.description"),
-                        descriptionText: hasDescription ? subscription.roomDescription : localized("chat.info.item.no_description")
+                        descriptionText: hasDescription ? subscriptionx.roomDescription : localized("chat.info.item.no_description")
                     ),
                     ChannelInfoDescriptionCellData(
                         title: localized("chat.info.item.topic"),
-                        descriptionText: hasTopic ? subscription.roomTopic : localized("chat.info.item.no_topic")
+                        descriptionText: hasTopic ? subscriptionx.roomTopic : localized("chat.info.item.no_topic")
                     )
                 ]
             }
@@ -137,6 +140,7 @@ class ChannelActionsViewController: BaseViewController {
     }
 
     func registerCells() {
+        tableView.registerNib(ChannelInfoMembersCell.self)
         tableView.registerNib(ChannelInfoMemberCell.self)
         tableView.registerNib(ChannelInfoUserCell.self)
         tableView.registerNib(ChannelInfoActionCell.self)
@@ -203,7 +207,8 @@ extension ChannelActionsViewController {
     }
 
     @objc func buttonFavoriteDidPressed(_ sender: Any) {
-        guard let subscription = self.subscription?.validated() else { return }
+        guard self.subscription?.isInvalidated == false else { return  }
+        guard let subscription = self.subscription else { return }
 
         SubscriptionManager.toggleFavorite(subscription) { [unowned self] (response) in
             DispatchQueue.main.async {
@@ -284,7 +289,10 @@ extension ChannelActionsViewController {
     }
 
     func shareRoom() {
-        guard let url = subscription?.validated()?.externalURL() else { return }
+        guard subscription?.isInvalidated == false else {
+            return
+        }
+        guard let url = subscription?.externalURL() else { return }
         let controller = UIActivityViewController(activityItems: [url], applicationActivities: nil)
 
         if shareRoomCell != nil && UIDevice.current.userInterfaceIdiom == .pad {
@@ -354,9 +362,9 @@ extension ChannelActionsViewController: UITableViewDelegate {
                 return cell
         }
         // member cell
-        if let data = data as? ChannelInfoMemberCellData {
+        if let data = data as? ChannelInfoMembersCellData {
             
-            let cell = tableView.dequeueReusableCell(ChannelInfoMemberCell.self)
+            let cell = tableView.dequeueReusableCell(ChannelInfoMembersCell.self)
             cell.data = data
             return cell
         }
@@ -387,8 +395,8 @@ extension ChannelActionsViewController: UITableViewDelegate {
             return ChannelInfoDescriptionCell.defaultHeight
         }
 //member Data
-        if data as? ChannelInfoMemberCellData != nil {
-            return ChannelInfoMemberCell.defaultHeight
+        if data as? ChannelInfoMembersCellData != nil {
+            return ChannelInfoMembersCell.defaultHeight
         }
         
         if data as? ChannelInfoBasicCellData != nil {
@@ -399,9 +407,7 @@ extension ChannelActionsViewController: UITableViewDelegate {
     }
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        tableView.deselectRow(at: indexPath, animated: true)
-print(indexPath.row)
-        
+        tableView.deselectRow(at: indexPath, animated: true)        
         /*群公告*/
         if indexPath.section == 1 && indexPath.row == 4{
             let vc = GroupAnnouncementViewController()
@@ -419,7 +425,7 @@ print(indexPath.row)
             showUserDetails(user)
         }
 
-        if let data = data as? ChannelInfoMemberCellData {
+        if let data = data as? ChannelInfoMembersCellData {
             guard let action = data.action else {
                 alert(title: localized("alert.feature.wip.title"), message: localized("alert.feature.wip.message"))
                 return

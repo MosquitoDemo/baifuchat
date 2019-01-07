@@ -18,20 +18,20 @@ class AttachmentField: Object {
 
 class Attachment: BaseModel {
     var type: MessageType {
-        guard let validatedAttachment = validated() else {
+        guard !isInvalidated else {
             // FA NOTE: Returning the default MessageType for an invalidated object since there's no invalid MessageType
             return .textAttachment
         }
 
-        if !(validatedAttachment.audioURL?.isEmpty ?? true) {
+        if self.audioURL?.isEmpty == false {
             return .audio
         }
 
-        if !(validatedAttachment.videoURL?.isEmpty ?? true) {
+        if self.videoURL?.isEmpty == false {
             return .video
         }
 
-        if !(validatedAttachment.imageURL?.isEmpty ?? true) {
+        if self.imageURL?.isEmpty == false{
             return .image
         }
 

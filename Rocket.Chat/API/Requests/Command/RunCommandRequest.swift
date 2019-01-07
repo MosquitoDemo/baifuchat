@@ -16,7 +16,7 @@ final class RunCommandRequest: APIRequest {
 
     let method: HTTPMethod = .post
     let path = "/api/v1/commands.run"
-    let requiredVersion = Version(0, 60, 0)
+    let requiredVersion = Version(0, 67, 0)
 
     let command: String
     let params: String

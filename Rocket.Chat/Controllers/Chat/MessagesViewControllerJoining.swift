@@ -33,7 +33,7 @@ extension MessagesViewController {
     }
 
     func updateJoinedView() {
-        guard let subscription = subscription?.validated() else { return }
+        guard !subscription.isInvalidated else { return }
 
         if subscription.isJoined() {
             composerView.isHidden = false

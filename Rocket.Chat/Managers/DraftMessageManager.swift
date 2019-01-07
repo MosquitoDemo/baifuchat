@@ -56,7 +56,7 @@ struct DraftMessageManager {
          - parameter subscription: The subscription that is related to the draftMessage.
      */
     static func update(draftMessage: String, for subscription: Subscription) {
-        guard let subscription = subscription.validated() else { return }
+        guard !subscription.isInvalidated else { return }
         guard !selectedServerKey.isEmpty else { return }
 
         let subscriptionKey = draftMessageKey(for: subscription.rid)

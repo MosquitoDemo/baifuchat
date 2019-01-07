@@ -31,9 +31,10 @@ struct MessagesClient: APIClient {
         }
 
         func updateMessage(json: JSON) {
-            if message.validated() == nil {
-                return
-            }
+        
+         
+         guard !message.isInvalidated else { return  }
+           
 
             let server = AuthManager.selectedServerHost()
 
@@ -54,9 +55,8 @@ struct MessagesClient: APIClient {
 
         func setMessageOffline() {
             DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
-                if message.validated() == nil {
-                    return
-                }
+               guard !message.isInvalidated else {return}
+       
 
                 Realm.executeOnMainThread(realm: realm) { (realm) in
                     message.temporary = false

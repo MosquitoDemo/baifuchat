@@ -61,11 +61,13 @@ extension AuthManager {
                 return completion(response)
             }
 
+            let token = auth.token ?? ""
+            let validToken = auth.isInvalidated ? "":token
             let object = [
                 "msg": "method",
                 "method": "login",
                 "params": [[
-                    "resume": auth.validated()?.token ?? ""
+                    "resume": validToken
                 ]]
             ] as [String: Any]
 

@@ -12,7 +12,7 @@ import SwiftyJSON
 final class UploadAvatarRequest: APIRequest {
     typealias APIResourceType = UploadAvatarResource
 
-    let requiredVersion = Version(0, 60, 0)
+    let requiredVersion = Version(0, 67, 0)
 
     let method: HTTPMethod = .post
     var path = "/api/v1/users.setAvatar"

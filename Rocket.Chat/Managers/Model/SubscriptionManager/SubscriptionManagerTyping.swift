@@ -30,9 +30,12 @@ extension SubscriptionManager {
     }
 
     static func sendTypingStatus(_ subscription: Subscription, isTyping: Bool, completion: MessageCompletion? = nil) {
+       
+        guard !subscription.isInvalidated else {
+            return
+        }
         guard
-            let username = AuthManager.currentUser()?.username,
-            let subscription = subscription.validated()
+            let username = AuthManager.currentUser()?.username
         else {
             return
         }

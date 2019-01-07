@@ -26,7 +26,7 @@ struct UnmanagedUser: UnmanagedObject, Equatable {
     var kefuUsernames:[String]?
 
     var managedObject: User? {
-        return User.find(withIdentifier: identifier)?.validated()
+        return User.find(withIdentifier: identifier)?.isInvalidated == false ? User.find(withIdentifier: identifier):nil
     }
 }
 

@@ -7,8 +7,24 @@
 //
 
 import UIKit
+extension UIColor{
+    var colorImage:UIImage{
+        let rect = CGRect(x: 0, y: 0, width: 1, height: 1)
+        UIGraphicsBeginImageContext(rect.size)
+        let context = UIGraphicsGetCurrentContext()
+        context?.setFillColor(self.cgColor)
+        context?.fill(rect)
+        let image = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        return image ?? UIImage()
+    }
+    
+    
+    
+}
 
-struct MemberCellData {
+public struct MemberCellData {
+    
     let member: UnmanagedUser
 
     var nameText: String {
@@ -33,6 +49,17 @@ struct MemberCellData {
 final class MemberCell: UITableViewCell {
     static let identifier = "MemberCell"
 
+    var owner:UnmanagedUser?{
+        didSet{
+            
+        }
+    }
+    var isOwner:Bool = false{
+        didSet{
+            self.roleButton.isHidden = !isOwner
+            self.roleButton.setTitle("群主", for: .normal)
+        }
+    }
     @IBOutlet weak var statusView: UIView! {
         didSet {
             statusView.layer.cornerRadius = statusView.layer.frame.width / 2
@@ -77,9 +104,18 @@ final class MemberCell: UITableViewCell {
             avatarView.username = data?.member.username
         }
     }
-
+    @IBOutlet weak var roleButton: UIButton!
+    
+    @IBOutlet weak var buttonHeightConstraint: NSLayoutConstraint!
+    @IBOutlet weak var buttonWidthConstraint: NSLayoutConstraint!
     override func awakeFromNib() {
         super.awakeFromNib()
+    
+        self.roleButton.titleLabel?.font = UIFont.systemFont(ofSize: 11)
+        self.roleButton.setTitleColor(UIColor.init(hex: "#1d74f4"), for: .normal)
+        self.roleButton.setBackgroundImage(UIColor(hex: "#c3dbff").colorImage, for: .normal)
+        self.roleButton.layer.cornerRadius = self.buttonHeightConstraint.constant/2
+        self.roleButton.layer.masksToBounds = true
     }
 }
 
