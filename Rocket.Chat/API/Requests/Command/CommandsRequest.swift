@@ -12,7 +12,7 @@ import SwiftyJSON
 struct CommandsRequest: APIRequest {
     typealias APIResourceType = CommandsResource
     let path = "/api/v1/commands.list"
-    let requiredVersion = Version(0, 60, 0)
+    let requiredVersion = Version(0, 67, 0)
 }
 
 final class CommandsResource: APIResource {

@@ -51,6 +51,7 @@ class ChannelInfoMembersCell: UITableViewCell,ChannelInfoCellProtocol {
                             return Alert.defaultError.present()
                     }
                     let members = userxs.map({ (userx) -> MemberCellData in
+                       
                         return MemberCellData(member: userx)
                     })
                     let first6Elements : [MemberCellData] // An Array of up to the first 3 elements.

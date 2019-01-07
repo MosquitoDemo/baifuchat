@@ -923,6 +923,17 @@
 		F342456A21D481E9009CD659 /* QuoteSelfCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F342456821D481E9009CD659 /* QuoteSelfCell.xib */; };
 		F342456D21D48272009CD659 /* MessageURLSelfCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F342456B21D48272009CD659 /* MessageURLSelfCell.swift */; };
 		F342456E21D48272009CD659 /* MessageURLSelfCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F342456C21D48272009CD659 /* MessageURLSelfCell.xib */; };
+		F3BCFCC321E2F799003D9930 /* RoomAddOwnerRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3BCFCC221E2F799003D9930 /* RoomAddOwnerRequest.swift */; };
+		F3BCFCC521E2F95F003D9930 /* RoomAddModeratorRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3BCFCC421E2F95F003D9930 /* RoomAddModeratorRequest.swift */; };
+		F3BCFCC721E2FC2A003D9930 /* RoomLeaveRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3BCFCC621E2FC2A003D9930 /* RoomLeaveRequest.swift */; };
+		F3BCFCC921E300E8003D9930 /* RoomDeleteRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3BCFCC821E300E8003D9930 /* RoomDeleteRequest.swift */; };
+		F3BCFCCB21E30532003D9930 /* RoomCloseRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3BCFCCA21E30532003D9930 /* RoomCloseRequest.swift */; };
+		F3BCFCCD21E305A8003D9930 /* RoomOpenRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3BCFCCC21E305A8003D9930 /* RoomOpenRequest.swift */; };
+		F3BCFCCF21E329C2003D9930 /* RoomSetTopicRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3BCFCCE21E329C2003D9930 /* RoomSetTopicRequest.swift */; };
+		F3BCFCD121E330D8003D9930 /* RoomSetAnnouncementRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3BCFCD021E330D8003D9930 /* RoomSetAnnouncementRequest.swift */; };
+		F3BCFCD321E33330003D9930 /* RoomSetPurposeRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3BCFCD221E33330003D9930 /* RoomSetPurposeRequest.swift */; };
+		F3BCFCD521E335D4003D9930 /* RoomSetReadOnlyRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3BCFCD421E335D4003D9930 /* RoomSetReadOnlyRequest.swift */; };
+		F3BCFCD721E33909003D9930 /* RoomSetDefaultRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3BCFCD621E33909003D9930 /* RoomSetDefaultRequest.swift */; };
 		F3F6BDEF21D70F77003DE407 /* GroupAnnouncementViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3F6BDEE21D70F77003DE407 /* GroupAnnouncementViewController.swift */; };
 		F3F6BDF221D7136E003DE407 /* KMPlaceholderTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3F6BDF121D7136E003DE407 /* KMPlaceholderTextView.swift */; };
 /* End PBXBuildFile section */
@@ -1897,6 +1908,17 @@
 		F342456821D481E9009CD659 /* QuoteSelfCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QuoteSelfCell.xib; sourceTree = "<group>"; };
 		F342456B21D48272009CD659 /* MessageURLSelfCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageURLSelfCell.swift; sourceTree = "<group>"; };
 		F342456C21D48272009CD659 /* MessageURLSelfCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MessageURLSelfCell.xib; sourceTree = "<group>"; };
+		F3BCFCC221E2F799003D9930 /* RoomAddOwnerRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomAddOwnerRequest.swift; sourceTree = "<group>"; };
+		F3BCFCC421E2F95F003D9930 /* RoomAddModeratorRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomAddModeratorRequest.swift; sourceTree = "<group>"; };
+		F3BCFCC621E2FC2A003D9930 /* RoomLeaveRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomLeaveRequest.swift; sourceTree = "<group>"; };
+		F3BCFCC821E300E8003D9930 /* RoomDeleteRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomDeleteRequest.swift; sourceTree = "<group>"; };
+		F3BCFCCA21E30532003D9930 /* RoomCloseRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomCloseRequest.swift; sourceTree = "<group>"; };
+		F3BCFCCC21E305A8003D9930 /* RoomOpenRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomOpenRequest.swift; sourceTree = "<group>"; };
+		F3BCFCCE21E329C2003D9930 /* RoomSetTopicRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomSetTopicRequest.swift; sourceTree = "<group>"; };
+		F3BCFCD021E330D8003D9930 /* RoomSetAnnouncementRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomSetAnnouncementRequest.swift; sourceTree = "<group>"; };
+		F3BCFCD221E33330003D9930 /* RoomSetPurposeRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomSetPurposeRequest.swift; sourceTree = "<group>"; };
+		F3BCFCD421E335D4003D9930 /* RoomSetReadOnlyRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomSetReadOnlyRequest.swift; sourceTree = "<group>"; };
+		F3BCFCD621E33909003D9930 /* RoomSetDefaultRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomSetDefaultRequest.swift; sourceTree = "<group>"; };
 		F3F6BDEE21D70F77003DE407 /* GroupAnnouncementViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupAnnouncementViewController.swift; sourceTree = "<group>"; };
 		F3F6BDF121D7136E003DE407 /* KMPlaceholderTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KMPlaceholderTextView.swift; sourceTree = "<group>"; };
 		F87E8221BEB77AF190F06201 /* Pods-Rocket.Chat.ShareExtension.beta.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Rocket.Chat.ShareExtension.beta.xcconfig"; path = "Pods/Target Support Files/Pods-Rocket.Chat.ShareExtension/Pods-Rocket.Chat.ShareExtension.beta.xcconfig"; sourceTree = "<group>"; };
@@ -3227,6 +3249,17 @@
 				414E8A8C20A5DD2200615CE6 /* RoomRolesRequest.swift */,
 				8039441020AF1334002F317A /* RoomKickRequest.swift */,
 				8039442420B330B2002F317A /* RoomInviteRequest.swift */,
+				F3BCFCC221E2F799003D9930 /* RoomAddOwnerRequest.swift */,
+				F3BCFCC421E2F95F003D9930 /* RoomAddModeratorRequest.swift */,
+				F3BCFCC621E2FC2A003D9930 /* RoomLeaveRequest.swift */,
+				F3BCFCC821E300E8003D9930 /* RoomDeleteRequest.swift */,
+				F3BCFCCA21E30532003D9930 /* RoomCloseRequest.swift */,
+				F3BCFCCC21E305A8003D9930 /* RoomOpenRequest.swift */,
+				F3BCFCCE21E329C2003D9930 /* RoomSetTopicRequest.swift */,
+				F3BCFCD021E330D8003D9930 /* RoomSetAnnouncementRequest.swift */,
+				F3BCFCD221E33330003D9930 /* RoomSetPurposeRequest.swift */,
+				F3BCFCD421E335D4003D9930 /* RoomSetReadOnlyRequest.swift */,
+				F3BCFCD621E33909003D9930 /* RoomSetDefaultRequest.swift */,
 			);
 			path = Room;
 			sourceTree = "<group>";
@@ -4905,6 +4938,7 @@
 				805DEC351FFC03380033151B /* CustomEmojiManager.swift in Sources */,
 				33D08E2520BD5EDC008D03EF /* ThemeableViews.swift in Sources */,
 				0BC0E8632032DD95004BFAAF /* DrawingViewModel.swift in Sources */,
+				F3BCFCC921E300E8003D9930 /* RoomDeleteRequest.swift in Sources */,
 				F342453D21D47753009CD659 /* AudioSelfCell.swift in Sources */,
 				35E892C8201CDD1600B4BE5A /* NewRoomViewController.swift in Sources */,
 				990FF6D620740C79007B4A53 /* RoomMentionsRequest.swift in Sources */,
@@ -4921,6 +4955,7 @@
 				415066881EB8B541003AEA1C /* MessageTextCacheManager.swift in Sources */,
 				4124D834209A0521005374CD /* ChatMessageDaySeparator.swift in Sources */,
 				4151B45A1E2D1DD400F8AA1B /* AttachmentModelMapping.swift in Sources */,
+				F3BCFCC721E2FC2A003D9930 /* RoomLeaveRequest.swift in Sources */,
 				8039443220B3988F002F317A /* PagedResource.swift in Sources */,
 				80307E3E1FD75CB1006AD9EF /* VOLocalized.swift in Sources */,
 				807C7BF920740F3C006B600E /* AuthCanPinMessage.swift in Sources */,
@@ -4960,9 +4995,11 @@
 				8013F8861FD6B76600EE1A4E /* CommandsRequest.swift in Sources */,
 				412719461E6B403700461FEE /* RegisterUsernameTableViewController.swift in Sources */,
 				806C59A21FBB0BD600C32D0A /* PostMessageRequest.swift in Sources */,
+				F3BCFCC521E2F95F003D9930 /* RoomAddModeratorRequest.swift in Sources */,
 				1496A87C20FA481B005C2E14 /* SaveNotificationRequest.swift in Sources */,
 				9990751F2176714700CAB7C8 /* ImageMessageCell.swift in Sources */,
 				9938A08720D3141C00714AB4 /* CustomFieldTableViewCell.swift in Sources */,
+				F3BCFCC321E2F799003D9930 /* RoomAddOwnerRequest.swift in Sources */,
 				41BAE3E71D71B26C00C2445A /* URLExtension.swift in Sources */,
 				991AB00821744E640097AE4C /* BaseAudioMessageCell.swift in Sources */,
 				4174CB0D1D2D994A0086DAC8 /* ConnectServerViewController.swift in Sources */,
@@ -5068,6 +5105,7 @@
 				41A79C0F1D2F085F00A1968E /* User.swift in Sources */,
 				8076FDB92048581F00114F28 /* AuthManagerCurrentUser.swift in Sources */,
 				99B060CE1FB1225200F471C2 /* DraftMessageManager.swift in Sources */,
+				F3BCFCCD21E305A8003D9930 /* RoomOpenRequest.swift in Sources */,
 				8013F86C1FD6B59A00EE1A4E /* APIError.swift in Sources */,
 				41FC9E0A209B3A9800FED485 /* MessageExtensions.swift in Sources */,
 				4101B02921A2EF6B00772F7C /* HeaderChatItem.swift in Sources */,
@@ -5097,6 +5135,7 @@
 				4124D833209A0517005374CD /* ChatLoaderCell.swift in Sources */,
 				8013F8871FD6B76600EE1A4E /* RunCommandRequest.swift in Sources */,
 				997FE19A210B9D2E000F6836 /* SubscriptionLeaveRequest.swift in Sources */,
+				F3BCFCCF21E329C2003D9930 /* RoomSetTopicRequest.swift in Sources */,
 				9911CF3420C1CF58001471C3 /* StyledButton.swift in Sources */,
 				4101B02D21A2EF9300772F7C /* HeaderCell.swift in Sources */,
 				41DAE93C1D318E280098E068 /* SubscriptionManager.swift in Sources */,
@@ -5175,6 +5214,7 @@
 				411D40CA20D27A5E001A1035 /* ChannelInfoDescriptionCell.swift in Sources */,
 				802C895E2165393600C6B9B2 /* MessagesViewControllerEditing.swift in Sources */,
 				807371A61F96A4FF00D53ADF /* LoginServiceModelHandler.swift in Sources */,
+				F3BCFCD521E335D4003D9930 /* RoomSetReadOnlyRequest.swift in Sources */,
 				80D41DFD2092378400034D1F /* StarMessageRequest.swift in Sources */,
 				33D08E2A20BD5F24008D03EF /* TopTransparentViewController.swift in Sources */,
 				F342456921D481E9009CD659 /* QuoteSelfCell.swift in Sources */,
@@ -5193,6 +5233,7 @@
 				8076FDD82048654F00114F28 /* UserUtils.swift in Sources */,
 				80F09A1D1FFFC24800977D0D /* NSAttributedString+CustomEmojis.swift in Sources */,
 				995FEB2F206286D9004EE38F /* WebBrowserManager.swift in Sources */,
+				F3BCFCD321E33330003D9930 /* RoomSetPurposeRequest.swift in Sources */,
 				4162E1531D651A8800AAAE49 /* UserManager.swift in Sources */,
 				F342456D21D48272009CD659 /* MessageURLSelfCell.swift in Sources */,
 				800FCD4C1F728EC800D9A692 /* ChannelInfoCellProtocol.swift in Sources */,
@@ -5226,6 +5267,7 @@
 				8032E3E820362EF5009D33CE /* UpdateMessageRequest.swift in Sources */,
 				411119B61F680DB00019854B /* NetworkCoordinator.swift in Sources */,
 				99EA7A99219181750023BB63 /* BaseTextAttachmentChatItem.swift in Sources */,
+				F3BCFCCB21E30532003D9930 /* RoomCloseRequest.swift in Sources */,
 				F31C296521DFAB5200D8A4F8 /* CommandsClient.swift in Sources */,
 				8076FDAE2048567B00114F28 /* AuthCanDeleteMessage.swift in Sources */,
 				41D3668820C0323100970B99 /* SubscriptionsSortingViewModel.swift in Sources */,
@@ -5272,6 +5314,7 @@
 				80D41DFA2092147300034D1F /* UserActionSheetPresenter.swift in Sources */,
 				F321AEC121D3B18F005B365B /* MessageSelfActionsCell.swift in Sources */,
 				597ECBA21E3708A50041C5C5 /* DataExtension.swift in Sources */,
+				F3BCFCD121E330D8003D9930 /* RoomSetAnnouncementRequest.swift in Sources */,
 				444797D521D21491005416B9 /* Date+Extension.swift in Sources */,
 				414A1FFC1D46395900093E10 /* SocketResponse.swift in Sources */,
 				807371A21F96968C00D53ADF /* LoginServiceModelMapping.swift in Sources */,
@@ -5320,6 +5363,7 @@
 				99907513217622A900CAB7C8 /* FileMessageCell.swift in Sources */,
 				414A1FF61D46320F00093E10 /* ResponseMessage.swift in Sources */,
 				996735CF21582E790049BB63 /* BasicMessageCell.swift in Sources */,
+				F3BCFCD721E33909003D9930 /* RoomSetDefaultRequest.swift in Sources */,
 				4151B44E1E2CF19A00F8AA1B /* UserModelHandler.swift in Sources */,
 				1496A87220FA469C005C2E14 /* Dynamic.swift in Sources */,
 				80DC9A6C206BA95600032BE0 /* Localized.swift in Sources */,

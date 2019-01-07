@@ -49,6 +49,7 @@ class MembersListViewData {
             let options: APIRequestOptionSet = [.paginated(count: pageSize, offset: currentPage*pageSize)]
             let client = API.current()?.client(SubscriptionsClient.self)
 
+        
             client?.fetchMembersList(subscription: subscription, options: options) { response, users in
                 guard
                     let users = users,
@@ -82,6 +83,18 @@ class MembersListViewController: BaseViewController {
             }
 
             title = data.title
+            /*
+            let _ = API.current()?.client(SubscriptionsClient.self).api.fetch(RoomInfoRequest.init(roomId: data.subscription?.rid ?? ""), completion: { (response) in
+                switch response {
+                case .resource(let resultx):
+                    print(resultx)
+                    print(resultx)
+                    
+                case .error(let error):
+                    print(error)
+                }
+            })
+ */
         }
     }
 
@@ -120,6 +133,7 @@ class MembersListViewController: BaseViewController {
 extension MembersListViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         let refreshControl = UIRefreshControl()
         refreshControl.addTarget(self, action: #selector(refreshControlDidPull), for: .valueChanged)
 
@@ -186,19 +200,20 @@ extension MembersListViewController: UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-
+        
         if indexPath.row == data.members.count {
             let cell = tableView.dequeueReusableCell(indexPath: indexPath, LoaderTableViewCell.self)
             return cell
         }
-
+        
         let cell = tableView.dequeueReusableCell(indexPath: indexPath, MemberCell.self)
-//        if let cell = tableView.dequeueReusableCell(withIdentifier: MemberCell.identifier) as? MemberCell {
-            cell.data = MemberCellData(member: data.member(at: indexPath.row))
-            return cell
-//        }
-
-//        return UITableViewCell()
+        
+        let isOwner = self.data.subscription?.roomOwner?.identifier == data.member(at: indexPath.row).identifier
+        cell.data = MemberCellData(member: data.member(at: indexPath.row))
+        cell.isOwner = isOwner
+        cell.owner = isOwner ? data.member(at: indexPath.row):nil
+        return cell
+        
     }
 
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {

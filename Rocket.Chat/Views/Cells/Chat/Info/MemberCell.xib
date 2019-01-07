@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -27,7 +27,7 @@
                         </constraints>
                     </view>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vQw-Lj-ju1" userLabel="NameLabel">
-                        <rect key="frame" x="67" y="17.5" width="162" height="18"/>
+                        <rect key="frame" x="67" y="17.5" width="38" height="18"/>
                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                         <color key="textColor" red="0.1843137255" green="0.20392156859999999" blue="0.16134180240000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <nil key="highlightedColor"/>
@@ -40,25 +40,49 @@
                             <constraint firstAttribute="height" constant="35" id="shJ-kj-c50"/>
                         </constraints>
                     </view>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mqV-HC-nS9">
+                        <rect key="frame" x="120" y="18" width="36" height="17"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="36" id="KgO-Ux-Ntg"/>
+                            <constraint firstAttribute="height" constant="17" id="YgN-4T-U6W"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                        <state key="normal" title="Button"/>
+                    </button>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="U56-Km-f7T">
+                        <rect key="frame" x="0.0" y="52" width="253" height="0.5"/>
+                        <color key="backgroundColor" red="0.84313725490196079" green="0.84313725490196079" blue="0.84313725490196079" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="0.5" id="nR6-WZ-iJl"/>
+                        </constraints>
+                    </view>
                 </subviews>
                 <constraints>
+                    <constraint firstItem="U56-Km-f7T" firstAttribute="leading" secondItem="JEZ-6W-A0m" secondAttribute="leading" id="2Qs-bf-cME"/>
                     <constraint firstItem="QCs-d6-xj4" firstAttribute="leading" secondItem="S39-gJ-qtV" secondAttribute="trailing" constant="8" id="495-6A-jld"/>
+                    <constraint firstAttribute="bottom" secondItem="U56-Km-f7T" secondAttribute="bottom" id="8LM-d4-for"/>
                     <constraint firstItem="QCs-d6-xj4" firstAttribute="centerY" secondItem="JEZ-6W-A0m" secondAttribute="centerY" id="Jom-X3-SXJ"/>
+                    <constraint firstAttribute="trailing" secondItem="U56-Km-f7T" secondAttribute="trailing" id="KCR-2P-Yd6"/>
                     <constraint firstItem="vQw-Lj-ju1" firstAttribute="centerY" secondItem="JEZ-6W-A0m" secondAttribute="centerY" id="MKA-F5-GI6"/>
-                    <constraint firstAttribute="trailingMargin" secondItem="vQw-Lj-ju1" secondAttribute="trailing" constant="8" id="Net-Vb-BTK"/>
+                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="mqV-HC-nS9" secondAttribute="trailing" constant="15" id="UHH-T6-RtW"/>
                     <constraint firstItem="S39-gJ-qtV" firstAttribute="centerY" secondItem="JEZ-6W-A0m" secondAttribute="centerY" id="VEo-wQ-7CC"/>
                     <constraint firstItem="S39-gJ-qtV" firstAttribute="leading" secondItem="JEZ-6W-A0m" secondAttribute="leading" constant="8" id="eRP-Ki-FiI"/>
                     <constraint firstItem="vQw-Lj-ju1" firstAttribute="leading" secondItem="QCs-d6-xj4" secondAttribute="trailing" constant="8" id="eZD-nV-aQF"/>
+                    <constraint firstItem="mqV-HC-nS9" firstAttribute="centerY" secondItem="vQw-Lj-ju1" secondAttribute="centerY" id="f5H-Fy-B7B"/>
+                    <constraint firstItem="mqV-HC-nS9" firstAttribute="leading" secondItem="vQw-Lj-ju1" secondAttribute="trailing" constant="15" id="rax-Rc-gMl"/>
                 </constraints>
             </tableViewCellContentView>
             <inset key="separatorInset" minX="59" minY="0.0" maxX="0.0" maxY="0.0"/>
             <connections>
                 <outlet property="avatarViewContainer" destination="QCs-d6-xj4" id="EZe-g6-4fQ"/>
+                <outlet property="buttonHeightConstraint" destination="YgN-4T-U6W" id="4bw-2M-Lpo"/>
+                <outlet property="buttonWidthConstraint" destination="KgO-Ux-Ntg" id="TQH-43-HVh"/>
                 <outlet property="nameLabel" destination="vQw-Lj-ju1" id="vV9-SJ-Evs"/>
+                <outlet property="roleButton" destination="mqV-HC-nS9" id="hwq-8S-hUX"/>
                 <outlet property="statusView" destination="S39-gJ-qtV" id="sy7-7C-SCX"/>
                 <outlet property="statusViewWidthConstraint" destination="Sxo-VE-pM9" id="UpS-oO-W02"/>
             </connections>
-            <point key="canvasLocation" x="-158.5" y="55.5"/>
+            <point key="canvasLocation" x="-159.19999999999999" y="55.322338830584712"/>
         </tableViewCell>
     </objects>
 </document>

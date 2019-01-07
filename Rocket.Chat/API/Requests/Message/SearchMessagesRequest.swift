@@ -12,15 +12,20 @@ import Foundation
 final class SearchMessagesRequest: APIRequest {
     typealias APIResourceType = SearchMessagesResource
 
-    let requiredVersion = Version(0, 60, 0)
+    let requiredVersion = Version(0, 67, 0)
     let path = "/api/v1/chat.search"
 
     let roomId: String?
+    var searchText:String?
+    
     var query: String?
+    var count:Int?
 
-    init(roomId: String, searchText: String) {
+    init(roomId: String, searchText: String,count:Int = 10) {
         self.roomId = roomId
-        self.query = "roomId=\(roomId)&searchText=\(searchText)"
+        self.searchText = searchText
+        self.count = count
+        self.query = "roomId=\(roomId)&searchText=\(searchText)&count=\(count)"
     }
 }
 

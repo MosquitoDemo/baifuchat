@@ -11,7 +11,7 @@ import SwiftyJSON
 final class UploadMessageRequest: APIRequest {
     typealias APIResourceType = UploadMessageResource
 
-    let requiredVersion = Version(0, 60, 0)
+    let requiredVersion = Version(0, 67, 0)
 
     let method: HTTPMethod = .post
     var path: String {
