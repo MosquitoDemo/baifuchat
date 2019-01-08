@@ -78,13 +78,14 @@ class AddUsersViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        
+        self.tableView.rowHeight = UITableView.automaticDimension
+        self.tableView.estimatedRowHeight = 56
+        self.tableView.sectionHeaderHeight = UITableView.automaticDimension
+        self.tableView.estimatedSectionHeaderHeight = 0
+        self.tableView.separatorStyle = .none
+        self.tableView.tableFooterView = UIView()
         registerCells()
-
-//         let cell = tableView.dequeueReusableCell(LoaderTableViewCell.self)
-//        if let cell = tableView.dequeueReusableCell(withIdentifier: LoaderTableViewCell.identifier) as? LoaderTableViewCell {
-//            self.loaderCell = cell
-//        }
-
         setupSearchBar()
 
         title = data.title
@@ -128,17 +129,7 @@ class AddUsersViewController: BaseViewController {
     func registerCells() {
         tableView.registerNib(MemberCell.self)
         tableView.registerNib(LoaderTableViewCell.self)
-        /*
-        tableView.register(UINib(
-            nibName: "MemberCell",
-            bundle: Bundle.main
-        ), forCellReuseIdentifier: MemberCell.identifier)
-
-        tableView.register(UINib(
-            nibName: "LoaderTableViewCell",
-            bundle: Bundle.main
-        ), forCellReuseIdentifier: LoaderTableViewCell.identifier)
- */
+        
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -224,13 +215,15 @@ extension AddUsersViewController: UITableViewDataSource {
         
     }
 
+    /*
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 0
     }
 
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 50
+        return 51
     }
+ */
 }
 
 // MARK: SearchBar
