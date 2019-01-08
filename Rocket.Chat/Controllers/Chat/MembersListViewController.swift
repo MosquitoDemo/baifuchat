@@ -147,13 +147,19 @@ extension MembersListViewController {
 
         title = data.title
 
-        if data.canInviteUsers {
-            navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(inviteUsersButtonPressed(sender:)))
-        }
+//        if data.canInviteUsers {
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(MembersListViewController.inviteUsersButtonPressed(_:)))
+//        }
     }
 
-    @objc func inviteUsersButtonPressed(sender: Any) {
-        performSegue(withIdentifier: "toAddUsers", sender: self)
+    @objc func inviteUsersButtonPressed(_ sender: UIBarButtonItem) {
+//        performSegue(withIdentifier: "toAddUsers", sender: self)
+        let storyBoard = UIStoryboard(name: "Chat", bundle: Bundle.init(for: MembersListViewController.self))
+        if let vc = storyBoard.instantiateViewController(withIdentifier: "addUsers") as? AddUsersViewController{
+            vc.data.subscription = data.subscription
+            
+            self.navigationController?.pushViewController(vc, animated: true)
+        }
     }
 
     func registerCells() {

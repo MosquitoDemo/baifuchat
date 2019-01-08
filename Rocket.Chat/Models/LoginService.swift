@@ -9,7 +9,7 @@
 import Foundation
 import RealmSwift
 
-enum LoginServiceType {
+enum LoginServiceType:String {
     case google
     case github
     case facebook
@@ -21,6 +21,7 @@ enum LoginServiceType {
     case custom
     case invalid
 
+    
     init(string: String) {
         switch string {
         case "google": self = .google

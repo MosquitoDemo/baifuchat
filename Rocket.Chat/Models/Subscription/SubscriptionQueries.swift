@@ -15,7 +15,6 @@ extension Subscription {
             format: "name == %@ && privateType IN %@",
             name, subscriptionType.map { $0.rawValue }
         )
-
         return realm?.objects(Subscription.self).filter(predicate).first
     }
 

@@ -9,6 +9,7 @@
 import Foundation
 
 extension Subscription {
+    
     var directMessageUser: User? {
         guard let otherUserId = otherUserId else { return nil }
         return User.find(withIdentifier: otherUserId)
