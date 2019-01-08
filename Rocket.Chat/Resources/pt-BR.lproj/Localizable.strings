@@ -316,6 +316,8 @@
 
 // Members List
 "chat.members.list.title" = "Membros";
+"chat.members.list.owner" = "Proprietário do grupo";
+
 
 // Add Users
 "chat.add_users.title" = "Adicionar Usuários";

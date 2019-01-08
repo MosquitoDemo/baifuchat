@@ -316,6 +316,8 @@
 "chat.info.item.Actions" = "操作";
 // Members List
 "chat.members.list.title" = "会员";
+"chat.members.list.owner" = "群主";
+
 
 // Add Users
 "chat.add_users.title" = "添加用户";

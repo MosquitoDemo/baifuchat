@@ -317,6 +317,8 @@
 
 // Members List
 "chat.members.list.title" = "メンバー";
+"chat.members.list.owner" = "グループオーナー";
+
 
 // Add Users
 "chat.add_users.title" = "ユーザーの追加";

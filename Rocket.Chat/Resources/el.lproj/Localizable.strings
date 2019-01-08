@@ -316,6 +316,8 @@
 
 // Members List
 "chat.members.list.title" = "Μέλη";
+"chat.members.list.owner" = "Ιδιοκτήτης ομάδας";
+
 
 // Add Users
 "chat.add_users.title" = "Προσθήκη χρηστών"; 

@@ -57,7 +57,7 @@ final class MemberCell: UITableViewCell {
     var isOwner:Bool = false{
         didSet{
             self.roleButton.isHidden = !isOwner
-            self.roleButton.setTitle("群主", for: .normal)
+            self.roleButton.setTitle(localized("chat.members.list.owner"), for: .normal)
         }
     }
     @IBOutlet weak var statusView: UIView! {
