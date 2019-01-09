@@ -310,6 +310,8 @@
 "chat.info.item.starred" = "Oznaczone gwiazdką";
 "chat.info.item.announcement" = "Ogłoszenie";
 "chat.info.item.add_announcement" = "Dodaj ogłoszenie";
+"chat.info.item.leave" = "Opuść czat grupowy";
+"chat.info.item.delete" = "Rozpuść czat grupowy";
 "chat.info.item.mentions" = "Wzmianki";
 "chat.info.item.files" = "Pliki";
 "chat.info.item.share" = "Udostępnij";

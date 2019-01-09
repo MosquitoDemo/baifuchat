@@ -310,6 +310,8 @@
 "chat.info.item.starred" = "Отмеченные";
 "chat.info.item.announcement" = "объявление";
 "chat.info.item.add_announcement" = "Добавить объявление";
+"chat.info.item.leave" = "Покинуть групповой чат";
+"chat.info.item.delete" = "Распустить групповой чат";
 "chat.info.item.mentions" = "Упоминания";
 "chat.info.item.files" = "Файлы";
 "chat.info.item.share" = "Поделиться";

@@ -310,6 +310,8 @@
 "chat.info.item.starred" = "Αστερωμένα";
 "chat.info.item.announcement" = "Ανακοίνωση";
 "chat.info.item.add_announcement" = "Προσθήκη ανακοίνωσης";
+"chat.info.item.leave" = "Αφήστε την ομαδική συζήτηση";
+"chat.info.item.delete" = "Διαλύστε την ομαδική συζήτηση";
 "chat.info.item.mentions" = "Αναφέρθηκαν";
 "chat.info.item.files" = "Αρχεία";
 "chat.info.item.share" = "Κοινή Χρήση";

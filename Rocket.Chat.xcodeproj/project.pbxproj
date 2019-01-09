@@ -925,6 +925,10 @@
 		F342456E21D48272009CD659 /* MessageURLSelfCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F342456C21D48272009CD659 /* MessageURLSelfCell.xib */; };
 		F35B80EA21E4A9E100204D7A /* ChannelInfoAnnouncementCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F35B80E821E4A9E100204D7A /* ChannelInfoAnnouncementCell.swift */; };
 		F35B80EB21E4A9E100204D7A /* ChannelInfoAnnouncementCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F35B80E921E4A9E100204D7A /* ChannelInfoAnnouncementCell.xib */; };
+		F35B80EE21E59FE600204D7A /* DeleteChannelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F35B80EC21E59FE600204D7A /* DeleteChannelCell.swift */; };
+		F35B80EF21E59FE600204D7A /* DeleteChannelCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F35B80ED21E59FE600204D7A /* DeleteChannelCell.xib */; };
+		F35B80F221E5A02500204D7A /* LeaveChannelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F35B80F021E5A02500204D7A /* LeaveChannelCell.swift */; };
+		F35B80F321E5A02500204D7A /* LeaveChannelCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F35B80F121E5A02500204D7A /* LeaveChannelCell.xib */; };
 		F3BCFCC321E2F799003D9930 /* RoomAddOwnerRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3BCFCC221E2F799003D9930 /* RoomAddOwnerRequest.swift */; };
 		F3BCFCC521E2F95F003D9930 /* RoomAddModeratorRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3BCFCC421E2F95F003D9930 /* RoomAddModeratorRequest.swift */; };
 		F3BCFCC721E2FC2A003D9930 /* RoomLeaveRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3BCFCC621E2FC2A003D9930 /* RoomLeaveRequest.swift */; };
@@ -1912,6 +1916,10 @@
 		F342456C21D48272009CD659 /* MessageURLSelfCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MessageURLSelfCell.xib; sourceTree = "<group>"; };
 		F35B80E821E4A9E100204D7A /* ChannelInfoAnnouncementCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelInfoAnnouncementCell.swift; sourceTree = "<group>"; };
 		F35B80E921E4A9E100204D7A /* ChannelInfoAnnouncementCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChannelInfoAnnouncementCell.xib; sourceTree = "<group>"; };
+		F35B80EC21E59FE600204D7A /* DeleteChannelCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteChannelCell.swift; sourceTree = "<group>"; };
+		F35B80ED21E59FE600204D7A /* DeleteChannelCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DeleteChannelCell.xib; sourceTree = "<group>"; };
+		F35B80F021E5A02500204D7A /* LeaveChannelCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaveChannelCell.swift; sourceTree = "<group>"; };
+		F35B80F121E5A02500204D7A /* LeaveChannelCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LeaveChannelCell.xib; sourceTree = "<group>"; };
 		F3BCFCC221E2F799003D9930 /* RoomAddOwnerRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomAddOwnerRequest.swift; sourceTree = "<group>"; };
 		F3BCFCC421E2F95F003D9930 /* RoomAddModeratorRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomAddModeratorRequest.swift; sourceTree = "<group>"; };
 		F3BCFCC621E2FC2A003D9930 /* RoomLeaveRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomLeaveRequest.swift; sourceTree = "<group>"; };
@@ -3157,6 +3165,10 @@
 				F325F1FF21E0AA9200BAA3EF /* ChannelMemberCollectionCell.xib */,
 				F35B80E821E4A9E100204D7A /* ChannelInfoAnnouncementCell.swift */,
 				F35B80E921E4A9E100204D7A /* ChannelInfoAnnouncementCell.xib */,
+				F35B80EC21E59FE600204D7A /* DeleteChannelCell.swift */,
+				F35B80ED21E59FE600204D7A /* DeleteChannelCell.xib */,
+				F35B80F021E5A02500204D7A /* LeaveChannelCell.swift */,
+				F35B80F121E5A02500204D7A /* LeaveChannelCell.xib */,
 			);
 			path = Info;
 			sourceTree = "<group>";
@@ -4490,6 +4502,7 @@
 				80235D261F74672D00A56CA5 /* LoaderTableViewCell.xib in Resources */,
 				14F8A25A202E64B200175FDC /* BnW-29@2x.png in Resources */,
 				418C4DC81DC4C08800ABED4C /* SubscriptionSectionView.xib in Resources */,
+				F35B80F321E5A02500204D7A /* LeaveChannelCell.xib in Resources */,
 				14F8A298202E65C700175FDC /* Blue-29@2x.png in Resources */,
 				8045F49D20D059A600AA0F3C /* ReadReceiptListView.xib in Resources */,
 				412E1F3C1DB6D55000531FDA /* ChatMessageURLView.xib in Resources */,
@@ -4591,6 +4604,7 @@
 				14F8A26E202E653E00175FDC /* Grey-76@3x.png in Resources */,
 				802498F31F7ACD76005477EC /* ChatMessageAudioView.xib in Resources */,
 				41EB22361E5F056600AA3AE7 /* Localizable.strings in Resources */,
+				F35B80EF21E59FE600204D7A /* DeleteChannelCell.xib in Resources */,
 				41E2F9FF1D414DE800238DFD /* Chat.storyboard in Resources */,
 				14F8A273202E653E00175FDC /* Grey-60@3x.png in Resources */,
 				F342456221D480A7009CD659 /* ImageSelfCell.xib in Resources */,
@@ -5013,6 +5027,7 @@
 				4199A9891DABCC570035F820 /* Emojione.swift in Sources */,
 				4116CBE720B599E6007E7163 /* StatusViewModel.swift in Sources */,
 				418C74431FA3813F00499577 /* CompoundPickerViewDelegate.swift in Sources */,
+				F35B80EE21E59FE600204D7A /* DeleteChannelCell.swift in Sources */,
 				80235D1B1F74070100A56CA5 /* RoomMembersRequest.swift in Sources */,
 				419EB5B1215E3C1400E591BF /* AudioCell.swift in Sources */,
 				1496A86F20FA4644005C2E14 /* NotificationsSwitchCell.swift in Sources */,
@@ -5099,6 +5114,7 @@
 				800FCD4F1F728EC800D9A692 /* ChannelInfoUserCell.swift in Sources */,
 				14BAFAE220308F010054A2E6 /* DrawingBrushColorViewController.swift in Sources */,
 				99B4A7B22164683200C80FF2 /* QuoteCell.swift in Sources */,
+				F35B80F221E5A02500204D7A /* LeaveChannelCell.swift in Sources */,
 				8076FDD6204864E700114F28 /* UserQueries.swift in Sources */,
 				F342455D21D4808B009CD659 /* ImageMessageSelfCell.swift in Sources */,
 				80DF7123219CABAD000F0DA5 /* MessagesViewControllerJoining.swift in Sources */,

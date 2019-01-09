@@ -310,6 +310,8 @@
 "chat.info.item.starred" = "Sembrado de estrellas";
 "chat.info.item.announcement" = "Anuncio";
 "chat.info.item.add_announcement" = "Añadir anuncio";
+"chat.info.item.leave" = "Dejar el chat de grupo";
+"chat.info.item.delete" = "Disolver el chat de grupo";
 "chat.info.item.mentions" = "Mentions"; // TODO
 "chat.info.item.files" = "Files"; // TODO
 "chat.info.item.share" = "Share"; // TODO

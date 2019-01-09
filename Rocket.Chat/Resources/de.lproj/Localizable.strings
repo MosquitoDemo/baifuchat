@@ -310,6 +310,8 @@
 "chat.info.item.starred" = "Favorisiert";
 "chat.info.item.announcement" = "Ankündigung";
 "chat.info.item.add_announcement" = "Ankündigung hinzufügen";
+"chat.info.item.leave" = "Gruppenchat verlassen";
+"chat.info.item.delete" = "Gruppenchat auflösen";
 "chat.info.item.files" = "Dateien";
 "chat.info.item.mentions" = "Erwähnungen";
 "chat.info.item.share" = "Teilen";

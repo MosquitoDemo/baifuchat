@@ -311,6 +311,8 @@
 "chat.info.item.starred" = "S hvězdičkou";
 "chat.info.item.announcement" = "Oznámení";
 "chat.info.item.add_announcement" = "Přidat oznámení";
+"chat.info.item.leave" = "Nechte skupinový chat";
+"chat.info.item.delete" = "Rozpusťte skupinový chat";
 "chat.info.item.mentions" = "Mentions"; // TODO
 "chat.info.item.files" = "Files"; // TODO
 "chat.info.item.share" = "Share"; // TODO

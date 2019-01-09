@@ -305,6 +305,8 @@
 "chat.info.item.description" = "Description";
 "chat.info.item.no_description" = "No description";
 "chat.info.item.add_announcement" = "Add announcement";
+"chat.info.item.leave" = "Leave group chat";
+"chat.info.item.delete" = "Dissolve group chat";
 "chat.info.item.members" = "Members";
 "chat.info.item.pinned" = "Pinned";
 "chat.info.item.starred" = "Starred";
