@@ -44,6 +44,9 @@ class ChannelActionsViewController: BaseViewController {
     
     var subscription: Subscription? {
         didSet {
+            func title(for menuTitle: String) -> String {
+                return localized("chat.info.item.\(menuTitle)")
+            }
             guard self.subscription?.isInvalidated == false else { return }
 
             guard let subscriptionx = self.subscription else {
@@ -103,20 +106,21 @@ class ChannelActionsViewController: BaseViewController {
                     ChannelInfoDescriptionCellData(
                         title: localized("chat.info.item.topic"),
                         descriptionText: hasTopic ? subscriptionx.roomTopic : localized("chat.info.item.no_topic")
-                    )
+                    ),
+                    ChannelInfoAnnouncementCellData(
+                        title: title(for: "announcement"),
+                        announcement: subscriptionx.roomAnnouncement)
                 ]
             }
 
-            func title(for menuTitle: String) -> String {
-                return localized("chat.info.item.\(menuTitle)")
-            }
+            
 
             let data = [header, [
                 ChannelInfoActionCellData(icon: UIImage(named: "Attachments"), title: title(for: "files"), action: showFilesList),
                 isDirectMessage ? nil : ChannelInfoActionCellData(icon: UIImage(named: "Mentions"), title: title(for: "mentions"), action: showMentionsList),
                 isDirectMessage ? nil : ChannelInfoActionCellData(icon: UIImage(named: "Members"), title: title(for: "members"), action: showMembersList),
                 ChannelInfoActionCellData(icon: UIImage(named: "Star"), title: title(for: "starred"), action: showStarredList),
-                ChannelInfoActionCellData(icon: UIImage(named: "announcement"), title: title(for: "announcement"), action: showStarredList),
+//                ChannelInfoActionCellData(icon: UIImage(named: "announcement"), title: title(for: "announcement"), action: showStarredList),
                 ChannelInfoActionCellData(icon: UIImage(named: "Pinned"), title: title(for: "pinned"), action: showPinnedList),
                 ChannelInfoActionCellData(icon: UIImage(named: "Notifications"), title: title(for: "notifications"), action: showNotificationsSettings)
             ], [
@@ -140,6 +144,7 @@ class ChannelActionsViewController: BaseViewController {
     }
 
     func registerCells() {
+        tableView.registerNib(ChannelInfoAnnouncementCell.self)
         tableView.registerNib(ChannelInfoMembersCell.self)
         tableView.registerNib(ChannelInfoMemberCell.self)
         tableView.registerNib(ChannelInfoUserCell.self)
@@ -361,6 +366,12 @@ extension ChannelActionsViewController: UITableViewDelegate {
                 cell.data = data
                 return cell
         }
+        if let data = data as? ChannelInfoAnnouncementCellData {
+            
+            let cell = tableView.dequeueReusableCell(ChannelInfoAnnouncementCell.self)
+            cell.data = data
+            return cell
+        }
         // member cell
         if let data = data as? ChannelInfoMembersCellData {
             
@@ -402,19 +413,24 @@ extension ChannelActionsViewController: UITableViewDelegate {
         if data as? ChannelInfoBasicCellData != nil {
             return ChannelInfoBasicCell.defaultHeight
         }
+        if data as? ChannelInfoAnnouncementCellData != nil {
+            return ChannelInfoAnnouncementCell.defaultHeight
+        }
 
         return 0
     }
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)        
-        /*群公告*/
-        if indexPath.section == 1 && indexPath.row == 4{
-            let vc = GroupAnnouncementViewController()
-            vc.hidesBottomBarWhenPushed = true
-            self.navigationController?.pushViewController(vc, animated: true)
-            return
-        }
+//        if indexPath.section == 1 && indexPath.row == 4{
+//            let vc = GroupAnnouncementViewController()
+//            vc.canEdit = subscription?.roomOwnerId == AuthManager.currentUser()?.identifier
+//
+//            vc.subscription = self.subscription
+//            vc.hidesBottomBarWhenPushed = true
+//            self.navigationController?.pushViewController(vc, animated: true)
+//            return
+//        }
         if indexPath.section == kShareRoomSection && UIDevice.current.userInterfaceIdiom == .pad {
             shareRoomCell = tableView.cellForRow(at: indexPath)
         }
@@ -423,6 +439,17 @@ extension ChannelActionsViewController: UITableViewDelegate {
 
         if let data = data as? ChannelInfoUserCellData, let user = data.user {
             showUserDetails(user)
+        }
+        /*群公告*/
+
+        if let data = data as? ChannelInfoAnnouncementCellData{
+            let vc = GroupAnnouncementViewController()
+            vc.subscription = self.subscription
+            vc.data = data
+            vc.canEdit = subscription?.roomOwnerId == AuthManager.currentUser()?.identifier
+            
+            vc.hidesBottomBarWhenPushed = true
+            self.navigationController?.pushViewController(vc, animated: true)
         }
 
         if let data = data as? ChannelInfoMembersCellData {

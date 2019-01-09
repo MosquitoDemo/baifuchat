@@ -307,7 +307,8 @@
 "chat.info.item.members" = "Membres";
 "chat.info.item.pinned" = "Épinglé";
 "chat.info.item.starred" = "Mis en favoris";
-"chat.info.item.announcement" = "announcement";
+"chat.info.item.announcement" = "Annonce";
+"chat.info.item.add_announcement" = "Ajouter une annonce";
 "chat.info.item.notifications" = "Notifications"; // TODO
 "chat.info.item.mentions" = "Mentions";
 "chat.info.item.files" = "Fichiers";

@@ -308,7 +308,8 @@
 "chat.info.item.members" = "Członkowie";
 "chat.info.item.pinned" = "Przypięte";
 "chat.info.item.starred" = "Oznaczone gwiazdką";
-"chat.info.item.announcement" = "announcement";
+"chat.info.item.announcement" = "Ogłoszenie";
+"chat.info.item.add_announcement" = "Dodaj ogłoszenie";
 "chat.info.item.mentions" = "Wzmianki";
 "chat.info.item.files" = "Pliki";
 "chat.info.item.share" = "Udostępnij";

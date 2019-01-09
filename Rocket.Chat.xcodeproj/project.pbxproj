@@ -923,6 +923,8 @@
 		F342456A21D481E9009CD659 /* QuoteSelfCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F342456821D481E9009CD659 /* QuoteSelfCell.xib */; };
 		F342456D21D48272009CD659 /* MessageURLSelfCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F342456B21D48272009CD659 /* MessageURLSelfCell.swift */; };
 		F342456E21D48272009CD659 /* MessageURLSelfCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F342456C21D48272009CD659 /* MessageURLSelfCell.xib */; };
+		F35B80EA21E4A9E100204D7A /* ChannelInfoAnnouncementCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F35B80E821E4A9E100204D7A /* ChannelInfoAnnouncementCell.swift */; };
+		F35B80EB21E4A9E100204D7A /* ChannelInfoAnnouncementCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F35B80E921E4A9E100204D7A /* ChannelInfoAnnouncementCell.xib */; };
 		F3BCFCC321E2F799003D9930 /* RoomAddOwnerRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3BCFCC221E2F799003D9930 /* RoomAddOwnerRequest.swift */; };
 		F3BCFCC521E2F95F003D9930 /* RoomAddModeratorRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3BCFCC421E2F95F003D9930 /* RoomAddModeratorRequest.swift */; };
 		F3BCFCC721E2FC2A003D9930 /* RoomLeaveRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3BCFCC621E2FC2A003D9930 /* RoomLeaveRequest.swift */; };
@@ -1908,6 +1910,8 @@
 		F342456821D481E9009CD659 /* QuoteSelfCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QuoteSelfCell.xib; sourceTree = "<group>"; };
 		F342456B21D48272009CD659 /* MessageURLSelfCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageURLSelfCell.swift; sourceTree = "<group>"; };
 		F342456C21D48272009CD659 /* MessageURLSelfCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MessageURLSelfCell.xib; sourceTree = "<group>"; };
+		F35B80E821E4A9E100204D7A /* ChannelInfoAnnouncementCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelInfoAnnouncementCell.swift; sourceTree = "<group>"; };
+		F35B80E921E4A9E100204D7A /* ChannelInfoAnnouncementCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChannelInfoAnnouncementCell.xib; sourceTree = "<group>"; };
 		F3BCFCC221E2F799003D9930 /* RoomAddOwnerRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomAddOwnerRequest.swift; sourceTree = "<group>"; };
 		F3BCFCC421E2F95F003D9930 /* RoomAddModeratorRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomAddModeratorRequest.swift; sourceTree = "<group>"; };
 		F3BCFCC621E2FC2A003D9930 /* RoomLeaveRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomLeaveRequest.swift; sourceTree = "<group>"; };
@@ -3151,6 +3155,8 @@
 				F325F1FB21E0A54B00BAA3EF /* ChannelInfoMembersCell.xib */,
 				F325F1FE21E0AA9200BAA3EF /* ChannelMemberCollectionCell.swift */,
 				F325F1FF21E0AA9200BAA3EF /* ChannelMemberCollectionCell.xib */,
+				F35B80E821E4A9E100204D7A /* ChannelInfoAnnouncementCell.swift */,
+				F35B80E921E4A9E100204D7A /* ChannelInfoAnnouncementCell.xib */,
 			);
 			path = Info;
 			sourceTree = "<group>";
@@ -4595,6 +4601,7 @@
 				800FCD511F728EC800D9A692 /* MemberCell.xib in Resources */,
 				14F8A226202E5CBF00175FDC /* Black-29@2x.png in Resources */,
 				33A5C9D0206A565800FE1C8F /* food.json in Resources */,
+				F35B80EB21E4A9E100204D7A /* ChannelInfoAnnouncementCell.xib in Resources */,
 				80B2D98720E5496E002F4149 /* UserDetail.storyboard in Resources */,
 				F342456621D48198009CD659 /* QuoteMessageSelfCell.xib in Resources */,
 				33A5C9CF206A565800FE1C8F /* objects.json in Resources */,
@@ -5194,6 +5201,7 @@
 				8076FDC320485A2200114F28 /* SubscriptionUtils.swift in Sources */,
 				33D08E2420BD5EDC008D03EF /* ThemeableViewControllers.swift in Sources */,
 				35BCD301201A57EA00B4BE5A /* Ask.swift in Sources */,
+				F35B80EA21E4A9E100204D7A /* ChannelInfoAnnouncementCell.swift in Sources */,
 				4135A64421623F1300C1741A /* ImageCell.swift in Sources */,
 				33D08E3120BD92A5008D03EF /* ThemePreferenceCell.swift in Sources */,
 				80CCD3BC216235B1002AFE83 /* MessagesComposerViewModel.swift in Sources */,

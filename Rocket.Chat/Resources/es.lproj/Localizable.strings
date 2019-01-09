@@ -308,7 +308,8 @@
 "chat.info.item.members" = "Miembros";
 "chat.info.item.pinned" = "Fijado";
 "chat.info.item.starred" = "Sembrado de estrellas";
-"chat.info.item.announcement" = "announcement";
+"chat.info.item.announcement" = "Anuncio";
+"chat.info.item.add_announcement" = "Añadir anuncio";
 "chat.info.item.mentions" = "Mentions"; // TODO
 "chat.info.item.files" = "Files"; // TODO
 "chat.info.item.share" = "Share"; // TODO

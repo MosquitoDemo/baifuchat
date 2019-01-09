@@ -309,6 +309,7 @@
 "chat.info.item.pinned" = "已固定";
 "chat.info.item.starred" = "主演";
 "chat.info.item.announcement" = "公告";
+"chat.info.item.add_announcement" = "添加公告";
 "chat.info.item.mentions" = "提及";
 "chat.info.item.notifications" = "通知";
 "chat.info.item.files" = "文件";

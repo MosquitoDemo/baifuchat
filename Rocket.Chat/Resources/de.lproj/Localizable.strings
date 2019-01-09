@@ -308,7 +308,8 @@
 "chat.info.item.members" = "Teilnehmer";
 "chat.info.item.pinned" = "Angeheftet";
 "chat.info.item.starred" = "Favorisiert";
-"chat.info.item.announcement" = "公告";
+"chat.info.item.announcement" = "Ankündigung";
+"chat.info.item.add_announcement" = "Ankündigung hinzufügen";
 "chat.info.item.files" = "Dateien";
 "chat.info.item.mentions" = "Erwähnungen";
 "chat.info.item.share" = "Teilen";
