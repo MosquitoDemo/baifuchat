@@ -28,6 +28,8 @@ class LeaveChannelCell: UITableViewCell,ChannelInfoCellProtocol {
         
             self.leaveChannelButton.setTitle(data?.title, for: .normal)
             self.leaveChannelButton.setTitle(data?.title, for: .selected)
+            self.leaveChannelButton.setTitleColor(UIColor.init(hex: "#ff001f"), for: .normal)
+            self.leaveChannelButton.setTitleColor(UIColor.init(hex: "#ff001f"), for: .selected)
             
         }
     }
@@ -45,6 +47,8 @@ class LeaveChannelCell: UITableViewCell,ChannelInfoCellProtocol {
         
         self.leaveChannelButton.setTitle(localized("chat.info.item.leave"), for: .normal)
         self.leaveChannelButton.setTitle(localized("chat.info.item.leave"), for: .selected)
+        self.leaveChannelButton.setTitleColor(UIColor.init(hex: "#ff001f"), for: .normal)
+        self.leaveChannelButton.setTitleColor(UIColor.init(hex: "#ff001f"), for: .selected)
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -57,6 +61,6 @@ class LeaveChannelCell: UITableViewCell,ChannelInfoCellProtocol {
 }
 extension LeaveChannelCell{
     override func applyTheme() {
-        super.applyTheme()
+//        super.applyTheme()
     }
 }

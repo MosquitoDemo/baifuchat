@@ -677,4 +677,5 @@
         <image name="tuichu" width="20" height="19.5"/>
         <image name="wenjian" width="20" height="20"/>
     </resources>
+    <color key="tintColor" red="1" green="0.0" blue="0.1215686275" alpha="1" colorSpace="calibratedRGB"/>
 </document>

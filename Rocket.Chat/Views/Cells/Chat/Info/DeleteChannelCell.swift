@@ -24,6 +24,8 @@ class DeleteChannelCell: UITableViewCell,ChannelInfoCellProtocol {
         didSet{
             self.deleteChannelButton.setTitle(data?.title, for: .normal)
             self.deleteChannelButton.setTitle(data?.title, for: .selected)
+            self.deleteChannelButton.setTitleColor(UIColor.init(hex: "#ff001f"), for: .normal)
+            self.deleteChannelButton.setTitleColor(UIColor.init(hex: "#ff001f"), for: .selected)
         }
     }
     var delegate:DeleteChannelCellDelegate?
@@ -43,6 +45,8 @@ class DeleteChannelCell: UITableViewCell,ChannelInfoCellProtocol {
         
         self.deleteChannelButton.setTitle(localized("chat.info.item.delete"), for: .normal)
         self.deleteChannelButton.setTitle(localized("chat.info.item.delete"), for: .selected)
+        self.deleteChannelButton.setTitleColor(UIColor.init(hex: "#ff001f"), for: .normal)
+        self.deleteChannelButton.setTitleColor(UIColor.init(hex: "#ff001f"), for: .selected)
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -56,6 +60,6 @@ class DeleteChannelCell: UITableViewCell,ChannelInfoCellProtocol {
 }
 extension DeleteChannelCell{
     override func applyTheme() {
-        super.applyTheme()
+//        super.applyTheme()
     }
 }

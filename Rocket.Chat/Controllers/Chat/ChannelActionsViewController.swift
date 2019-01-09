@@ -126,12 +126,16 @@ class ChannelActionsViewController: BaseViewController {
             ], [
                 ChannelInfoActionCellData(icon: UIImage(named: "Share"), title: title(for: "share"), detail: false, action: shareRoom)
             ]]
-            if subscriptionx.roomOwnerId == AuthManager.currentUser()?.identifier{
+            if subscriptionx.type == .directMessage{
+                
+            }else{
+            if subscriptionx.roomOwnerId == AuthManager.currentUser()?.identifier {
                 data.append([DeleteChannelCellData(title: localized("chat.info.item.delete"))])
             }else{
                 data.append([LeaveChannelCellData(title: localized("chat.info.item.leave"))])
             }
 
+            }
         
             tableViewData = data.compactMap({ $0 })
         }
