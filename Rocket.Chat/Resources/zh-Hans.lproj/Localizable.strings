@@ -89,6 +89,14 @@
 "alert.logout.confirmation.message" = "您确定要从这退出 \"%@\"?";
 "alert.logout.confirmation.confirm" = "是的，退出";
 
+"alert.channel.leave.confirmation.title" = "离开群聊";
+"alert.channel.leave.confirmation.message" = "您确定要离开此群聊？";
+"alert.channel.leave.confirmation.confirm" = "确定";
+"alert.channel.leave.confirmation.cancel" = "取消";
+"alert.channel.delete.confirmation.title" = "解散群聊";
+"alert.channel.delete.confirmation.message" = "您确定要解散此群聊？";
+"alert.channel.delete.confirmation.confirm" = "确定";
+"alert.channel.delete.confirmation.cancel" = "取消";
 // Connection Redirect
 "connection.server.redirect.alert.title" = "服务器更改了它的URL";
 "connection.server.redirect.alert.message" = "看起来这个服务器将其URL更改为:\n\n%@\n\您要更新网址吗?";

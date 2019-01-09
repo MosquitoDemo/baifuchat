@@ -7,14 +7,34 @@
 //
 
 import UIKit
+
+struct LeaveChannelCellData: ChannelInfoCellDataProtocol {
+    let cellType = LeaveChannelCell.self
+    var title: String?
+}
 protocol LeaveChannelCellDelegate {
     func leaveChannel(_ sender:UIButton,_ cell:LeaveChannelCell)
     
 }
-class LeaveChannelCell: UITableViewCell {
+class LeaveChannelCell: UITableViewCell,ChannelInfoCellProtocol {
+    static var identifier: String = String(describing: LeaveChannelCell.self)
+    
+    static var defaultHeight: CGFloat = UITableView.automaticDimension
+    
+    
+    var leaveBlock:((UIButton)->Void)?
+    var data:LeaveChannelCellData?{
+        didSet{
+        
+            self.leaveChannelButton.setTitle(data?.title, for: .normal)
+            self.leaveChannelButton.setTitle(data?.title, for: .selected)
+            
+        }
+    }
     var delegate:LeaveChannelCellDelegate?
 
     @IBAction func leaveButtonTapped(_ sender: UIButton) {
+        self.leaveBlock?(sender)
         delegate?.leaveChannel(sender, self)
         sender.isSelected = !sender.isSelected
     }
@@ -23,8 +43,8 @@ class LeaveChannelCell: UITableViewCell {
         super.awakeFromNib()
         // Initialization code
         
-        self.leaveChannelButton.setTitle("", for: .normal)
-        self.leaveChannelButton.setTitle("", for: .selected)
+        self.leaveChannelButton.setTitle(localized("chat.info.item.leave"), for: .normal)
+        self.leaveChannelButton.setTitle(localized("chat.info.item.leave"), for: .selected)
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

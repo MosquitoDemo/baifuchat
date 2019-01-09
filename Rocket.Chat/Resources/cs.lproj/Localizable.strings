@@ -88,6 +88,14 @@
 "alert.logout.confirmation.title" = "Logout from this server"; // TODO
 "alert.logout.confirmation.message" = "Are you sure you want to logout from \"%@\"?"; // TODO
 "alert.logout.confirmation.confirm" = "Yes, logout"; // TODO
+"alert.channel.leave.confirmation.title" = "Nechte skupinový chat";
+"alert.channel.leave.confirmation.message" = "Opravdu chcete tento skupinový chat opustit?";
+"alert.channel.leave.confirmation.confirm" = "Určete";
+"alert.channel.leave.confirmation.cancel" = "Zrušit";
+"alert.channel.delete.confirmation.title" = "Rozpusťte skupinový chat";
+"alert.channel.delete.confirmation.message" = "Opravdu chcete tento skupinový chat zrušit?";
+"alert.channel.delete.confirmation.confirm" = "Určete";
+"alert.channel.delete.confirmation.cancel" = "Zrušit";
 
 // Connection Redirect
 "connection.server.redirect.alert.title" = "Server changed it's URL";

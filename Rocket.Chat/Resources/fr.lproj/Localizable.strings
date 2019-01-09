@@ -88,6 +88,14 @@
 "alert.logout.confirmation.title" = "Se déconnecter de ce serveur";
 "alert.logout.confirmation.message" = "Êtes-vous sûr de vouloir vous déconnecter de \"%@\"?";
 "alert.logout.confirmation.confirm" = "Oui, se déconnecter";
+"alert.channel.leave.confirmation.title" = "Quitter le chat en groupe";
+"alert.channel.leave.confirmation.message" = "Êtes-vous sûr de vouloir quitter ce chat en groupe?";
+"alert.channel.leave.confirmation.confirm" = "Déterminer";
+"alert.channel.leave.confirmation.cancel" = "Annuler";
+"alert.channel.delete.confirmation.title" = "Dissoudre le chat en groupe";
+"alert.channel.delete.confirmation.message" = "Êtes-vous sûr de vouloir exclure cette discussion de groupe?";
+"alert.channel.delete.confirmation.confirm" = "Déterminer";
+"alert.channel.delete.confirmation.cancel" = "Annuler";
 
 // Connection Redirect
 "connection.server.redirect.alert.title" = "Le serveur a changé son URL";

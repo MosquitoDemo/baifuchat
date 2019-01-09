@@ -88,6 +88,14 @@
 "alert.logout.confirmation.title" = "Von diesem Server abmelden";
 "alert.logout.confirmation.message" = "Sind Sie sicher, dass Sie sich von \"%@\" abmelden möchten?";
 "alert.logout.confirmation.confirm" = "Ja, abmelden";
+"alert.channel.leave.confirmation.title" = "Gruppenchat verlassen";
+"alert.channel.leave.confirmation.message" = "Möchten Sie diesen Gruppenchat wirklich verlassen?";
+"alert.channel.leave.confirmation.confirm" = "Bestimmen Sie";
+"alert.channel.leave.confirmation.cancel" = "Abbrechen";
+"alert.channel.delete.confirmation.title" = "Gruppenchat auflösen";
+"alert.channel.delete.confirmation.message" = "Möchten Sie diesen Gruppenchat wirklich beenden?";
+"alert.channel.delete.confirmation.confirm" = "Bestimmen Sie";
+"alert.channel.delete.confirmation.cancel" = "Abbrechen";
 
 // Connection Redirect
 "connection.server.redirect.alert.title" = "Der Server hat seine URL geändert";

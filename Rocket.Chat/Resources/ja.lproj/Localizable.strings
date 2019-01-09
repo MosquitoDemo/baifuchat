@@ -88,6 +88,14 @@
 "alert.logout.confirmation.title" = "このサーバーからログアウトする";
 "alert.logout.confirmation.message" = "\"%@\" からログアウトしてもよろしいですか?";
 "alert.logout.confirmation.confirm" = "はい、ログアウトします";
+"alert.channel.leave.confirmation.title" = "グループチャットを離れる";
+"alert.channel.leave.confirmation.message" = "このグループチャットを終了しますか？";
+"alert.channel.leave.confirmation.confirm" = "決定する";
+"alert.channel.leave.confirmation.cancel" = "キャンセル";
+"alert.channel.delete.confirmation.title" = "グループチャットを解除する";
+"alert.channel.delete.confirmation.message" = "このグループチャットを解消しますか？";
+"alert.channel.delete.confirmation.confirm" = "決定する";
+"alert.channel.delete.confirmation.cancel" = "キャンセル";
 
 // Connection Redirect
 "connection.server.redirect.alert.title" = "サーバーがURLを変更しました";

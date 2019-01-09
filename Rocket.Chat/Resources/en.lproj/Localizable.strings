@@ -88,6 +88,14 @@
 "alert.logout.confirmation.title" = "Logout from this server";
 "alert.logout.confirmation.message" = "Are you sure you want to logout from \"%@\"?";
 "alert.logout.confirmation.confirm" = "Yes, logout";
+"alert.channel.leave.confirmation.title" = "Leave group chat";
+"alert.channel.leave.confirmation.message" = "Are you sure you want to leave this group chat?";
+"alert.channel.leave.confirmation.confirm" = "Sure";
+"alert.channel.leave.confirmation.cancel" = "Cancel";
+"alert.channel.delete.confirmation.title" = "Dissolve group chat";
+"alert.channel.delete.confirmation.message" = "Are you sure you want to dissolve this group chat?";
+"alert.channel.delete.confirmation.confirm" = "Sure";
+"alert.channel.delete.confirmation.cancel" = "Cancel";
 
 // Connection Redirect
 "connection.server.redirect.alert.title" = "Server changed it's URL";
