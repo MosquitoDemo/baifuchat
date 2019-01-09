@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import RealmSwift
 
 class GroupAnnouncementViewController: UIViewController {
 
@@ -97,6 +97,14 @@ class GroupAnnouncementViewController: UIViewController {
             switch response{
             case .resource(let result):
                 print(result)
+                
+                try? Realm.current?.write {
+                    self.subscription?.roomAnnouncement = result.raw?["announcement"].string
+                    if let subscriptionx = self.subscription{
+                    
+                    Realm.current?.add(subscriptionx, update: true)
+                    }
+                }
                 self.alertSuccess(title: result.raw?.stringValue ?? "")
                 self.navigationController?.popViewController(animated: true)
             case .error(let error):
