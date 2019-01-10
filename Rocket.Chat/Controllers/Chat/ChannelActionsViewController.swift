@@ -117,12 +117,30 @@ class ChannelActionsViewController: BaseViewController {
 
             var data = [header, [
                 ChannelInfoActionCellData(icon: UIImage(named: "Attachments"), title: title(for: "files"), action: showFilesList),
-                isDirectMessage ? nil : ChannelInfoActionCellData(icon: UIImage(named: "Mentions"), title: title(for: "mentions"), action: showMentionsList),
+                
+                
+                ///commented by steve 2019-01-10 16:18:59
+//                isDirectMessage ? nil : ChannelInfoActionCellData(icon: UIImage(named: "Mentions"), title: title(for: "mentions"), action: showMentionsList),
+                
+                
                 isDirectMessage ? nil : ChannelInfoActionCellData(icon: UIImage(named: "Members"), title: title(for: "members"), action: showMembersList),
-                ChannelInfoActionCellData(icon: UIImage(named: "Star"), title: title(for: "starred"), action: showStarredList),
-//                ChannelInfoActionCellData(icon: UIImage(named: "announcement"), title: title(for: "announcement"), action: showStarredList),
-                ChannelInfoActionCellData(icon: UIImage(named: "Pinned"), title: title(for: "pinned"), action: showPinnedList),
+                
+                
+                ///commented by steve 2019-01-10 16:18:59
+//                ChannelInfoActionCellData(icon: UIImage(named: "Star"), title: title(for: "starred"), action: showStarredList),
+                
+                
+                ///commented by steve 2019-01-10 16:18:59
+                isDirectMessage ? nil : ChannelInfoActionCellData(icon: UIImage(named: "announcement"), title: title(for: "announcement"), action: showStarredList),
+                
+                
+                ///commented by steve 2019-01-10 16:18:59
+//                ChannelInfoActionCellData(icon: UIImage(named: "Pinned"), title: title(for: "pinned"), action: showPinnedList),
+                
+                
                 ChannelInfoActionCellData(icon: UIImage(named: "Notifications"), title: title(for: "notifications"), action: showNotificationsSettings)
+                
+                
             ], [
                 ChannelInfoActionCellData(icon: UIImage(named: "Share"), title: title(for: "share"), detail: false, action: shareRoom)
             ]]

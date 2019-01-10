@@ -623,6 +623,16 @@ final class EditProfileTableViewController: BaseTableViewController, MediaPicker
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         switch indexPath.section {
+            
+            ///added by steve
+            
+        case 0:
+            
+            tableView.deselectRow(at: indexPath, animated: true)
+            
+            break
+            
+            
         case 1:
             if indexPath.row == 4{
                 print("ssss")
