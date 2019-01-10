@@ -19,7 +19,7 @@ struct ChannelInfoDescriptionCellData: ChannelInfoCellDataProtocol {
 final class ChannelInfoDescriptionCell: UITableViewCell, ChannelInfoCellProtocol {
     typealias DataType = ChannelInfoDescriptionCellData
 
-    static let identifier = "kChannelInfoCellDescription"
+    static let identifier = String(describing: ChannelInfoDescriptionCell.self)
     static let defaultHeight: CGFloat = UITableView.automaticDimension
 
     @IBOutlet weak var labelTitle: UILabel!

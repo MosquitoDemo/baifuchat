@@ -88,6 +88,14 @@
 "alert.logout.confirmation.title" = "Выход с этого сервера";
 "alert.logout.confirmation.message" = "Вы действительно хотите выйти из \"%@\"?";
 "alert.logout.confirmation.confirm" = "Да, выйти";
+"alert.channel.leave.confirmation.title" = "Покинуть групповой чат";
+"alert.channel.leave.confirmation.message" = "Вы уверены, что хотите выйти из этого группового чата?";
+"alert.channel.leave.confirmation.confirm" = "определить";
+"alert.channel.leave.confirmation.cancel" = "отменен";
+"alert.channel.delete.confirmation.title" = "Распустить групповой чат";
+"alert.channel.delete.confirmation.message" = "Вы уверены, что хотите закрыть этот групповой чат?";
+"alert.channel.delete.confirmation.confirm" = "определить";
+"alert.channel.delete.confirmation.cancel" = "отменен";
 
 // Connection Redirect
 "connection.server.redirect.alert.title" = "Сервер изменил URL-адрес";
@@ -308,7 +316,10 @@
 "chat.info.item.members" = "Пользователи";
 "chat.info.item.pinned" = "Прикрепленные";
 "chat.info.item.starred" = "Отмеченные";
-"chat.info.item.announcement" = "announcement";
+"chat.info.item.announcement" = "объявление";
+"chat.info.item.add_announcement" = "Добавить объявление";
+"chat.info.item.leave" = "Покинуть групповой чат";
+"chat.info.item.delete" = "Распустить групповой чат";
 "chat.info.item.mentions" = "Упоминания";
 "chat.info.item.files" = "Файлы";
 "chat.info.item.share" = "Поделиться";

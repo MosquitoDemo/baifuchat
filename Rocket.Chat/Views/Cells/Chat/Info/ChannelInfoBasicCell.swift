@@ -18,7 +18,7 @@ struct ChannelInfoBasicCellData: ChannelInfoCellDataProtocol {
 final class ChannelInfoBasicCell: UITableViewCell, ChannelInfoCellProtocol {
     typealias DataType = ChannelInfoBasicCellData
 
-    static let identifier = "kChannelInfoCellBasic"
+    static let identifier = String(describing: ChannelInfoBasicCell.self)
     static let defaultHeight: CGFloat = 44
 
     var data: DataType? {

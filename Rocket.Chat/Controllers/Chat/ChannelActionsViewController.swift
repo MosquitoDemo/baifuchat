@@ -44,6 +44,9 @@ class ChannelActionsViewController: BaseViewController {
     
     var subscription: Subscription? {
         didSet {
+            func title(for menuTitle: String) -> String {
+                return localized("chat.info.item.\(menuTitle)")
+            }
             guard self.subscription?.isInvalidated == false else { return }
 
             guard let subscriptionx = self.subscription else {
@@ -103,26 +106,37 @@ class ChannelActionsViewController: BaseViewController {
                     ChannelInfoDescriptionCellData(
                         title: localized("chat.info.item.topic"),
                         descriptionText: hasTopic ? subscriptionx.roomTopic : localized("chat.info.item.no_topic")
-                    )
+                    ),
+                    ChannelInfoAnnouncementCellData(
+                        title: title(for: "announcement"),
+                        announcement: subscriptionx.roomAnnouncement)
                 ]
             }
 
-            func title(for menuTitle: String) -> String {
-                return localized("chat.info.item.\(menuTitle)")
-            }
+            
 
-            let data = [header, [
+            var data = [header, [
                 ChannelInfoActionCellData(icon: UIImage(named: "Attachments"), title: title(for: "files"), action: showFilesList),
                 isDirectMessage ? nil : ChannelInfoActionCellData(icon: UIImage(named: "Mentions"), title: title(for: "mentions"), action: showMentionsList),
                 isDirectMessage ? nil : ChannelInfoActionCellData(icon: UIImage(named: "Members"), title: title(for: "members"), action: showMembersList),
                 ChannelInfoActionCellData(icon: UIImage(named: "Star"), title: title(for: "starred"), action: showStarredList),
-                ChannelInfoActionCellData(icon: UIImage(named: "announcement"), title: title(for: "announcement"), action: showStarredList),
+//                ChannelInfoActionCellData(icon: UIImage(named: "announcement"), title: title(for: "announcement"), action: showStarredList),
                 ChannelInfoActionCellData(icon: UIImage(named: "Pinned"), title: title(for: "pinned"), action: showPinnedList),
                 ChannelInfoActionCellData(icon: UIImage(named: "Notifications"), title: title(for: "notifications"), action: showNotificationsSettings)
             ], [
                 ChannelInfoActionCellData(icon: UIImage(named: "Share"), title: title(for: "share"), detail: false, action: shareRoom)
             ]]
+            if subscriptionx.type == .directMessage{
+                
+            }else{
+            if subscriptionx.roomOwnerId == AuthManager.currentUser()?.identifier {
+                data.append([DeleteChannelCellData(title: localized("chat.info.item.delete"))])
+            }else{
+                data.append([LeaveChannelCellData(title: localized("chat.info.item.leave"))])
+            }
 
+            }
+        
             tableViewData = data.compactMap({ $0 })
         }
     }
@@ -140,12 +154,15 @@ class ChannelActionsViewController: BaseViewController {
     }
 
     func registerCells() {
+        tableView.registerNib(ChannelInfoAnnouncementCell.self)
         tableView.registerNib(ChannelInfoMembersCell.self)
         tableView.registerNib(ChannelInfoMemberCell.self)
         tableView.registerNib(ChannelInfoUserCell.self)
         tableView.registerNib(ChannelInfoActionCell.self)
         tableView.registerNib(ChannelInfoDescriptionCell.self)
         tableView.registerNib(ChannelInfoBasicCell.self)
+        tableView.registerNib(DeleteChannelCell.self)
+        tableView.registerNib(LeaveChannelCell.self)
 /*
         tableView?.register(UINib(
             nibName: "ChannelInfoUserCell",
@@ -361,6 +378,12 @@ extension ChannelActionsViewController: UITableViewDelegate {
                 cell.data = data
                 return cell
         }
+        if let data = data as? ChannelInfoAnnouncementCellData {
+            
+            let cell = tableView.dequeueReusableCell(ChannelInfoAnnouncementCell.self)
+            cell.data = data
+            return cell
+        }
         // member cell
         if let data = data as? ChannelInfoMembersCellData {
             
@@ -371,12 +394,27 @@ extension ChannelActionsViewController: UITableViewDelegate {
         
 
         if let data = data as? ChannelInfoBasicCellData {
-            if let cell = tableView.dequeueReusableCell(withIdentifier: ChannelInfoBasicCell.identifier) as? ChannelInfoBasicCell {
-                cell.data = data
-                return cell
-            }
+            let cell = tableView.dequeueReusableCell(ChannelInfoBasicCell.self)
+            cell.data = data
+            return cell
         }
 
+        if let datax = data as? DeleteChannelCellData{
+            let cell = tableView.dequeueReusableCell(DeleteChannelCell.self)
+            cell.data = datax
+            cell.deleteBlock = {bt in
+                self.deleteChannel()
+            }
+            return cell
+        }
+        if let datax = data as? LeaveChannelCellData{
+            let cell = tableView.dequeueReusableCell(LeaveChannelCell.self)
+            cell.data = datax
+            cell.leaveBlock = {bt in
+                self.leaveChannel()
+            }
+            return cell
+        }
         return UITableViewCell()
     }
 
@@ -402,19 +440,30 @@ extension ChannelActionsViewController: UITableViewDelegate {
         if data as? ChannelInfoBasicCellData != nil {
             return ChannelInfoBasicCell.defaultHeight
         }
+        if data as? ChannelInfoAnnouncementCellData != nil {
+            return ChannelInfoAnnouncementCell.defaultHeight
+        }
+        if data as? DeleteChannelCellData != nil{
+            return DeleteChannelCell.defaultHeight
+        }
+        if data as? LeaveChannelCellData != nil{
+            return LeaveChannelCell.defaultHeight
+        }
 
         return 0
     }
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)        
-        /*群公告*/
-        if indexPath.section == 1 && indexPath.row == 4{
-            let vc = GroupAnnouncementViewController()
-            vc.hidesBottomBarWhenPushed = true
-            self.navigationController?.pushViewController(vc, animated: true)
-            return
-        }
+//        if indexPath.section == 1 && indexPath.row == 4{
+//            let vc = GroupAnnouncementViewController()
+//            vc.canEdit = subscription?.roomOwnerId == AuthManager.currentUser()?.identifier
+//
+//            vc.subscription = self.subscription
+//            vc.hidesBottomBarWhenPushed = true
+//            self.navigationController?.pushViewController(vc, animated: true)
+//            return
+//        }
         if indexPath.section == kShareRoomSection && UIDevice.current.userInterfaceIdiom == .pad {
             shareRoomCell = tableView.cellForRow(at: indexPath)
         }
@@ -423,6 +472,17 @@ extension ChannelActionsViewController: UITableViewDelegate {
 
         if let data = data as? ChannelInfoUserCellData, let user = data.user {
             showUserDetails(user)
+        }
+        /*群公告*/
+
+        if let data = data as? ChannelInfoAnnouncementCellData{
+            let vc = GroupAnnouncementViewController()
+            vc.subscription = self.subscription
+            vc.data = data
+            vc.canEdit = subscription?.roomOwnerId == AuthManager.currentUser()?.identifier
+            
+            vc.hidesBottomBarWhenPushed = true
+            self.navigationController?.pushViewController(vc, animated: true)
         }
 
         if let data = data as? ChannelInfoMembersCellData {
@@ -441,8 +501,74 @@ extension ChannelActionsViewController: UITableViewDelegate {
 
             action()
         }
+        
+        if let _ = data as? DeleteChannelCellData{
+
+            deleteChannel()
+            
+        }
+        if let _ = data as? LeaveChannelCellData{
+            leaveChannel()
+        }
     }
 
+    func deleteChannel(){
+        let cancelAction = UIAlertAction.init(title: localized("alert.channel.delete.confirmation.cancel"), style: .cancel) { (action) in
+            
+        }
+        let sureAction = UIAlertAction.init(title: localized("alert.channel.delete.confirmation.confirm"), style: .default) { (action) in
+            guard let rid = self.subscription?.rid else { return  }
+            guard let type = self.subscription?.type else { return  }
+            
+            let request = RoomDeleteRequest(roomId: rid, roomType: type)
+            
+            API.current()?.fetch(request, completion: { (response) in
+                switch response{
+                case .resource(let result):
+                    print(result)
+                    
+                    
+                    self.alertSuccess(title: result.raw?.stringValue ?? "")
+                case .error(let error):
+                    print(error)
+                    
+                    
+                    self.alert(title: localized("error.socket.default_error.title"), message: error.description)
+                }
+            })
+            
+        }
+        alert(with: [cancelAction,sureAction], title: localized("alert.channel.delete.confirmation.title"), message: localized("alert.channel.delete.confirmation.confirm"))
+    }
+    func leaveChannel(){
+        let cancelAction = UIAlertAction.init(title: localized("alert.channel.leave.confirmation.cancel"), style: .cancel) { (action) in
+            
+        }
+        let sureAction = UIAlertAction.init(title: localized("alert.channel.leave.confirmation.confirm"), style: .default) { (action) in
+            guard let rid = self.subscription?.rid else { return  }
+            guard let type = self.subscription?.type else { return  }
+            
+            let request = RoomLeaveRequest(roomId: rid, roomType: type)
+            
+            API.current()?.fetch(request, completion: { (response) in
+                switch response{
+                case .resource(let result):
+                    print(result)
+                    
+                    
+                    self.alertSuccess(title: result.raw?.stringValue ?? "")
+                    
+                case .error(let error):
+                    print(error)
+                    
+                    
+                    self.alert(title: localized("error.socket.default_error.title"), message: error.description)
+                }
+            })
+            
+        }
+        alert(with: [cancelAction,sureAction], title: localized("alert.channel.leave.confirmation.title"), message: localized("alert.channel.leave.confirmation.message"))
+    }
 }
 
 // MARK: UITableViewDataSource

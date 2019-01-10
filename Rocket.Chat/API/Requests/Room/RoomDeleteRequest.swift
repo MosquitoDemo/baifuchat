@@ -34,7 +34,7 @@ final class RoomDeleteRequest: APIRequest {
     let roomType: RoomType
     let roomName:String
     
-    init(roomId: String, roomType: RoomType,roomName:String) {
+    init(roomId: String = "", roomType: RoomType,roomName:String = "") {
         self.roomId = roomId
         self.roomType = roomType
         self.roomName = roomName
