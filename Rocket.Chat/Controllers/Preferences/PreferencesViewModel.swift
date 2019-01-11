@@ -19,7 +19,11 @@ final class PreferencesViewModel {
     internal let title = localized("myaccount.settings.title")
     internal let profile = localized("myaccount.settings.profile")
     internal let administration = localized("myaccount.settings.administration")
-    internal let contactus = localized("myaccount.settings.contactus")
+
+    ///commented by steve 2019-01-10 15:27:43
+//    internal let contactus = localized("myaccount.settings.contactus")
+    
+    
     internal let license = localized("myaccount.settings.license")
     internal let language = localized("myaccount.settings.language")
     internal let webBrowser = localized("myaccount.settings.web_browser")
@@ -140,7 +144,13 @@ final class PreferencesViewModel {
         switch section {
         case 0: return 1
 //        case 1: return canChangeAppIcon ? 7 : 6
-            case 1: return 4
+        
+            
+            ///commented by steve 2019-01-10 15:27:50 (remove the menu [contact us])
+            //        case 1: return 4
+            
+            case 1: return 3
+            
         /*暂时去掉用户权限判断*/
 //        case 2: return canViewAdministrationPanel ? 1 : 0
         case 2:return 1

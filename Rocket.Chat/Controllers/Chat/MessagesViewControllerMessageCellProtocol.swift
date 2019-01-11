@@ -266,13 +266,17 @@ extension MessagesViewController {
             self.handleReadReceiptPress(message, source: (view, view.frame))
         }) : nil
 
-        let react = UIAlertAction(title: localized("chat.message.actions.react"), style: .default, handler: { _ in
-            self.react(message: message, view: view)
-        })
+        
+        
+        ///commented by steve 2019-01-10 15:27:09
+//        let react = UIAlertAction(title: localized("chat.message.actions.react"), style: .default, handler: { _ in
+//            self.react(message: message, view: view)
+//        })
 
-        let report = UIAlertAction(title: localized("chat.message.actions.report"), style: .default, handler: { _ in
-            self.report(message: message)
-        })
+        ///commented by steve 2019-01-10 15:27:18
+//        let report = UIAlertAction(title: localized("chat.message.actions.report"), style: .default, handler: { _ in
+//            self.report(message: message)
+//        })
 
         let copy = UIAlertAction(title: localized("chat.message.actions.copy"), style: .default, handler: { _ in
             UIPasteboard.general.string = message.text
@@ -286,8 +290,11 @@ extension MessagesViewController {
             self.reply(to: message, onlyQuote: true)
         })
 
-        var actions = [info, react, replyAction, quote, copy, report].compactMap { $0 }
-
+        ///commented by steve 2019-01-10 15:27:23
+//        var actions = [info, react, replyAction, quote, copy, report].compactMap { $0 }
+        var actions = [info, replyAction, quote, copy].compactMap { $0 }
+        
+        
         if auth.canPinMessage(message) == .allowed {
             let pinMessage = message.pinned ? localized("chat.message.actions.unpin") : localized("chat.message.actions.pin")
             let pin = UIAlertAction(title: pinMessage, style: .default, handler: { _ in
@@ -297,15 +304,17 @@ extension MessagesViewController {
             actions.append(pin)
         }
 
-        if auth.canStarMessage(message) == .allowed, let userId = auth.user?.identifier {
-            let isStarred = message.starred.contains(userId)
-            let starMessage = isStarred ? localized("chat.message.actions.unstar") : localized("chat.message.actions.star")
-            let star = UIAlertAction(title: starMessage, style: .default, handler: { _ in
-                client.starMessage(message, star: !isStarred)
-            })
-
-            actions.append(star)
-        }
+        
+        ///commented by steve 2019-01-10 15:27:28
+//        if auth.canStarMessage(message) == .allowed, let userId = auth.user?.identifier {
+//            let isStarred = message.starred.contains(userId)
+//            let starMessage = isStarred ? localized("chat.message.actions.unstar") : localized("chat.message.actions.star")
+//            let star = UIAlertAction(title: starMessage, style: .default, handler: { _ in
+//                client.starMessage(message, star: !isStarred)
+//            })
+//
+//            actions.append(star)
+//        }
 
         if auth.canBlockMessage(message) == .allowed {
             let block = UIAlertAction(title: localized("chat.message.actions.block"), style: .default, handler: { _ in

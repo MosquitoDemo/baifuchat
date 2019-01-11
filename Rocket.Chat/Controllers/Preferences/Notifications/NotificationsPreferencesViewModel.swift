@@ -152,8 +152,13 @@ final class NotificationsPreferencesViewModel {
     private typealias TableSection = (header: String?, footer: String?, elements: [NotificationSettingModel])
 
     private lazy var alwaysActiveSections: [TableSection] = [
-        (header: nil, footer: String(format: localized("myaccount.settings.notifications.receive.footer"), channelName), [enableModel]),
-        (header: nil, footer: localized("myaccount.settings.notifications.show.footer"), [counterModel])
+        
+        ///commented by steve
+//        (header: nil, footer: String(format: localized("myaccount.settings.notifications.receive.footer"), channelName), [enableModel]),
+//        (header: nil, footer: localized("myaccount.settings.notifications.show.footer"), [counterModel])
+        
+        (header: nil, footer: String(format: localized("myaccount.settings.notifications.receive.footer"), channelName), [enableModel])
+        
     ]
 
     private lazy var conditionallyActiveSections: [TableSection] = [
@@ -172,7 +177,11 @@ final class NotificationsPreferencesViewModel {
         if !enableModel.value.value {
             return alwaysActiveSections
         } else {
-            return alwaysActiveSections + conditionallyActiveSections
+
+            ///commented by steve
+//            return alwaysActiveSections + conditionallyActiveSections
+            
+            return alwaysActiveSections
         }
     }
 

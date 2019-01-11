@@ -52,7 +52,10 @@ final class PreferencesViewController: BaseTableViewController {
 
     @IBOutlet weak var labelContactUs: UILabel! {
         didSet {
-            labelContactUs.text = viewModel.contactus
+            
+            ///commented by steve 2019-01-10 15:27:33
+            
+//            labelContactUs.text = viewModel.contactus
         }
     }
 
@@ -277,6 +280,11 @@ final class PreferencesViewController: BaseTableViewController {
         
         if indexPath.section == kSectionSettings {
             switch indexPath.row {
+
+                /*
+                 
+                 ///commented by steve 2019-01-10 15:27:38
+
             case 0:
                 print("xxxx")
 //                cellContactDidPressed()
@@ -293,6 +301,17 @@ final class PreferencesViewController: BaseTableViewController {
             case 3://fenxiang
                 shareAppCell = tableView.cellForRow(at: indexPath)
                 cellShareDidPressed()
+                 */
+                
+            case 0:
+                cellLanguageDidPressed()
+                break
+            case 1:
+                print("click 111")
+                break
+            case 2:
+                cellShareDidPressed()
+                break
                 
             default:
                 break

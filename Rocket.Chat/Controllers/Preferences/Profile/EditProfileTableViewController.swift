@@ -627,6 +627,16 @@ final class EditProfileTableViewController: BaseTableViewController, MediaPicker
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         switch indexPath.section {
+            
+            ///added by steve
+            
+        case 0:
+            
+            tableView.deselectRow(at: indexPath, animated: true)
+            
+            break
+            
+            
         case 1:
             if indexPath.row == 4{
                 let datePicker = YLDatePicker(currentDate: nil, minLimitDate: Date(), maxLimitDate: nil, datePickerType: .YMD) { [weak self] (date) in
