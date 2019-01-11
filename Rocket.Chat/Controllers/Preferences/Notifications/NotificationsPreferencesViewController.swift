@@ -34,14 +34,17 @@ final class NotificationsPreferencesViewController: BaseTableViewController {
 
         title = viewModel.title
         viewModel.enableModel.value.bind { [unowned self] _ in
-            let updates = self.viewModel.tableUpdatesAfterStateChange()
+            
+            ///commented by steve
 
-            DispatchQueue.main.async {
-                self.tableView.beginUpdates()
-                self.tableView.insertSections(updates.insertions, with: .fade)
-                self.tableView.deleteSections(updates.deletions, with: .fade)
-                self.tableView.endUpdates()
-            }
+//            let updates = self.viewModel.tableUpdatesAfterStateChange()
+//
+//            DispatchQueue.main.async {
+//                self.tableView.beginUpdates()
+//                self.tableView.insertSections(updates.insertions, with: .fade)
+//                self.tableView.deleteSections(updates.deletions, with: .fade)
+//                self.tableView.endUpdates()
+//            }
         }
 
         viewModel.isSaveButtonEnabled.bindAndFire { enabled in
