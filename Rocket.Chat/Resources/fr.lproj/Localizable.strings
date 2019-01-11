@@ -88,6 +88,14 @@
 "alert.logout.confirmation.title" = "Se déconnecter de ce serveur";
 "alert.logout.confirmation.message" = "Êtes-vous sûr de vouloir vous déconnecter de \"%@\"?";
 "alert.logout.confirmation.confirm" = "Oui, se déconnecter";
+"alert.channel.leave.confirmation.title" = "Quitter le chat en groupe";
+"alert.channel.leave.confirmation.message" = "Êtes-vous sûr de vouloir quitter ce chat en groupe?";
+"alert.channel.leave.confirmation.confirm" = "Déterminer";
+"alert.channel.leave.confirmation.cancel" = "Annuler";
+"alert.channel.delete.confirmation.title" = "Dissoudre le chat en groupe";
+"alert.channel.delete.confirmation.message" = "Êtes-vous sûr de vouloir exclure cette discussion de groupe?";
+"alert.channel.delete.confirmation.confirm" = "Déterminer";
+"alert.channel.delete.confirmation.cancel" = "Annuler";
 
 // Connection Redirect
 "connection.server.redirect.alert.title" = "Le serveur a changé son URL";
@@ -307,7 +315,10 @@
 "chat.info.item.members" = "Membres";
 "chat.info.item.pinned" = "Épinglé";
 "chat.info.item.starred" = "Mis en favoris";
-"chat.info.item.announcement" = "announcement";
+"chat.info.item.announcement" = "Annonce";
+"chat.info.item.add_announcement" = "Ajouter une annonce";
+"chat.info.item.leave" = "Quitter le chat en groupe";
+"chat.info.item.delete" = "Dissoudre le chat en groupe";
 "chat.info.item.notifications" = "Notifications"; // TODO
 "chat.info.item.mentions" = "Mentions";
 "chat.info.item.files" = "Fichiers";
@@ -316,6 +327,8 @@
 
 // Members List
 "chat.members.list.title" = "Membres";
+"chat.members.list.owner" = "Propriétaire du groupe";
+
 
 // Add Users
 "chat.add_users.title" = "Ajouter des utilisateurs";

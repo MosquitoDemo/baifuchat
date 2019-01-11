@@ -923,6 +923,12 @@
 		F342456A21D481E9009CD659 /* QuoteSelfCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F342456821D481E9009CD659 /* QuoteSelfCell.xib */; };
 		F342456D21D48272009CD659 /* MessageURLSelfCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F342456B21D48272009CD659 /* MessageURLSelfCell.swift */; };
 		F342456E21D48272009CD659 /* MessageURLSelfCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F342456C21D48272009CD659 /* MessageURLSelfCell.xib */; };
+		F35B80EA21E4A9E100204D7A /* ChannelInfoAnnouncementCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F35B80E821E4A9E100204D7A /* ChannelInfoAnnouncementCell.swift */; };
+		F35B80EB21E4A9E100204D7A /* ChannelInfoAnnouncementCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F35B80E921E4A9E100204D7A /* ChannelInfoAnnouncementCell.xib */; };
+		F35B80EE21E59FE600204D7A /* DeleteChannelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F35B80EC21E59FE600204D7A /* DeleteChannelCell.swift */; };
+		F35B80EF21E59FE600204D7A /* DeleteChannelCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F35B80ED21E59FE600204D7A /* DeleteChannelCell.xib */; };
+		F35B80F221E5A02500204D7A /* LeaveChannelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F35B80F021E5A02500204D7A /* LeaveChannelCell.swift */; };
+		F35B80F321E5A02500204D7A /* LeaveChannelCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F35B80F121E5A02500204D7A /* LeaveChannelCell.xib */; };
 		F3BCFCC321E2F799003D9930 /* RoomAddOwnerRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3BCFCC221E2F799003D9930 /* RoomAddOwnerRequest.swift */; };
 		F3BCFCC521E2F95F003D9930 /* RoomAddModeratorRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3BCFCC421E2F95F003D9930 /* RoomAddModeratorRequest.swift */; };
 		F3BCFCC721E2FC2A003D9930 /* RoomLeaveRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3BCFCC621E2FC2A003D9930 /* RoomLeaveRequest.swift */; };
@@ -1908,6 +1914,12 @@
 		F342456821D481E9009CD659 /* QuoteSelfCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QuoteSelfCell.xib; sourceTree = "<group>"; };
 		F342456B21D48272009CD659 /* MessageURLSelfCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageURLSelfCell.swift; sourceTree = "<group>"; };
 		F342456C21D48272009CD659 /* MessageURLSelfCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MessageURLSelfCell.xib; sourceTree = "<group>"; };
+		F35B80E821E4A9E100204D7A /* ChannelInfoAnnouncementCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelInfoAnnouncementCell.swift; sourceTree = "<group>"; };
+		F35B80E921E4A9E100204D7A /* ChannelInfoAnnouncementCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChannelInfoAnnouncementCell.xib; sourceTree = "<group>"; };
+		F35B80EC21E59FE600204D7A /* DeleteChannelCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteChannelCell.swift; sourceTree = "<group>"; };
+		F35B80ED21E59FE600204D7A /* DeleteChannelCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DeleteChannelCell.xib; sourceTree = "<group>"; };
+		F35B80F021E5A02500204D7A /* LeaveChannelCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaveChannelCell.swift; sourceTree = "<group>"; };
+		F35B80F121E5A02500204D7A /* LeaveChannelCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LeaveChannelCell.xib; sourceTree = "<group>"; };
 		F3BCFCC221E2F799003D9930 /* RoomAddOwnerRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomAddOwnerRequest.swift; sourceTree = "<group>"; };
 		F3BCFCC421E2F95F003D9930 /* RoomAddModeratorRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomAddModeratorRequest.swift; sourceTree = "<group>"; };
 		F3BCFCC621E2FC2A003D9930 /* RoomLeaveRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomLeaveRequest.swift; sourceTree = "<group>"; };
@@ -3151,6 +3163,12 @@
 				F325F1FB21E0A54B00BAA3EF /* ChannelInfoMembersCell.xib */,
 				F325F1FE21E0AA9200BAA3EF /* ChannelMemberCollectionCell.swift */,
 				F325F1FF21E0AA9200BAA3EF /* ChannelMemberCollectionCell.xib */,
+				F35B80E821E4A9E100204D7A /* ChannelInfoAnnouncementCell.swift */,
+				F35B80E921E4A9E100204D7A /* ChannelInfoAnnouncementCell.xib */,
+				F35B80EC21E59FE600204D7A /* DeleteChannelCell.swift */,
+				F35B80ED21E59FE600204D7A /* DeleteChannelCell.xib */,
+				F35B80F021E5A02500204D7A /* LeaveChannelCell.swift */,
+				F35B80F121E5A02500204D7A /* LeaveChannelCell.xib */,
 			);
 			path = Info;
 			sourceTree = "<group>";
@@ -4368,21 +4386,21 @@
 					};
 					41DF76F21D2C50720028DBF8 = {
 						CreatedOnToolsVersion = 7.3.1;
-						DevelopmentTeam = S6UPZG7ZR3;
+						DevelopmentTeam = 8Y5DWP2UC4;
 						LastSwiftMigration = 1000;
 						TestTargetID = 41DF76DE1D2C50710028DBF8;
 					};
 					41DF76FD1D2C50720028DBF8 = {
 						CreatedOnToolsVersion = 7.3.1;
-						DevelopmentTeam = S6UPZG7ZR3;
+						DevelopmentTeam = 8Y5DWP2UC4;
 						LastSwiftMigration = 1000;
 						TestTargetID = 41DF76DE1D2C50710028DBF8;
 					};
 					807FB5572046E7DD00E21429 = {
 						CreatedOnToolsVersion = 9.2;
-						DevelopmentTeam = 2UZ593Q3X2;
+						DevelopmentTeam = 8Y5DWP2UC4;
 						LastSwiftMigration = 1000;
-						ProvisioningStyle = Manual;
+						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.ApplicationGroups.iOS = {
 								enabled = 1;
@@ -4484,6 +4502,7 @@
 				80235D261F74672D00A56CA5 /* LoaderTableViewCell.xib in Resources */,
 				14F8A25A202E64B200175FDC /* BnW-29@2x.png in Resources */,
 				418C4DC81DC4C08800ABED4C /* SubscriptionSectionView.xib in Resources */,
+				F35B80F321E5A02500204D7A /* LeaveChannelCell.xib in Resources */,
 				14F8A298202E65C700175FDC /* Blue-29@2x.png in Resources */,
 				8045F49D20D059A600AA0F3C /* ReadReceiptListView.xib in Resources */,
 				412E1F3C1DB6D55000531FDA /* ChatMessageURLView.xib in Resources */,
@@ -4585,6 +4604,7 @@
 				14F8A26E202E653E00175FDC /* Grey-76@3x.png in Resources */,
 				802498F31F7ACD76005477EC /* ChatMessageAudioView.xib in Resources */,
 				41EB22361E5F056600AA3AE7 /* Localizable.strings in Resources */,
+				F35B80EF21E59FE600204D7A /* DeleteChannelCell.xib in Resources */,
 				41E2F9FF1D414DE800238DFD /* Chat.storyboard in Resources */,
 				14F8A273202E653E00175FDC /* Grey-60@3x.png in Resources */,
 				F342456221D480A7009CD659 /* ImageSelfCell.xib in Resources */,
@@ -4595,6 +4615,7 @@
 				800FCD511F728EC800D9A692 /* MemberCell.xib in Resources */,
 				14F8A226202E5CBF00175FDC /* Black-29@2x.png in Resources */,
 				33A5C9D0206A565800FE1C8F /* food.json in Resources */,
+				F35B80EB21E4A9E100204D7A /* ChannelInfoAnnouncementCell.xib in Resources */,
 				80B2D98720E5496E002F4149 /* UserDetail.storyboard in Resources */,
 				F342456621D48198009CD659 /* QuoteMessageSelfCell.xib in Resources */,
 				33A5C9CF206A565800FE1C8F /* objects.json in Resources */,
@@ -5006,6 +5027,7 @@
 				4199A9891DABCC570035F820 /* Emojione.swift in Sources */,
 				4116CBE720B599E6007E7163 /* StatusViewModel.swift in Sources */,
 				418C74431FA3813F00499577 /* CompoundPickerViewDelegate.swift in Sources */,
+				F35B80EE21E59FE600204D7A /* DeleteChannelCell.swift in Sources */,
 				80235D1B1F74070100A56CA5 /* RoomMembersRequest.swift in Sources */,
 				419EB5B1215E3C1400E591BF /* AudioCell.swift in Sources */,
 				1496A86F20FA4644005C2E14 /* NotificationsSwitchCell.swift in Sources */,
@@ -5092,6 +5114,7 @@
 				800FCD4F1F728EC800D9A692 /* ChannelInfoUserCell.swift in Sources */,
 				14BAFAE220308F010054A2E6 /* DrawingBrushColorViewController.swift in Sources */,
 				99B4A7B22164683200C80FF2 /* QuoteCell.swift in Sources */,
+				F35B80F221E5A02500204D7A /* LeaveChannelCell.swift in Sources */,
 				8076FDD6204864E700114F28 /* UserQueries.swift in Sources */,
 				F342455D21D4808B009CD659 /* ImageMessageSelfCell.swift in Sources */,
 				80DF7123219CABAD000F0DA5 /* MessagesViewControllerJoining.swift in Sources */,
@@ -5194,6 +5217,7 @@
 				8076FDC320485A2200114F28 /* SubscriptionUtils.swift in Sources */,
 				33D08E2420BD5EDC008D03EF /* ThemeableViewControllers.swift in Sources */,
 				35BCD301201A57EA00B4BE5A /* Ask.swift in Sources */,
+				F35B80EA21E4A9E100204D7A /* ChannelInfoAnnouncementCell.swift in Sources */,
 				4135A64421623F1300C1741A /* ImageCell.swift in Sources */,
 				33D08E3120BD92A5008D03EF /* ThemePreferenceCell.swift in Sources */,
 				80CCD3BC216235B1002AFE83 /* MessagesComposerViewModel.swift in Sources */,
@@ -5811,6 +5835,7 @@
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Bluce Wink (CBPJU3JPL3)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
@@ -5846,7 +5871,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Rocket.Chat/Rocket.Chat.entitlements;
-				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Bluce Wink (CBPJU3JPL3)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
 				DEBUG_INFORMATION_FORMAT = dwarf;
@@ -5859,7 +5884,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = palm.chat.anyone;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
-				PROVISIONING_PROFILE_SPECIFIER = maoisDistribution;
+				PROVISIONING_PROFILE_SPECIFIER = maoDevelopment;
 				SWIFT_DISABLE_SAFETY_CHECKS = NO;
 				SWIFT_OBJC_BRIDGING_HEADER = "Rocket.Chat/Rocket.Chat-Bridge.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
@@ -5876,17 +5901,17 @@
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CODE_SIGN_ENTITLEMENTS = Rocket.Chat.ShareExtension/Rocket.Chat.ShareExtension.entitlements;
-				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Bluce Wink (CBPJU3JPL3)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = 2UZ593Q3X2;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8Y5DWP2UC4;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				INFOPLIST_FILE = Rocket.Chat.ShareExtension/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = palm.chat.anyone.zm;
+				PRODUCT_BUNDLE_IDENTIFIER = rn.chat.anyone.zm;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = zmdis;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OBJC_BRIDGING_HEADER = "Rocket.Chat/Rocket.Chat-Bridge.h";
@@ -5901,7 +5926,8 @@
 			baseConfigurationReference = 931A9FDD60FB42509A0958F5 /* Pods-Rocket.ChatTests.test.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				DEVELOPMENT_TEAM = S6UPZG7ZR3;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Bluce Wink (CBPJU3JPL3)";
+				DEVELOPMENT_TEAM = 8Y5DWP2UC4;
 				ENABLE_BITCODE = YES;
 				INFOPLIST_FILE = Rocket.ChatTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
@@ -5917,7 +5943,8 @@
 		33A37DF720EAB7E9004014B6 /* Test */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				DEVELOPMENT_TEAM = S6UPZG7ZR3;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Bluce Wink (CBPJU3JPL3)";
+				DEVELOPMENT_TEAM = 8Y5DWP2UC4;
 				INFOPLIST_FILE = Rocket.ChatUITests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -5958,6 +5985,7 @@
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Bluce Wink (CBPJU3JPL3)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
@@ -6016,6 +6044,7 @@
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Bluce Wink (CBPJU3JPL3)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
@@ -6045,7 +6074,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Rocket.Chat/Rocket.Chat.entitlements;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Bluce Wink (CBPJU3JPL3)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
 				DEBUG_INFORMATION_FORMAT = dwarf;
@@ -6072,7 +6101,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Rocket.Chat/Rocket.Chat.entitlements;
-				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Bluce Wink (CBPJU3JPL3)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
@@ -6084,7 +6113,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = palm.chat.anyone;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
-				PROVISIONING_PROFILE_SPECIFIER = maoisDistribution;
+				PROVISIONING_PROFILE_SPECIFIER = maoDevelopment;
 				SWIFT_OBJC_BRIDGING_HEADER = "Rocket.Chat/Rocket.Chat-Bridge.h";
 				SWIFT_VERSION = 4.2;
 			};
@@ -6095,7 +6124,8 @@
 			baseConfigurationReference = 58C7F7D8D91A05CA5D1C9FE0 /* Pods-Rocket.ChatTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				DEVELOPMENT_TEAM = S6UPZG7ZR3;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Bluce Wink (CBPJU3JPL3)";
+				DEVELOPMENT_TEAM = 8Y5DWP2UC4;
 				ENABLE_BITCODE = YES;
 				INFOPLIST_FILE = Rocket.ChatTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
@@ -6113,7 +6143,8 @@
 			baseConfigurationReference = 35AE3FC690B1D3DC4E9DE715 /* Pods-Rocket.ChatTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				DEVELOPMENT_TEAM = S6UPZG7ZR3;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Bluce Wink (CBPJU3JPL3)";
+				DEVELOPMENT_TEAM = 8Y5DWP2UC4;
 				ENABLE_BITCODE = YES;
 				INFOPLIST_FILE = Rocket.ChatTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
@@ -6129,7 +6160,8 @@
 		41DF770E1D2C50720028DBF8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				DEVELOPMENT_TEAM = S6UPZG7ZR3;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Bluce Wink (CBPJU3JPL3)";
+				DEVELOPMENT_TEAM = 8Y5DWP2UC4;
 				INFOPLIST_FILE = Rocket.ChatUITests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -6143,7 +6175,8 @@
 		41DF770F1D2C50720028DBF8 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				DEVELOPMENT_TEAM = S6UPZG7ZR3;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Bluce Wink (CBPJU3JPL3)";
+				DEVELOPMENT_TEAM = 8Y5DWP2UC4;
 				INFOPLIST_FILE = Rocket.ChatUITests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -6184,6 +6217,7 @@
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Bluce Wink (CBPJU3JPL3)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
@@ -6213,7 +6247,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Rocket.Chat/Rocket.Chat.entitlements;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Bluce Wink (CBPJU3JPL3)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
@@ -6236,7 +6270,8 @@
 			baseConfigurationReference = FEDACA44BBB1C0633DEA6F3D /* Pods-Rocket.ChatTests.beta.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				DEVELOPMENT_TEAM = S6UPZG7ZR3;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Bluce Wink (CBPJU3JPL3)";
+				DEVELOPMENT_TEAM = 8Y5DWP2UC4;
 				ENABLE_BITCODE = YES;
 				INFOPLIST_FILE = Rocket.ChatTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
@@ -6252,7 +6287,8 @@
 		41E69F0720050A310040ADB2 /* Beta */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				DEVELOPMENT_TEAM = S6UPZG7ZR3;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Bluce Wink (CBPJU3JPL3)";
+				DEVELOPMENT_TEAM = 8Y5DWP2UC4;
 				INFOPLIST_FILE = Rocket.ChatUITests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -6272,18 +6308,18 @@
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CODE_SIGN_ENTITLEMENTS = Rocket.Chat.ShareExtension/Rocket.Chat.ShareExtension.entitlements;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Bluce Wink (CBPJU3JPL3)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_STYLE = Automatic;
 				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEVELOPMENT_TEAM = 2UZ593Q3X2;
+				DEVELOPMENT_TEAM = 8Y5DWP2UC4;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				INFOPLIST_FILE = Rocket.Chat.ShareExtension/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = palm.chat.anyone.zm;
+				PRODUCT_BUNDLE_IDENTIFIER = rn.chat.anyone.zm;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = zmdeveloper;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OBJC_BRIDGING_HEADER = "Rocket.Chat/Rocket.Chat-Bridge.h";
@@ -6302,17 +6338,17 @@
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CODE_SIGN_ENTITLEMENTS = Rocket.Chat.ShareExtension/Rocket.Chat.ShareExtension.entitlements;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Bluce Wink (CBPJU3JPL3)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = 2UZ593Q3X2;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8Y5DWP2UC4;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				INFOPLIST_FILE = Rocket.Chat.ShareExtension/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = palm.chat.anyone.zm;
+				PRODUCT_BUNDLE_IDENTIFIER = rn.chat.anyone.zm;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = zmdis;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "Rocket.Chat/Rocket.Chat-Bridge.h";
 				SWIFT_OBJC_INTERFACE_HEADER_NAME = "Rocket_Chat-Swift.h";
@@ -6330,17 +6366,17 @@
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CODE_SIGN_ENTITLEMENTS = Rocket.Chat.ShareExtension/Rocket.Chat.ShareExtension.entitlements;
-				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Bluce Wink (CBPJU3JPL3)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = 2UZ593Q3X2;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8Y5DWP2UC4;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				INFOPLIST_FILE = Rocket.Chat.ShareExtension/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = palm.chat.anyone.zm;
+				PRODUCT_BUNDLE_IDENTIFIER = rn.chat.anyone.zm;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = zmdeveloper;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "Rocket.Chat/Rocket.Chat-Bridge.h";
 				SWIFT_OBJC_INTERFACE_HEADER_NAME = "Rocket_Chat-Swift.h";

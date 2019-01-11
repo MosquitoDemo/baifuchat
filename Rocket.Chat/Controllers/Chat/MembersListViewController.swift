@@ -133,7 +133,12 @@ class MembersListViewController: BaseViewController {
 extension MembersListViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        membersTableView.rowHeight = UITableView.automaticDimension
+        membersTableView.estimatedRowHeight = 56
+        membersTableView.sectionHeaderHeight = UITableView.automaticDimension
+        membersTableView.estimatedSectionHeaderHeight = 0
+        membersTableView.separatorStyle = .none
+        membersTableView.tableFooterView = UIView()
         let refreshControl = UIRefreshControl()
         refreshControl.addTarget(self, action: #selector(refreshControlDidPull), for: .valueChanged)
 
@@ -147,13 +152,19 @@ extension MembersListViewController {
 
         title = data.title
 
-        if data.canInviteUsers {
-            navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(inviteUsersButtonPressed(sender:)))
-        }
+//        if data.canInviteUsers {
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(MembersListViewController.inviteUsersButtonPressed(_:)))
+//        }
     }
 
-    @objc func inviteUsersButtonPressed(sender: Any) {
-        performSegue(withIdentifier: "toAddUsers", sender: self)
+    @objc func inviteUsersButtonPressed(_ sender: UIBarButtonItem) {
+//        performSegue(withIdentifier: "toAddUsers", sender: self)
+        let storyBoard = UIStoryboard(name: "Chat", bundle: Bundle.init(for: MembersListViewController.self))
+        if let vc = storyBoard.instantiateViewController(withIdentifier: "addUsers") as? AddUsersViewController{
+            vc.data.subscription = data.subscription
+            
+            self.navigationController?.pushViewController(vc, animated: true)
+        }
     }
 
     func registerCells() {
@@ -215,14 +226,15 @@ extension MembersListViewController: UITableViewDataSource {
         return cell
         
     }
-
+/*
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 0
     }
 
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 50
+        return 51
     }
+ */
 }
 
 extension MembersListViewController: UITableViewDelegate, UserActionSheetPresenter {

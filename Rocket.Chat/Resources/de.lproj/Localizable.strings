@@ -88,6 +88,14 @@
 "alert.logout.confirmation.title" = "Von diesem Server abmelden";
 "alert.logout.confirmation.message" = "Sind Sie sicher, dass Sie sich von \"%@\" abmelden möchten?";
 "alert.logout.confirmation.confirm" = "Ja, abmelden";
+"alert.channel.leave.confirmation.title" = "Gruppenchat verlassen";
+"alert.channel.leave.confirmation.message" = "Möchten Sie diesen Gruppenchat wirklich verlassen?";
+"alert.channel.leave.confirmation.confirm" = "Bestimmen Sie";
+"alert.channel.leave.confirmation.cancel" = "Abbrechen";
+"alert.channel.delete.confirmation.title" = "Gruppenchat auflösen";
+"alert.channel.delete.confirmation.message" = "Möchten Sie diesen Gruppenchat wirklich beenden?";
+"alert.channel.delete.confirmation.confirm" = "Bestimmen Sie";
+"alert.channel.delete.confirmation.cancel" = "Abbrechen";
 
 // Connection Redirect
 "connection.server.redirect.alert.title" = "Der Server hat seine URL geändert";
@@ -308,7 +316,10 @@
 "chat.info.item.members" = "Teilnehmer";
 "chat.info.item.pinned" = "Angeheftet";
 "chat.info.item.starred" = "Favorisiert";
-"chat.info.item.announcement" = "公告";
+"chat.info.item.announcement" = "Ankündigung";
+"chat.info.item.add_announcement" = "Ankündigung hinzufügen";
+"chat.info.item.leave" = "Gruppenchat verlassen";
+"chat.info.item.delete" = "Gruppenchat auflösen";
 "chat.info.item.files" = "Dateien";
 "chat.info.item.mentions" = "Erwähnungen";
 "chat.info.item.share" = "Teilen";
@@ -316,6 +327,8 @@
 
 // Members List
 "chat.members.list.title" = "Mitglieder";
+"chat.members.list.owner" = "Eigentümer der Gruppe";
+
 
 // Add Users
 "chat.add_users.title" = "Nutzer hinzufügen";

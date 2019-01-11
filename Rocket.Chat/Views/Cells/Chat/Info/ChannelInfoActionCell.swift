@@ -28,7 +28,7 @@ struct ChannelInfoActionCellData: ChannelInfoCellDataProtocol {
 class ChannelInfoActionCell: UITableViewCell, ChannelInfoCellProtocol {
     typealias DataType = ChannelInfoActionCellData
 
-    static let identifier = "kChannelInfoActionCell"
+    static let identifier = String(describing: ChannelInfoActionCell.self)
     static let defaultHeight: CGFloat = 44
     var data: DataType? {
         didSet {

@@ -88,6 +88,14 @@
 "alert.logout.confirmation.title" = "Logout from this server"; // TODO
 "alert.logout.confirmation.message" = "Are you sure you want to logout from \"%@\"?"; // TODO
 "alert.logout.confirmation.confirm" = "Yes, logout"; // TODO
+"alert.channel.leave.confirmation.title" = "Nechte skupinový chat";
+"alert.channel.leave.confirmation.message" = "Opravdu chcete tento skupinový chat opustit?";
+"alert.channel.leave.confirmation.confirm" = "Určete";
+"alert.channel.leave.confirmation.cancel" = "Zrušit";
+"alert.channel.delete.confirmation.title" = "Rozpusťte skupinový chat";
+"alert.channel.delete.confirmation.message" = "Opravdu chcete tento skupinový chat zrušit?";
+"alert.channel.delete.confirmation.confirm" = "Určete";
+"alert.channel.delete.confirmation.cancel" = "Zrušit";
 
 // Connection Redirect
 "connection.server.redirect.alert.title" = "Server changed it's URL";
@@ -309,7 +317,10 @@
 "chat.info.item.members" = "Členové";
 "chat.info.item.pinned" = "Připnuto";
 "chat.info.item.starred" = "S hvězdičkou";
-"chat.info.item.announcement" = "公告";
+"chat.info.item.announcement" = "Oznámení";
+"chat.info.item.add_announcement" = "Přidat oznámení";
+"chat.info.item.leave" = "Nechte skupinový chat";
+"chat.info.item.delete" = "Rozpusťte skupinový chat";
 "chat.info.item.mentions" = "Mentions"; // TODO
 "chat.info.item.files" = "Files"; // TODO
 "chat.info.item.share" = "Share"; // TODO
@@ -317,6 +328,8 @@
 
 // Members List
 "chat.members.list.title" = "Členové";
+"chat.members.list.owner" = "Vlastník skupiny";
+
 
 // Add Users
 "chat.add_users.title" = "Add Users"; // TODO

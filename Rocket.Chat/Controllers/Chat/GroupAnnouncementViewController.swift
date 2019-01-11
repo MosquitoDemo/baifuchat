@@ -7,10 +7,18 @@
 //
 
 import UIKit
-
+import RealmSwift
 
 class GroupAnnouncementViewController: UIViewController {
 
+    
+    public var subscription:Subscription?
+    public var data:ChannelInfoAnnouncementCellData?{
+        didSet{
+            self.title = data?.title
+            self.mainTextView?.text = data?.announcement
+        }
+    }
     
     var canEdit:Bool = false
     var mainTextView:KMPlaceholderTextView?
@@ -56,9 +64,14 @@ class GroupAnnouncementViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.title = localized("chat.info.item.topic")
-        self.mainTextView?.placeholder = localized("chat.info.item.no_topic")
+        self.title = localized("chat.info.item.announcement")
+        self.mainTextView?.placeholder = localized("chat.info.item.add_announcement")
         self.mainTextView?.isEditable = self.canEdit
+        self.mainTextView?.text = data?.announcement
+        
+        self.numberLabel?.text = "\(data?.announcement?.count ?? 0)/200"
+
+        self.mainTextView?.font = UIFont.systemFont(ofSize: 15)
         // Do any additional setup after loading the view.
         
         let doneItem = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(GroupAnnouncementViewController.doneItemTapped(_:)))
@@ -75,7 +88,32 @@ class GroupAnnouncementViewController: UIViewController {
        
     }
     @objc func doneItemTapped(_ item:UIBarButtonItem){
+        guard let announcement = self.mainTextView?.text else { return  }
+        guard let rid = self.subscription?.rid else { return  }
+        guard let type = self.subscription?.type else { return  }
+        let request = RoomSetAnnouncementRequest(roomId: rid, roomType: type, announcement: announcement)
         
+        API.current()?.fetch(request, completion: { (response) in
+            switch response{
+            case .resource(let result):
+                print(result)
+                
+                try? Realm.current?.write {
+                    self.subscription?.roomAnnouncement = result.raw?["announcement"].string
+                    if let subscriptionx = self.subscription{
+                    
+                    Realm.current?.add(subscriptionx, update: true)
+                    }
+                }
+                self.alertSuccess(title: result.raw?.stringValue ?? "")
+                self.navigationController?.popViewController(animated: true)
+            case .error(let error):
+                print(error)
+                
+                
+                self.alert(title: localized("error.socket.default_error.title"), message: error.description)
+            }
+        })
     }
 
     /*

@@ -192,7 +192,7 @@ extension PushManager {
 
 final class UserNotificationCenterDelegate: NSObject, UNUserNotificationCenterDelegate {
     func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
-        if SocketManager.isConnected() {
+        if SocketManager.isConnected() {///如果已经与服务端建立长连接、则不显示本次推送
             completionHandler([])
             return
         }

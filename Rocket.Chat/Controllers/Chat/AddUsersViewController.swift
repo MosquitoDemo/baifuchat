@@ -71,19 +71,21 @@ class AddUsersViewController: BaseViewController {
 
     var searchBar: UISearchBar?
 
-    var loaderCell: LoaderTableViewCell!
+//    var loaderCell: LoaderTableViewCell!
+    
     var data = AddUsersViewData()
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        
+        self.tableView.rowHeight = UITableView.automaticDimension
+        self.tableView.estimatedRowHeight = 56
+        self.tableView.sectionHeaderHeight = UITableView.automaticDimension
+        self.tableView.estimatedSectionHeaderHeight = 0
+        self.tableView.separatorStyle = .none
+        self.tableView.tableFooterView = UIView()
         registerCells()
-
-         let cell = tableView.dequeueReusableCell(LoaderTableViewCell.self)
-//        if let cell = tableView.dequeueReusableCell(withIdentifier: LoaderTableViewCell.identifier) as? LoaderTableViewCell {
-            self.loaderCell = cell
-//        }
-
         setupSearchBar()
 
         title = data.title
@@ -127,17 +129,7 @@ class AddUsersViewController: BaseViewController {
     func registerCells() {
         tableView.registerNib(MemberCell.self)
         tableView.registerNib(LoaderTableViewCell.self)
-        /*
-        tableView.register(UINib(
-            nibName: "MemberCell",
-            bundle: Bundle.main
-        ), forCellReuseIdentifier: MemberCell.identifier)
-
-        tableView.register(UINib(
-            nibName: "LoaderTableViewCell",
-            bundle: Bundle.main
-        ), forCellReuseIdentifier: LoaderTableViewCell.identifier)
- */
+        
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -156,8 +148,7 @@ extension AddUsersViewController: UITableViewDelegate {
         guard
             let roomId = data.subscription?.rid,
             let roomType = data.subscription?.type,
-            let roomName = data.subscription?.displayName(),
-            let api = API.current()
+            let roomName = data.subscription?.displayName()
         else {
             return
         }
@@ -180,7 +171,7 @@ extension AddUsersViewController: UITableViewDelegate {
                 guard yes else { return }
 
                 let req = RoomInviteRequest(roomId: roomId, roomType: roomType, userId: user.identifier)
-                api.fetch(req) { [weak self] response in
+                API.current()?.fetch(req) { [weak self] response in
                     switch response {
                     case .resource(let resource):
                         if let error = resource.error {
@@ -189,8 +180,8 @@ extension AddUsersViewController: UITableViewDelegate {
                             self?.presentedViewController?.dismiss(animated: true, completion: nil)
                             self?.navigationController?.popViewController(animated: true)
                         }
-                    case .error:
-                        break
+                    case .error(let error):
+                        print(error)
                     }
                 }
         })
@@ -211,26 +202,28 @@ extension AddUsersViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if indexPath.row == data.users.count {
             let cell = tableView.dequeueReusableCell(LoaderTableViewCell.self)
-
+            
             return cell
         }
-
+        
         let cell = tableView.dequeueReusableCell(MemberCell.self)
-//        if let cell = tableView.dequeueReusableCell(withIdentifier: MemberCell.identifier) as? MemberCell {
-            cell.data = MemberCellData(member: data.user(at: indexPath.row))
-            return cell
-//        }
-
-//        return UITableViewCell(style: .default, reuseIdentifier: nil)
+        
+        cell.data = MemberCellData(member: data.user(at: indexPath.row))
+        
+        cell.isOwner = false
+        return cell
+        
     }
 
+    /*
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 0
     }
 
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 50
+        return 51
     }
+ */
 }
 
 // MARK: SearchBar

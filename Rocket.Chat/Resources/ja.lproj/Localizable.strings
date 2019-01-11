@@ -88,6 +88,14 @@
 "alert.logout.confirmation.title" = "このサーバーからログアウトする";
 "alert.logout.confirmation.message" = "\"%@\" からログアウトしてもよろしいですか?";
 "alert.logout.confirmation.confirm" = "はい、ログアウトします";
+"alert.channel.leave.confirmation.title" = "グループチャットを離れる";
+"alert.channel.leave.confirmation.message" = "このグループチャットを終了しますか？";
+"alert.channel.leave.confirmation.confirm" = "決定する";
+"alert.channel.leave.confirmation.cancel" = "キャンセル";
+"alert.channel.delete.confirmation.title" = "グループチャットを解除する";
+"alert.channel.delete.confirmation.message" = "このグループチャットを解消しますか？";
+"alert.channel.delete.confirmation.confirm" = "決定する";
+"alert.channel.delete.confirmation.cancel" = "キャンセル";
 
 // Connection Redirect
 "connection.server.redirect.alert.title" = "サーバーがURLを変更しました";
@@ -308,7 +316,10 @@
 "chat.info.item.members" = "メンバー";
 "chat.info.item.pinned" = "ピン留め";
 "chat.info.item.starred" = "スター";
-"chat.info.item.announcement" = "announcement";
+"chat.info.item.announcement" = "掲示";
+"chat.info.item.add_announcement" = "お知らせを追加";
+"chat.info.item.leave" = "グループチャットを離れる";
+"chat.info.item.delete" = "グループチャットを解除する";
 "chat.info.item.mentions" = "メンション";
 "chat.info.item.notifications" = "通知";
 "chat.info.item.files" = "ファイル";
@@ -317,6 +328,8 @@
 
 // Members List
 "chat.members.list.title" = "メンバー";
+"chat.members.list.owner" = "グループオーナー";
+
 
 // Add Users
 "chat.add_users.title" = "ユーザーの追加";

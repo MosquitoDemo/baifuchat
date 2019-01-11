@@ -47,7 +47,7 @@ public struct MemberCellData {
 }
 
 final class MemberCell: UITableViewCell {
-    static let identifier = "MemberCell"
+    static let identifier = String(describing: MemberCell.self)
 
     var owner:UnmanagedUser?{
         didSet{
@@ -57,7 +57,9 @@ final class MemberCell: UITableViewCell {
     var isOwner:Bool = false{
         didSet{
             self.roleButton.isHidden = !isOwner
-            self.roleButton.setTitle("群主", for: .normal)
+            self.roleButton.setTitle(localized("chat.members.list.owner"), for: .normal)
+            self.roleButton.setTitle(localized("chat.members.list.owner"), for: .selected)
+
         }
     }
     @IBOutlet weak var statusView: UIView! {
@@ -78,6 +80,7 @@ final class MemberCell: UITableViewCell {
         }
     }
 
+    @IBOutlet weak var bottomLineView: UIView!
     @IBOutlet weak var avatarViewContainer: UIView! {
         didSet {
             avatarViewContainer.layer.masksToBounds = true
@@ -107,15 +110,22 @@ final class MemberCell: UITableViewCell {
     @IBOutlet weak var roleButton: UIButton!
     
     @IBOutlet weak var buttonHeightConstraint: NSLayoutConstraint!
+    @IBOutlet weak var bottomLineHeightConstraint: NSLayoutConstraint!
     @IBOutlet weak var buttonWidthConstraint: NSLayoutConstraint!
     override func awakeFromNib() {
         super.awakeFromNib()
     
+        self.separatorInset = .zero
         self.roleButton.titleLabel?.font = UIFont.systemFont(ofSize: 11)
         self.roleButton.setTitleColor(UIColor.init(hex: "#1d74f4"), for: .normal)
+        self.roleButton.setTitleColor(UIColor.init(hex: "#1d74f4"), for: .selected)
         self.roleButton.setBackgroundImage(UIColor(hex: "#c3dbff").colorImage, for: .normal)
+        self.roleButton.setBackgroundImage(UIColor(hex: "#c3dbff").colorImage, for: .selected)
         self.roleButton.layer.cornerRadius = self.buttonHeightConstraint.constant/2
         self.roleButton.layer.masksToBounds = true
+        self.bottomLineView.backgroundColor = UIColor(hex: "#D7D7D7")
+        self.contentView.bringSubviewToFront(self.bottomLineView)
+        
     }
 }
 

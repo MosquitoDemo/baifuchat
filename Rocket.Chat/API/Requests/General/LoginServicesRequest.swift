@@ -8,6 +8,7 @@
 //  DOCS: https://rocket.chat/docs/developer-guides/rest-api/miscellaneous/info
 
 import SwiftyJSON
+import RealmSwift
 
 class LoginServicesRequest: APIRequest {
     typealias APIResourceType = LoginServicesResource

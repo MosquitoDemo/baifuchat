@@ -88,6 +88,14 @@
 "alert.logout.confirmation.title" = "Αποσύνδεση από αυτό τον εξυπηρετητή"; 
 "alert.logout.confirmation.message" = "Σίγουρα θέλετε να αποσυνδεθείτε από \"%@\"?"; 
 "alert.logout.confirmation.confirm" = "Ναι, αποσυνδέστε με";
+"alert.channel.leave.confirmation.title" = "Αφήστε την ομαδική συζήτηση";
+"alert.channel.leave.confirmation.message" = "Είστε βέβαιοι ότι θέλετε να αφήσετε αυτήν την ομαδική συζήτηση;";
+"alert.channel.leave.confirmation.confirm" = "Προσδιορίστε";
+"alert.channel.leave.confirmation.cancel" = "Ακύρωση";
+"alert.channel.delete.confirmation.title" = "Διαλύστε την ομαδική συζήτηση";
+"alert.channel.delete.confirmation.message" = "Είστε βέβαιοι ότι θέλετε να απορρίψετε αυτήν την ομαδική συζήτηση;";
+"alert.channel.delete.confirmation.confirm" = "Προσδιορίστε";
+"alert.channel.delete.confirmation.cancel" = "Ακύρωση";
 
 // Connection Redirect
 "connection.server.redirect.alert.title" = "Έχει αλλάξει το URL του Εξυπηρετητή";
@@ -308,7 +316,10 @@
 "chat.info.item.members" = "Μέλη";
 "chat.info.item.pinned" = "Καρφιτσωμένα";
 "chat.info.item.starred" = "Αστερωμένα";
-"chat.info.item.announcement" = "公告";
+"chat.info.item.announcement" = "Ανακοίνωση";
+"chat.info.item.add_announcement" = "Προσθήκη ανακοίνωσης";
+"chat.info.item.leave" = "Αφήστε την ομαδική συζήτηση";
+"chat.info.item.delete" = "Διαλύστε την ομαδική συζήτηση";
 "chat.info.item.mentions" = "Αναφέρθηκαν";
 "chat.info.item.files" = "Αρχεία";
 "chat.info.item.share" = "Κοινή Χρήση";
@@ -316,6 +327,8 @@
 
 // Members List
 "chat.members.list.title" = "Μέλη";
+"chat.members.list.owner" = "Ιδιοκτήτης ομάδας";
+
 
 // Add Users
 "chat.add_users.title" = "Προσθήκη χρηστών"; 
