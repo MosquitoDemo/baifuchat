@@ -11,7 +11,7 @@ import SwiftyJSON
 import RealmSwift
 
 extension User: ModelMappeable {
-    func map(_ values: JSON, realm: Realm?) {
+    func map(_ values: JSON, realm: Realm? = Realm.current) {
         if self.identifier == nil {
             self.identifier = values["_id"].string
         }
@@ -34,6 +34,7 @@ extension User: ModelMappeable {
 
         if let emailsRaw = values["emails"].array {
             let emails = emailsRaw.compactMap { emailRaw -> Email? in
+        
                 let email = Email(value: [
                     "email": emailRaw["address"].stringValue,
                     "verified": emailRaw["verified"].boolValue
@@ -44,21 +45,18 @@ extension User: ModelMappeable {
                 return email
             }
 
-            let temp = List<Email>()
-            temp.append(objectsIn: emails)
-            self.emails = temp
-//            self.emails.removeAll()
-//            self.emails.append(objectsIn: emails)
+            
+           
+            self.emails.removeAll()
+            self.emails.append(objectsIn: emails)
         }
 
         if let rolesRaw = values["roles"].array {
             let roles = rolesRaw.compactMap({ $0.string })
 
-            let temp = List<String>()
-            temp.append(objectsIn: roles)
-            self.roles = temp
-//            self.roles.removeAll()
-//            self.roles.append(objectsIn: roles)
+            
+            self.roles.removeAll()
+            self.roles.append(objectsIn: roles)
         }
         
         if let birthdate = values["customFields"]["birthdate"].string{
@@ -67,6 +65,7 @@ extension User: ModelMappeable {
         if let gender = values["customFields"]["gender"].string{
             self.gender = gender
         }
+            realm?.add(self, update: true)
     }
 
 }

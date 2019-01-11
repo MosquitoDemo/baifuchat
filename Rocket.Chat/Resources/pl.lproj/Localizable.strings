@@ -447,6 +447,10 @@
 "myaccount.settings.profile.name_placeholder" = "Nazwa";
 "myaccount.settings.profile.username_placeholder" = "Nazwa użytkownika";
 "myaccount.settings.profile.email_placeholder" = "E-mail";
+"myaccount.settings.profile.gender_placeholder" = "Płeć";
+"myaccount.settings.profile.gender_male" = "Mężczyzna";
+"myaccount.settings.profile.gender_female" = "Kobieta";
+"myaccount.settings.profile.birthdate_placeholder" = "Urodziny";
 "myaccount.settings.profile.status.title" = "Status";
 "myaccount.settings.profile.password_required.title" = "Wprowadź swoje hasło";
 "myaccount.settings.profile.password_required.message" = "Twoje hasło jest wymagane aby zaktualizować adres e-mail.";

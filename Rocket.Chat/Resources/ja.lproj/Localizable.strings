@@ -448,6 +448,10 @@
 "myaccount.settings.profile.name_placeholder" = "名前";
 "myaccount.settings.profile.username_placeholder" = "ユーザー名";
 "myaccount.settings.profile.email_placeholder" = "メール";
+"myaccount.settings.profile.gender_placeholder" = "性別";
+"myaccount.settings.profile.gender_male" = "男性";
+"myaccount.settings.profile.gender_female" = "女性";
+"myaccount.settings.profile.birthdate_placeholder" = "誕生日";
 "myaccount.settings.profile.status.title" = "状態";
 "myaccount.settings.profile.password_required.title" = "パスワードを入力";
 "myaccount.settings.profile.password_required.message" = "メールアドレスを更新する際にはパスワードが必要です。";

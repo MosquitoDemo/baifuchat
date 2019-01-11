@@ -59,9 +59,6 @@
                                                 <constraint firstItem="q4p-F0-OV3" firstAttribute="leading" secondItem="Nb7-OU-8Qa" secondAttribute="trailing" constant="15" id="hGO-XB-sel"/>
                                             </constraints>
                                         </tableViewCellContentView>
-                                        <connections>
-                                            <segue destination="MdX-88-2ZI" kind="show" id="lUW-RX-M8I"/>
-                                        </connections>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>

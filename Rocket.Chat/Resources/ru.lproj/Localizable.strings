@@ -447,6 +447,10 @@
 "myaccount.settings.profile.name_placeholder" = "Имя";
 "myaccount.settings.profile.username_placeholder" = "Имя пользователя";
 "myaccount.settings.profile.email_placeholder" = "E-mail";
+"myaccount.settings.profile.gender_placeholder" = "пол";
+"myaccount.settings.profile.gender_male" = "мужчина";
+"myaccount.settings.profile.gender_female" = "женщина";
+"myaccount.settings.profile.birthdate_placeholder" = "день рождения";
 "myaccount.settings.profile.status.title" = "Статус";
 "myaccount.settings.profile.password_required.title" = "Введите ваш пароль";
 "myaccount.settings.profile.password_required.message" = "При изменении электронного адреса требуется ввести ваш пароль.";

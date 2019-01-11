@@ -448,6 +448,10 @@
 "myaccount.settings.profile.name_placeholder" = "Nome";
 "myaccount.settings.profile.username_placeholder" = "Nome Utente";
 "myaccount.settings.profile.email_placeholder" = "E-mail";
+"myaccount.settings.profile.gender_placeholder" = "Genere";
+"myaccount.settings.profile.gender_male" = "Maschio";
+"myaccount.settings.profile.gender_female" = "Donna";
+"myaccount.settings.profile.birthdate_placeholder" = "Compleanno";
 "myaccount.settings.profile.status.title" = "Stato";
 "myaccount.settings.profile.password_required.title" = "Inserire la password";
 "myaccount.settings.profile.password_required.message" = "La tua password è richiesta quando aggiorni la tua e-mail.";

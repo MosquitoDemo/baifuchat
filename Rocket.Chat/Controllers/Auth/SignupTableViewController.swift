@@ -245,7 +245,9 @@ final class SignupTableViewController: BaseTableViewController {
     func fetchMeThenSetUsername(startLoading: @escaping () -> Void, stopLoading: @escaping () -> Void) {
         let realm = Realm.current
         startLoading()
-        API.current()?.fetch(MeRequest()) { [weak self] response in
+        let user = AuthManager.currentUser() ?? User()
+        
+        API.current()?.client(UsersClient.self).fetchUser(user, completion: { (response) in
             stopLoading()
             switch response {
             case .resource(let resource):
@@ -256,10 +258,10 @@ final class SignupTableViewController: BaseTableViewController {
                 }
 
                 if resource.user?.username != nil {
-                    self?.dismiss(animated: true, completion: nil)
+                    self.dismiss(animated: true, completion: nil)
                     AppManager.reloadApp()
                 } else {
-                    self?.setUsername(startLoading: startLoading, stopLoading: stopLoading)
+                    self.setUsername(startLoading: startLoading, stopLoading: stopLoading)
                 }
 
                 AnalyticsManager.log(event: .signup)
@@ -269,7 +271,7 @@ final class SignupTableViewController: BaseTableViewController {
                     message: localized("error.socket.default_error.message")
                 ).present()
             }
-        }
+        })
     }
 
     func setUsername(startLoading: @escaping () -> Void, stopLoading: @escaping () -> Void) {

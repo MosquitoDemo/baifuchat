@@ -12,9 +12,9 @@ import SwiftyJSON
 final class UpdateUserRequest: APIRequest {
     typealias APIResourceType = UpdateUserResource
 
-    let requiredVersion = Version(0, 62, 2)
+    let requiredVersion = Version(0, 48, 0)
     let method: HTTPMethod = .post
-    let path = "/api/v1/users.updateOwnBasicInfo"
+    let path = "/api/v1/users.update"
 
     let user: User?
     let username: String?
@@ -39,9 +39,12 @@ final class UpdateUserRequest: APIRequest {
     }
 
     func body() -> Data? {
-        var body = JSON(["data": [:],"customFields":[:]])
+        var body = JSON(["data":[:],"userId":""])
 
         if let user = user {
+            if let userId = user.identifier{
+                body["userId"].string = userId
+            }
             if let name = user.name, !name.isEmpty {
                 body["data"]["name"].string = user.name
             }
@@ -62,19 +65,25 @@ final class UpdateUserRequest: APIRequest {
         if let currentPassword = currentPassword {
             body["data"]["currentPassword"].string = currentPassword.sha256()
         }
+        
 
+        if let currentPassword = currentPassword {
+            body["data"]["password"].string = currentPassword.sha256()
+        }
         if let username = username {
             body["data"] = ["username": username]
         }
+        var customFields = [String:Any]()
         if let birthdate = user?.birthdate{
-            body["customFields"]["birthdate"].string = birthdate
+            customFields["birthdate"] = birthdate
 
             
         }
         if let gender = user?.gender{
-            
-            body["customFields"]["gender"].string = gender
+            customFields["gender"] = gender
+
         }
+        body["data"]["customFields"].dictionaryObject = customFields
 
         let string = body.rawString()
         let data = string?.data(using: .utf8)

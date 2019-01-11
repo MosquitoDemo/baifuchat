@@ -447,6 +447,10 @@
 "myaccount.settings.profile.name_placeholder" = "Nom";
 "myaccount.settings.profile.username_placeholder" = "Nom d'utilisateur";
 "myaccount.settings.profile.email_placeholder" = "E-mail";
+"myaccount.settings.profile.gender_placeholder" = "Genre";
+"myaccount.settings.profile.gender_male" = "Mâle";
+"myaccount.settings.profile.gender_female" = "Femme";
+"myaccount.settings.profile.birthdate_placeholder" = "Anniversaire";
 "myaccount.settings.profile.status.title" = "Statut";
 "myaccount.settings.profile.password_required.title" = "Entrez votre mot de passe";
 "myaccount.settings.profile.password_required.message" = "Votre mot de passe est requis pour changer votre email.";

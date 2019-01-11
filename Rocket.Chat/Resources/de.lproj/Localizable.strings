@@ -447,6 +447,10 @@
 "myaccount.settings.profile.name_placeholder" = "Name";
 "myaccount.settings.profile.username_placeholder" = "Benutzername";
 "myaccount.settings.profile.email_placeholder" = "E-Mail";
+"myaccount.settings.profile.gender_placeholder" = "Geschlecht";
+"myaccount.settings.profile.gender_male" = "Männlich";
+"myaccount.settings.profile.gender_female" = "Weiblich";
+"myaccount.settings.profile.birthdate_placeholder" = "Geburtstag";
 "myaccount.settings.profile.status.title" = "Status";
 "myaccount.settings.profile.password_required.title" = "Passwort eingeben";
 "myaccount.settings.profile.password_required.message" = "Das Passwort wird zum Ändern der E-Mail-Adresse benötigt";

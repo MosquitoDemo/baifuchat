@@ -274,6 +274,7 @@ final class PreferencesViewController: BaseTableViewController {
     // MARK: UITableViewDelegate
 
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
         if indexPath.section == kSectionSettings {
             switch indexPath.row {
             case 0:
@@ -308,6 +309,9 @@ final class PreferencesViewController: BaseTableViewController {
             #if BETA || DEBUG
             FLEXManager.shared().showExplorer()
             #endif
+        }else if indexPath.section == kSectionProfile{
+            let vc = ProfileViewController()
+            self.navigationController?.pushViewController(vc, animated: true)
         }
 
         tableView.deselectRow(at: indexPath, animated: true)
