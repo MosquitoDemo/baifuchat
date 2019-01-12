@@ -41,7 +41,6 @@ class EditProfileViewController: UIViewController {
         self.tableView = UITableView(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.size.width, height: UIScreen.main.bounds.size.width))
         self.tableView?.backgroundColor = UIColor.groupTableViewBackground
         self.tableView?.rowHeight = UITableView.automaticDimension
-        //        self.tableView?.estimatedRowHeight = 44
         self.tableView?.register(EditAvatarCell.self)
         self.tableView?.register(StatusCell.self)
         self.tableView?.register(EditUserNameCell.self)
@@ -70,6 +69,7 @@ class EditProfileViewController: UIViewController {
         
         let editItem = UIBarButtonItem(title: localized("myaccount.settings.profile.actions.save"), style: .plain, target: self, action: #selector(ProfileViewController.editItemTapped(_:)))
         self.navigationItem.rightBarButtonItem = editItem
+        self.email = self.updateUser.emails.first?.email
         /*
          internal let title = localized("myaccount.settings.profile.title")
          internal let editingTitle = localized("myaccount.settings.editing_profile.title")
@@ -124,6 +124,7 @@ class EditProfileViewController: UIViewController {
             }
             requestPasswordToUpdate(user: self.updateUser)
         } else {
+            
             self.update(user: self.updateUser)
         }
     }
@@ -450,7 +451,7 @@ extension EditProfileViewController{
                     return
                 }
                 
-                self.updateUser = resource.user ?? User()
+//                self.updateUser = resource.user ?? User()
                 
                 stopLoading(true)
                 
