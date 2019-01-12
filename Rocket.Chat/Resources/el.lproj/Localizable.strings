@@ -446,7 +446,11 @@
 "myaccount.settings.profile.section.password" = "Συνθηματικό"; 
 "myaccount.settings.profile.name_placeholder" = "Όνομα"; 
 "myaccount.settings.profile.username_placeholder" = "Όνομα χρήστη"; 
-"myaccount.settings.profile.email_placeholder" = "E-mail"; 
+"myaccount.settings.profile.email_placeholder" = "E-mail";
+"myaccount.settings.profile.gender_placeholder" = "Φύλο";
+"myaccount.settings.profile.gender_male" = "Αρσενικό";
+"myaccount.settings.profile.gender_female" = "Γυναίκα";
+"myaccount.settings.profile.birthdate_placeholder" = "Γενέθλια";
 "myaccount.settings.profile.status.title" = "Κατάσταση"; 
 "myaccount.settings.profile.password_required.title" = "Εισάγετε το συνθηματικό σας"; 
 "myaccount.settings.profile.password_required.message" = "Το συνθηματικό σας είναι απαραίτητο όταν αλλάζετε το e-mail σας."; 

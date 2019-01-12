@@ -447,6 +447,10 @@
 "myaccount.settings.profile.name_placeholder" = "名字";
 "myaccount.settings.profile.username_placeholder" = "用户名";
 "myaccount.settings.profile.email_placeholder" = "电子邮件";
+"myaccount.settings.profile.gender_placeholder" = "性别";
+"myaccount.settings.profile.gender_male" = "男";
+"myaccount.settings.profile.gender_female" = "女";
+"myaccount.settings.profile.birthdate_placeholder" = "生日";
 "myaccount.settings.profile.status.title" = "状态";
 "myaccount.settings.profile.password_required.title" = "输入您的密码";
 "myaccount.settings.profile.password_required.message" = "更新电子邮件时需要输入密码.";

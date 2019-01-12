@@ -446,6 +446,10 @@
 "myaccount.settings.profile.name_placeholder" = "Nome";
 "myaccount.settings.profile.username_placeholder" = "Username";
 "myaccount.settings.profile.email_placeholder" = "E-mail";
+"myaccount.settings.profile.gender_placeholder" = "Sexo";
+"myaccount.settings.profile.gender_male" = "Macho";
+"myaccount.settings.profile.gender_female" = "Feminino";
+"myaccount.settings.profile.birthdate_placeholder" = "Aniversário";
 "myaccount.settings.profile.status.title" = "Status";
 "myaccount.settings.profile.password_required.title" = "Insira sua senha";
 "myaccount.settings.profile.password_required.message" = "É necessário inserir sua senha para atualizar seu e-mail.";

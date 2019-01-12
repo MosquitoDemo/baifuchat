@@ -21,7 +21,7 @@ final class EditProfileTableViewController: BaseTableViewController, MediaPicker
     //女
     @IBAction func womanClick(_ sender: Any) {
         
-        if isShowEditStatue {
+        if isShowEditStatus {
             manImage.image = UIImage.init(named: "select-after")
             
             womanImage.image = UIImage.init(named: "select-click")
@@ -33,7 +33,7 @@ final class EditProfileTableViewController: BaseTableViewController, MediaPicker
     //男
     @IBAction func manClick(_ sender: Any) {
         
-        if isShowEditStatue {
+        if isShowEditStatus {
             womanImage.image = UIImage.init(named: "select-after")
             
             manImage.image = UIImage.init(named: "select-click")
@@ -141,11 +141,11 @@ final class EditProfileTableViewController: BaseTableViewController, MediaPicker
     var isUpdatingUser = false
     var isUploadingAvatar = false
     var isLoading = true
-    var isShowEditStatue = false
+    var isShowEditStatus = false
     
     
     var currentPassword: String?
-    var user: User? = User() {
+    var user: User? = AuthManager.currentUser() {
         didSet {
             bindUserData()
         }
@@ -228,6 +228,7 @@ final class EditProfileTableViewController: BaseTableViewController, MediaPicker
             }
         })
 
+        /*
         let meRequest = MeRequest()
         API.current()?.fetch(meRequest) { [weak self] response in
             stopLoading()
@@ -254,6 +255,7 @@ final class EditProfileTableViewController: BaseTableViewController, MediaPicker
                 })
             }
         }
+ */
  
     }
 
@@ -261,26 +263,27 @@ final class EditProfileTableViewController: BaseTableViewController, MediaPicker
         avatarView.username = user?.username
         name.text = user?.name
         username.text = user?.username
-        email.text = user?.emails.first?.email
+        email.text = user?.emails.last?.email
 
         if user?.gender == "male"{
             
             
             //男
             
-            if isShowEditStatue {
-                womanImage.image = UIImage.init(named: "select-after")
+            if isShowEditStatus {
                 
-                manImage.image = UIImage.init(named: "select-click")
+                womanImage.image = UIImage(named: "select-after")
+                
+                manImage.image = UIImage(named: "select-click")
                 self.gender = "male"
                 
             }
         
         }else{
-            if isShowEditStatue {
-                manImage.image = UIImage.init(named: "select-after")
+            if isShowEditStatus {
+                manImage.image = UIImage(named: "select-after")
                 
-                womanImage.image = UIImage.init(named: "select-click")
+                womanImage.image = UIImage(named: "select-click")
                 self.gender = "female"
             }
             
@@ -303,7 +306,7 @@ final class EditProfileTableViewController: BaseTableViewController, MediaPicker
 
     @objc func beginEditing() {
         isEditingProfile = true
-        isShowEditStatue = true
+        isShowEditStatus = true
         navigationItem.title = viewModel.editingTitle
         navigationItem.rightBarButtonItem = saveButton
         navigationItem.hidesBackButton = true
@@ -377,11 +380,11 @@ final class EditProfileTableViewController: BaseTableViewController, MediaPicker
 
         guard
             let name = name.text,
-            let username = username.text,
-//            let email = email.text,
-            let birthdate = timeselect.text,
-            !name.isEmpty,
-            !username.isEmpty
+//            let username = username.text,
+            let email = email.text,
+            let birthdate = timeselect.text
+//            !name.isEmpty,
+//            !username.isEmpty
 //            !email.isEmpty
         else {
             Alert(key: "alert.update_profile_empty_fields").present()
@@ -416,11 +419,11 @@ final class EditProfileTableViewController: BaseTableViewController, MediaPicker
         let user = User()
         user.map(jsonx, realm: nil)
 
-//        if !(self.user?.emails.first?.email == email) {
-//            requestPasswordToUpdate(user: user)
-//        } else {
+        if !(self.user?.emails.first?.email == email) {
+            requestPasswordToUpdate(user: user)
+        } else {
             update(user: user)
-//        }
+        }
     }
 
     fileprivate func requestPasswordToUpdate(user: User) {
@@ -496,6 +499,7 @@ final class EditProfileTableViewController: BaseTableViewController, MediaPicker
         }
 
         let updateUserRequest = UpdateUserRequest(user: user, currentPassword: currentPassword)
+    
         API.current()?.fetch(updateUserRequest) {  response in
 //            guard let self = self else { return }
 
@@ -635,7 +639,6 @@ final class EditProfileTableViewController: BaseTableViewController, MediaPicker
             
         case 1:
             if indexPath.row == 4{
-                print("ssss")
                 let datePicker = YLDatePicker(currentDate: nil, minLimitDate: Date(), maxLimitDate: nil, datePickerType: .YMD) { [weak self] (date) in
 //                    self?.navigationItem.title = date.getString(format: "yyyy-MM-dd")
 //                    print(date.getString(format: "yyyy-MM-dd"))
@@ -645,7 +648,7 @@ final class EditProfileTableViewController: BaseTableViewController, MediaPicker
                 }
                 
                 
-                if isShowEditStatue{
+                if isShowEditStatus{
                     datePicker.show()
                 }
             }else if indexPath.row == 3{
@@ -694,13 +697,14 @@ extension EditProfileTableViewController: UIImagePickerControllerDelegate {
 extension EditProfileTableViewController: UITextFieldDelegate {
 
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        /*
         switch textField {
         case name: username.becomeFirstResponder()
         case username: email.becomeFirstResponder()
         case email: hideKeyboard()
         default: break
         }
-
+*/
         return true
     }
 }

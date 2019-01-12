@@ -447,6 +447,10 @@
 "myaccount.settings.profile.name_placeholder" = "Nome";
 "myaccount.settings.profile.username_placeholder" = "Nome de Utilizador";
 "myaccount.settings.profile.email_placeholder" = "E-mail";
+"myaccount.settings.profile.gender_placeholder" = "Sexo";
+"myaccount.settings.profile.gender_male" = "Macho";
+"myaccount.settings.profile.gender_female" = "Feminino";
+"myaccount.settings.profile.birthdate_placeholder" = "Aniversário";
 "myaccount.settings.profile.status.title" = "Estado";
 "myaccount.settings.profile.password_required.title" = "Introduza a sua palavra-passe";
 "myaccount.settings.profile.password_required.message" = "a sua palavra-passe é necessária ao atualizar o seu e-mail.";

@@ -43,10 +43,12 @@ extension LoginTableViewController {
     }
 
     internal func performMeRequest() {
-        API.current()?.fetch(MeRequest()) { [weak self] response in
+        let user = AuthManager.currentUser() ?? User()
+        
+        API.current()?.client(UsersClient.self).fetchUser(user, completion: { (response) in
             switch response {
             case .resource(let resource):
-                self?.stopLoading()
+                self.stopLoading()
 
                 if let user = resource.user {
                     let realm = Realm.current
@@ -55,20 +57,20 @@ extension LoginTableViewController {
                     }
 
                     if user.username != nil {
-                        self?.dismiss(animated: true, completion: nil)
+                        self.dismiss(animated: true, completion: nil)
                         AppManager.reloadApp()
                     } else {
-                        self?.performSegue(withIdentifier: "RequestUsername", sender: nil)
+                        self.performSegue(withIdentifier: "RequestUsername", sender: nil)
                     }
 
                     AnalyticsManager.log(event: .login)
                 } else {
-                    self?.stopLoading()
+                    self.stopLoading()
                     Alert(key: "error.socket.default_error").present()
                 }
             case .error:
-                self?.stopLoading()
+                self.stopLoading()
             }
-        }
+        })
     }
 }
