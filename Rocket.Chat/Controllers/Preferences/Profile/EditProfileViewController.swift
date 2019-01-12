@@ -451,7 +451,7 @@ extension EditProfileViewController{
                     return
                 }
                 
-//                self.updateUser = resource.user ?? User()
+                self.updateUser = resource.user ?? User()
                 
                 stopLoading(true)
                 
