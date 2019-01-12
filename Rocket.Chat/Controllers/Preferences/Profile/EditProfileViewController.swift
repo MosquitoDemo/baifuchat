@@ -457,6 +457,7 @@ extension EditProfileViewController{
                 if !self.isUploadingAvatar {
                     self.alertSuccess(title: localized("alert.update_profile_success.title"))
                 }
+                self.navigationController?.popViewController(animated: true)
             case .error(let error):
                 print(error)
                 stopLoading(false)
