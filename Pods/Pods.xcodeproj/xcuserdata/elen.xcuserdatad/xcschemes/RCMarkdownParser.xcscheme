@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "1A00EDA8A9538FA113B1734BC5F28795"
+               BlueprintIdentifier = "5119534DBDF5262D507E51D0752D8C3C"
                BlueprintName = "RCMarkdownParser"
                ReferencedContainer = "container:Pods.xcodeproj"
                BuildableName = "RCMarkdownParser.framework">

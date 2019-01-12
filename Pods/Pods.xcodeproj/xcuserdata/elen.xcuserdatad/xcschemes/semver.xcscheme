@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "D1124D2FD9A26FC871FB7FB9AA76D9BE"
+               BlueprintIdentifier = "345A68A6387413201638113F2CAD2F77"
                BlueprintName = "semver"
                ReferencedContainer = "container:Pods.xcodeproj"
                BuildableName = "semver.framework">

@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "37515DB33E76B4A4B1E375D2075F615C"
+               BlueprintIdentifier = "D6E02B63404B9CE8B18259A9D0850ADD"
                BuildableName = "DifferenceKit.framework"
                BlueprintName = "DifferenceKit-Core"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -45,7 +45,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "37515DB33E76B4A4B1E375D2075F615C"
+            BlueprintIdentifier = "D6E02B63404B9CE8B18259A9D0850ADD"
             BuildableName = "DifferenceKit.framework"
             BlueprintName = "DifferenceKit-Core"
             ReferencedContainer = "container:Pods.xcodeproj">

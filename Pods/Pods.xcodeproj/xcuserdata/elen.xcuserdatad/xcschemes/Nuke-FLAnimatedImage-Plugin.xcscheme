@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "FAC0EDA22C68AE54A68C056BA09FBA71"
+               BlueprintIdentifier = "A57320E10A3CE8C34AFC7D0CD1DC31F6"
                BuildableName = "NukeFLAnimatedImagePlugin.framework"
                BlueprintName = "Nuke-FLAnimatedImage-Plugin"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -45,7 +45,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "FAC0EDA22C68AE54A68C056BA09FBA71"
+            BlueprintIdentifier = "A57320E10A3CE8C34AFC7D0CD1DC31F6"
             BuildableName = "NukeFLAnimatedImagePlugin.framework"
             BlueprintName = "Nuke-FLAnimatedImage-Plugin"
             ReferencedContainer = "container:Pods.xcodeproj">

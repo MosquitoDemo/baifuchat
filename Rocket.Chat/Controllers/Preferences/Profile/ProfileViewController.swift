@@ -22,6 +22,7 @@ public struct ProfileItem:Codable {
    public var title:String?
    public var value:String?
    public var type:CellType?
+   
 }
 public class ProfileViewController: UIViewController {
 
@@ -85,6 +86,12 @@ public class ProfileViewController: UIViewController {
          }
  */
         // Do any additional setup after loading the view.
+     
+        
+        
+    }
+    public override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         let user = AuthManager.currentUser()
         self.items = [
             ProfileItem(title: user?.name, value: user?.avatarURL()?.absoluteString, type: .avatar),
@@ -97,19 +104,18 @@ public class ProfileViewController: UIViewController {
             
             ProfileItem(title: localized("myaccount.settings.profile.name_placeholder"), value: user?.name, type: .name),
             
-             ProfileItem(title: localized("myaccount.settings.profile.email_placeholder"), value: user?.emails.first?.email, type: .email),
-             
-             ProfileItem(title: localized("myaccount.settings.profile.gender_placeholder"), value: user?.gender == "male" ? localized("myaccount.settings.profile.gender_male"):localized("myaccount.settings.profile.gender_female"), type: .gender),
-             
-             ProfileItem(title: localized("myaccount.settings.profile.birthdate_placeholder"), value: user?.birthdate, type: .birthdate),
-             
+            ProfileItem(title: localized("myaccount.settings.profile.email_placeholder"), value: user?.emails.first?.email, type: .email),
+            
+            ProfileItem(title: localized("myaccount.settings.profile.gender_placeholder"), value: user?.gender, type: .gender),
+            
+            ProfileItem(title: localized("myaccount.settings.profile.birthdate_placeholder"), value: user?.birthdate, type: .birthdate),
+            
         ]
         self.tableView?.reloadData()
-        
-        
     }
     @objc func editItemTapped(_ item:UIBarButtonItem){
         let editProfileViewController = EditProfileViewController()
+        editProfileViewController.updateUser = AuthManager.currentUser() ?? User()
         self.navigationController?.pushViewController(editProfileViewController, animated: true)
     }
 
@@ -125,7 +131,18 @@ public class ProfileViewController: UIViewController {
 
 }
 extension ProfileViewController:UITableViewDelegate{
-    
+    public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let itemx = self.items?[indexPath.row]
+        guard let type = itemx?.type else {return}
+        switch type {
+        case .status:
+            let storyBoard = UIStoryboard.init(name: "Preferences", bundle: Bundle.init(for: ProfileViewController.self))
+            let vc = storyBoard.instantiateViewController(withIdentifier: "setStatus")
+            self.navigationController?.pushViewController(vc, animated: true)
+        default:
+            break
+        }
+    }
 }
 extension ProfileViewController:UITableViewDataSource{
     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -144,6 +161,7 @@ extension ProfileViewController:UITableViewDataSource{
             return cell
         case .status:
             let cell = tableView.dequeueReusableCell(indexPath: indexPath, StatusCell.self)
+            cell.user = AuthManager.currentUser()
             cell.item = itemx
             return cell
             

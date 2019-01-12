@@ -33,6 +33,7 @@ def shared_pods
   pod 'MobilePlayer', :git => 'https://github.com/RocketChat/RCiOSMobilePlayer'
   pod 'SimpleImageViewer', :git => 'https://github.com/cardoso/SimpleImageViewer.git'
   pod 'SwipeCellKit'
+  pod 'DLRadioButton'
   ui_pods
 
   # Text Processing
