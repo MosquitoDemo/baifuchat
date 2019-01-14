@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "81E27232DC00A881ACF75C7B5F193333"
+               BlueprintIdentifier = "63EF8A6B320FC77F141133A4D5D2AD7C"
                BuildableName = "MobilePlayer.bundle"
                BlueprintName = "MobilePlayer-MobilePlayer"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -45,7 +45,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "81E27232DC00A881ACF75C7B5F193333"
+            BlueprintIdentifier = "63EF8A6B320FC77F141133A4D5D2AD7C"
             BuildableName = "MobilePlayer.bundle"
             BlueprintName = "MobilePlayer-MobilePlayer"
             ReferencedContainer = "container:Pods.xcodeproj">

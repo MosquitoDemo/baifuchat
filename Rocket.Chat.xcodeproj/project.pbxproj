@@ -939,6 +939,12 @@
 		F35B811521E891FD00204D7A /* GenderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F35B811421E891FD00204D7A /* GenderCell.swift */; };
 		F35B811721E892B200204D7A /* BirthdateCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F35B811621E892B200204D7A /* BirthdateCell.swift */; };
 		F35B811921E896B300204D7A /* StatusCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F35B811821E896B300204D7A /* StatusCell.swift */; };
+		F3BA3A7C21E97E3700790C45 /* EditAvatarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3BA3A7B21E97E3700790C45 /* EditAvatarCell.swift */; };
+		F3BA3A7E21E97FA300790C45 /* EditBirthdateCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3BA3A7D21E97FA300790C45 /* EditBirthdateCell.swift */; };
+		F3BA3A8021E980B200790C45 /* EditGenderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3BA3A7F21E980B200790C45 /* EditGenderCell.swift */; };
+		F3BA3A8221E9811000790C45 /* EditEmailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3BA3A8121E9811000790C45 /* EditEmailCell.swift */; };
+		F3BA3A8421E9814100790C45 /* EditUserNameCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3BA3A8321E9814100790C45 /* EditUserNameCell.swift */; };
+		F3BA3A8621E9848E00790C45 /* EditNameCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3BA3A8521E9848E00790C45 /* EditNameCell.swift */; };
 		F3BCFCC321E2F799003D9930 /* RoomAddOwnerRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3BCFCC221E2F799003D9930 /* RoomAddOwnerRequest.swift */; };
 		F3BCFCC521E2F95F003D9930 /* RoomAddModeratorRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3BCFCC421E2F95F003D9930 /* RoomAddModeratorRequest.swift */; };
 		F3BCFCC721E2FC2A003D9930 /* RoomLeaveRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3BCFCC621E2FC2A003D9930 /* RoomLeaveRequest.swift */; };
@@ -1940,6 +1946,12 @@
 		F35B811421E891FD00204D7A /* GenderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenderCell.swift; sourceTree = "<group>"; };
 		F35B811621E892B200204D7A /* BirthdateCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirthdateCell.swift; sourceTree = "<group>"; };
 		F35B811821E896B300204D7A /* StatusCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusCell.swift; sourceTree = "<group>"; };
+		F3BA3A7B21E97E3700790C45 /* EditAvatarCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditAvatarCell.swift; sourceTree = "<group>"; };
+		F3BA3A7D21E97FA300790C45 /* EditBirthdateCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditBirthdateCell.swift; sourceTree = "<group>"; };
+		F3BA3A7F21E980B200790C45 /* EditGenderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditGenderCell.swift; sourceTree = "<group>"; };
+		F3BA3A8121E9811000790C45 /* EditEmailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditEmailCell.swift; sourceTree = "<group>"; };
+		F3BA3A8321E9814100790C45 /* EditUserNameCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditUserNameCell.swift; sourceTree = "<group>"; };
+		F3BA3A8521E9848E00790C45 /* EditNameCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditNameCell.swift; sourceTree = "<group>"; };
 		F3BCFCC221E2F799003D9930 /* RoomAddOwnerRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomAddOwnerRequest.swift; sourceTree = "<group>"; };
 		F3BCFCC421E2F95F003D9930 /* RoomAddModeratorRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomAddModeratorRequest.swift; sourceTree = "<group>"; };
 		F3BCFCC621E2FC2A003D9930 /* RoomLeaveRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomLeaveRequest.swift; sourceTree = "<group>"; };
@@ -4294,6 +4306,12 @@
 				F35B811421E891FD00204D7A /* GenderCell.swift */,
 				F35B811621E892B200204D7A /* BirthdateCell.swift */,
 				F35B811821E896B300204D7A /* StatusCell.swift */,
+				F3BA3A7B21E97E3700790C45 /* EditAvatarCell.swift */,
+				F3BA3A7D21E97FA300790C45 /* EditBirthdateCell.swift */,
+				F3BA3A7F21E980B200790C45 /* EditGenderCell.swift */,
+				F3BA3A8121E9811000790C45 /* EditEmailCell.swift */,
+				F3BA3A8321E9814100790C45 /* EditUserNameCell.swift */,
+				F3BA3A8521E9848E00790C45 /* EditNameCell.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -4767,6 +4785,7 @@
 				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 				"${BUILT_PRODUCTS_DIR}/1PasswordExtension/OnePasswordExtension.framework",
+				"${BUILT_PRODUCTS_DIR}/DLRadioButton/DLRadioButton.framework",
 				"${BUILT_PRODUCTS_DIR}/FLEX/FLEX.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
 				"${BUILT_PRODUCTS_DIR}/MobilePlayer/MobilePlayer.framework",
@@ -4794,6 +4813,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/OnePasswordExtension.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DLRadioButton.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FLEX.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MobilePlayer.framework",
@@ -4850,6 +4870,7 @@
 				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 				"${BUILT_PRODUCTS_DIR}/1PasswordExtension/OnePasswordExtension.framework",
+				"${BUILT_PRODUCTS_DIR}/DLRadioButton/DLRadioButton.framework",
 				"${BUILT_PRODUCTS_DIR}/FLEX/FLEX.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
 				"${BUILT_PRODUCTS_DIR}/MobilePlayer/MobilePlayer.framework",
@@ -4874,6 +4895,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/OnePasswordExtension.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DLRadioButton.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FLEX.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MobilePlayer.framework",
@@ -4963,6 +4985,7 @@
 				4192054C1D52F4FC004EEC5F /* SubscriptionCell.swift in Sources */,
 				412E1F3B1DB6D55000531FDA /* ChatMessageURLView.swift in Sources */,
 				8039442E20B342BB002F317A /* AddUsersViewController.swift in Sources */,
+				F3BA3A7E21E97FA300790C45 /* EditBirthdateCell.swift in Sources */,
 				35C7D19A202B130400B4BE5A /* RCDateFormatter.swift in Sources */,
 				444797D721D21491005416B9 /* YLDatePicker.swift in Sources */,
 				4466CBBB21D325A90015614A /* MessagesViewControllerGroup.swift in Sources */,
@@ -4977,6 +5000,7 @@
 				412A95D61FD94ED000954AA6 /* ChatMessageVideoView.swift in Sources */,
 				8067DAA6206D1883005E3369 /* APIResource.swift in Sources */,
 				F31C296221DFAB5200D8A4F8 /* UsersClient.swift in Sources */,
+				F3BA3A7C21E97E3700790C45 /* EditAvatarCell.swift in Sources */,
 				411F7D941F5179A50080E8AD /* ChatChannelHeaderCell.swift in Sources */,
 				41F167E91DAC4D4300775CCA /* ChatTitleView.swift in Sources */,
 				B5893BF41F6C4A5F00365768 /* UserReviewManager.swift in Sources */,
@@ -4985,6 +5009,7 @@
 				41552F661D30308C0081438D /* AuthManager.swift in Sources */,
 				F31C296421DFAB5200D8A4F8 /* AuthClient.swift in Sources */,
 				80AC400620EECB84005082E1 /* ChatBannerView.swift in Sources */,
+				F3BA3A8021E980B200790C45 /* EditGenderCell.swift in Sources */,
 				F35B810D21E8888C00204D7A /* LineCell.swift in Sources */,
 				33FD181D20D253AE00380BEC /* BaseNavigationBar.swift in Sources */,
 				4112DC5A1FFFB9B2005995E1 /* ModelMappeable.swift in Sources */,
@@ -5143,6 +5168,7 @@
 				140A95E6202F7074003FD564 /* DrawingControllerDelegate.swift in Sources */,
 				80CC78CF20DAE334002FBEBC /* SubscriptionsViewModel.swift in Sources */,
 				33E33ED620E0E59B00EF4560 /* AuthNavigationController.swift in Sources */,
+				F3BA3A8221E9811000790C45 /* EditEmailCell.swift in Sources */,
 				9990751D21766ECE00CAB7C8 /* BaseImageMessageCell.swift in Sources */,
 				33F73B302073F24200F03F29 /* NotificationViewController.swift in Sources */,
 				99DBB8742090360600382DB2 /* MessagesListControllerSearch.swift in Sources */,
@@ -5232,6 +5258,7 @@
 				41EB22331E5E474200AA3AE7 /* UploadVideoCompression.swift in Sources */,
 				802A4E24204D73100072CD23 /* AppGroup.swift in Sources */,
 				8076FDE62048CD0600114F28 /* UserDefaults+Group.swift in Sources */,
+				F3BA3A8421E9814100790C45 /* EditUserNameCell.swift in Sources */,
 				80D41E072099341C00034D1F /* PermissionsRequest.swift in Sources */,
 				335F4F03207A31D3005E14AF /* NotificationManager.swift in Sources */,
 				35E892CA201CDD9700B4BE5A /* PreferencesViewModel.swift in Sources */,
@@ -5256,6 +5283,7 @@
 				D15C83861F70991F001AB155 /* APIResponse.swift in Sources */,
 				8020C3D52199DDA400AA7133 /* MessagesViewControllerDrafting.swift in Sources */,
 				800FCD3E1F72893E00D9A692 /* MembersListViewController.swift in Sources */,
+				F3BA3A8621E9848E00790C45 /* EditNameCell.swift in Sources */,
 				806401351FB09F8A00990572 /* PermissionManager.swift in Sources */,
 				4124D835209A0533005374CD /* ChatDirectMessageHeaderCell.swift in Sources */,
 				413FB6DD1FE17E4500F010AA /* LoaderView.swift in Sources */,

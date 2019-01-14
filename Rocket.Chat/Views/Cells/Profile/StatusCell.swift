@@ -10,10 +10,15 @@ import UIKit
 
 class StatusCell: UITableViewCell {
 
+    var user:User?{
+        didSet{
+            
+            self.detailLabel.text = (user?.status).map { $0.rawValue }
+        }
+    }
     var item:ProfileItem?{
         didSet{
             self.titleLabel.text = item?.title
-            self.detailLabel.text = item?.value
         }
     }
     var lineView:UIView = UIView()
