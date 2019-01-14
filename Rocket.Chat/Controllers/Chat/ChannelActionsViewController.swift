@@ -547,6 +547,10 @@ extension ChannelActionsViewController: UITableViewDelegate {
                     
                     
                     self.alertSuccess(title: result.raw?.stringValue ?? "")
+                    
+                    ///added by steve
+                    self.dismiss(animated: true, completion: nil)
+                    
                 case .error(let error):
                     print(error)
                     
@@ -575,6 +579,9 @@ extension ChannelActionsViewController: UITableViewDelegate {
                     
                     
                     self.alertSuccess(title: result.raw?.stringValue ?? "")
+                    
+                    ///added by steve
+                    self.dismiss(animated: true, completion: nil)
                     
                 case .error(let error):
                     print(error)

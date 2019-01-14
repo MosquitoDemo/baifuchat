@@ -171,8 +171,16 @@ extension MessageManager {
         self.blockedUsersList = blockedUsers
 
         Realm.execute({ (realm) in
-            let messages = realm.objects(Message.self).filter("user.identifier = '\(userIdentifier)'")
-
+            
+            /*
+             commented by steve
+             因为Realm数据库的Message表中没有user.identifier，所以这里的断言表达式不成立
+             改为Message表中存在的字段userIdentifier就OK了
+             */
+//            let messages = realm.objects(Message.self).filter("user.identifier = '\(userIdentifier)'")
+            let messages = realm.objects(Message.self).filter("userIdentifier = '\(userIdentifier)'")
+            
+            
             for message in messages {
                 message.userBlocked = true
             }
