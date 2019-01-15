@@ -10,10 +10,14 @@ import UIKit
 
 class BirthdateCell: UITableViewCell {
 
+    var user:User?{
+        didSet{
+            self.detailLabel.text = user?.birthdate
+        }
+    }
     var item:ProfileItem?{
         didSet{
             self.titleLabel.text = item?.title
-            self.detailLabel.text = item?.value
         }
     }
     var lineView:UIView = UIView()

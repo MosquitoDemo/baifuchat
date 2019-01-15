@@ -11,9 +11,9 @@ protocol EditAvatarCellDelegate {
     func editAvatar(_ tap:UITapGestureRecognizer,_ cell:EditAvatarCell)
 }
 class EditAvatarCell: UITableViewCell {
-    
+    typealias TapGestureBlock = ((UITapGestureRecognizer)->Void)
     var delegate:EditAvatarCellDelegate?
-    var editBlock:((UITapGestureRecognizer)->Void)?
+    var editBlock:TapGestureBlock?
 
     let editingAvatarImage = UIImage(named: "Camera")?.imageWithTint(.RCEditingAvatarColor())
     var imagex:UIImage?{

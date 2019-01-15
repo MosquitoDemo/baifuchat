@@ -11,6 +11,7 @@ import DLRadioButton
 
 class EditGenderCell: UITableViewCell {
 
+    typealias RadioButtonBlock = ((DLRadioButton)->Void)
     var user:User?{
         didSet{
             if user?.gender == "male" {
@@ -30,7 +31,7 @@ class EditGenderCell: UITableViewCell {
     
     var lineView:UIView = UIView()
     var titleLabel:UILabel = UILabel()
-    var buttonSelectedBlock:((DLRadioButton)->Void)?
+    var buttonSelectedBlock:RadioButtonBlock?
 
     var maleButton:DLRadioButton = DLRadioButton(frame: CGRect(x: 0, y: 0, width: 80, height: 30))
     var femaleButton:DLRadioButton = DLRadioButton(frame:CGRect(x: 0, y: 0, width: 80, height: 30))

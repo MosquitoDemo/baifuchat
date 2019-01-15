@@ -157,9 +157,10 @@ final class SignupTableViewController: BaseTableViewController {
     }
 
     fileprivate func signup(with name: String, email: String, password: String, customFields: [String: String] = [:], startLoading: @escaping () -> Void, stopLoading: @escaping () -> Void) {
+        let userName = textFieldUsername.text ?? ""
         guard
             !name.isEmpty,
-            !(textFieldUsername.text ?? "").isEmpty,
+            !userName.isEmpty,
             !email.isEmpty,
             !password.isEmpty,
             (hasCustomFields ? !customFields.isEmpty : true)

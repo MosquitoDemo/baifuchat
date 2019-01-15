@@ -9,11 +9,16 @@
 import UIKit
 
 class UserNameCell: UITableViewCell {
+    var user:User?{
+        didSet{
+            self.detailLabel.text = user?.username
+
+        }
+    }
 
     var item:ProfileItem?{
         didSet{
             self.titleLabel.text = item?.title
-            self.detailLabel.text = item?.value
         }
     }
     var lineView:UIView = UIView()

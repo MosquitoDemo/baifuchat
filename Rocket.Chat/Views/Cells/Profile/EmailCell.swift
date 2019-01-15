@@ -10,10 +10,16 @@ import UIKit
 
 class EmailCell: UITableViewCell {
 
+    var user:User?{
+        didSet{
+            
+            self.detailLabel.text = user?.emails.first?.email
+            
+        }
+    }
     var item:ProfileItem?{
         didSet{
             self.titleLabel.text = item?.title
-            self.detailLabel.text = item?.value
         }
     }
     var lineView:UIView = UIView()

@@ -221,16 +221,21 @@ extension YLDatePicker: UIPickerViewDelegate, UIPickerViewDataSource {
         
         switch dateComponent {
         case .year:
-            dateRecord.year = dataArray[.year]![row]
-            backLabel.text = dateRecord.year
+            let year = dataArray[.year]?[row] ?? ""
+            dateRecord.year = year
+            backLabel.text = year
         case .month:
-            dateRecord.month = dataArray[.month]![row]
+            let month =  dataArray[.month]?[row] ?? ""
+            dateRecord.month = month
         case .day:
-            dateRecord.day = dataArray[.day]![row]
+            let day = dataArray[.day]?[row] ?? ""
+            dateRecord.day = day
         case .hour:
-            dateRecord.hour = dataArray[.hour]![row]
+            let hour = dataArray[.hour]?[row] ?? ""
+            dateRecord.hour = hour
         case .minute:
-            dateRecord.minute = dataArray[.minute]![row]
+            let minute = dataArray[.minute]?[row] ?? ""
+            dateRecord.minute = minute
         }
         reload(dateComponent: dateComponent)
     }

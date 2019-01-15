@@ -12,7 +12,6 @@ class StatusCell: UITableViewCell {
 
     var user:User?{
         didSet{
-            
             self.detailLabel.text = (user?.status).map { $0.rawValue }
         }
     }

@@ -10,10 +10,15 @@ import UIKit
 
 class GenderCell: UITableViewCell {
 
+    var user:User?{
+        didSet{
+            
+            self.detailLabel.text = user?.gender == "male" ? localized("myaccount.settings.profile.gender_male"):localized("myaccount.settings.profile.gender_female")
+        }
+    }
     var item:ProfileItem?{
         didSet{
             self.titleLabel.text = item?.title
-            self.detailLabel.text = item?.value == "male" ? localized("myaccount.settings.profile.gender_male"):localized("myaccount.settings.profile.gender_female")
         }
     }
     var lineView:UIView = UIView()
