@@ -169,10 +169,13 @@ extension ProfileViewController:UITableViewDataSource{
             
         case .birthdate:
             let cell = tableView.dequeueReusableCell(indexPath: indexPath, BirthdateCell.self)
+            cell.user = AuthManager.currentUser()
             cell.item = itemx
             return cell
         case .email:
             let cell = tableView.dequeueReusableCell(indexPath: indexPath, EmailCell.self)
+            cell.user = AuthManager.currentUser()
+
             cell.item = itemx
 
             return cell
@@ -181,16 +184,23 @@ extension ProfileViewController:UITableViewDataSource{
             return cell
         case .gender:
             let cell = tableView.dequeueReusableCell(indexPath: indexPath, GenderCell.self)
+            cell.user = AuthManager.currentUser()
+
             cell.item = itemx
 
             return cell
         case .name:
             let cell = tableView.dequeueReusableCell(indexPath: indexPath, NameCell.self)
+            cell.user = AuthManager.currentUser()
+
             cell.item = itemx
 
             return cell
         case .userName:
             let cell = tableView.dequeueReusableCell(indexPath: indexPath, UserNameCell.self)
+            cell.user = AuthManager.currentUser()
+
+            
             cell.item = itemx
 
             return cell
