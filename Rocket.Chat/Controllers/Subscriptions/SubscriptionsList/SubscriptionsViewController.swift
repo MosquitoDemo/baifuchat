@@ -43,6 +43,7 @@ final class SubscriptionsViewController: BaseViewController {
         NotificationCenter.default.removeObserver(self)
     }
 
+    
     override func viewDidLoad() {
         setupSearchBar()
         /*
@@ -56,7 +57,7 @@ final class SubscriptionsViewController: BaseViewController {
         super.viewDidLoad()
 
     
-        /*
+        
         let user = AuthManager.currentUser() ?? User()
         
         API.current()?.client(UsersClient.self).fetchUser(user, completion: { (response) in
@@ -69,7 +70,7 @@ final class SubscriptionsViewController: BaseViewController {
                 print(error)
             }
         })
- */
+ 
         /*
         let method = "UserPresence:".appending(UserPresence.away.rawValue)
         
