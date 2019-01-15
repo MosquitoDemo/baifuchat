@@ -201,6 +201,12 @@
 "new_room.cell.channel_name.title" = "チャンネル名";
 "new_room.group.invite_users" = "メンバーを招待する";
 "new_room.cell.invite_users.placeholder" = "ユーザー名";
+///added by steve
+"new_room.private_channel.title" = "プライベートチャンネル";
+"new_room.private_channel.title.description" = "指定されたユーザーはこのチャンネルにアクセスできます";
+
+
+
 
 // Notifications
 "notifications.action.reply" = "返信";

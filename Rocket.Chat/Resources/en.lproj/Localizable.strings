@@ -201,6 +201,10 @@
 "new_room.cell.channel_name.title" = "Channel Name";
 "new_room.group.invite_users" = "Invite users";
 "new_room.cell.invite_users.placeholder" = "Usernames";
+///added by steve
+"new_room.private_channel.title" = "Private Channel";
+"new_room.private_channel.title.description" = "The specified user can access this channel";
+
 
 // Notifications
 "notifications.action.reply" = "Reply";

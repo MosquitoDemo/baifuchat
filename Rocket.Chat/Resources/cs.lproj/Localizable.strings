@@ -201,6 +201,10 @@
 "new_room.cell.channel_name.title" = "Jméno kanálu";
 "new_room.group.invite_users" = "Invite users"; // TODO
 "new_room.cell.invite_users.placeholder" = "Usernames"; // TODO
+///added by steve
+"new_room.private_channel.title" = "Súkromný kanál";
+"new_room.private_channel.title.description" = "Zadaný používateľ má prístup k tomuto kanálu";
+
 
 // Notifications
 "notifications.action.reply" = "Reply";

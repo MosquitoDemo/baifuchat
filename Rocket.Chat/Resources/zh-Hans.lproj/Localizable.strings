@@ -201,6 +201,13 @@
 "new_room.cell.channel_name.title" = "通道名称";
 "new_room.group.invite_users" = "邀请用户";
 "new_room.cell.invite_users.placeholder" = "用户名";
+///added by steve
+"new_room.private_channel.title" = "私有通道";
+"new_room.private_channel.title.description" = "指定用户可访问此通道";
+
+
+
+
 
 // Notifications
 "notifications.action.reply" = "回复";

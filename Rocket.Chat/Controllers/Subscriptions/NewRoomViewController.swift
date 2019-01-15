@@ -36,6 +36,15 @@ final class NewRoomViewController: BaseViewController {
                     key: "read only room",
                     defaultValue: false,
                     enabled: true
+                ),
+                
+                ///added by steve
+                
+                FormCell(
+                    cell: .check(title: localized("new_room.private_channel.title"), description: localized("new_room.private_channel.title.description")),
+                    key: "private room",
+                    defaultValue: false,
+                    enabled: true
                 )
             ]
         ),
@@ -204,7 +213,38 @@ extension NewRoomViewController: FormTableViewDelegate {
             } else {
                 cellRoomName.imgLeftIcon.image = UIImage(named: "Cell Subscription Lock")?.imageWithTint(.RCDarkGray())
             }
+            
+            ///added by steve
+            ///打开公共通道——则自动关闭私有通道
+            ///关闭公共通道——则自动打开私有通道
+            let privateRoomCell = referenceOfCells["private room"] as? CheckTableViewCell
+            privateRoomCell?.switchOption.isOn = !value
+            
         }
+        
+        ///added by steve
+        if key == "private room",
+            let value = value as? Bool,
+            let cellRoomName = referenceOfCells["room name"] as? TextFieldTableViewCell {
+            
+                if value {
+                    cellRoomName.imgLeftIcon.image = UIImage(named: "Cell Subscription Lock")?.imageWithTint(.RCDarkGray())
+                } else {
+                    cellRoomName.imgLeftIcon.image = UIImage(named: "Cell Subscription Hashtag")?.imageWithTint(.RCDarkGray())
+
+                }
+            
+            ///added by steve
+            ///打开私有通道——则自动关闭公共通道
+            ///关闭私有通道——则自动打开公共通道
+            let publicRoomCell = referenceOfCells["public room"] as? CheckTableViewCell
+            publicRoomCell?.switchOption.isOn = !value
+
+            ///改变public room的值(因为发送到接口的地方没改,其取的正是public room的值)
+            setValues["public room"] = !value
+
+        }
+        
     }
 
     func getPreviousValue(key: String) -> Any? {
