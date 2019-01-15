@@ -19,7 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
 //        added by steve s打印Realm数据库路径
-//        print(Realm.current?.configuration.fileURL as Any)
+        print(Realm.current?.configuration.fileURL as Any)
         
         Launcher().prepareToLaunch(with: launchOptions)
 
