@@ -598,13 +598,7 @@ extension MessagesViewController{
 
 extension ComposerView{
     
-    
-    public override func updateConstraints() {
-        
-        
-        
-        
-    }
+
     
     
     /**
