@@ -128,7 +128,11 @@ final class MemberCell: UITableViewCell {
         
     }
 }
-
+extension MemberCell{
+    override func applyTheme() {
+        
+    }
+}
 // MARK: ReactorCell
 
 extension MemberCell: ReactorPresenter {

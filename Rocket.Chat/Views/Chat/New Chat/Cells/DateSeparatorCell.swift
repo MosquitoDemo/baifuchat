@@ -22,9 +22,15 @@ final class DateSeparatorCell: UICollectionViewCell, ChatCell, SizingCell {
 
     @IBOutlet weak var leftLine: UIView!
 
+    @IBOutlet weak var labelWidthConstraint: NSLayoutConstraint!
+    @IBOutlet weak var labelHeightConstraint: NSLayoutConstraint!
     @IBOutlet weak var date: UILabel! {
         didSet {
             date.font = date.font.bold()
+            date.backgroundColor = UIColor.groupTableViewBackground
+            date.textColor = UIColor.white
+            date.layer.cornerRadius = 5
+            date.layer.masksToBounds = true
         }
     }
 
@@ -44,9 +50,14 @@ final class DateSeparatorCell: UICollectionViewCell, ChatCell, SizingCell {
         date.text = viewModel.dateFormatted
     }
 
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        self.leftLine.isHidden = true
+        self.rightLine.isHidden = true
+        date.text = ""
+    }
     override func prepareForReuse() {
         super.prepareForReuse()
-        date.text = ""
     }
 }
 
@@ -55,12 +66,12 @@ final class DateSeparatorCell: UICollectionViewCell, ChatCell, SizingCell {
 extension DateSeparatorCell {
 
     override func applyTheme() {
-        super.applyTheme()
-
-        let theme = self.theme ?? .light
-        date.textColor = theme.auxiliaryText
-        leftLine.backgroundColor = theme.borderColor
-        rightLine.backgroundColor = theme.borderColor
+//        super.applyTheme()
+//
+//        let theme = self.theme ?? .light
+//        date.textColor = theme.auxiliaryText
+//        leftLine.backgroundColor = theme.borderColor
+//        rightLine.backgroundColor = theme.borderColor
     }
 
 }
