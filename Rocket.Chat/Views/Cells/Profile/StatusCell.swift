@@ -27,7 +27,12 @@ class StatusCell: UITableViewCell {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         
         self.selectionStyle = .none
-        self.accessoryType = .disclosureIndicator
+        
+        
+        ///commented by steve
+//        self.accessoryType = .disclosureIndicator
+        
+        
         self.lineView.backgroundColor = UIColor.groupTableViewBackground
         self.lineView.translatesAutoresizingMaskIntoConstraints = false
         self.contentView.addSubview(self.lineView)

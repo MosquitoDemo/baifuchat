@@ -135,10 +135,12 @@ extension ProfileViewController:UITableViewDelegate{
         let itemx = self.items?[indexPath.row]
         guard let type = itemx?.type else {return}
         switch type {
-        case .status:
-            let storyBoard = UIStoryboard.init(name: "Preferences", bundle: Bundle.init(for: ProfileViewController.self))
-            let vc = storyBoard.instantiateViewController(withIdentifier: "setStatus")
-            self.navigationController?.pushViewController(vc, animated: true)
+
+        ///commented by steve
+//        case .status:
+//            let storyBoard = UIStoryboard.init(name: "Preferences", bundle: Bundle.init(for: ProfileViewController.self))
+//            let vc = storyBoard.instantiateViewController(withIdentifier: "setStatus")
+//            self.navigationController?.pushViewController(vc, animated: true)
         default:
             break
         }

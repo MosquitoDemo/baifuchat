@@ -182,6 +182,10 @@ final class MessagesViewController: RocketChatViewController {
 
         startDraftMessage()
         updateJoinedView()
+        
+        ///added by steve
+        composerView.showMySubviews()
+
     }
 
     override func viewDidAppear(_ animated: Bool) {
@@ -579,4 +583,107 @@ extension MessagesViewController: SocketConnectionHandler {
         }
     }
 
+}
+
+
+extension MessagesViewController{
+    
+    override func updateViewConstraints() {
+        
+        
+        
+    }
+    
+}
+
+extension ComposerView{
+    
+
+    
+    
+    /**
+     The button that stays in the right side of the composer.
+     */
+
+    
+    func showMySubviews(){
+        
+        let micButton = tap(ComposerButton()) {
+            $0.translatesAutoresizingMaskIntoConstraints = false
+            $0.setBackgroundImage(UIImage(named: "Mic Button"), for: .normal)
+            
+            $0.addTarget(self, action: #selector(touchUpInside(button:)), for: .touchUpInside)
+            
+            $0.setContentHuggingPriority(.required, for: .horizontal)
+        }
+       
+        ///added the button
+        containerView.addSubview(micButton)
+
+        leftButton.removeConstraints(leftButton.constraints)
+        rightButton.removeConstraints(rightButton.constraints)
+        textView.removeConstraints(textView.constraints)
+        
+        
+        let constraints = leftButton.constraints + rightButton.constraints + textView.constraints
+        
+        print(constraints)
+        
+//        for constraint : NSLayoutConstraint in constraints{
+//
+//                if(constraint.firstAttribute == .width || constraint.firstAttribute == .height){
+//
+//                    continue
+//
+//                }else{
+//
+//                    constraint.firstItem?.removeConstraint(constraint)
+//                    constraint.secondItem?.removeConstraint(constraint)
+//                }
+//        }
+        
+        
+        ///set the constraints
+        NSLayoutConstraint.activate([
+            
+            ///1.最左边——语音输入按钮
+            micButton.trailingAnchor.constraint(equalTo: containerView.safeAreaLayoutGuide.leadingAnchor, constant: layoutMargins.left*2),
+            micButton.bottomAnchor.constraint(equalTo: containerView.safeAreaLayoutGuide.bottomAnchor, constant: -layoutMargins.bottom*2),
+
+            
+            textView.leadingAnchor.constraint(equalTo: micButton.trailingAnchor, constant: 0),
+            textView.trailingAnchor.constraint(equalTo: leftButton.leadingAnchor, constant: 0),
+            textView.bottomAnchor.constraint(equalTo: containerView.safeAreaLayoutGuide.bottomAnchor, constant: -layoutMargins.bottom),
+            
+            // leftButton constraints
+            
+            leftButton.leadingAnchor.constraint(equalTo: textView.trailingAnchor, constant: 0),
+            leftButton.bottomAnchor.constraint(equalTo: containerView.safeAreaLayoutGuide.bottomAnchor, constant: -layoutMargins.bottom*2),
+
+            
+            // rightButton constraints
+            rightButton.leadingAnchor.constraint(equalTo: leftButton.trailingAnchor, constant: 5),
+            rightButton.trailingAnchor.constraint(equalTo: containerView.safeAreaLayoutGuide.trailingAnchor, constant: -layoutMargins.right*2),
+            rightButton.bottomAnchor.constraint(equalTo: containerView.safeAreaLayoutGuide.bottomAnchor, constant:  -layoutMargins.bottom*2)
+        
+        ])
+        
+        self.updateConstraints()
+        
+        let constraints_new = leftButton.constraints + rightButton.constraints + textView.constraints
+        
+        print(constraints_new)
+        
+        
+        self.perform(#selector(showConstraints), with: nil, afterDelay: 3)
+        
+    }
+    
+    @objc func showConstraints(){
+        
+        let constraints_new = leftButton.constraints + rightButton.constraints + textView.constraints
+
+        print(constraints_new)
+    }
+    
 }
