@@ -184,8 +184,7 @@ final class MessagesViewController: RocketChatViewController {
         updateJoinedView()
         
         ///added by steve
-        composerView.showMySubviews()
-
+//        self.composerView.insertMicButton()
     }
 
     override func viewDidAppear(_ animated: Bool) {
@@ -224,6 +223,9 @@ final class MessagesViewController: RocketChatViewController {
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         updateEmptyStateFrame()
+        
+        ///added by steve
+//        self.composerView.updateSubviewsFrames()
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -585,19 +587,56 @@ extension MessagesViewController: SocketConnectionHandler {
 
 }
 
-
-extension MessagesViewController{
+extension ComposerView{
     
-    override func updateViewConstraints() {
+    
+    func insertMicButton(){
         
+        let micButton = tap(ComposerButton()) {
+            $0.translatesAutoresizingMaskIntoConstraints = false
+            $0.setBackgroundImage(UIImage(named: "Mic Button"), for: .normal)
+            $0.addTarget(self, action: #selector(touchUpInside(button:)), for: .touchUpInside)
+            $0.setContentHuggingPriority(.required, for: .horizontal)
+        }
         
+        micButton.tag = 7688;
+        containerView.addSubview(micButton)
+        containerView.bringSubviewToFront(micButton)
+        micButton.backgroundColor = .red
         
     }
     
-}
+    func updateSubviewsFrames(){
 
-extension ComposerView{
-    
+        ///1.micBotton
+        let micButton = containerView.viewWithTag(7688)
+        let leftButtonOriginalFrameKey = "leftButtonOriginalFrameKey"
+        var leftButtonFrameString = UserDefaults.standard.object(forKey: leftButtonOriginalFrameKey)
+        var leftButtonOriginalFrame : CGRect
+        if(leftButtonFrameString == nil){
+            leftButtonOriginalFrame = leftButton.frame
+            leftButtonFrameString = NSCoder.string(for: leftButtonOriginalFrame)
+            UserDefaults.standard.set(leftButtonFrameString, forKey: leftButtonOriginalFrameKey)
+        }
+        leftButtonOriginalFrame = NSCoder.cgRect(for: leftButtonFrameString as! String)
+        micButton?.frame = leftButtonOriginalFrame
+            
+        ///2.textView
+        let textViewOriginalFrameKey = "textViewOriginalFrameKey"
+        var textViewFrameString = UserDefaults.standard.object(forKey: textViewOriginalFrameKey)
+        var textViewOriginalFrame : CGRect
+        if(textViewFrameString == nil){
+            textViewOriginalFrame = textView.frame
+            textViewFrameString = NSCoder.string(for: textViewOriginalFrame)
+            UserDefaults.standard.set(textViewFrameString, forKey: textViewOriginalFrameKey)
+        }
+        textViewOriginalFrame = NSCoder.cgRect(for: textViewFrameString as! String)
+        self.textView.frame = CGRect(x: textViewOriginalFrame.minX, y: textViewOriginalFrame.minY, width: textViewOriginalFrame.width - 16 - leftButtonOriginalFrame.width, height: textViewOriginalFrame.height)
+        
+        ///3.leftButton
+        leftButton.frame = CGRect(x: self.textView.frame.maxX, y: leftButtonOriginalFrame.minY, width: leftButtonOriginalFrame.width, height: leftButtonOriginalFrame.height)
+        
+    }
 
     
     
@@ -619,11 +658,6 @@ extension ComposerView{
        
         ///added the button
         containerView.addSubview(micButton)
-
-        leftButton.removeConstraints(leftButton.constraints)
-        rightButton.removeConstraints(rightButton.constraints)
-        textView.removeConstraints(textView.constraints)
-        
         
         let constraints = leftButton.constraints + rightButton.constraints + textView.constraints
         
@@ -644,29 +678,28 @@ extension ComposerView{
         
         
         ///set the constraints
-        NSLayoutConstraint.activate([
-            
+//        NSLayoutConstraint.activate([
+        
             ///1.最左边——语音输入按钮
-            micButton.trailingAnchor.constraint(equalTo: containerView.safeAreaLayoutGuide.leadingAnchor, constant: layoutMargins.left*2),
-            micButton.bottomAnchor.constraint(equalTo: containerView.safeAreaLayoutGuide.bottomAnchor, constant: -layoutMargins.bottom*2),
-
+            micButton.trailingAnchor.constraint(equalTo: containerView.safeAreaLayoutGuide.leadingAnchor, constant: layoutMargins.left*2).isActive = true
+            micButton.bottomAnchor.constraint(equalTo: containerView.safeAreaLayoutGuide.bottomAnchor, constant: -layoutMargins.bottom*2).isActive = true
             
-            textView.leadingAnchor.constraint(equalTo: micButton.trailingAnchor, constant: 0),
-            textView.trailingAnchor.constraint(equalTo: leftButton.leadingAnchor, constant: 0),
-            textView.bottomAnchor.constraint(equalTo: containerView.safeAreaLayoutGuide.bottomAnchor, constant: -layoutMargins.bottom),
+            textView.leadingAnchor.constraint(equalTo: micButton.trailingAnchor, constant: 0).isActive = true
+            textView.trailingAnchor.constraint(equalTo: leftButton.leadingAnchor, constant: 0).isActive = true
+            textView.bottomAnchor.constraint(equalTo: containerView.safeAreaLayoutGuide.bottomAnchor, constant: -layoutMargins.bottom).isActive = true
             
             // leftButton constraints
             
-            leftButton.leadingAnchor.constraint(equalTo: textView.trailingAnchor, constant: 0),
-            leftButton.bottomAnchor.constraint(equalTo: containerView.safeAreaLayoutGuide.bottomAnchor, constant: -layoutMargins.bottom*2),
+            leftButton.leadingAnchor.constraint(equalTo: textView.trailingAnchor, constant: 0).isActive = true
+            leftButton.bottomAnchor.constraint(equalTo: containerView.safeAreaLayoutGuide.bottomAnchor, constant: -layoutMargins.bottom*2).isActive = true
 
             
             // rightButton constraints
-            rightButton.leadingAnchor.constraint(equalTo: leftButton.trailingAnchor, constant: 5),
-            rightButton.trailingAnchor.constraint(equalTo: containerView.safeAreaLayoutGuide.trailingAnchor, constant: -layoutMargins.right*2),
-            rightButton.bottomAnchor.constraint(equalTo: containerView.safeAreaLayoutGuide.bottomAnchor, constant:  -layoutMargins.bottom*2)
+            rightButton.leadingAnchor.constraint(equalTo: leftButton.trailingAnchor, constant: 5).isActive = true
+            rightButton.trailingAnchor.constraint(equalTo: containerView.safeAreaLayoutGuide.trailingAnchor, constant: -layoutMargins.right*2).isActive = true
+            rightButton.bottomAnchor.constraint(equalTo: containerView.safeAreaLayoutGuide.bottomAnchor, constant:  -layoutMargins.bottom*2).isActive = true
         
-        ])
+//        ])
         
         self.updateConstraints()
         
