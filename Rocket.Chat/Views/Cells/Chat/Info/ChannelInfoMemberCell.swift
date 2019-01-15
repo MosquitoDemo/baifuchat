@@ -252,7 +252,7 @@ class ChannelInfoMemberCell: UITableViewCell, ChannelInfoCellProtocol {
 
 extension ChannelInfoMemberCell {
     override func applyTheme() {
-        super.applyTheme()
+//        super.applyTheme()
         //        guard let theme = theme else { return }
         //        imageViewIcon.tintColor = theme.titleText
     }
