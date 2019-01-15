@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import RocketChatViewController
+
 
 private typealias ListSegueData = (title: String, query: String?, isListingMentions: Bool)
 
@@ -86,11 +88,10 @@ class ChannelActionsViewController: BaseViewController {
                 
                 let data = MembersListViewData()
                 data.subscription = subscriptionx
-                data.loadMoreMembers { [weak self] in
-//                    print(data.member(at: 1).displayName)
-//                    https://chat-stg.baifu-tech.net/avatar/Abc199?format=jpeg
+                data.loadMoreMembers {
                     
                 }
+ 
                 
                 header = [
 //                    ChannelInfoBasicCellData(title: "#\(subscription.name)"),

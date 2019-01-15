@@ -56,7 +56,7 @@ extension LoginTableViewController {
                         realm.add(user, update: true)
                     }
 
-                    if user.username != nil {
+                    if let _ = user.username {
                         self.dismiss(animated: true, completion: nil)
                         AppManager.reloadApp()
                     } else {

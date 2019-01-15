@@ -7,7 +7,9 @@
 //
 
 import UIKit
-
+class DrawingBrushColorCell: UICollectionViewCell {
+    
+}
 final class DrawingBrushColorViewController: BaseViewController {
     weak var delegate: DrawingBrushColorDelegate?
     private let viewModel = DrawingBrushColorViewModel()
@@ -58,8 +60,7 @@ extension DrawingBrushColorViewController: UICollectionViewDataSource {
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: viewModel.cellIdentifier, for: indexPath)
-
+        let cell = collectionView.dequeueReusableCollectionCell(DrawingBrushColorCell.self, indexPath: indexPath)
         let color = viewModel.availableColors[indexPath.row]
         cell.contentView.backgroundColor = color
 

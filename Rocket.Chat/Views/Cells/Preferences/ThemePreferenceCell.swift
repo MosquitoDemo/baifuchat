@@ -10,7 +10,7 @@ import UIKit
 
 class ThemePreferenceCell: UITableViewCell {
 
-    static let identifier = "ThemePreferenceCell"
+    static let identifier = String(describing:ThemePreferenceCell.self)
     static let cellHeight: CGFloat = 78
 
     let borderWidth: CGFloat = 1.0
