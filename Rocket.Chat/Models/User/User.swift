@@ -28,6 +28,7 @@ enum UserStatus: String, CustomStringConvertible {
 }
 
 final class User: BaseModel {
+   
     @objc dynamic var birthdate:String?
     @objc dynamic var gender:String?
     @objc dynamic var username: String?

@@ -24,7 +24,7 @@ final class Auth: Object {
     }
 
     @objc dynamic var settings: AuthSettings?
-
+    @objc dynamic var me:User?
     @objc dynamic var token: String?
     @objc dynamic var tokenExpires: Date?
     @objc dynamic var lastAccess: Date?

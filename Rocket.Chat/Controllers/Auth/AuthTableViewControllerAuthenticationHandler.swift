@@ -53,10 +53,10 @@ extension AuthTableViewController {
                 
 
                 if let user = resource.user {
-                    let realm = Realm.current
-                    Realm.executeOnMainThread(realm: realm) { realm in
-                        realm.add(user, update: true)
-                    }
+//                    let realm = Realm.current
+//                    Realm.executeOnMainThread(realm: realm) { realm in
+//                        realm.add(user, update: true)
+//                    }
 
                     if user.username != nil {
                         self.dismiss(animated: true, completion: nil)

@@ -20,6 +20,7 @@ final class MeResource: APIResource {
         guard let raw = raw else { return nil }
 
         let user = User()
+        
         user.map(raw, realm: nil)
         return user
     }

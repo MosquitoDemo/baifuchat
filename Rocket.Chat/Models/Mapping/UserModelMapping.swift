@@ -13,7 +13,7 @@ import RealmSwift
 extension User: ModelMappeable {
     func map(_ values: JSON, realm: Realm? = Realm.current) {
         if self.identifier == nil {
-            self.identifier = values["_id"].string
+            self.identifier = values["_id"].stringValue
         }
 
         if let username = values["username"].string {
@@ -93,7 +93,7 @@ extension User: ModelMappeable {
         if let gender = values["customFields"]["gender"].string{
             self.gender = gender
         }
-            realm?.add(self, update: true)
+       
     }
 
 }

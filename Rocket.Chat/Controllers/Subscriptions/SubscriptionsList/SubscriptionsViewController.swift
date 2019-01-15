@@ -57,7 +57,7 @@ final class SubscriptionsViewController: BaseViewController {
         super.viewDidLoad()
 
     
-        
+        /*
         let user = AuthManager.currentUser() ?? User()
         
         API.current()?.client(UsersClient.self).fetchUser(user, completion: { (response) in
@@ -70,7 +70,7 @@ final class SubscriptionsViewController: BaseViewController {
                 print(error)
             }
         })
- 
+ */
         /*
         let method = "UserPresence:".appending(UserPresence.away.rawValue)
         
@@ -151,6 +151,7 @@ final class SubscriptionsViewController: BaseViewController {
 
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+        
         if !(searchBar?.text?.isEmpty ?? true) {
             searchBar?.perform(#selector(becomeFirstResponder), with: nil, afterDelay: 0.1)
         }
