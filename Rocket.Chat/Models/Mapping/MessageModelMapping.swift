@@ -55,7 +55,7 @@ extension Message: ModelMappeable {
 //                        user.identifier = values["u"]["_id"].string
                         user.username = values["u"]["username"].string
                         user.name = values["u"]["name"].string
-                    
+//                    realm.add(user, update: true)
                     
                 } else {
                     let user = User()

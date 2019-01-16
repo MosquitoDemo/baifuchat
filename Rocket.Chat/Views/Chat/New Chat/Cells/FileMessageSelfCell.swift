@@ -29,7 +29,9 @@ class FileMessageSelfCell: BaseMessageCell, SizingCell {
     }
     
     @IBOutlet weak var labelDescriptionTopConstraint: NSLayoutConstraint!
+    /*
     @IBOutlet weak var username: UILabel!
+ */
     @IBOutlet weak var date: UILabel!
     @IBOutlet weak var statusView: UIImageView!
     @IBOutlet weak var labelDescription: UILabel!
@@ -44,7 +46,7 @@ class FileMessageSelfCell: BaseMessageCell, SizingCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        insertGesturesIfNeeded(with: username)
+//        insertGesturesIfNeeded(with: username)
     }
     
     override func configure(completeRendering: Bool) {
@@ -65,7 +67,7 @@ class FileMessageSelfCell: BaseMessageCell, SizingCell {
             with: avatarView,
             date: date,
             status: statusView,
-            and: username,
+            and: UILabel(),
             completeRendering: completeRendering
         )
         
@@ -83,6 +85,7 @@ class FileMessageSelfCell: BaseMessageCell, SizingCell {
 
 extension FileMessageSelfCell {
     override func applyTheme() {
+        /*
         super.applyTheme()
         
         let theme = self.theme ?? .light
@@ -91,5 +94,6 @@ extension FileMessageSelfCell {
         labelDescription.textColor = theme.controlText
         fileButton.backgroundColor = theme.chatComponentBackground
         fileButton.setTitleColor(theme.titleText, for: .normal)
+ */
     }
 }

@@ -29,8 +29,9 @@ class BasicMessageSelfCell: BaseMessageCell, SizingCell {
             avatarContainerView.addSubview(avatarView)
         }
     }
-    
+    /*
     @IBOutlet weak var username: UILabel!
+ */
     @IBOutlet weak var date: UILabel!
     @IBOutlet weak var statusView: UIImageView!
     @IBOutlet weak var text: RCTextView!
@@ -70,7 +71,7 @@ class BasicMessageSelfCell: BaseMessageCell, SizingCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        username.text = ""
+//        username.text = ""
         date.text = ""
         text.message = nil
         avatarView.prepareForReuse()
@@ -78,7 +79,7 @@ class BasicMessageSelfCell: BaseMessageCell, SizingCell {
         textHeightConstraint.constant = initialTextHeightConstant
         initialTextHeightConstant = textHeightConstraint.constant
  */
-        insertGesturesIfNeeded(with: username)
+//        insertGesturesIfNeeded(with: username)
     }
     
     override func configure(completeRendering: Bool) {
@@ -86,7 +87,7 @@ class BasicMessageSelfCell: BaseMessageCell, SizingCell {
             with: avatarView,
             date: date,
             status: statusView,
-            and: username,
+            and: UILabel(),
             completeRendering: completeRendering
         )
         
@@ -109,7 +110,7 @@ class BasicMessageSelfCell: BaseMessageCell, SizingCell {
                 messageText.setFontColor(MessageTextFontAttributes.failedFontColor(for: theme))
             }
             
-            self.text.textView.contentInset = UIEdgeInsets(top: 10, left: 10, bottom: 5, right: 10)
+            self.text.textView.contentInset = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
             self.text.textView.backgroundColor = UIColor(hex: "#1D74F5")
             self.text.textView.layer.cornerRadius = 5
             self.text.textView.layer.masksToBounds = true
@@ -137,7 +138,7 @@ class BasicMessageSelfCell: BaseMessageCell, SizingCell {
             let estimateWidth = text.textView.sizeThatFits(estimateSize).width
             if estimateWidth < textWidth{
                 textWidthConstraint.constant = estimateWidth + 30
-                textHeightConstraint.constant = 35
+                textHeightConstraint.constant = 40
             }else{
                 
                 textHeightConstraint.constant = text.textView.sizeThatFits(
@@ -159,12 +160,14 @@ class BasicMessageSelfCell: BaseMessageCell, SizingCell {
 extension BasicMessageSelfCell{
     
     override func applyTheme() {
+    /*
         super.applyTheme()
         
         let theme = self.theme ?? .light
         date.textColor = theme.auxiliaryText
-        username.textColor = theme.titleText
+//        username.textColor = theme.titleText
         updateText()
+ */
     }
     
 }

@@ -34,8 +34,9 @@ final class VideoMessageCell: BaseVideoMessageCell, SizingCell {
             avatarContainerView.addSubview(avatarView)
         }
     }
-
+/*
     @IBOutlet weak var username: UILabel!
+ */
     @IBOutlet weak var date: UILabel!
     @IBOutlet weak var statusView: UIImageView!
     @IBOutlet weak var activityIndicatorView: UIActivityIndicatorView!
@@ -55,7 +56,7 @@ final class VideoMessageCell: BaseVideoMessageCell, SizingCell {
         super.awakeFromNib()
 
         setupWidthConstraint()
-        insertGesturesIfNeeded(with: username)
+//        insertGesturesIfNeeded(with: username)
     }
 
     override func configure(completeRendering: Bool) {
@@ -78,7 +79,7 @@ final class VideoMessageCell: BaseVideoMessageCell, SizingCell {
             with: avatarView,
             date: date,
             status: statusView,
-            and: username,
+            and: UILabel(),
             completeRendering: completeRendering
         )
 
@@ -105,6 +106,7 @@ final class VideoMessageCell: BaseVideoMessageCell, SizingCell {
 
 extension VideoMessageCell {
     override func applyTheme() {
+        /*
         super.applyTheme()
 
         let theme = self.theme ?? .light
@@ -112,5 +114,6 @@ extension VideoMessageCell {
         username.textColor = theme.titleText
         labelDescription.textColor = theme.controlText
         imageViewThumb.layer.borderColor = theme.borderColor.cgColor
+ */
     }
 }

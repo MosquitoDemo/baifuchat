@@ -27,8 +27,9 @@ final class TextAttachmentMessageSelfCell: BaseTextAttachmentMessageCell, Sizing
             avatarContainerView.addSubview(avatarView)
         }
     }
-    
+    /*
     @IBOutlet weak var username: UILabel!
+ */
     @IBOutlet weak var date: UILabel!
     @IBOutlet weak var statusView: UIImageView!
     @IBOutlet weak var textContainer: UIView! {
@@ -108,7 +109,7 @@ final class TextAttachmentMessageSelfCell: BaseTextAttachmentMessageCell, Sizing
         gesture.delegate = self
         textContainer.addGestureRecognizer(gesture)
         
-        insertGesturesIfNeeded(with: username)
+//        insertGesturesIfNeeded(with: username)
     }
     
     override func configure(completeRendering: Bool) {
@@ -127,7 +128,7 @@ final class TextAttachmentMessageSelfCell: BaseTextAttachmentMessageCell, Sizing
             with: avatarView,
             date: date,
             status: statusView,
-            and: username,
+            and: UILabel(),
             completeRendering: completeRendering
         )
         
@@ -185,6 +186,7 @@ final class TextAttachmentMessageSelfCell: BaseTextAttachmentMessageCell, Sizing
 
 extension TextAttachmentMessageSelfCell {
     override func applyTheme() {
+        /*
         super.applyTheme()
         
         let theme = self.theme ?? .light
@@ -197,6 +199,7 @@ extension TextAttachmentMessageSelfCell {
         textContainer.layer.borderColor = theme.borderColor.cgColor
         
         configure(statusColor: statusColor)
+ */
     }
 }
 

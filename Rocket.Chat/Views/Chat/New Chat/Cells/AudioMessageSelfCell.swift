@@ -36,8 +36,9 @@ final class AudioMessageSelfCell: BaseAudioMessageCell, SizingCell {
             viewPlayerBackground.layer.cornerRadius = 4
         }
     }
-    
+    /*
     @IBOutlet weak var username: UILabel!
+ */
     @IBOutlet weak var date: UILabel!
     @IBOutlet weak var statusView: UIImageView!
     @IBOutlet weak var activityIndicatorView: UIActivityIndicatorView!
@@ -77,7 +78,7 @@ final class AudioMessageSelfCell: BaseAudioMessageCell, SizingCell {
         super.awakeFromNib()
         
         updateTimer = setupPlayerTimer(with: slider, and: labelAudioTime)
-        insertGesturesIfNeeded(with: username)
+//        insertGesturesIfNeeded(with: username)
     }
     
     override func configure(completeRendering: Bool) {
@@ -86,7 +87,7 @@ final class AudioMessageSelfCell: BaseAudioMessageCell, SizingCell {
             with: avatarView,
             date: date,
             status: statusView,
-            and: username,
+            and: UILabel(),
             completeRendering: completeRendering
         )
         
@@ -123,15 +124,17 @@ final class AudioMessageSelfCell: BaseAudioMessageCell, SizingCell {
 
 extension AudioMessageSelfCell {
     override func applyTheme() {
+        /*
         super.applyTheme()
         
         let theme = self.theme ?? .light
         date.textColor = theme.auxiliaryText
-        username.textColor = theme.titleText
+//        username.textColor = theme.titleText
         viewPlayerBackground.backgroundColor = theme.chatComponentBackground
         labelAudioTime.textColor = theme.auxiliaryText
         updatePlayingState(with: buttonPlay)
         viewPlayerBackground.layer.borderColor = theme.borderColor.cgColor
+ */
     }
 }
 
