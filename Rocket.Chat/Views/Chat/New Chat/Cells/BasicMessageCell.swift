@@ -30,7 +30,9 @@ final class BasicMessageCell: BaseMessageCell, SizingCell {
         }
     }
 
+/*
     @IBOutlet weak var username: UILabel!
+ */
     @IBOutlet weak var date: UILabel!
     @IBOutlet weak var statusView: UIImageView!
     @IBOutlet weak var text: RCTextView!
@@ -69,7 +71,7 @@ final class BasicMessageCell: BaseMessageCell, SizingCell {
     override func awakeFromNib() {
         super.awakeFromNib()
 
-        username.text = ""
+//        username.text = ""
         date.text = ""
         text.message = nil
         avatarView.prepareForReuse()
@@ -77,7 +79,7 @@ final class BasicMessageCell: BaseMessageCell, SizingCell {
         textHeightConstraint.constant = initialTextHeightConstant
         initialTextHeightConstant = textHeightConstraint.constant
  */
-        insertGesturesIfNeeded(with: username)
+//        insertGesturesIfNeeded(with: username)
     }
 
     override func configure(completeRendering: Bool) {
@@ -85,7 +87,7 @@ final class BasicMessageCell: BaseMessageCell, SizingCell {
             with: avatarView,
             date: date,
             status: statusView,
-            and: username,
+            and: UILabel(),
             completeRendering: completeRendering
         )
 
@@ -156,12 +158,14 @@ final class BasicMessageCell: BaseMessageCell, SizingCell {
 extension BasicMessageCell {
 
     override func applyTheme() {
+        /*
         super.applyTheme()
 
         let theme = self.theme ?? .light
         date.textColor = theme.auxiliaryText
-        username.textColor = theme.titleText
+//        username.textColor = theme.titleText
         updateText()
+ */
     }
 
 }

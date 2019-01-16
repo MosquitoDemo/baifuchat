@@ -36,3 +36,8 @@ final class LoaderCell: UICollectionViewCell, ChatCell, SizingCell {
         activityIndicator.stopAnimating()
     }
 }
+extension LoaderCell{
+    override func applyTheme() {
+        
+    }
+}

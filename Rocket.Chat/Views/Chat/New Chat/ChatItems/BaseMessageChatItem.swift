@@ -16,7 +16,7 @@ class BaseMessageChatItem {
             return ""
         }
 
-        return RCDateFormatter.time(date)
+        return RCDateFormatter.time24(date)
     }
 
     init(user: UnmanagedUser?, message: UnmanagedMessage?) {
