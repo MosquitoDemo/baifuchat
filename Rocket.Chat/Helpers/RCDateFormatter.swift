@@ -17,12 +17,18 @@ final class RCDateFormatter {
         return self.dateFormatter.string(from: date)
     }
 
-    static func time(_ date: Date, timeStyle: DateFormatter.Style = .short) -> String {
+    static func time(_ date: Date, timeStyle: DateFormatter.Style = .medium) -> String {
         dateFormatter.dateStyle = .none
         dateFormatter.timeStyle = timeStyle
         return self.dateFormatter.string(from: date)
     }
 
+    static func time24(_ date: Date, timeStyle: DateFormatter.Style = .medium) -> String {
+        dateFormatter.dateStyle = .none
+        dateFormatter.timeStyle = timeStyle
+        dateFormatter.dateFormat = "HH:mm:ss"
+        return self.dateFormatter.string(from: date)
+    }
     static func datetime(_ date: Date, dateStyle: DateFormatter.Style = .medium, timeStyle: DateFormatter.Style = .short) -> String {
         dateFormatter.dateStyle = dateStyle
         dateFormatter.timeStyle = timeStyle

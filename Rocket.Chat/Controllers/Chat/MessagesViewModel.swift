@@ -214,7 +214,6 @@ final class MessagesViewModel {
         if let section = section {
             return dataSorted.firstIndex(of: section)
         }
-
         return nil
     }
 
