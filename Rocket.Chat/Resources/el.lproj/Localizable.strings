@@ -201,6 +201,9 @@
 "new_room.cell.channel_name.title" = "Όνομα Καναλιού";
 "new_room.group.invite_users" = "Προσκαλέστε χρήστες";
 "new_room.cell.invite_users.placeholder" = "Ονόματα χρηστών";
+///added by steve
+"new_room.private_channel.title" = "Ιδιωτικό κανάλι";
+"new_room.private_channel.title.description" = "Ο συγκεκριμένος χρήστης μπορεί να έχει πρόσβαση σε αυτό το κανάλι";
 
 // Notifications
 "notifications.action.reply" = "Απάντηση";

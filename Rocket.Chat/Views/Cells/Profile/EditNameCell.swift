@@ -62,6 +62,8 @@ class EditNameCell: UITableViewCell {
         self.lineView.trailingAnchor.constraint(equalTo: self.contentView.trailingAnchor).isActive = true
         self.lineView.heightAnchor.constraint(equalToConstant: 0.5).isActive = true
         
+        ///added by steve
+        self.detailTextField.addTarget(self, action: #selector(textDidChangeAction(_:)), for: .editingChanged)
     }
     @objc func editNameChanged(_ textField:UITextField){
         self.nameChangedBlock?(textField)
@@ -87,3 +89,26 @@ extension EditNameCell{
         
     }
 }
+
+///edded by steve
+extension EditNameCell : UITextFieldDelegate{
+    
+    @objc func textDidChangeAction(_ textField : UITextField){
+        
+        let content = textField.text ?? ""
+        
+        if(content.count > 16){
+            
+            let bufferString = content
+            let startIndex = bufferString.startIndex
+            let endIndex = bufferString.index(startIndex, offsetBy: 16)
+            let subString = bufferString.prefix(upTo: endIndex)
+            textField.text = String(subString)
+            
+        }
+        
+    }
+    
+}
+
+

@@ -185,6 +185,7 @@ final class MessagesViewController: RocketChatViewController {
         
         ///added by steve
 //        self.composerView.insertMicButton()
+        addMicButton()
     }
 
     override func viewDidAppear(_ animated: Bool) {
@@ -707,16 +708,36 @@ extension ComposerView{
         
         print(constraints_new)
         
+    }
+    
+}
+
+
+extension MessagesViewController{
+    
+    func addMicButton(){
         
-        self.perform(#selector(showConstraints), with: nil, afterDelay: 3)
+        
+//        self.view.translatesAutoresizingMaskIntoConstraints = false
+        
+        let micButton = UIButton(type: .system)
+        self.view.addSubview(micButton)
+        self.view.bringSubviewToFront(micButton)
+//        micButton.setBackgroundImage(UIImage(named: "Mic Button"), for: .normal)
+//        micButton.leadingAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.leadingAnchor, constant: 10).isActive = true
+//        micButton.bottomAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.bottomAnchor, constant: -90 - 30).isActive = true
+//        micButton.widthAnchor.constraint(equalToConstant: 24).isActive = true
+//        micButton.heightAnchor.constraint(equalToConstant: 24).isActive = true
+        micButton.addTarget(self, action: #selector(micAction), for: .touchUpInside)
+        micButton.tag = 8991
+        micButton.backgroundColor = .red
+        
         
     }
     
-    @objc func showConstraints(){
+    @objc func micAction(){
         
-        let constraints_new = leftButton.constraints + rightButton.constraints + textView.constraints
-
-        print(constraints_new)
+        print("micAction")
     }
     
 }

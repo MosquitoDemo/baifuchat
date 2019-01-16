@@ -60,7 +60,12 @@ extension LoginTableViewController {
                         self.dismiss(animated: true, completion: nil)
                         AppManager.reloadApp()
                     } else {
-                        self.performSegue(withIdentifier: "RequestUsername", sender: nil)
+                        
+                        ///modified by steve
+//                        self.performSegue(withIdentifier: "RequestUsername", sender: nil)
+                        self.dismiss(animated: true, completion: nil)
+                        AppManager.reloadApp()
+
                     }
 
                     AnalyticsManager.log(event: .login)
