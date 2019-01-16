@@ -29,7 +29,12 @@ final class NewRoomViewController: BaseViewController {
             cells: [
                 createPublicChannelSwitch(
                     allowPublic: AuthManager.currentUser()?.hasPermission(.createPublicChannels) ?? false,
-                    allowPrivate: AuthManager.currentUser()?.hasPermission(.createPublicChannels) ?? false
+//                    allowPrivate: AuthManager.currentUser()?.hasPermission(.createPublicChannels) ?? false
+
+                    ///modified by steve
+                    allowPrivate: AuthManager.currentUser()?.hasPermission(.createPrivateChannels) ?? false
+
+
                 ),
                 FormCell(
                     cell: .check(title: localized("new_room.cell.read_only.title"), description: localized("new_room.cell.read_only.description")),
