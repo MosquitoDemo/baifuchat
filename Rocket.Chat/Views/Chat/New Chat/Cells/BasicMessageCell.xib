@@ -20,13 +20,13 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" text="Label" lineBreakMode="tailTruncation" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3FX-dW-pKk">
-                        <rect key="frame" x="70" y="10" width="33" height="157"/>
+                        <rect key="frame" x="75" y="10" width="33" height="157"/>
                         <fontDescription key="fontDescription" style="UICTFontTextStyleFootnote"/>
                         <color key="textColor" red="0.61960784313725492" green="0.63529411764705879" blue="0.6588235294117647" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jUK-HJ-1Sf">
-                        <rect key="frame" x="15" y="54" width="40" height="40"/>
+                        <rect key="frame" x="20" y="54" width="40" height="40"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="40" id="W8q-lN-Rhh"/>
@@ -34,7 +34,7 @@
                         </constraints>
                     </view>
                     <view contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" layoutMarginsFollowReadableWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Cr2-8p-eRS" customClass="RCTextView" customModule="Rocket_Chat" customModuleProvider="target">
-                        <rect key="frame" x="70" y="169" width="200" height="30"/>
+                        <rect key="frame" x="75" y="169" width="200" height="30"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="200" id="Xe6-Dq-idt"/>
@@ -49,7 +49,7 @@
                         </constraints>
                     </button>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Exclamation" translatesAutoresizingMaskIntoConstraints="NO" id="yII-Mp-ySs">
-                        <rect key="frame" x="110" y="81.666666666666671" width="14" height="14"/>
+                        <rect key="frame" x="115" y="81.666666666666671" width="14" height="14"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="14" id="Kky-qD-47s"/>
                             <constraint firstAttribute="width" constant="14" id="NWV-t0-obh"/>
@@ -70,7 +70,7 @@
                 <constraint firstItem="jUK-HJ-1Sf" firstAttribute="top" secondItem="ISK-7O-71i" secondAttribute="top" constant="10" id="bav-oS-3nH"/>
                 <constraint firstItem="Cr2-8p-eRS" firstAttribute="leading" secondItem="jUK-HJ-1Sf" secondAttribute="trailing" constant="15" id="gDv-iX-t86"/>
                 <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="3FX-dW-pKk" secondAttribute="trailing" constant="8" id="lBY-Ue-s9E"/>
-                <constraint firstItem="jUK-HJ-1Sf" firstAttribute="leading" secondItem="ISK-7O-71i" secondAttribute="leading" constant="15" id="t0a-jK-xXC"/>
+                <constraint firstAttribute="leadingMargin" secondItem="jUK-HJ-1Sf" secondAttribute="leading" id="t0a-jK-xXC"/>
                 <constraint firstItem="yII-Mp-ySs" firstAttribute="leading" secondItem="3FX-dW-pKk" secondAttribute="trailing" constant="7" id="uap-tz-etd"/>
                 <constraint firstItem="3FX-dW-pKk" firstAttribute="top" secondItem="tSh-T8-5Jy" secondAttribute="top" constant="10" id="zvF-0e-ulz"/>
             </constraints>

@@ -100,15 +100,15 @@ class ChannelActionsViewController: BaseViewController {
                         icon: UIImage.init(named: ""), title: "" ,subscription: subscriptionx ,action: showMembersList
                     ),
                     
-                    ChannelInfoDescriptionCellData(
-                        title: localized("chat.info.item.description"),
-                        descriptionText: hasDescription ? subscriptionx.roomDescription : localized("chat.info.item.no_description")
-                    ),
-                    ChannelInfoDescriptionCellData(
-                        title: localized("chat.info.item.topic"),
-                        descriptionText: hasTopic ? subscriptionx.roomTopic : localized("chat.info.item.no_topic")
-                    ),
-                    ChannelInfoAnnouncementCellData(
+//                    ChannelInfoDescriptionCellData(
+//                        title: localized("chat.info.item.description"),
+//                        descriptionText: hasDescription ? subscriptionx.roomDescription : localized("chat.info.item.no_description")
+//                    ),
+//                    ChannelInfoDescriptionCellData(
+//                        title: localized("chat.info.item.topic"),
+//                        descriptionText: hasTopic ? subscriptionx.roomTopic : localized("chat.info.item.no_topic")
+//                    ),
+                    isDirectMessage ? nil :ChannelInfoAnnouncementCellData(
                         title: title(for: "announcement"),
                         announcement: subscriptionx.roomAnnouncement)
                 ]
@@ -132,7 +132,9 @@ class ChannelActionsViewController: BaseViewController {
                 
                 
                 ///commented by steve 2019-01-10 16:18:59
+                /*
                 isDirectMessage ? nil : ChannelInfoActionCellData(icon: UIImage(named: "announcement"), title: title(for: "announcement"), action: showStarredList),
+ */
                 
                 
                 ///commented by steve 2019-01-10 16:18:59
