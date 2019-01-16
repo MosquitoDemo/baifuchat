@@ -65,12 +65,15 @@ class GroupAnnouncementViewController: UIViewController {
         super.viewDidLoad()
 
         self.title = localized("chat.info.item.announcement")
-        self.mainTextView?.placeholder = localized("chat.info.item.add_announcement")
+        
+        self.mainTextView?.placeholder = self.canEdit ? localized("chat.info.item.add_announcement"):""
+        
         self.mainTextView?.isEditable = self.canEdit
         self.mainTextView?.text = data?.announcement
         
         self.numberLabel?.text = "\(data?.announcement?.count ?? 0)/200"
 
+        self.numberLabel?.isHidden = !self.canEdit
         self.mainTextView?.font = UIFont.systemFont(ofSize: 15)
         // Do any additional setup after loading the view.
         

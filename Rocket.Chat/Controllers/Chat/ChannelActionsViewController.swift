@@ -495,18 +495,15 @@ extension ChannelActionsViewController: UITableViewDelegate {
         /*群公告*/
 
         if let data = data as? ChannelInfoAnnouncementCellData{
-            if subscription?.roomOwnerId == AuthManager.currentUser()?.identifier{
+           
                 
                 let vc = GroupAnnouncementViewController()
                 vc.subscription = self.subscription
                 vc.data = data
                 vc.canEdit = subscription?.roomOwnerId == AuthManager.currentUser()?.identifier
-                
                 vc.hidesBottomBarWhenPushed = true
                 self.navigationController?.pushViewController(vc, animated: true)
-            }else{
-                
-            }
+
         }
 
         if let data = data as? ChannelInfoMembersCellData {
