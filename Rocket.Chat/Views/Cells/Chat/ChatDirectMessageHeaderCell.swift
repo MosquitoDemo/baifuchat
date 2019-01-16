@@ -40,13 +40,17 @@ final class ChatDirectMessageHeaderCell: UICollectionViewCell {
     @IBOutlet weak var labelUser: UILabel!
     @IBOutlet weak var labelStartConversation: UILabel!
 
-    override func prepareForReuse() {
-        super.prepareForReuse()
-
+    override func awakeFromNib() {
+        super.awakeFromNib()
         avatarView.username = nil
         labelUser.text = ""
         labelStartConversation.text = ""
     }
+//    override func prepareForReuse() {
+//        super.prepareForReuse()
+//
+//        
+//    }
 
     func updateUser() {
         guard let user = subscription?.directMessageUser else {
@@ -76,4 +80,9 @@ final class ChatDirectMessageHeaderCell: UICollectionViewCell {
         })
     }
 
+}
+extension ChatDirectMessageHeaderCell{
+    override func applyTheme() {
+        
+    }
 }

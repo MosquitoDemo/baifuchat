@@ -13,7 +13,7 @@ import RealmSwift
 extension User: ModelMappeable {
     func map(_ values: JSON, realm: Realm? = Realm.current) {
         if self.identifier == nil {
-            self.identifier = values["_id"].string
+            self.identifier = values["_id"].stringValue
         }
 
         if let username = values["username"].string {
@@ -58,6 +58,34 @@ extension User: ModelMappeable {
             self.roles.removeAll()
             self.roles.append(objectsIn: roles)
         }
+        /*
+        @objc dynamic var superiorUsername:String?
+        visibleUsernames
+        var inferiorUsernames = List<String>()
+        var kefuUsernames = List<String>()
+ */
+        if let visibleUsernamesRaw = values["visibleUsernames"].array{
+            let visibleUsernames = visibleUsernamesRaw.compactMap({ $0.string })
+            self.visibleUsernames.removeAll()
+            self.visibleUsernames.append(objectsIn: visibleUsernames)
+        }
+        if let inferiorUsernamesRaw = values["inferiorUsernames"].array {
+            let inferiorUsernames = inferiorUsernamesRaw.compactMap({ $0.string })
+            
+            
+            self.inferiorUsernames.removeAll()
+            self.inferiorUsernames.append(objectsIn: inferiorUsernames)
+        }
+        if let kefuUsernamesRaw = values["kefuUsernames"].array {
+            let kefuUsernames = kefuUsernamesRaw.compactMap({ $0.string })
+            
+            
+            self.kefuUsernames.removeAll()
+            self.kefuUsernames.append(objectsIn: kefuUsernames)
+        }
+        if let superiorUsernameRaw = values["superiorUsername"].string {
+            self.superiorUsername = superiorUsernameRaw
+        }
         
         if let birthdate = values["customFields"]["birthdate"].string{
             self.birthdate = birthdate
@@ -65,7 +93,7 @@ extension User: ModelMappeable {
         if let gender = values["customFields"]["gender"].string{
             self.gender = gender
         }
-            realm?.add(self, update: true)
+       
     }
 
 }

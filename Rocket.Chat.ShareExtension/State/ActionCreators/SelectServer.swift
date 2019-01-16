@@ -32,6 +32,7 @@ func fetchRooms(store: SEStore) -> SEAction {
         store.state.api?.fetch(request) { response in
             switch response {
             case .resource(let resource):
+                
                 store.dispatch(.setRooms(resource.subscriptions ?? []))
             case .error:
                 store.dispatch(.setRooms([]))

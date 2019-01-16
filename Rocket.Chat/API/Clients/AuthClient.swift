@@ -7,7 +7,7 @@
 //
 
 import RealmSwift
-
+import SwiftyJSON
 struct AuthClient: APIClient {
     let api: AnyAPIFetcher
 
@@ -27,7 +27,15 @@ struct AuthClient: APIClient {
                 auth.serverURL = (self.api as? API)?.host.absoluteString ?? ""
                 auth.token = resource.authToken
                 auth.userId = resource.userId
-
+                let user = User()
+                user.map(resource.me, realm: Realm.current)
+                try? Realm.current?.write {
+                    Realm.current?.add(user, update: true)
+                }
+                
+                auth.me = user
+                    
+                
                 AuthManager.persistAuthInformation(auth)
                 DatabaseManager.changeDatabaseInstance()
 

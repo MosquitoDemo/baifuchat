@@ -105,26 +105,27 @@ class SubscriptionsViewModel {
             }
             let user = AuthManager.currentUser()
             
-            let userNames = realm?
-                .objects(User.self)
-                .filter({ (userx) -> Bool in
-                    return userx.roles.contains("customer-service")
-                })
-                .map({ (userx) -> String in
-                    return userx.username ?? ""
-                }) ?? [String]()
+//            let userNames = realm?
+//                .objects(User.self)
+//                .filter({ (userx) -> Bool in
+//                    return userx.roles.contains("customer-service")
+//                })
+//                .map({ (userx) -> String in
+//                    return userx.username ?? ""
+//                }) ?? [String]()
         
-            if let _ = user?.unmanaged?.kefuUsernames{
-                let namePre = NSPredicate(format: "SELF.name IN %@",userNames)
-                let subscriptionxs = queryItems.filter(namePre)
+            if let kefus = user?.unmanaged?.kefuUsernames{
+                let predicate = NSPredicate(format: "SELF.name IN %@",kefus)
+                let subscriptionxs = queryItems.filter(predicate)
                 assorter.registerSection(name: localized("subscriptions.customer_service"), objects: subscriptionxs)
             }
             
             
             
-            if let p = user?.superiorUsername{
-                
-                let parentData = filtered(using: "SELF.name == \(p)")
+            if let p = user?.unmanaged?.superiorUsername{
+                let predicate = NSPredicate(format: "SELF.name == %@",p)
+
+                let parentData = queryItems.filter(predicate)
                 assorter.registerSection(name: localized("subscriptions.boss"), objects: parentData)
             }
             
@@ -163,15 +164,16 @@ class SubscriptionsViewModel {
                 let selectedGroupingOptions = SubscriptionsSortingManager.selectedGroupingOptions
                 assorter.willReconstructSections()
                 let title = !selectedGroupingOptions.isEmpty ? localized("subscriptions.conversations") : ""
-                if let _ = user?.unmanaged?.kefuUsernames{
-                    let namePre = NSPredicate(format: "SELF.name IN %@",userNames)
-                    let subscriptionxs = queryItems.filter(namePre)
+                if let kefus = user?.unmanaged?.kefuUsernames{
+                    let predicate = NSPredicate(format: "SELF.name IN %@",kefus)
+                    let subscriptionxs = queryItems.filter(predicate)
                     assorter.registerSection(name: title, objects: subscriptionxs)
                 }
                 if let p = user?.superiorUsername{
                     
-                    let parentData = filtered(using: "SELF.name == \(p)")
-                    assorter.registerSection(name: title, objects: parentData)
+                    let namePre = NSPredicate(format: "SELF.name == %@",p)
+                    let subscriptionxs = queryItems.filter(namePre)
+                    assorter.registerSection(name: title, objects: subscriptionxs)
                 }
                 if let inferiors = user?.unmanaged?.inferiorUsernames{
                     let namePre = NSPredicate(format: "SELF.name IN %@",inferiors)

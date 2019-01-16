@@ -28,13 +28,14 @@ enum UserStatus: String, CustomStringConvertible {
 }
 
 final class User: BaseModel {
+   
     @objc dynamic var birthdate:String?
     @objc dynamic var gender:String?
     @objc dynamic var username: String?
     @objc dynamic var name: String?
     @objc dynamic var parentUsername:String?
     @objc dynamic var superiorUsername:String?
-
+    var visibleUsernames = List<String>()
     var inferiorUsernames = List<String>()
     var kefuUsernames = List<String>()
     var emails = List<Email>()

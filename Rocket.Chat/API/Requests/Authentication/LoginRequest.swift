@@ -47,6 +47,9 @@ final class LoginResource: APIResource {
     var userId: String? {
         return data?["userId"].string
     }
+    var me:JSON{
+        return data?["me"] ?? JSON()
+    }
 }
 
 typealias LoginResponse = APIResponse<LoginResource>

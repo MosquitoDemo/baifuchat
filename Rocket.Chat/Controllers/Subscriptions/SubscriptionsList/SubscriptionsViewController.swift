@@ -43,6 +43,7 @@ final class SubscriptionsViewController: BaseViewController {
         NotificationCenter.default.removeObserver(self)
     }
 
+    
     override func viewDidLoad() {
         setupSearchBar()
         /*
@@ -150,6 +151,7 @@ final class SubscriptionsViewController: BaseViewController {
 
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+        
         if !(searchBar?.text?.isEmpty ?? true) {
             searchBar?.perform(#selector(becomeFirstResponder), with: nil, afterDelay: 0.1)
         }

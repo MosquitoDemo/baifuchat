@@ -14,6 +14,6 @@ extension AuthManager {
      - returns: Current user object, if exists.
      */
     static func currentUser(realm: Realm? = Realm.current) -> User? {
-        return isAuthenticated(realm: realm)?.user
+        return isAuthenticated(realm: realm)?.me
     }
 }

@@ -29,6 +29,9 @@ final class HeaderCell: UICollectionViewCell, ChatCell, SizingCell {
         return avatarView
     }()
 
+    @IBOutlet weak var labelHeightConstraint: NSLayoutConstraint!
+    @IBOutlet weak var labelWidthConstraint: NSLayoutConstraint!
+    /*
     @IBOutlet weak var avatarContainerView: UIView! {
         didSet {
             avatarContainerView.layer.cornerRadius = 4
@@ -38,6 +41,7 @@ final class HeaderCell: UICollectionViewCell, ChatCell, SizingCell {
     }
 
     @IBOutlet weak var labelName: UILabel!
+ */
     @IBOutlet weak var labelDescription: UILabel!
 
     var messageWidth: CGFloat = 0
@@ -48,9 +52,18 @@ final class HeaderCell: UICollectionViewCell, ChatCell, SizingCell {
             return
         }
 
-        labelName.text = viewModel.title
+//        labelName.text = viewModel.title
         labelDescription.text = viewModel.descriptionText
+        labelDescription.backgroundColor = UIColor.groupTableViewBackground
+        labelDescription.layer.cornerRadius = 5
+        labelDescription.layer.masksToBounds = true
+        labelDescription.textColor = UIColor.white
         avatarView.avatarURL = viewModel.avatarURL
     }
 
+}
+extension HeaderCell{
+    override func applyTheme() {
+        
+    }
 }

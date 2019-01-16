@@ -244,7 +244,7 @@ final class SignupTableViewController: BaseTableViewController {
     }
 
     func fetchMeThenSetUsername(startLoading: @escaping () -> Void, stopLoading: @escaping () -> Void) {
-        let realm = Realm.current
+//        let realm = Realm.current
         startLoading()
         let user = AuthManager.currentUser() ?? User()
         
@@ -252,11 +252,11 @@ final class SignupTableViewController: BaseTableViewController {
             stopLoading()
             switch response {
             case .resource(let resource):
-                Realm.executeOnMainThread(realm: realm) { realm in
-                    if let user = resource.user {
-                        realm.add(user, update: true)
-                    }
-                }
+//                Realm.executeOnMainThread(realm: realm) { realm in
+//                    if let user = resource.user {
+//                        realm.add(user, update: true)
+//                    }
+//                }
 
                 if resource.user?.username != nil {
                     self.dismiss(animated: true, completion: nil)
