@@ -122,6 +122,18 @@ final class SubscriptionsViewController: BaseViewController {
                 }
             }
         }
+        
+        ///added by steve
+//        NotificationCenter.default.addObserver(forName: NSNotification.Name(rawValue: "please_fetch_subscriptions"), object: nil, queue: OperationQueue.main) { (Notification) in
+//
+//            guard let auth = AuthManager.isAuthenticated() else { return }
+//
+//            SubscriptionManager.updateSubscriptions(auth, completion: {
+//
+//                print("didfinished fetching subscriptions")
+//
+//            })
+//        }
     }
 
     override func viewDidLayoutSubviews() {
@@ -154,6 +166,20 @@ final class SubscriptionsViewController: BaseViewController {
         
         if !(searchBar?.text?.isEmpty ?? true) {
             searchBar?.perform(#selector(becomeFirstResponder), with: nil, afterDelay: 0.1)
+        }
+        
+        else{
+        
+            
+            guard let auth = AuthManager.isAuthenticated() else { return }
+            
+            SubscriptionManager.updateSubscriptions(auth, completion: {
+                
+                print("didfinished fetching subscriptions")
+                
+            })
+
+            
         }
     }
 
@@ -316,6 +342,15 @@ extension SubscriptionsViewController: UISearchBarDelegate {
         searchBar.text = ""
 
         viewModel.buildSections()
+        
+        //added by steve
+        guard let auth = AuthManager.isAuthenticated() else { return }
+        
+        SubscriptionManager.updateSubscriptions(auth, completion: {
+            
+            print("didfinished fetching subscriptions")
+            
+        })
     }
 
     func updateServerInformation() {

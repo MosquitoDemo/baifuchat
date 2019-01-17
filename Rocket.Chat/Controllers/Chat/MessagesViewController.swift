@@ -192,6 +192,17 @@ final class MessagesViewController: RocketChatViewController {
         super.viewDidAppear(animated)
         markAsRead()
         becomeFirstResponder()
+        
+        ///added by steve
+        if(subscription != nil && subscription.unmanaged?.roomReadOnly ?? false && AuthManager.currentUser()?.identifier != subscription.unmanaged?.roomOwnerId){
+            
+            composerView.leftButton.isEnabled = false
+            composerView.rightButton.isEnabled = false
+            composerView.textView.isEditable = false
+            
+        }
+        
+        
     }
 
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {

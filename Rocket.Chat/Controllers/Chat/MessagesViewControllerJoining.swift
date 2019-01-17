@@ -61,9 +61,47 @@ extension MessagesViewController: ChatPreviewModeViewProtocol {
 
         Realm.executeOnMainThread({ realm in
             subscription.auth = auth
+            subscription.open = true
             realm.add(subscription, update: true)
         })
 
         self.subscription = subscription
+        
+        
+        
+        ///added by steve
+//        if(self.subscription != nil && self.subscription.unmanaged?.roomReadOnly ?? false && AuthManager.currentUser()?.identifier != self.subscription.unmanaged?.roomOwnerId){
+//
+//            composerView.leftButton.isEnabled = false
+//            composerView.rightButton.isEnabled = false
+//            composerView.textView.isEditable = false
+//
+//        }
+//
+//        ///通知SubscriptionViewController刷新subscriptions
+//        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "please_fetch_subscriptions"), object: nil)
+        
+//        self.viewDidAppear(false)
+        
+        ///added by steve
+//        let _ = API.current()?.client(SubscriptionsClient.self).api.fetch(RoomInfoRequest.init(roomId: self.subscription?.rid ?? ""), completion: { (response) in
+//            switch response {
+//            case .resource(let resultx):
+//                print(resultx)
+//
+//                if(self.subscription != nil && self.subscription.unmanaged?.roomReadOnly ?? false && AuthManager.currentUser()?.identifier != self.subscription.unmanaged?.roomOwnerId){
+//
+//                    self.composerView.leftButton.isEnabled = false
+//                    self.composerView.rightButton.isEnabled = false
+//                    self.composerView.textView.isEditable = false
+//
+//                }
+//
+//            case .error(let error):
+//                print(error)
+//            }
+//        })
+        
+        
     }
 }
