@@ -30,7 +30,9 @@ class ImageMessageCell: BaseImageMessageCell, SizingCell {
         }
     }
 
+    /*
     @IBOutlet weak var username: UILabel!
+ */
     @IBOutlet weak var date: UILabel!
     @IBOutlet weak var statusView: UIImageView!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
@@ -50,7 +52,7 @@ class ImageMessageCell: BaseImageMessageCell, SizingCell {
         super.awakeFromNib()
 
         setupWidthConstraint()
-        insertGesturesIfNeeded(with: username)
+//        insertGesturesIfNeeded(with: username)
     }
 
     override func configure(completeRendering: Bool) {
@@ -65,7 +67,7 @@ class ImageMessageCell: BaseImageMessageCell, SizingCell {
             with: avatarView,
             date: date,
             status: statusView,
-            and: username,
+            and: UILabel(),
             completeRendering: completeRendering
         )
 
@@ -104,6 +106,7 @@ class ImageMessageCell: BaseImageMessageCell, SizingCell {
 
 extension ImageMessageCell {
     override func applyTheme() {
+        /*
         super.applyTheme()
 
         let theme = self.theme ?? .light
@@ -112,5 +115,6 @@ extension ImageMessageCell {
         labelTitle.textColor = theme.bodyText
         labelDescription.textColor = theme.bodyText
         imageView.layer.borderColor = theme.borderColor.cgColor
+ */
     }
 }

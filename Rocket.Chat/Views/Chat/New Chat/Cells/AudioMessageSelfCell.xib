@@ -73,27 +73,18 @@
                         </constraints>
                     </button>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" text="Label" lineBreakMode="tailTruncation" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="reA-sZ-mZS">
-                        <rect key="frame" x="239" y="116" width="33" height="16"/>
+                        <rect key="frame" x="290" y="10" width="33" height="234"/>
                         <fontDescription key="fontDescription" style="UICTFontTextStyleFootnote"/>
                         <color key="textColor" red="0.61960784310000006" green="0.63529411759999999" blue="0.6588235294" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Exclamation" translatesAutoresizingMaskIntoConstraints="NO" id="yvT-QZ-XEz">
-                        <rect key="frame" x="219" y="117" width="14" height="14"/>
+                        <rect key="frame" x="270" y="120" width="14" height="14"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="14" id="3D0-O4-W62"/>
                             <constraint firstAttribute="height" constant="14" id="den-4v-l6o"/>
                         </constraints>
                     </imageView>
-                    <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g8B-Yo-Lcw">
-                        <rect key="frame" x="279.5" y="6" width="43.5" height="235.5"/>
-                        <constraints>
-                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="20" id="wce-YO-aFl"/>
-                        </constraints>
-                        <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
-                        <color key="textColor" red="0.047058823530000002" green="0.050980392159999999" blue="0.058823529409999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <nil key="highlightedColor"/>
-                    </label>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="B1G-dm-7v2">
                         <rect key="frame" x="338" y="10" width="40" height="40"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -106,7 +97,7 @@
             </view>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
-                <constraint firstItem="g8B-Yo-Lcw" firstAttribute="leading" secondItem="reA-sZ-mZS" secondAttribute="trailing" constant="7.5" id="7py-9f-hej"/>
+                <constraint firstItem="reA-sZ-mZS" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="10" id="0Pt-5K-549"/>
                 <constraint firstItem="reA-sZ-mZS" firstAttribute="leading" secondItem="yvT-QZ-XEz" secondAttribute="trailing" constant="6" id="98y-Sh-O6h"/>
                 <constraint firstItem="B1G-dm-7v2" firstAttribute="trailing" secondItem="gTV-IL-0wX" secondAttribute="trailingMargin" id="Gvo-P2-ctC"/>
                 <constraint firstAttribute="bottom" secondItem="0eq-QV-zLF" secondAttribute="bottom" constant="10" id="Ive-YZ-Ems"/>
@@ -114,12 +105,10 @@
                 <constraint firstItem="Vms-YY-6vy" firstAttribute="bottom" secondItem="0eq-QV-zLF" secondAttribute="bottom" id="OHX-rm-sbI"/>
                 <constraint firstItem="B1G-dm-7v2" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="topMargin" constant="10" id="SHH-eX-jW6"/>
                 <constraint firstItem="yvT-QZ-XEz" firstAttribute="centerY" secondItem="reA-sZ-mZS" secondAttribute="centerY" id="Y28-ok-Dph"/>
-                <constraint firstItem="g8B-Yo-Lcw" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="6" id="YKA-hF-DOe"/>
-                <constraint firstItem="reA-sZ-mZS" firstAttribute="centerY" secondItem="g8B-Yo-Lcw" secondAttribute="centerY" id="iW5-UX-m2s"/>
-                <constraint firstItem="0eq-QV-zLF" firstAttribute="top" secondItem="g8B-Yo-Lcw" secondAttribute="bottom" constant="7.5" id="lzA-l1-gWr"/>
                 <constraint firstItem="B1G-dm-7v2" firstAttribute="leading" secondItem="0eq-QV-zLF" secondAttribute="trailing" constant="15" id="ma8-8a-FVV"/>
-                <constraint firstItem="B1G-dm-7v2" firstAttribute="leading" secondItem="g8B-Yo-Lcw" secondAttribute="trailing" constant="15" id="wMc-cA-9mj"/>
+                <constraint firstItem="B1G-dm-7v2" firstAttribute="leading" secondItem="reA-sZ-mZS" secondAttribute="trailing" constant="15" id="nzY-Hc-BLP"/>
                 <constraint firstItem="Vms-YY-6vy" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leadingMargin" id="wS7-bM-jv0"/>
+                <constraint firstItem="0eq-QV-zLF" firstAttribute="top" secondItem="reA-sZ-mZS" secondAttribute="bottom" constant="5" id="yKE-dk-x0Q"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <size key="customSize" width="398" height="313"/>
@@ -132,7 +121,6 @@
                 <outlet property="readReceiptButton" destination="Vms-YY-6vy" id="XTF-wU-Fpq"/>
                 <outlet property="slider" destination="RaN-YB-U5P" id="lS6-Nz-fy8"/>
                 <outlet property="statusView" destination="yvT-QZ-XEz" id="1J8-OR-TcH"/>
-                <outlet property="username" destination="g8B-Yo-Lcw" id="7i4-KD-UcQ"/>
                 <outlet property="viewPlayerBackground" destination="0eq-QV-zLF" id="H9s-vf-Imk"/>
             </connections>
             <point key="canvasLocation" x="-24" y="172"/>

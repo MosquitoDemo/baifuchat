@@ -28,7 +28,9 @@ final class QuoteMessageCell: BaseQuoteMessageCell, SizingCell {
         }
     }
 
+    /*
     @IBOutlet weak var messageUsername: UILabel!
+ */
     @IBOutlet weak var date: UILabel!
     @IBOutlet weak var statusView: UIImageView!
     @IBOutlet weak var containerView: UIView! {
@@ -83,7 +85,7 @@ final class QuoteMessageCell: BaseQuoteMessageCell, SizingCell {
         gesture.delegate = self
         containerView.addGestureRecognizer(gesture)
 
-        insertGesturesIfNeeded(with: username)
+//        insertGesturesIfNeeded(with: username)
     }
 
     override func configure(completeRendering: Bool) {
@@ -96,7 +98,7 @@ final class QuoteMessageCell: BaseQuoteMessageCell, SizingCell {
             with: avatarView,
             date: date,
             status: statusView,
-            and: messageUsername,
+            and: UILabel(),
             completeRendering: completeRendering
         )
 
@@ -132,15 +134,17 @@ final class QuoteMessageCell: BaseQuoteMessageCell, SizingCell {
 
 extension QuoteMessageCell {
     override func applyTheme() {
+        /*
         super.applyTheme()
 
         let theme = self.theme ?? .light
         containerView.backgroundColor = theme.chatComponentBackground
-        messageUsername.textColor = theme.titleText
+//        messageUsername.textColor = theme.titleText
         date.textColor = theme.auxiliaryText
         purpose.textColor = theme.auxiliaryText
         username.textColor = theme.actionTintColor
         text.textColor = theme.bodyText
         containerView.layer.borderColor = theme.borderColor.cgColor
+ */
     }
 }

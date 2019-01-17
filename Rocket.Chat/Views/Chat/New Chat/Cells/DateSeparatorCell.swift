@@ -27,9 +27,10 @@ final class DateSeparatorCell: UICollectionViewCell, ChatCell, SizingCell {
     @IBOutlet weak var date: UILabel! {
         didSet {
             date.font = date.font.bold()
-            date.backgroundColor = UIColor.groupTableViewBackground
+            
+            date.backgroundColor = UIColor.lightGray
             date.textColor = UIColor.white
-            date.layer.cornerRadius = 5
+            date.layer.cornerRadius = 13
             date.layer.masksToBounds = true
         }
     }
