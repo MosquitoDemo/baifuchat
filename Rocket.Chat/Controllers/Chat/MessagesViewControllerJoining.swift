@@ -61,9 +61,25 @@ extension MessagesViewController: ChatPreviewModeViewProtocol {
 
         Realm.executeOnMainThread({ realm in
             subscription.auth = auth
+            subscription.open = true
             realm.add(subscription, update: true)
         })
 
         self.subscription = subscription
+        
+        ///added by steve
+        ///点击加入通道——判断是否是只读通道，如果是，则把j控件都置灰不可操作
+        ///注意这里y需要调接口拉一下数据
+        let _ = API.current()?.client(SubscriptionsClient.self).api.fetch(RoomInfoRequest.init(roomId: self.subscription?.rid ?? ""), completion: { (response) in
+
+            if(self.viewModel.subscription != nil && self.viewModel.subscription?.unmanaged?.roomReadOnly ?? false && AuthManager.currentUser()?.identifier != self.viewModel.subscription?.unmanaged?.roomOwnerId){
+
+                self.composerView.leftButton.isEnabled = false
+                self.composerView.rightButton.isEnabled = false
+                self.composerView.textView.isEditable = false
+
+            }
+        })
+        
     }
 }

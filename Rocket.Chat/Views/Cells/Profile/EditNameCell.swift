@@ -44,6 +44,10 @@ class EditNameCell: UITableViewCell {
         self.detailTextField.borderStyle = .none
         self.detailTextField.keyboardType = .default
         self.detailTextField.clearButtonMode = .whileEditing
+        
+        ///added by steve
+        self.detailTextField.addTarget(self, action: #selector(textDidChangeAction(_:)), for: .editingChanged)
+
         self.detailTextField.addTarget(self, action: #selector(EditNameCell.editNameChanged(_:)), for: .editingChanged)
         self.contentView.addSubview(self.detailTextField)
         self.lineView.backgroundColor = UIColor.groupTableViewBackground
@@ -62,8 +66,6 @@ class EditNameCell: UITableViewCell {
         self.lineView.trailingAnchor.constraint(equalTo: self.contentView.trailingAnchor).isActive = true
         self.lineView.heightAnchor.constraint(equalToConstant: 0.5).isActive = true
         
-        ///added by steve
-        self.detailTextField.addTarget(self, action: #selector(textDidChangeAction(_:)), for: .editingChanged)
     }
     @objc func editNameChanged(_ textField:UITextField){
         self.nameChangedBlock?(textField)
