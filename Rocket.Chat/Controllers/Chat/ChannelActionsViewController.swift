@@ -99,7 +99,7 @@ class ChannelActionsViewController: BaseViewController {
                     ChannelInfoMembersCellData(
                         icon: UIImage.init(named: ""), title: "" ,subscription: subscriptionx ,action: showMembersList
                     ),
-                    
+                    ChannelBlankCellData(),
 //                    ChannelInfoDescriptionCellData(
 //                        title: localized("chat.info.item.description"),
 //                        descriptionText: hasDescription ? subscriptionx.roomDescription : localized("chat.info.item.no_description")
@@ -175,6 +175,7 @@ class ChannelActionsViewController: BaseViewController {
     }
 
     func registerCells() {
+        tableView.register(LineCell.self)
         tableView.registerNib(ChannelInfoAnnouncementCell.self)
         tableView.registerNib(ChannelInfoMembersCell.self)
         tableView.registerNib(ChannelInfoMemberCell.self)
@@ -379,12 +380,17 @@ extension ChannelActionsViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let data = tableViewData[indexPath.section][indexPath.row]
 
+        
         if let data = data as? ChannelInfoActionCellData {
             let cell = tableView.dequeueReusableCell(ChannelInfoActionCell.self)
             cell.data = data
             cell.separatorInset = UIEdgeInsets(top: 0, left: 48, bottom: 0, right: 0)
             return cell
             
+        }
+        if let _ = data as? ChannelBlankCellData{
+            let cell = tableView.dequeueReusableCell(LineCell.self)
+            return cell
         }
 
         if let data = data as? ChannelInfoUserCellData {
@@ -470,6 +476,10 @@ extension ChannelActionsViewController: UITableViewDelegate {
         if data as? LeaveChannelCellData != nil{
             return LeaveChannelCell.defaultHeight
         }
+        if let _ = data as? ChannelBlankCellData{
+            return 44
+        }
+            
 
         return 0
     }
@@ -535,6 +545,7 @@ extension ChannelActionsViewController: UITableViewDelegate {
         }
     }
 
+    /*删除群聊*/
     func deleteChannel(){
         let cancelAction = UIAlertAction.init(title: localized("alert.channel.delete.confirmation.cancel"), style: .cancel) { (action) in
             
@@ -567,6 +578,7 @@ extension ChannelActionsViewController: UITableViewDelegate {
         }
         alert(with: [cancelAction,sureAction], title: localized("alert.channel.delete.confirmation.title"), message: localized("alert.channel.delete.confirmation.confirm"))
     }
+    /*离开群聊*/
     func leaveChannel(){
         let cancelAction = UIAlertAction.init(title: localized("alert.channel.leave.confirmation.cancel"), style: .cancel) { (action) in
             

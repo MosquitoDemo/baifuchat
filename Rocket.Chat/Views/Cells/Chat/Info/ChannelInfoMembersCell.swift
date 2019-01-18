@@ -8,7 +8,12 @@
 
 import UIKit
 
+struct ChannelBlankCellData:ChannelInfoCellDataProtocol {
+    
+    
+    let cellType = LineCell.self
 
+}
 
 struct ChannelInfoMembersCellData: ChannelInfoCellDataProtocol {
     let cellType = ChannelInfoMembersCell.self

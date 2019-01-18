@@ -108,10 +108,13 @@ class GroupAnnouncementViewController: UIViewController {
                     
                     Realm.current?.add(subscriptionx, update: true)
                     }
+                     
  */
                 }
                 self.alertSuccess(title: result.raw?.stringValue ?? "")
-                self.navigationController?.popViewController(animated: true)
+                self.navigationController?.dismiss(animated: true, completion: {
+                    
+                })
             case .error(let error):
                 print(error)
                 
