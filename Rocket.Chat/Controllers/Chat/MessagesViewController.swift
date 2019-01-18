@@ -110,6 +110,7 @@ final class MessagesViewController: RocketChatViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        
         setupTitleView()
         updateEmptyState()
         updateSearchMessagesButton()

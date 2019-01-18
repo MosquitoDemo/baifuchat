@@ -20,6 +20,9 @@ final class HeaderCell: UICollectionViewCell, ChatCell, SizingCell {
         return cell
     }()
 
+    static func size(for viewModel: AnyChatItem, with cellWidth: CGFloat) -> CGSize{
+        return CGSize(width: UIScreen.main.bounds.size.width, height: 50)
+    }
     lazy var avatarView: AvatarView = {
         let avatarView = AvatarView()
 
@@ -54,11 +57,11 @@ final class HeaderCell: UICollectionViewCell, ChatCell, SizingCell {
 
 //        labelName.text = viewModel.title
         labelDescription.text = viewModel.descriptionText
-        labelDescription.backgroundColor = UIColor.groupTableViewBackground
+        labelDescription.backgroundColor = UIColor.init(hex: "#d7d7d7")
         labelDescription.layer.cornerRadius = 5
         labelDescription.layer.masksToBounds = true
         labelDescription.textColor = UIColor.white
-        avatarView.avatarURL = viewModel.avatarURL
+//        avatarView.avatarURL = viewModel.avatarURL
     }
 
 }

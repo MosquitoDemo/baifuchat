@@ -61,8 +61,8 @@ class ChannelActionsViewController: BaseViewController {
             if isDirectMessage {
                 header = [ChannelInfoUserCellData(user: subscriptionx.directMessageUser)]
             } else {
-                let hasDescription = !(subscriptionx.roomDescription?.isEmpty ?? true)
-                let hasTopic = !(subscriptionx.roomTopic?.isEmpty ?? true)
+                _ = !(subscriptionx.roomDescription?.isEmpty ?? true)
+                _ = !(subscriptionx.roomTopic?.isEmpty ?? true)
 
                 let memberData = MembersListViewData()
                 memberData.subscription = subscriptionx

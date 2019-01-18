@@ -103,10 +103,12 @@ class GroupAnnouncementViewController: UIViewController {
                 
                 try? Realm.current?.write {
                     self.subscription?.roomAnnouncement = result.raw?["announcement"].string
+                    /*
                     if let subscriptionx = self.subscription{
                     
                     Realm.current?.add(subscriptionx, update: true)
                     }
+ */
                 }
                 self.alertSuccess(title: result.raw?.stringValue ?? "")
                 self.navigationController?.popViewController(animated: true)
