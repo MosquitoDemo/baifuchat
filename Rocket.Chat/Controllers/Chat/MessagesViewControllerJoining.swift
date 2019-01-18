@@ -67,41 +67,19 @@ extension MessagesViewController: ChatPreviewModeViewProtocol {
 
         self.subscription = subscription
         
-        
-        
         ///added by steve
-//        if(self.subscription != nil && self.subscription.unmanaged?.roomReadOnly ?? false && AuthManager.currentUser()?.identifier != self.subscription.unmanaged?.roomOwnerId){
-//
-//            composerView.leftButton.isEnabled = false
-//            composerView.rightButton.isEnabled = false
-//            composerView.textView.isEditable = false
-//
-//        }
-//
-//        ///通知SubscriptionViewController刷新subscriptions
-//        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "please_fetch_subscriptions"), object: nil)
-        
-//        self.viewDidAppear(false)
-        
-        ///added by steve
-//        let _ = API.current()?.client(SubscriptionsClient.self).api.fetch(RoomInfoRequest.init(roomId: self.subscription?.rid ?? ""), completion: { (response) in
-//            switch response {
-//            case .resource(let resultx):
-//                print(resultx)
-//
-//                if(self.subscription != nil && self.subscription.unmanaged?.roomReadOnly ?? false && AuthManager.currentUser()?.identifier != self.subscription.unmanaged?.roomOwnerId){
-//
-//                    self.composerView.leftButton.isEnabled = false
-//                    self.composerView.rightButton.isEnabled = false
-//                    self.composerView.textView.isEditable = false
-//
-//                }
-//
-//            case .error(let error):
-//                print(error)
-//            }
-//        })
-        
+        ///点击加入通道——判断是否是只读通道，如果是，则把j控件都置灰不可操作
+        ///注意这里y需要调接口拉一下数据
+        let _ = API.current()?.client(SubscriptionsClient.self).api.fetch(RoomInfoRequest.init(roomId: self.subscription?.rid ?? ""), completion: { (response) in
+
+            if(self.viewModel.subscription != nil && self.viewModel.subscription?.unmanaged?.roomReadOnly ?? false && AuthManager.currentUser()?.identifier != self.viewModel.subscription?.unmanaged?.roomOwnerId){
+
+                self.composerView.leftButton.isEnabled = false
+                self.composerView.rightButton.isEnabled = false
+                self.composerView.textView.isEditable = false
+
+            }
+        })
         
     }
 }
